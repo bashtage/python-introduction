@@ -1,3 +1,36 @@
+# Repo specific
+website/
+.vscode
+.idea
+.ipynb_checkpoints
+*.dill
+*.pkl
+*.aux
+*.out
+*.synctex
+*.bbl
+*.blg
+*.toc
+tex/*.pdf
+tex/lesson*.tex
+tex/images/
+/solutions/gs10-exported.csv
+/solutions/gs10-combined.xlsx
+/solutions/gs10.h5
+/gs10.h5
+/ibm.csv
+/import-hf-data.py
+/lesson-2.py
+/msft.csv
+/data.zip
+.idea/.gitignore
+.idea/Python MFE Introduction.iml
+.idea/dictionaries/
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -12,7 +12,10 @@ website/
 *.blg
 *.toc
 tex/*.pdf
+tex/data-*.tex
+tex/estimation-*.tex
 tex/lesson*.tex
+tex/regression-*.tex
 tex/images/
 /solutions/gs10-exported.csv
 /solutions/gs10-combined.xlsx

@@ -1,5 +1,7 @@
 \documentclass[11pt]{book}
 
+%\usepackage[a4paper]{geometry}
+
 \usepackage[svgnames]{xcolor}
 \usepackage[breakable]{tcolorbox}
 \tcbset{nobeforeafter} % prevents tcolorboxes being placing in paragraphs
@@ -30,7 +32,7 @@
 \usepackage{adjustbox} % Used to constrain images to a maximum size
 %\usepackage{xcolor} % Allow colors to be defined
 \usepackage{enumerate} % Needed for markdown enumerations to work
-\usepackage[a4paper]{geometry}
+
 \usepackage{amsmath} % Equations
 \usepackage{amssymb} % Equations
 \usepackage{textcomp} % defines textquotesingle
@@ -356,18 +358,11 @@ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
 breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
 {hyperref}
 
-% Slightly bigger margins than the latex defaults
-\geometry{verbose,tmargin=4cm,bmargin=4cm,lmargin=2.5cm,rmargin=2.5cm}
 
 \usepackage{SheppardCommonNew}
+% Slightly bigger margins than the latex defaults
+\geometry{verbose,tmargin=4cm,bmargin=4cm,lmargin=2.5cm,rmargin=2.5cm}
 \usepackage[scaled]{beramono}
-% \renewcommand*\ttdefault{cmvtt}
-\usepackage[usefilenames,% Important for XeLaTeX
-  RMstyle=Thin,
-  SSstyle=Thin,
-  TTstyle=Thin,
-  DefaultFeatures={Ligatures=Common}]{plex-otf}
-
 \usepackage[scaled]{helvet}
 \usepackage[T1]{fontenc}
 \setlength{\parskip}{\smallskipamount}
@@ -424,4 +419,5 @@ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
 \include{lesson-7}
 \include{lesson-8}
 \include{lesson-9}
+\include{lesson-10}
 \end{document}

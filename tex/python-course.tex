@@ -1,4 +1,4 @@
-\documentclass[11pt]{book}
+\documentclass[11pt, a4paper]{book}
 
 \usepackage[svgnames]{xcolor}
 \usepackage[breakable]{tcolorbox}
@@ -353,7 +353,6 @@ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
 
 \usepackage{SheppardCommonNew}
 % Slightly bigger margins than the latex defaults
-\usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=4cm,bmargin=4cm,lmargin=2.5cm,rmargin=2.5cm}
 \usepackage[scaled]{beramono}
 \usepackage[scaled]{helvet}
@@ -417,5 +416,13 @@ University of Oxford\\
 \chapter{Linear Regression}
 \input{regression-basic}
 \include{regression-rolling-and-recursive}
+\include{regression-cross-validation}
+\chapter{ARMA Models}
+\input{arma-estimation}
+\include{arma-model-selection}
+\include{arma-residual-diagnostics}
+\include{arma-forecasting}
+\include{arma-unit-roots}
+
 \include{regression-cross-validation}
 \end{document}

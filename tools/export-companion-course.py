@@ -1,7 +1,6 @@
 """
 Prepare notebooks for PDF export via LaTeX
 """
-import distutils.dir_util
 import glob
 import os
 import shutil

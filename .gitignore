@@ -11,11 +11,13 @@ website/
 *.bbl
 *.blg
 *.toc
+*.h5
 tex/*.pdf
 tex/data-*.tex
 tex/estimation-*.tex
 tex/lesson*.tex
 tex/regression-*.tex
+tex/arma-*.tex
 tex/images/
 /solutions/gs10-exported.csv
 /solutions/gs10-combined.xlsx

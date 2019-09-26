@@ -7,7 +7,7 @@ import os
 import shutil
 import subprocess
 
-from .latex import execute_and_clear, strip_latex
+from latex import execute_and_clear, strip_latex
 
 base_dir = os.path.abspath("..")
 latex_dir = os.path.join("..", "tex")
@@ -22,7 +22,7 @@ for nb_file in nb_files:
     out = os.path.abspath(os.path.join("..", base))
     base, _ = os.path.splitext(base)
     to_export = strip_latex(nb)
-    if base == "lesson-1":
+    if base == "installation":
         to_export = to_export.replace("\section{", "\section*{")
     with open(os.path.join(latex_dir, base + ".tex"), "w") as output:
         output.write(to_export)

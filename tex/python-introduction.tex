@@ -1,6 +1,6 @@
-\documentclass[11pt]{book}
+\documentclass[11pt,a4paper]{book}
 
-%\usepackage[a4paper]{geometry}
+\usepackage{geometry}
 
 \usepackage[svgnames]{xcolor}
 \usepackage[breakable]{tcolorbox}
@@ -409,8 +409,9 @@ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
 
 \thispagestyle{empty}\tableofcontents{}\thispagestyle{empty}\pagenumbering{gobble}
 \frontmatter
-\include{lesson-1}
+\include{installation}
 \mainmatter
+\include{lesson-1}
 \include{lesson-2}
 \include{lesson-3}
 \include{lesson-4}
@@ -419,5 +420,4 @@ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
 \include{lesson-7}
 \include{lesson-8}
 \include{lesson-9}
-\include{lesson-10}
 \end{document}

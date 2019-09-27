@@ -13,6 +13,7 @@ website/
 *.toc
 *.h5
 tex/*.pdf
+tex/installation.tex
 tex/data-*.tex
 tex/estimation-*.tex
 tex/lesson*.tex

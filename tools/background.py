@@ -37,6 +37,9 @@ def save(filepath, fig=None):
 
 def generate_cover(lesson_name, subtitle):
     name = ' '.join([lesson_name, subtitle]).lower().replace(' ', '-')
+    name = name.replace(',', '-')
+    while '--' in name:
+        name = name.replace('--', '-')
     print(name)
     seed = np.array([hash(lesson_name + subtitle)]).view(np.uint32)
     rs = np.random.RandomState(seed)
@@ -65,14 +68,15 @@ def generate_cover(lesson_name, subtitle):
 
     plt.fill(
         [0, triangle_width * (width + 2), triangle_width * (width + 2), 0],
-        [12 * trangle_height, 12 * trangle_height, 16 * trangle_height,
-         16 * trangle_height],
+        [13 * trangle_height, 13 * trangle_height, 17 * trangle_height,
+         17 * trangle_height],
         color='#ffffff')
-    ax.text(1.5 * triangle_width, 14 * trangle_height, LESSON_NAME,
+    ax.text(1.5 * triangle_width, 15 * trangle_height, lesson_name,
             fontsize=3 * 72, color=color[1], fontweight='bold',
             fontname='Roboto Condensed')
-    ax.text(1.5 * triangle_width, 12.7 * trangle_height, SUBTITLE,
-            fontsize=3 * 48, color=color[3], fontname='Roboto Condensed')
+    ax.text(1.5 * triangle_width, 13.7 * trangle_height, subtitle,
+            fontsize=3 * 48, color=color[3], fontname='Roboto Condensed',
+            fontweight='light')
     save('cover.png', fig)
 
     img = Image.open('cover.png')
@@ -86,7 +90,12 @@ def generate_cover(lesson_name, subtitle):
     crop.save(f'{name}-back.png')
 
 
-LESSON_NAME = 'Lesson 8'
-SUBTITLE = 'Importing Data'
+content = (('Installation', 'Anaconda, VS Code, and PyCharm'),
+           ('Lesson 1', 'Pycharm'),
+           ('Lesson 1', 'Spyder'),
+           ('Lesson 1', 'VS Code'),
+           ('Lesson 2', 'Basic Python Types'),
+           ('Lesson 8', 'Importing and Exporting Data'))
 
-generate_cover(LESSON_NAME, SUBTITLE)
+for name, sub in content[-1:]:
+    generate_cover(name, sub)

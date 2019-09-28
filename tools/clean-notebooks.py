@@ -8,12 +8,15 @@ import os
 import nbconvert.preprocessors as pre
 import nbformat
 
+from latex import key
+
 website_dir = os.path.join("..", "website")
 if not os.path.exists(website_dir):
     os.mkdir(website_dir)
 
 source_dir = "../solutions/"
 nb_files = glob.glob(os.path.join(source_dir, "*.ipynb"))
+nb_files = sorted(nb_files, key=lambda v: key(v))
 
 for nb_file in nb_files:
     print(f"Processing {nb_file}")
@@ -27,9 +30,9 @@ for nb_file in nb_files:
     for cell in nb["cells"]:
         if isinstance(cell, MutableMapping):
             if (
-                "cell_type" not in cell
-                or cell["cell_type"] != "code"
-                or "# Setup" in cell["source"]
+                    "cell_type" not in cell
+                    or cell["cell_type"] != "code"
+                    or "# Setup" in cell["source"]
             ):
                 continue
             cell["source"] = ""
@@ -55,9 +58,11 @@ for nb_file in nb_files:
     }
     nb["metadata"]["nikola"] = nikola
     for cell in nb["cells"]:
-        if isinstance(cell, MutableMapping) and cell["cell_type"] == "markdown":
+        if isinstance(cell, MutableMapping) and cell[
+            "cell_type"] == "markdown":
             source = cell["source"]
-            source = source.replace("(images/", "(/images/teaching/python/course/")
+            source = source.replace("(images/",
+                                    "(/images/teaching/python/course/")
             cell["source"] = source
     out = os.path.abspath(os.path.join(website_dir, base))
     print(f"Writing website version to {out}")

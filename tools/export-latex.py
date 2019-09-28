@@ -7,12 +7,13 @@ import os
 import shutil
 import subprocess
 
-from latex import execute_and_clear, strip_latex
+from latex import execute_and_clear, key, strip_latex
 
 base_dir = os.path.abspath("..")
 latex_dir = os.path.join("..", "tex")
 source_dir = "../solutions/"
 nb_files = glob.glob(os.path.join(source_dir, "*.ipynb"))
+nb_files = sorted(nb_files, key=lambda v: key(v))
 
 for nb_file in nb_files:
     print(f"Processing {nb_file}")

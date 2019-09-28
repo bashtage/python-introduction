@@ -1,6 +1,6 @@
+from PIL import Image
 import matplotlib.pyplot as plt
 import numpy as np
-from PIL import Image
 
 width = 16 * 2
 height = int(9 * 2 * np.sqrt(4 / 3))

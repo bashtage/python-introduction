@@ -2,10 +2,11 @@
 Tools for manipulating the LaTeX produced from notebooks
 """
 from collections.abc import MutableMapping
+import os
 
+from nbconvert import LatexExporter
 import nbconvert.preprocessors as pre
 import nbformat
-from nbconvert import LatexExporter
 
 REPLACEMENTS = {
     r"\maketitle": "",
@@ -19,6 +20,14 @@ REPLACEMENTS = {
     "£": r"\pounds{}",
     "\\prompt{In}{incolor}{ }{\\hspace{4pt}}\n": "",
 }
+
+
+def key(f):
+    file_key = os.path.splitext(os.path.split(f)[-1])[0]
+    print(file_key)
+    if '-' in file_key:
+        return int(file_key.split('-')[-1])
+    return hash(file_key)
 
 
 def execute_and_clear(notebook_file_name, source_dir):

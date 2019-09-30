@@ -96,7 +96,10 @@ content = (('Installation', 'Anaconda, VS Code, and PyCharm'),
            ('Lesson 1', 'VS Code'),
            ('Lesson 2', 'Basic Python Types'),
            ('Lesson 8', 'Importing and Exporting Data'),
-           ('Lesson 3', 'Modules and Functions'))
+           ('Lesson 3', 'Modules and Functions'),
+           ('Lesson 14', 'Importing Data'),
+           ('Lesson 15', 'Saving and Exporting Data')
+           )
 
-for name, sub in content[-1:]:
+for name, sub in content[-2:]:
     generate_cover(name, sub)

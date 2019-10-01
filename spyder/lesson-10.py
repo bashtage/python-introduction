@@ -10,11 +10,19 @@
 # Accessing elements in a DataFrame is a common task. To begin this lesson, clear the
 # workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
 # to determine which elements are selected by a command.
+# 
+# Begin by creating:
+# 
+# * A 5-by-5 DataFrame `x_df` containing `np.arange(25).reshape((5,5))`.
+# * A 5-element Series `y_s` containing `np.arange(5)`.
+# * A 5-by-5 DataFrame `x_named` that is `x_df` with columns 'c0', 'c1',..., 'c4'
+#   and rows 'r0', 'r1', ..., 'r4'.
+# * A 5-element Series `y_named` with index 'r0', 'r1', ..., 'r4'. 
 
 
 
 
-# ## Problem: Picking an Element out of a Matrix
+# ## Problem: Picking an Element out of a DataFrame
 # 
 # Using double index notation, select the (0,2) and the (2,0) element of `x_named`.
 
@@ -65,6 +73,20 @@
 # 
 # **Note**: This is the only important difference with NumPy.  Arbitrary row/column
 # selection using `DataFrame.iloc` is simpler but less flexible.
+
+
+
+
+# ## Problem: Mix names and integer selection
+# 
+# Select the columns c1 and c2 and rows 0, 2 and 4.
+
+
+
+
+# ## Problem: Mix names and integer selection
+# 
+# Select the rows r1 and r2 and columns 0, 2 and 4.
 
 
 

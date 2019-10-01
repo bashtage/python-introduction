@@ -24,9 +24,9 @@ gs10_excel = pd.read_excel('data/GS10.xls', skiprows=10, index_col='observation_
 
 
 
-# ## Problem: Export to Excel, CSV, HDF, and Pickle.
+# ## Problem: Export to Excel sheets
 # 
-# Export both `gs10_excel` and `gs10_csv` to the same Excel file
+# Export both `gs10_excel` and `gs10_csv` to the same Excel file.
 
 
 

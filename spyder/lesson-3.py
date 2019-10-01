@@ -5,7 +5,7 @@
 # 
 # This lesson covers:
 # 
-# * Import modules
+# * Module import
 
 # ## Problem: Importing Modules
 # 

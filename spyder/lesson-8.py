@@ -7,9 +7,10 @@
 # 
 # * Assessing specific elements in Pandas Series and DataFrames 
 # 
-# Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
-# workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
-# to determine which elements are selected by a command.
+# Accessing elements in an array or a DataFrame is a common task. To begin this
+# lesson, clear the workspace set up some vectors and a $5\times5$ array. These
+# vectors and matrix will make it easy to determine which elements are selected
+# by a command.
 
 
 

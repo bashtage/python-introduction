@@ -13,7 +13,8 @@
 import pandas as pd
 
 gs10_csv = pd.read_csv('data/GS10.csv', index_col='DATE', parse_dates=True)
-gs10_excel = pd.read_excel('data/GS10.xls', skiprows=10, index_col='observation_date')
+gs10_excel = pd.read_excel('data/GS10.xls', skiprows=10,
+                           index_col='observation_date')
 
 
 # ## Problem: Export to Excel
@@ -48,7 +49,8 @@ gs10_excel = pd.read_excel('data/GS10.xls', skiprows=10, index_col='observation_
 # ## Problem: Export to Pickle
 # 
 # 1. Export `gs10_excel` to a pickle file.
-# 2. Combine `gs10_excel` and `gs10_csv` into a dictionary and pickle the dictionary.
+# 2. Combine `gs10_excel` and `gs10_csv` into a dictionary and pickle the
+#    dictionary.
 
 
 

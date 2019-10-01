@@ -24,8 +24,8 @@
 # 1. Create a variable called `a_string` containing `This is a string`
 # 2. Create a f-string the prints `The value of scalar_float is 3.1415` using
 #    the variable created in the previous step
-# 3. Create two string, `first` containing `String concatenation` and the second containing
-#    ` is like addition`, and join the two using `+` to produce
+# 3. Create two string, `first` containing `String concatenation` and the
+#    second containing ` is like addition`, and join the two using `+` to produce
 #    `String concatenation is like addition`. 
 
 
@@ -50,8 +50,8 @@
 
 # ## Problem: Create a dictionary
 # 
-# 1. Create a dictionary containing the key-value pairs `"float"` and 3.1415, `"int"` and 31415,
-#    and `"string"` and `"three-point-one-four-one-five"`.
+# 1. Create a dictionary containing the key-value pairs `"float"` and 3.1415,
+#    `"int"` and 31415, and `"string"` and `"three-point-one-four-one-five"`.
 
 
 

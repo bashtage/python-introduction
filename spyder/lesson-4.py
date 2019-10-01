@@ -11,8 +11,8 @@
 # 
 # <a id="stock-data"></a>
 # ## Data
-# September 2018 prices (adjusted closing prices) for the S&P 500 EFT (SPY), Apple (AAPL) and 
-# Google (GOOG) are listed below:
+# September 2018 prices (adjusted closing prices) for the S&P 500 EFT (SPY),
+# Apple (AAPL) and Google (GOOG) are listed below:
 # 
 # 
 # 
@@ -36,8 +36,9 @@
 
 # ## Problem: Input scalar data
 # 
-# Create 3 variables, one labeled `spy`, one labeled `aapl` and one labeled `goog` that contain the
-# September 4 price of the asset. For example, to enter the Google data
+# Create 3 variables, one labeled `spy`, one labeled `aapl` and one labeled
+# `goog` that contain the September 4 price of the asset. For example, to
+# enter the Google data 
 # ```python
 # goog = 1197.00
 # ```
@@ -46,22 +47,24 @@
 
 
 # ## Problem: Print the values
-# Print the values of the three variables you created in the previous step using `print`.
+# Print the values of the three variables you created in the previous step
+# using `print`.
 
 
 
 
 # ## Problem: Print the values with formatting
-# Print the values of the three variables you created in the previous step using format strings following
-# the pattern TICKER: Value. For example, you can print the value of Google using `print(f'GOOG: {goog}')`.
+# Print the values of the three variables you created in the previous step using
+# format strings following the pattern TICKER: Value. For example, you can print
+# the value of Google using `print(f'GOOG: {goog}')`.
 
 
 
 
 # ## Problem: Input a Vector
 # 
-# Create vectors for each of the days in the [Table](#stock-data) named `sep_xx` where `xx` is the 
-# numeric date. For example,  
+# Create vectors for each of the days in the [Table](#stock-data) named `sep_xx`
+# where `xx` is the numeric date. For example,  
 # ```python
 # import pandas as pd
 # 
@@ -73,9 +76,9 @@
 
 # ## Problem: Create a Vector of Dates
 # 
-# Use the pandas function `pd.to_datetime` to convert a list of string dates to a pandas 
-# `DateTimeIndex`, which can be used to set dates in other arrays. For example, the first two dates 
-# are
+# Use the pandas function `pd.to_datetime` to convert a list of string dates to
+# a pandas `DateTimeIndex`, which can be used to set dates in other arrays.
+# For example, the first two dates are
 # ```python
 # dates_2 = pd.to_datetime(['4-9-2018','5-9-2018'])
 # print(dates_2)
@@ -92,8 +95,9 @@
 
 # ## Problem: Input a Vector with Dates
 # 
-# Create vectors for each of the ticker symbols in [Table](#stock-data) named spy, aapl and 
-# goog, respectively. Use the variable `dates` that you created in the previous step. 
+# Create vectors for each of the ticker symbols in [Table](#stock-data) named
+# spy, aapl and goog, respectively. Use the variable `dates` that you created
+# in the previous step. 
 # 
 # For example
 # 
@@ -106,8 +110,9 @@
 
 # ## Problem: Create a DataFrame
 # 
-# Create a DataFrame named `prices` containing [Table](#stock-data). Set the column names equal to 
-# the ticker and set the index to the dates you created previously.
+# Create a DataFrame named `prices` containing [Table](#stock-data). Set the
+# column names equal to the ticker and set the index to the dates you created
+# previously.
 # 
 # ```python
 # prices = pd.DataFrame([[289.81, 228.36, 1197.00], [289.03, 226.87, 1186.48]],
@@ -119,8 +124,9 @@
 
 # ## Problem: Construct a DataFrame from Series
 # 
-# Create a second DataFrame named prices_row from the row vectors previously entered such that 
-# the results are identical to prices. For example, the first two days worth of data are
+# Create a second DataFrame named prices_row from the row vectors previously
+# entered such that the results are identical to prices. For example, the first
+# two days worth of data are
 # 
 # ```python
 # pricess_row = pd.DataFrame([Sep04, Sep05])
@@ -128,13 +134,14 @@
 # pricess_row.index = dates_2
 # ```
 # 
-# Create a third DataFrame named prices_col from the 3 column vectors entered such that the results 
-# are identical to prices
+# Create a third DataFrame named prices_col from the 3 column vectors entered
+# such that the results are identical to prices
 # ```python
 # prices_col = pd.DataFrame([SPY,APPL,GOOG]).T
 # ```
 # 
-# *Note*: The `.T` above transposes the 2-d array since `DataFrame` builds the array by rows.
+# *Note*: The `.T` above transposes the 2-d array since `DataFrame` builds the
+# array by rows.
 # 
 # Verify that all three matrices are identical by printing the difference, e.g., 
 # 

@@ -10,8 +10,8 @@
 # ## Problem: Importing Modules
 # 
 # Python is a general-purpose programming language and is not specialized for
-# numerical or statistical computation. The core modules that enable Python to store
-# and access data efficiently and that provide statistical algorithms are
+# numerical or statistical computation. The core modules that enable Python to
+# store and access data efficiently and that provide statistical algorithms are
 # located in modules.  The most important are:
 # 
 # * NumPy (`numpy`) - provide the basic array block used throughout numerical

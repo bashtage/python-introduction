@@ -10,16 +10,16 @@
 # * Histograms 
 # * Scatter Plots
 
-# Plotting in notebooks requires using a magic command, which starts with `%`, to initialize
-# the plotting backend.
+# Plotting in notebooks requires using a magic command, which starts with
+# `%`, to initialize the plotting backend.
 
 # Setup
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# Begin by loading the data in hf.h5. This data set contains high-frequency price data for IBM and MSFT
-# on a single day stored as two Series. IBM is stored as 'IBM' in the HDF file, and MSFT is stored
-# as 'MSFT.
+# Begin by loading the data in hf.h5. This data set contains high-frequency
+# price data for IBM and MSFT on a single day stored as two Series. IBM is
+# stored as 'IBM' in the HDF file, and MSFT is stored as 'MSFT.
 
 
 
@@ -41,16 +41,16 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 # ## Problem: Subplot
 # 
-# Create a 2 by 1 subplot with the price of IBM in the top subplot and the price of MSFT in the
-# bottom subplot. 
+# Create a 2 by 1 subplot with the price of IBM in the top subplot and the
+# price of MSFT in the bottom subplot. 
 
 
 
 
 # ## Problem: Plot with Dates
 # 
-# Use `matplotlib` to directly plot `ibm` against its `index`. This is a repeat of a previous
-# plot but shows how to use the `plot` command directly. 
+# Use `matplotlib` to directly plot `ibm` against its `index`. This is a
+# repeat of a previous plot but shows how to use the `plot` command directly. 
 
 
 

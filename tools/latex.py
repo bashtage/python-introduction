@@ -19,6 +19,7 @@ REPLACEMENTS = {
     r"\subsection{Exercise": r"\subsection*{Exercise",
     "£": r"\pounds{}",
     "\\prompt{In}{incolor}{ }{\\hspace{4pt}}\n": "",
+    r"\prompt{In}{incolor}{ }{\boxspacing}": "",
 }
 
 

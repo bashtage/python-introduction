@@ -10,6 +10,14 @@
 # Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
 # workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
 # to determine which elements are selected by a command.
+# 
+# 
+# Using `arange` and `reshape` to create 3 arrays:
+# 
+# * 5-by-5 array `x` containing the values 0,1,...,24 
+# * 5-element, 1-dimensional array `y` containing 0,1,...,4
+# * 5-by-1 array `z` containing 0,1,...,4
+# 
 
 
 
@@ -20,7 +28,7 @@
 # and so on until the last element has position `n-1` in an array that contains `n` elements in
 # total.
 # 
-# ## Problem: Picking an Element out of a Matrix
+# ## Problem: Picking elements out of arrays
 # 1. Select the third element of all three, x, y, and z. 
 # 2. Select the 11$^{\text{th}}$ element of x.
 # 3. Using double index notation, select the (0,2) and the (2,0) element of x.
@@ -88,14 +96,24 @@
 
 # ## Problem: Convert a DataFrame to a NumPy array
 # 
-# Use  `.to_numpy` to convert a DataFrame toa NumPy array.
+# Use  `.to_numpy` to convert a DataFrame to a NumPy array.
+
+# Setup: Create a DataFrame
+import pandas as pd
+import numpy as np
+
+names = ['a', 'b', 'c', 'd', 'e']
+x = np.arange(25).reshape((5,5))
+x_df = pd.DataFrame(x, index=names, columns=names)
+print(x_df)
+
 
 
 
 
 # ## Problem: Use `np.asarray` to convert to an array
 # 
-# Use  `.to_numpy` to convert a DataFrame toa NumPy array.
+# Use  `np.asarray` to convert a DataFrame toa NumPy array.
 
 
 

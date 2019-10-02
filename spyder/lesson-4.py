@@ -41,7 +41,7 @@
 # ```python
 # import pandas as pd
 # 
-# sep_04 = pd.Series([289.81,228.36,1197.00], index=['SPY','AAPL','GOOG']);
+# sep_04 = pd.Series([289.81,228.36,1197.00], index=["SPY","AAPL","GOOG"]);
 # ```
 # 
 # Using the ticker names as the `index` of each series
@@ -58,13 +58,13 @@
 # ```python
 # import pandas as pd
 # 
-# dates_2 = pd.to_datetime(['4-9-2018','5-9-2018'])
+# dates_2 = pd.to_datetime(["4-9-2018","5-9-2018"])
 # print(dates_2)
 # ```
 # which produces
 # 
 # ```
-# DatetimeIndex(['2018-04-09', '2018-05-09'], dtype='datetime64[ns]', freq=None)
+# DatetimeIndex(["2018-04-09", "2018-05-09"], dtype="datetime64[ns]", freq=None)
 # ```
 # 
 # Create a vector containing all of the dates in the table.
@@ -84,7 +84,7 @@
 # goog = pd.Series([1197.00,1186.48,1171.44,...], index=dates)
 # ```
 # 
-# Set the `name` of each series as the series' ticker.
+# Set the `name` of each series as the series" ticker.
 
 
 
@@ -96,7 +96,7 @@
 # 
 # ```python
 # prices = pd.DataFrame([[289.81, 228.36, 1197.00], [289.03, 226.87, 1186.48]],
-#                       columns = ['SPY', 'AAPL', 'GOOG'],index=dates_2)
+#                       columns = ["SPY", "AAPL", "GOOG"],index=dates_2)
 # ```
 
 
@@ -113,12 +113,12 @@
 # Setup: Save prices, goog and sep_04 into a single file for use in other lessons
 
 # Only run if prices has been defined
-if 'prices' in globals():
+if "prices" in globals():
     dates = pd.Series(dates)
-    variables = ['sep_04', 'sep_05', 'sep_06', 'sep_07', 'sep_10', 'sep_11',
-                 'sep_12', 'sep_13', 'sep_14', 'sep_17', 'sep_18', 'sep_19',
-                 'spy', 'goog', 'aapl', 'prices', 'dates']
-    with pd.HDFStore('data/dataframes.h5', mode='w') as h5:
+    variables = ["sep_04", "sep_05", "sep_06", "sep_07", "sep_10", "sep_11",
+                 "sep_12", "sep_13", "sep_14", "sep_17", "sep_18", "sep_19",
+                 "spy", "goog", "aapl", "prices", "dates"]
+    with pd.HDFStore("data/dataframes.h5", mode="w") as h5:
         for var in variables:
             h5.put(var, globals()[var])
 

@@ -26,7 +26,7 @@
 # 
 # ### OSX and Linux
 # Open the terminal (instructions depend on your distribution). If you allowed
-# conda to initialize, then you should be ready to call Anaconda's python and
+# conda to initialize, then you should be ready to call Anaconda"s python and
 # supporting functions.  If not, you should 
 # 
 # ```
@@ -65,7 +65,7 @@
 # x = exp(1)
 # y = log(x)
 # 
-# print(f'exp(1)={x}, log(exp(1))={y}')
+# print(f"exp(1)={x}, log(exp(1))={y}")
 # ```
 # 
 # 2. Run the code in an IPython session using `%run -i lesson-2.py`.  Note: you
@@ -94,17 +94,17 @@
 #    code cells and `#%% [markdown]` for cells that contain markdown code.
 #    Note that markdown text **must** be either:
 #    
-#    * Surrounded by triple quotes, e.g. `"""markdown text"""` or `'''markdown text'''`; e.g., 
+#    * Surrounded by triple quotes, e.g. `"""markdown text"""` or `"""markdown text"""`; e.g., 
 #     ```python
 #     """
 #     # Cell Heading
 #     
-#     Likeness darkness. That give brought creeping. Doesn't may. Fruit kind 
+#     Likeness darkness. That give brought creeping. Doesn"t may. Fruit kind 
 #     midst seed. Creature, let under created void god to. Them day was Was
-#     creature set it from. Fourth. Created don't man. Man. Light fourth
-#     light given the he image first multiply after deep she'd great. Morning 
+#     creature set it from. Fourth. Created don"t man. Man. Light fourth
+#     light given the he image first multiply after deep she"d great. Morning 
 #     likeness very have give also fowl third land beast from moving thing
-#     creepeth herb creeping won't fifth. Us bring was our beast wherein our
+#     creepeth herb creeping won"t fifth. Us bring was our beast wherein our
 #     void and green he fruit kind upon a given, saying fruit, moveth face 
 #     forth. His you it. Good beginning hath.
 #     """
@@ -114,12 +114,12 @@
 #     ```python
 #     # # Cell Heading
 #     #
-#     # Likeness darkness. That give brought creeping. Doesn't may. Fruit kind 
+#     # Likeness darkness. That give brought creeping. Doesn"t may. Fruit kind 
 #     # midst seed. Creature, let under created void god to. Them day was Was
-#     # creature set it from. Fourth. Created don't man. Man. Light fourth
-#     # light given the he image first multiply after deep she'd great. Morning 
+#     # creature set it from. Fourth. Created don"t man. Man. Light fourth
+#     # light given the he image first multiply after deep she"d great. Morning 
 #     # likeness very have give also fowl third land beast from moving thing
-#     # creepeth herb creeping won't fifth. Us bring was our beast wherein our
+#     # creepeth herb creeping won"t fifth. Us bring was our beast wherein our
 #     # void and green he fruit kind upon a given, saying fruit, moveth face 
 #     # forth. His you it. Good beginning hath.
 #     ```
@@ -192,10 +192,10 @@
 # 2. Enter
 #    ```python
 #    #%%
-#    print('This is the first cell')
+#    print("This is the first cell")
 #    
 #    #%%
-#    print('This is not executed when the first cell is run') 
+#    print("This is not executed when the first cell is run") 
 #    ```
 # 3. Enable Scientific Mode in the View menu.
 # 4. Run the first cell by placing you mouse in the cell and pressing CTRL+Enter.

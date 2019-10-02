@@ -16,9 +16,9 @@
 # 
 # * A 5-by-5 DataFrame `x_df` containing `np.arange(25).reshape((5,5))`.
 # * A 5-element Series `y_s` containing `np.arange(5)`.
-# * A 5-by-5 DataFrame `x_named` that is `x_df` with columns 'c0', 'c1', ...,
-#   'c4' and rows 'r0', 'r1', ..., 'r4'.
-# * A 5-element Series `y_named` with index 'r0', 'r1', ..., 'r4'. 
+# * A 5-by-5 DataFrame `x_named` that is `x_df` with columns "c0", "c1", ...,
+#   "c4" and rows "r0", "r1", ..., "r4".
+# * A 5-element Series `y_named` with index "r0", "r1", ..., "r4". 
 
 
 

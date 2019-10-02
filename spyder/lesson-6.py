@@ -14,12 +14,12 @@
 # Setup: Load the momentum data
 import pandas as pd
 
-momentum = pd.read_csv('data/momentum.csv')
+momentum = pd.read_csv("data/momentum.csv")
 
 print(momentum.head())
 
-mom_01 = momentum['mom_01']
-mom_10 = momentum['mom_10']
+mom_01 = momentum["mom_01"]
+mom_10 = momentum["mom_10"]
 
 
 # This data set contains 2 years of data on the 10 momentum portfolios from
@@ -29,22 +29,9 @@ mom_10 = momentum['mom_10']
 # ## Problem: Calling Functions
 # Functions were used in the previous lesson. Get used to calling functions
 # by computing the mean, std, kurtosis, max, and min of the 10 momentum
-# portfolios. Also, explore the help available for calling functions `?`
-# operator. For example,
+# portfolios. 
 # 
-# ```python
-# momentum.std?
-# ```  
-# 
-# opens a help window that shows the inputs and output, while
-# 
-# ```python
-# help(momentum.std)
-# ```
-# 
-# shows the help.
-# 
-# Use the functions `mean`, `std`, `skew` and `kurt` to print the
+# Use the DataFrame functions `mean`, `std`, `skew` and `kurt` to print the
 # values for `mom_01`.
 
 
@@ -87,27 +74,57 @@ mom_10 = momentum['mom_10']
 # 
 # Many functions have optional arguments. You can see these in a docstring since
 # optional arguments take the form `variable=default`. For example, see
-# the help for `np.mean`
-
-
-
-
-# which is 
+# the help for `scipy.special.comb`, which has the function signature
 # 
-# ```python
-# pd.DataFrame.std(self, axis=None, skipna=None, level=None, ddof=1, numeric_only=None)
+# ```
+# comb(N, k, exact=False, repetition=False)
 # ```
 # 
-# `std`  computes the standard deviation.
-# 
-# This tells us that only `self` (which is the DataFrame) is required and
-# that the other 5 inputs can be omitted if you are happy with the defaults.
+# This tells us that `N` and `k` are required and
+# that the other 2 inputs can be omitted if you are happy with the defaults.
 # However, if we want to change some of the optional inputs, then we can
 # directly use the inputs name in the function call.
 # 
-# By default `std` divides by `n-1`.  The `1` can be set using `ddof`.
+# Compute the number of distinct combinations of 5 objects from a set of 10.
+
+
+
+
+# Compute the total number of combinations allowing for repetition 
+# using the `repetition=True` keyword argument.
+
+
+
+
+# Compute the number of combinations using the exact representation using 
+# only positional arguments for all 3 inputs.  Repeat using the keyword
+# argument for `exact`.
+
+
+
+
+
+
+
+# ## Problem: Function Help
 # 
-# Compute `std` using `ddof=0` on the momentum data.
+# Explore the help available for calling functions `?` operator. For example,
+# 
+# ```python
+# import numpy as np
+# 
+# np.mean?
+# ```  
+# 
+# opens a help window that shows the inputs and output, while
+# 
+# ```python
+# import numpy as np
+# 
+# help(np.mean)
+# ```
+# 
+# shows the help in the console.
 
 
 

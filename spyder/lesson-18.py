@@ -19,7 +19,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 # Begin by loading the data in hf.h5. This data set contains high-frequency
 # price data for IBM and MSFT on a single day stored as two Series. IBM is
-# stored as 'IBM' in the HDF file, and MSFT is stored as 'MSFT.
+# stored as "IBM" in the HDF file, and MSFT is stored as "MSFT.
 
 
 

@@ -34,9 +34,9 @@ for nb_file in nb_files:
     for cell in nb["cells"]:
         if isinstance(cell, MutableMapping):
             if (
-                    "cell_type" not in cell
-                    or cell["cell_type"] != "code"
-                    or "# Setup" in cell["source"]
+                "cell_type" not in cell
+                or cell["cell_type"] != "code"
+                or "# Setup" in cell["source"]
             ):
                 continue
             cell["source"] = ""
@@ -48,13 +48,14 @@ for nb_file in nb_files:
     nbformat.write(nb, out, nbformat.NO_CONVERT)
 
     # Write to spyder
-    exporter = nbconvert.PythonExporter({'include_input_prompt': False,
-                                         'include_output_prompt': False,})
+    exporter = nbconvert.PythonExporter(
+        {"include_input_prompt": False, "include_output_prompt": False}
+    )
     exporter.exclude_input_prompt = True
     exporter.exclude_output_prompt = True
     py = exporter.from_notebook_node(nb)
-    py_name = os.path.split(nb_file)[-1].replace('.ipynb','.py')
-    with open(os.path.join(spyder_dir, py_name), 'w') as python_file:
+    py_name = os.path.split(nb_file)[-1].replace(".ipynb", ".py")
+    with open(os.path.join(spyder_dir, py_name), "w") as python_file:
         python_file.write(py[0])
 
     # Prepare for website
@@ -74,8 +75,7 @@ for nb_file in nb_files:
     for cell in nb["cells"]:
         if isinstance(cell, MutableMapping) and cell["cell_type"] == "markdown":
             source = cell["source"]
-            source = source.replace("(images/",
-                                    "(/images/teaching/python/course/")
+            source = source.replace("(images/", "(/images/teaching/python/course/")
             cell["source"] = source
     out = os.path.abspath(os.path.join(website_dir, base))
     print(f"Writing website version to {out}")

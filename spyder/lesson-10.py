@@ -22,16 +22,21 @@
 
 
 
-# 
+
+
+
+
+
+
 # ## Zero-based indexing
 # Python indexing is 0 based so that the first element has position `0`, the second has position `1`
 # and so on until the last element has position `n-1` in an array that contains `n` elements in
 # total.
 # 
 # ## Problem: Picking elements out of arrays
-# 1. Select the third element of all three, x, y, and z. 
-# 2. Select the 11$^{\text{th}}$ element of x.
-# 3. Using double index notation, select the (0,2) and the (2,0) element of x.
+# 1. Select the number 2 in all three, `x`, `y`, and `z`.
+# 2. Select the number 11 in `x` 
+# 3. Using double index notation, select the (0,2) and the (2,0) element of `x`.
 # 
 # **Issues to ponder**
 # 
@@ -50,19 +55,42 @@
 
 
 
-# ## Problem: Selecting Entire Rows
-# 1. Select the 2nd row of x using the colon (:) operator.
-# 2. Select the 2nd element of z and y using the same syntax.
+# ## Problem: Selecting Single Rows
+# 1. Select the 2nd row of `x` and `z`
+# 2. Select the 2nd element `y`.
 # 
 # **Issues to ponder**
 # 
-# * What happens to the output in each case? 
+# * What happens to the dimension in each case? **Hint** Use `np.ndim` on the
+# output of each. 
 # 
 
 
 
 
-# ## Problem: Selecting Entire Columns
+
+
+
+
+
+
+# ## Problem: Preserving Dimensions 
+# 
+# Repeat the previous selection using:
+# 
+# * A slice
+# * A list
+
+
+
+
+
+
+
+
+
+
+# ## Problem: Selecting a single Column
 # Select the 2nd column of x using the colon (:) operator. 
 
 
@@ -72,8 +100,8 @@
 
 
 # ## Problem: Selecting Specific Rows or Columns
-# 1. Select the 2nd and 3rd columns of x using the colon (:) operator.
-# 2. Select the 2nd and 4th rows of x. 
+# 1. Select the 2nd and 3rd columns of x using a slice.
+# 2. Select the 2nd and 4th rows of x using both a slice and a list. 
 # 3. Combine these be combined to select columns 2 and 3 and rows 2 and 4. 
 
 
@@ -85,7 +113,7 @@
 
 
 
-# ## Problem: Use `ix_` to select arbitrary rows and columns
+# ## Problem: Use `ix_` to select rows and columns using list
 # Use `ix_` to select the 2nd and 4th rows and 1st and 3rd columns of `x`.
 
 
@@ -102,7 +130,7 @@
 import pandas as pd
 import numpy as np
 
-names = ['a', 'b', 'c', 'd', 'e']
+names = ["a", "b", "c", "d", "e"]
 x = np.arange(25).reshape((5,5))
 x_df = pd.DataFrame(x, index=names, columns=names)
 print(x_df)

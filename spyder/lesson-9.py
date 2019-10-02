@@ -58,7 +58,7 @@
 
 import pandas as pd
 
-momentum = pd.read_csv('data/momentum.csv', index_col='date', parse_dates=True)
+momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
 momentum.head()
 
 

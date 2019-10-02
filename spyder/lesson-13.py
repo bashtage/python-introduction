@@ -14,13 +14,13 @@
 
 import pandas as pd
 
-momentum = pd.read_csv('data/momentum.csv', index_col='date', parse_dates=True)
+momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
 
 print(momentum.head())
 
-mom_01 = momentum['mom_01']
-mom_10 = momentum['mom_10']
-mom_05 = momentum['mom_05']
+mom_01 = momentum["mom_01"]
+mom_10 = momentum["mom_10"]
+mom_05 = momentum["mom_05"]
 
 
 # ## Problem: Basic Logical Statements

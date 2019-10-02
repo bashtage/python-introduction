@@ -1,32 +1,37 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Constructing DataFrames from Series
+# 
+# This lesson introduced method to construct a DataFrame from multiple
+# Series.
+
 # Setup: Load data created in an earlier lesson
 
 import pandas as pd
 
-hdf_file = 'data/dataframes.h5'
+hdf_file = "data/dataframes.h5"
 
-sep_04 = pd.read_hdf(hdf_file, 'sep_04')
-sep_05 = pd.read_hdf(hdf_file, 'sep_05')
-sep_06 = pd.read_hdf(hdf_file, 'sep_06')
-sep_07 = pd.read_hdf(hdf_file, 'sep_07')
-sep_10 = pd.read_hdf(hdf_file, 'sep_10')
-sep_11 = pd.read_hdf(hdf_file, 'sep_11')
-sep_12 = pd.read_hdf(hdf_file, 'sep_12')
-sep_13 = pd.read_hdf(hdf_file, 'sep_13')
-sep_14 = pd.read_hdf(hdf_file, 'sep_14')
-sep_17 = pd.read_hdf(hdf_file, 'sep_17')
-sep_18 = pd.read_hdf(hdf_file, 'sep_18')
-sep_19 = pd.read_hdf(hdf_file, 'sep_19')
+sep_04 = pd.read_hdf(hdf_file, "sep_04")
+sep_05 = pd.read_hdf(hdf_file, "sep_05")
+sep_06 = pd.read_hdf(hdf_file, "sep_06")
+sep_07 = pd.read_hdf(hdf_file, "sep_07")
+sep_10 = pd.read_hdf(hdf_file, "sep_10")
+sep_11 = pd.read_hdf(hdf_file, "sep_11")
+sep_12 = pd.read_hdf(hdf_file, "sep_12")
+sep_13 = pd.read_hdf(hdf_file, "sep_13")
+sep_14 = pd.read_hdf(hdf_file, "sep_14")
+sep_17 = pd.read_hdf(hdf_file, "sep_17")
+sep_18 = pd.read_hdf(hdf_file, "sep_18")
+sep_19 = pd.read_hdf(hdf_file, "sep_19")
 
-spy = pd.read_hdf(hdf_file, 'spy')
-aapl = pd.read_hdf(hdf_file, 'aapl')
-goog = pd.read_hdf(hdf_file, 'goog')
+spy = pd.read_hdf(hdf_file, "spy")
+aapl = pd.read_hdf(hdf_file, "aapl")
+goog = pd.read_hdf(hdf_file, "goog")
 
-dates = pd.to_datetime(pd.read_hdf(hdf_file, 'dates'))
+dates = pd.to_datetime(pd.read_hdf(hdf_file, "dates"))
 
-prices = pd.read_hdf(hdf_file, 'prices')
+prices = pd.read_hdf(hdf_file, "prices")
 
 
 # ## Problem: Construct a DataFrame from rows

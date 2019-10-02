@@ -5,42 +5,17 @@
 # 
 # This lesson introduces:
 # 
+# * Computing returns (percentage change)
 # * Basic mathematical operations on DataFrames
 # * Common DataFrame methods (functions)
-# * Computing percentage change (returns)
 # 
-# ## Problem: Addition and Subtraction
-# 
-# Add the prices of the three series together using `.sum(axis=1)`. Add the prices in `sep_04` to 
-# the prices of `goog`. What happens? 
+# This first cell load data for use in this lesson.
 
 # Setup: Load prices
 import pandas as pd
-prices = pd.read_hdf('data/data.h5', 'prices')
-sep_04 = pd.read_hdf('data/data.h5', 'sep_04')
-goog = pd.read_hdf('data/data.h5', 'goog')
-
-
-
-
-
-
-
-
-# ## Problem: Multiplication
-# 
-# Multiply the price of Google by 2. 
-
-
-
-
-# ## Problem: Constructing portfolio returns
-# Set up a vector or portfolio weights $w=\left(\frac{1}{3},\,\frac{1}{3}\,,\frac{1}{3}\right)$ and 
-# compute the price of a portfolio with $\frac{1}{3}$ share of each.
-# 
-# *Note*: Division uses the slash operator (/). 
-
-
+prices = pd.read_hdf("data/dataframes.h5", "prices")
+sep_04 = pd.read_hdf("data/dataframes.h5", "sep_04")
+goog = pd.read_hdf("data/dataframes.h5", "goog")
 
 
 # ## Problem: Compute Returns
@@ -56,9 +31,8 @@ goog = pd.read_hdf('data/data.h5', 'goog')
 # Additionally, extract returns for each name using 
 # 
 # ```python
-# spy_returns = returns['SPY']
+# spy_returns = returns["SPY"]
 # ```
-# 
 
 
 
@@ -79,6 +53,71 @@ goog = pd.read_hdf('data/data.h5', 'goog')
 # 
 # first difference of the natural log of the prices. Mathematically this is 
 # $r_{t}=\ln\left(P_{t}\right)-\ln\left(P_{t-1}\right)=\ln\left(\frac{P_{t}}{P_{t-1}}\right)\approx\frac{P_{t}}{P_{t-1}}-1$.
+
+
+
+
+# ## Problem: Basic Mathematical Operations
+# 
+# |  Operation            | Symbol | Precedence |
+# |:----------------------|:------:|:----------:|
+# | Parentheses           | ()     | 4          |
+# | Exponentiation        | **     | 3          |
+# | Multiplication        | *      | 2          | 
+# | Division              | /      | 2          |
+# | Floor division        | //     | 2          |
+# | Modulus               | %      | 2          | 
+# | Matrix multiplication | @      | 2          |
+# | Addition              | +      | 1          |
+# | Subtraction           | -      | 1          |
+# 
+# **Note**: Higher precedence operators are evaluated first, and ties are
+# evaluated left to right. 
+# 
+# 1. Add 1 to all returns
+# 2. Square the returns
+# 3. Multiply the price of Google by 2. 
+# 4. Extract the fractional return using floor division and modulus
+# 5. Add the returns on SPY to those of AAPL 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ## Problem: Non-conformable math
+# 
+# Add the prices in `sep_04` to the prices of `goog`. What happens? 
+
+
+
+
+# ## Problem: Constructing portfolio returns
+# Set up a 3-element array of portfolio weights 
+# 
+# $$w=\left(\frac{1}{3},\,\frac{1}{3}\,,\frac{1}{3}\right)$$
+# 
+# and compute the return of a portfolio with weight $\frac{1}{3}$ in each security.
+# 
+
+
+
+
+# Repeat the previous calcuation using multiplication (`*`) and `.sum()`.
+# **Note**: You need to use the `axis` keyword for the sum.
 
 
 
@@ -145,16 +184,6 @@ goog = pd.read_hdf('data/data.h5', 'goog')
 
 
 
-
-
-
-
-# ## Problem: Element-by-Element Multiplication
-# 
-# Mathematical commands in Python are element-by-element, except the `@` operator which is matrix 
-# multiplication and uses the rules of linear algebra. 
-# 
-# Multiply the returns of Google and SPY together using the dot operator. 
 
 
 

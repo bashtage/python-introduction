@@ -84,7 +84,7 @@
 # Setup: Load the momentum data
 
 import pandas as pd
-momentum = pd.read_csv('data/momentum.csv', index_col='date', parse_dates=True)
+momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
 momentum = momentum / 100  # Convert to numeric values from percentages
 # Convert to a plain numpy array
 momentum = momentum.to_numpy()

@@ -26,8 +26,8 @@ REPLACEMENTS = {
 def key(f):
     file_key = os.path.splitext(os.path.split(f)[-1])[0]
     print(file_key)
-    if '-' in file_key:
-        return int(file_key.split('-')[-1])
+    if "-" in file_key:
+        return int(file_key.split("-")[-1])
     return hash(file_key)
 
 

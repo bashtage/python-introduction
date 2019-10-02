@@ -1,93 +1,73 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Program Flow
+# # Numeric Indexing of DataFrames
 # 
 # This lesson covers:
 # 
-# * for loops 
-# * Nested loops 
+# * Accessing specific elements in DataFrames using numeric indices
 # 
+# Accessing elements in a DataFrame is a common task. To begin this lesson,
+# clear the workspace set up some vectors and a $5\times5$ array. These vectors
+# and matrix will make it easy to determine which elements are selected by a
+# command.
 # 
-
-# ## Problem: Basic For Loops
+# Begin by creating:
 # 
-# Construct a for loop to sum the numbers between 1 and N for any N. A for loop
-# that does nothing can be written:
+# * A 5-by-5 DataFrame `x_df` containing `np.arange(25).reshape((5,5))`.
+# * A 5-element Series `y_s` containing `np.arange(5)`.
+# * A 5-by-5 DataFrame `x_named` that is `x_df` with columns 'c0', 'c1', ...,
+#   'c4' and rows 'r0', 'r1', ..., 'r4'.
+# * A 5-element Series `y_named` with index 'r0', 'r1', ..., 'r4'. 
+
+
+
+
+# ## Problem: Picking an Element out of a DataFrame
 # 
-# ```python
-# n = 10
-# for i in range(n):
-#     pass
-# ```
+# Using double index notation, select the (0,2) and the (2,0) element of
+# `x_named`.
+
+
+
+
+# ## Problem: Select Elements from Series
 # 
+# Select the 2nd element of `y_named`.
 
 
 
 
-# ## Problem: Compute a compound return
-# The compound return on a bond that pays interest annually at rate r is given
-# by $cr_{t}=\prod_{i=1}^{T}(1+r)=(1+r)^{T}$. Use a for loop compute the total
-# return for £100 invested today for $1,2,\ldots,10$ years. Store this variable
-# in a 10 by 1 vector cr. 
+# ## Problem: Selecting Rows as Series
 # 
-
-
-
-
-# ## Problem: Simulate a random walk
-# (Pseudo) Normal random variables can be simulated using the command
-# `np.random.standard_normal(shape)` where `shape` is a tuple (or a scalar)
-# containing the dimensions of the desired random numbers. Simulate 100 normals
-# in a 100 by 1 vector and name the result `e`. Initialize a vector `p`
-# containing zeros using the function zeros. Add the 1st element of `e` to the
-# first element of `p`. Use a for loop to simulate a process
-# $y_{i}=y_{i-1}+e_{i}$. When finished plot the results using
-# 
-# ```python
-# %matplotlib inline
-# 
-# import matplotlib.pyplot as plt
-# plt.plot(y)
-# ```
+# Select the 2nd row of `x_named` using the colon (:) operator.
 # 
 
 
 
 
-
-
-
-# ## Problem: Nested Loops
-# Begin by loading momentum data used in an earlier lesson. Begin by adding 1 to
-# the returns to produce gross returns. The gross return is the total value in
-# the current period of £1 invested in the previous period. A net return
-# subtracts the original investment to produce the net gain or loss. Use two
-# loops to loop both across time and across the 10 portfolios to compute the 
-# total compound return. 
+# ## Problem: Selecting Rows as DataFrames
 # 
-# For example, if only interested in a single series,
+# 1. Select the 2nd row of `x_named` using a slice so that the selection
+#    remains a DataFrame.
+# 2. Repeat using a list of indices to retain the DataFrame. 
 # 
-# ```python
-# n = mom_01.shape[0]
-# cr=np.zeros(n) 
-# gr = 1 + mom_01 
-# cr[0] = 1+mom_01[0] 
-# for t in range(1, n):
-#     cr[t]=cr[t-1]*gr[t] 
-# ```
-# computes the cumulative return.
+
+
+
+
+
+
+
+# ## Problem: Selecting Entire Columns as Series
+# Select the 2nd column of `x_named` using the colon (:) operator. 
+
+
+
+
+# ## Problem: Selecting Single Columns as DataFrames
+# Select the 2nd column of `x_named`  so that the selection remains a DataFrame. 
 # 
-# When finished, plot the cumulative returns using `plt.plot(cr)`. After
-# finishing this problem, have a look at `np.cumsum?` and `np.cumprod?`. 
-
-# Setup: Load the momentum data
-
-import pandas as pd
-momentum = pd.read_csv('data/momentum.csv', index_col='date', parse_dates=True)
-momentum = momentum / 100  # Convert to numeric values from percentages
-# Convert to a plain numpy array
-momentum = momentum.to_numpy()
 
 
 
@@ -95,14 +75,45 @@ momentum = momentum.to_numpy()
 
 
 
+# ## Problem: Selecting Specific Columns
+# Select the 2nd and 3rd columns of `x_named` using a slice.
 
-# ## Exercises
+
+
+
+# ## Problem: Select Specific Rows
 # 
-# ### Exercise
-# 1. Simulate a 1000 by 10 matrix consisting of 10 standard random walks using
-#    both nested loops and `np.cumsum`. 
-# 2. Plot the results. 
+# Select the 2nd and 4th rows of `x_named` using a slice.  Repeat the 
+# selection using a list of integers.
+
+
+
+
+
+
+
+# ## Problem: Select arbitrary rows and columns
 # 
-# **Question to think about**
+# Combine the previous selections to select columns 2 and 3 and rows 2 and 4
+# of `x_named`. 
 # 
-# If you rerun the code in this Exercise, do the results change? Why? 
+# **Note**: This is the only important difference with NumPy.  Arbitrary
+# row/column selection using `DataFrame.iloc` is simpler but less flexible.
+# 
+# print(x_named.iloc[1:4:2, 1:3])
+# print(x_named.iloc[[1, 3],[1, 2]])
+# print(x_named.iloc[[1,3], 1:3])
+
+# ## Problem: Mixed selection
+# 
+# Select the columns c1 and c2 and rows 0, 2 and 4.
+
+
+
+
+# ## Problem: Mixed selection 2
+# 
+# Select the rows r1 and r2 and columns 0, 2 and 4.
+
+
+

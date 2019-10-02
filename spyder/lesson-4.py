@@ -5,9 +5,7 @@
 # 
 # This lesson covers:
 # 
-# * Manually inputting data in scalars, vectors, and matrices 
-# * Basic mathematical operations 
-# * Saving and loading data 
+# * Constructing pandas Series and DataFrames 
 # 
 # <a id="stock-data"></a>
 # ## Data
@@ -34,34 +32,9 @@
 # **Prices in September 2018**
 #  
 
-# ## Problem: Input scalar data
 # 
-# Create 3 variables, one labeled `spy`, one labeled `aapl` and one labeled
-# `goog` that contain the September 4 price of the asset. For example, to
-# enter the Google data 
-# ```python
-# goog = 1197.00
-# ```
 
-
-
-
-# ## Problem: Print the values
-# Print the values of the three variables you created in the previous step
-# using `print`.
-
-
-
-
-# ## Problem: Print the values with formatting
-# Print the values of the three variables you created in the previous step using
-# format strings following the pattern TICKER: Value. For example, you can print
-# the value of Google using `print(f'GOOG: {goog}')`.
-
-
-
-
-# ## Problem: Input a Vector
+# ## Problem: Input a pandas Series
 # 
 # Create vectors for each of the days in the [Table](#stock-data) named `sep_xx`
 # where `xx` is the numeric date. For example,  
@@ -70,6 +43,8 @@
 # 
 # sep_04 = pd.Series([289.81,228.36,1197.00], index=['SPY','AAPL','GOOG']);
 # ```
+# 
+# Using the ticker names as the `index` of each series
 
 
 
@@ -78,13 +53,17 @@
 # 
 # Use the pandas function `pd.to_datetime` to convert a list of string dates to
 # a pandas `DateTimeIndex`, which can be used to set dates in other arrays.
+# 
 # For example, the first two dates are
 # ```python
+# import pandas as pd
+# 
 # dates_2 = pd.to_datetime(['4-9-2018','5-9-2018'])
 # print(dates_2)
 # ```
 # which produces
-# ```python
+# 
+# ```
 # DatetimeIndex(['2018-04-09', '2018-05-09'], dtype='datetime64[ns]', freq=None)
 # ```
 # 
@@ -93,17 +72,19 @@
 
 
 
-# ## Problem: Input a Vector with Dates
+# ## Problem: Input a Series with Dates
 # 
 # Create vectors for each of the ticker symbols in [Table](#stock-data) named
 # spy, aapl and goog, respectively. Use the variable `dates` that you created
-# in the previous step. 
+# in the previous step as the index. 
 # 
 # For example
 # 
 # ```python
 # goog = pd.Series([1197.00,1186.48,1171.44,...], index=dates)
 # ```
+# 
+# Set the `name` of each series as the series' ticker.
 
 
 
@@ -111,8 +92,7 @@
 # ## Problem: Create a DataFrame
 # 
 # Create a DataFrame named `prices` containing [Table](#stock-data). Set the
-# column names equal to the ticker and set the index to the dates you created
-# previously.
+# column names equal to the ticker and set the index to `dates`.
 # 
 # ```python
 # prices = pd.DataFrame([[289.81, 228.36, 1197.00], [289.03, 226.87, 1186.48]],
@@ -122,49 +102,23 @@
 
 
 
-# ## Problem: Construct a DataFrame from Series
-# 
-# Create a second DataFrame named prices_row from the row vectors previously
-# entered such that the results are identical to prices. For example, the first
-# two days worth of data are
-# 
-# ```python
-# pricess_row = pd.DataFrame([Sep04, Sep05])
-# # Set the index after using concat to join
-# pricess_row.index = dates_2
-# ```
-# 
-# Create a third DataFrame named prices_col from the 3 column vectors entered
-# such that the results are identical to prices
-# ```python
-# prices_col = pd.DataFrame([SPY,APPL,GOOG]).T
-# ```
-# 
-# *Note*: The `.T` above transposes the 2-d array since `DataFrame` builds the
-# array by rows.
-# 
-# Verify that all three matrices are identical by printing the difference, e.g., 
-# 
-# ```python
-# print(pricescol - prices)
-# ```
-# 
-# and that all elements are 0. 
-
-
-
-
 # Save the price data
 # 
 # This block saves prices to a HDF file for use in later lessons. The
 # function used to save the data is covered in a later lesson.
+# 
+# This function uses some sophisticated ggeatures of Python. Do not
+# worry if it is unclear at this point.
 
 # Setup: Save prices, goog and sep_04 into a single file for use in other lessons
 
 # Only run if prices has been defined
 if 'prices' in globals():
-    with pd.HDFStore('data/data.h5', mode='w') as h5:
-        h5.put('prices', prices)
-        h5.put('goog', goog)
-        h5.put('sep_04', sep_04)
+    dates = pd.Series(dates)
+    variables = ['sep_04', 'sep_05', 'sep_06', 'sep_07', 'sep_10', 'sep_11',
+                 'sep_12', 'sep_13', 'sep_14', 'sep_17', 'sep_18', 'sep_19',
+                 'spy', 'goog', 'aapl', 'prices', 'dates']
+    with pd.HDFStore('data/dataframes.h5', mode='w') as h5:
+        for var in variables:
+            h5.put(var, globals()[var])
 

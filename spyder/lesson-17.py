@@ -1,48 +1,66 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Graphics: Other Plots
+# # Saving and Exporting Data
 # 
 # This lesson covers:
 # 
-# * Histograms 
-# * Scatter Plots
-
-# Plotting in notebooks requires using a magic command, which starts with `%`,
-# to initialize the plotting backend.
-
-# Setup
-get_ipython().run_line_magic('matplotlib', 'inline')
-
-
-# Begin by loading the data in hf.h5. This data set contains high-frequency
-# price data for IBM and MSFT on a single day stored as two Series. IBM is
-# stored as 'IBM' in the HDF file, and MSFT is stored as 'MSFT.
-
-
-
-
-# ## Problem: Histogram
+# * Saving and reloading data
 # 
-# Produce a histogram of MSFT 1-minute returns (Hint: you have to produce
-# the 1-minute Microsoft returns first using `resample` and `pct_change`).
+# This first block loads the data that was used in the previous lesson.
+
+# Setup: Load the data to use later
+import pandas as pd
+
+gs10_csv = pd.read_csv('data/GS10.csv', index_col='DATE', parse_dates=True)
+gs10_excel = pd.read_excel('data/GS10.xls', skiprows=10,
+                           index_col='observation_date')
 
 
-
-
-# ## Problem: Scatter Plot
+# ## Problem: Export to Excel
 # 
-# Scatter the 5-minute MSFT returns against the 5-minute IBM returns.
+# Export `gs10_csv` to the Excel file `gs10-exported.xlsx`.
 # 
-# *Hint*: You will need to create both 5-minute return series, merge them,
-# and then plot using the combined DataFrame. 
 
 
 
 
-# ## Problem: Saving plots
+# ## Problem: Export to Excel sheets
 # 
-# Save the previous plot to PNG and PDF.
+# Export both `gs10_excel` and `gs10_csv` to the same Excel file.
+
+
+
+
+# ## Problem: Export to CSV
+# 
+# Export `gs10_excel` to CSV. 
+
+
+
+
+# ## Problem: Export to HDF
+# 
+# Export both to an HDF file (the closest thing to a "native" format in pandas)
+
+
+
+
+# ## Problem: Export to Pickle
+# 
+# 1. Export `gs10_excel` to a pickle file.
+# 2. Combine `gs10_excel` and `gs10_csv` into a dictionary and pickle the
+#    dictionary.
+
+
+
+
+
+
+
+# ## Problem: Import from HDF and Pickle.
+# 
+# Import the data saved in steps 3-5 of the previous problem.
 
 
 

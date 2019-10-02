@@ -1,116 +1,77 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Calling Functions
-# 
-# This lesson covers:
-# 
-# * Calling functions with more than one input and output 
-# * Calling functions when some inputs are not used
+# Setup: Load data created in an earlier lesson
 
-# Read the data in momentum.csv and creating some variable. This cell uses
-# some magic to automate repeated typing.
-
-# Setup: Load the momentum data
 import pandas as pd
 
-momentum = pd.read_csv('data/momentum.csv')
+hdf_file = 'data/dataframes.h5'
 
-print(momentum.head())
+sep_04 = pd.read_hdf(hdf_file, 'sep_04')
+sep_05 = pd.read_hdf(hdf_file, 'sep_05')
+sep_06 = pd.read_hdf(hdf_file, 'sep_06')
+sep_07 = pd.read_hdf(hdf_file, 'sep_07')
+sep_10 = pd.read_hdf(hdf_file, 'sep_10')
+sep_11 = pd.read_hdf(hdf_file, 'sep_11')
+sep_12 = pd.read_hdf(hdf_file, 'sep_12')
+sep_13 = pd.read_hdf(hdf_file, 'sep_13')
+sep_14 = pd.read_hdf(hdf_file, 'sep_14')
+sep_17 = pd.read_hdf(hdf_file, 'sep_17')
+sep_18 = pd.read_hdf(hdf_file, 'sep_18')
+sep_19 = pd.read_hdf(hdf_file, 'sep_19')
 
-mom_01 = momentum['mom_01']
-mom_10 = momentum['mom_10']
+spy = pd.read_hdf(hdf_file, 'spy')
+aapl = pd.read_hdf(hdf_file, 'aapl')
+goog = pd.read_hdf(hdf_file, 'goog')
+
+dates = pd.to_datetime(pd.read_hdf(hdf_file, 'dates'))
+
+prices = pd.read_hdf(hdf_file, 'prices')
 
 
-# This data set contains 2 years of data on the 10 momentum portfolios from
-# 2016–2018. The variables are named mom_XX where XX ranges from 01 (work
-# return over the past 12 months) to 10 (best return over the past 12 months). 
-
-# ## Problem: Calling Functions
-# Functions were used in the previous lesson. Get used to calling functions
-# by computing the mean, std, kurtosis, max, and min of the 10 momentum
-# portfolios. Also, explore the help available for calling functions `?`
-# operator. For example,
+# ## Problem: Construct a DataFrame from rows
+# 
+# Create a DataFrame named `prices_row` from the row vectors previously
+# entered such that the results are identical to prices. For example, the first
+# two days worth of data are:
 # 
 # ```python
-# momentum.std?
-# ```  
+# pricess_row = pd.DataFrame([sep_04, sep_05])
+# # Set the index after using concat to join
+# pricess_row.index = dates_2
+# ```
 # 
-# opens a help window that shows the inputs and output, while
+# Verify that the DataFrame identical by printing the difference with
+# `prices` 
 # 
 # ```python
-# help(momentum.std)
+# print(prices_row - prices)
 # ```
+
+
+
+
+# ## Problem: Construct a DataFrame from columns
 # 
-# shows the help.
+# Create a DataFrame named `prices_col` from the 3 column vectors entered
+# such that the results are identical to prices.
 # 
-# Use the functions `mean`, `std`, `skew` and `kurt` to print the
-# values for `mom_01`.
-
-
-
-
-# ## Problem: Use NumPy and SciPy functions
+# *Note*: `.T` transposes a 2-d array since `DataFrame` builds the
+# array by rows.
 # 
-# Use the NumPy functions `mean` and `std` and the SciPy `stats` functions
-# `skew` and `kurtosis` to produce the same output.
+# Verify that the DataFrame identical by printing the difference with
+# `prices` 
 
 
 
 
-# ## Problem: Calling Functions with 2 Outputs
+# ## Problem: Construct a DataFrame from a dictionary
 # 
-# Some useful functions return 2 or more outputs. One example is ``np.linalg.slogdet`` 
-# computes the signed log determinant of a square array. It returns two output,
-# the sign and the log of the absolute determinant.
+# Create a DataFrame named `prices_dict` from the 3 column vectors entered
+# such that the results are identical to prices
 # 
-# Use this function to compute the sign and log determinant of the 2 by 2 array:
-# 
-# ```
-# 1  2
-# 2  9
-# ```  
-
-
-
-
-# ## Problem: Calling Functions with 2 Inputs
-# 
-# Many functions take two or more inputs. Like outputs, the inputs are simply
-# listed in order separated by commas. Use `np.linspace` to produce a series
-# of 11 points evenly spaced between 0 and 1.  
-
-
-
-
-# ## Problem: Calling Functions using Keyword Arguments
-# 
-# Many functions have optional arguments. You can see these in a docstring since
-# optional arguments take the form `variable=default`. For example, see
-# the help for `np.mean`
-
-
-
-
-# which is 
-# 
-# ```python
-# pd.DataFrame.std(self, axis=None, skipna=None, level=None, ddof=1, numeric_only=None)
-# ```
-# 
-# `std`  computes the standard deviation.
-# 
-# This tells us that only `self` (which is the DataFrame) is required and
-# that the other 5 inputs can be omitted if you are happy with the defaults.
-# However, if we want to change some of the optional inputs, then we can
-# directly use the inputs name in the function call.
-# 
-# By default `std` divides by `n-1`.  The `1` can be set using `ddof`.
-# 
-# Compute `std` using `ddof=0` on the momentum data.
-
-
-
+# Verify that the DataFrame identical by printing the difference with
+# `prices` 
 
 
 

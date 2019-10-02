@@ -1,56 +1,77 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Saving and Exporting Data
+# # Using Boolean arrays 
 # 
 # This lesson covers:
 # 
-# * Saving and reloading data
+# * `all` and `any`
+# * `where`
+#  
+# Begin by loading the data in momentum.csv.
 # 
-# This first block loads the data that was used in the previous lesson.
 
-# Setup: Load the data to use later
+# Setup: Load the momentum data
+
+import numpy as np
 import pandas as pd
 
-gs10_csv = pd.read_csv('data/GS10.csv', index_col='DATE', parse_dates=True)
-gs10_excel = pd.read_excel('data/GS10.xls', skiprows=10,
-                           index_col='observation_date')
+momentum = pd.read_csv('data/momentum.csv', index_col='date', parse_dates=True)
+
+print(momentum.head())
+
+mom_01 = momentum['mom_01']
+mom_10 = momentum['mom_10']
+mom_05 = momentum['mom_05']
 
 
-# ## Problem: Export to Excel
+# ## Problem: Using `where`
+# Use `where` to select the index of the elements in portfolio 5 that are
+# negative. Next, use the `where` command in its two output form to determine
+# which elements of the portfolio return matrix are less than -2%.
+
+
+
+
+
+
+
+
+
+
+# ## Problem: Combining flow control
+# For momentum portfolios 1 and 10, compute the length of the runs in the
+# series. In pseudo code,
 # 
-# Export `gs10_csv` to the Excel file `gs10-exported.xlsx`.
+# * Start at i=1 and define run(1) = 1
+# * For i in 2,...,T, define run(i) = run(i-1) + 1 if 
+#   $\textrm{sgn}\left(r_{i}\right)=\textrm{sgn}\left(r_{i-1}\right)$ else 1.
 # 
-
-
-
-
-# ## Problem: Export to Excel sheets
+# You will need to use `len` and `zeros`. 
 # 
-# Export both `gs10_excel` and `gs10_csv` to the same Excel file.
+# 1. Compute the length longest run in the series and the index of the
+#    location of the longest run. Was it positive or negative?
+# 2. How many distinct runs lasted 5 or more days?
 
 
 
 
-# ## Problem: Export to CSV
+# Plot the runs using 
 # 
-# Export `gs10_excel` to CSV. 
-
-
-
-
-# ## Problem: Export to HDF
+# ```python
+# %matplotlib inline
 # 
-# Export both to an HDF file (the closest thing to a "native" format in pandas)
+# import matplotlib.pyplot as plt
+# plt.plot(run)
+# ```
 
 
 
 
-# ## Problem: Export to Pickle
+# ## Problem: Use `any` to find large losses
 # 
-# 1. Export `gs10_excel` to a pickle file.
-# 2. Combine `gs10_excel` and `gs10_csv` into a dictionary and pickle the
-#    dictionary.
+# Use any to determine if any of the 10 portfolios experienced a loss
+# greater than -5%.
 
 
 
@@ -58,9 +79,17 @@ gs10_excel = pd.read_excel('data/GS10.xls', skiprows=10,
 
 
 
-# ## Problem: Import from HDF and Pickle.
+
+
+
+# Use `all` and negation to do the same check as `any`.
+
+
+
+
+# ## Exercises
 # 
-# Import the data saved in steps 3-5 of the previous problem.
-
-
-
+# ### Exercise: all and any
+# Use all to determine the number of days where all of the portfolio returns
+# were negative. Use any to compute the number of days with at least 1 negative
+# return and with no negative returns (Hint: use negation (~ or `logical_not`)). 

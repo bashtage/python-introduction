@@ -1,46 +1,69 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Numeric Indexing of DataFrames
+# # Accessing Elements in NumPy Arrays
 # 
 # This lesson covers:
 # 
-# * Accessing specific elements in DataFrames using numeric indices
+# * Accessing specific elements in NumPy arrays
 # 
-# Accessing elements in a DataFrame is a common task. To begin this lesson,
-# clear the workspace set up some vectors and a $5\times5$ array. These vectors
-# and matrix will make it easy to determine which elements are selected by a
-# command.
+# Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
+# workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
+# to determine which elements are selected by a command.
 # 
-# Begin by creating:
 # 
-# * A 5-by-5 DataFrame `x_df` containing `np.arange(25).reshape((5,5))`.
-# * A 5-element Series `y_s` containing `np.arange(5)`.
-# * A 5-by-5 DataFrame `x_named` that is `x_df` with columns 'c0', 'c1', ...,
-#   'c4' and rows 'r0', 'r1', ..., 'r4'.
-# * A 5-element Series `y_named` with index 'r0', 'r1', ..., 'r4'. 
+# Using `arange` and `reshape` to create 3 arrays:
+# 
+# * 5-by-5 array `x` containing the values 0,1,...,24 
+# * 5-element, 1-dimensional array `y` containing 0,1,...,4
+# * 5-by-1 array `z` containing 0,1,...,4
+# 
 
 
 
 
-# ## Problem: Picking an Element out of a DataFrame
 # 
-# Using double index notation, select the (0,2) and the (2,0) element of
-# `x_named`.
+# ## Zero-based indexing
+# Python indexing is 0 based so that the first element has position `0`, the second has position `1`
+# and so on until the last element has position `n-1` in an array that contains `n` elements in
+# total.
+# 
+# ## Problem: Picking elements out of arrays
+# 1. Select the third element of all three, x, y, and z. 
+# 2. Select the 11$^{\text{th}}$ element of x.
+# 3. Using double index notation, select the (0,2) and the (2,0) element of x.
+# 
+# **Issues to ponder**
+# 
+# * Which index is rows and which index is columns?
+# * Does NumPy count across first then down or down first then across? 
+
+
+
+
+
+
+
+
+
 
 
 
 
 # ## Problem: Selecting Entire Rows
-# 1. Select the 2nd row of `x_named` using the colon (:) operator.
-# 2. Select the 2nd element of `y_named` using the same syntax.
+# 1. Select the 2nd row of x using the colon (:) operator.
+# 2. Select the 2nd element of z and y using the same syntax.
+# 
+# **Issues to ponder**
+# 
+# * What happens to the output in each case? 
 # 
 
 
 
 
 # ## Problem: Selecting Entire Columns
-# Select the 2nd column of `x_named` using the colon (:) operator. 
+# Select the 2nd column of x using the colon (:) operator. 
 
 
 
@@ -48,47 +71,49 @@
 
 
 
-# ## Problem: Selecting Specific Columns
-# Select the 2nd and 3rd columns of `x_named` using the colon (:) operator.
+# ## Problem: Selecting Specific Rows or Columns
+# 1. Select the 2nd and 3rd columns of x using the colon (:) operator.
+# 2. Select the 2nd and 4th rows of x. 
+# 3. Combine these be combined to select columns 2 and 3 and rows 2 and 4. 
 
 
 
 
-# ## Problem: Select Specific Rows
+
+
+
+
+
+
+# ## Problem: Use `ix_` to select arbitrary rows and columns
+# Use `ix_` to select the 2nd and 4th rows and 1st and 3rd columns of `x`.
+
+
+
+
+
+
+
+# ## Problem: Convert a DataFrame to a NumPy array
 # 
-# Select the 2nd and 4th rows of `x_named`. 
-# Combine these be combined to select columns 2 and 3 and rows 2 and 4. 
+# Use  `.to_numpy` to convert a DataFrame to a NumPy array.
+
+# Setup: Create a DataFrame
+import pandas as pd
+import numpy as np
+
+names = ['a', 'b', 'c', 'd', 'e']
+x = np.arange(25).reshape((5,5))
+x_df = pd.DataFrame(x, index=names, columns=names)
+print(x_df)
+
+
+
+
+
+# ## Problem: Use `np.asarray` to convert to an array
 # 
-
-
-
-
-# ## Problem: Select Specific Rows and Columns
-# 
-# Combine these be combined to select columns 2 and 3 and rows 2 and 4. 
-
-
-
-
-# ## Problem: Select arbitrary rows and columns
-# Select the 2nd and 4th rows and 1st and 3rd columns of `x`.
-# 
-# **Note**: This is the only important difference with NumPy.  Arbitrary
-# row/column selection using `DataFrame.iloc` is simpler but less flexible.
-
-
-
-
-# ## Problem: Mix names and integer selection
-# 
-# Select the columns c1 and c2 and rows 0, 2 and 4.
-
-
-
-
-# ## Problem: Mix names and integer selection
-# 
-# Select the rows r1 and r2 and columns 0, 2 and 4.
+# Use  `np.asarray` to convert a DataFrame toa NumPy array.
 
 
 

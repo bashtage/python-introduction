@@ -9,7 +9,7 @@ from PIL import Image
 
 width = 16 * 2
 height = int(9 * 2 * np.sqrt(4 / 3))
-color = ("#eeeeee", "#6D6E73", "#FED201", "#214564", "#BDBCCC")
+color = ("#eeeeee", "#83c6ff", "#6D6E73", "#FED201", "#214564", "#BDBCCC")
 
 
 def triangle(left, size, invert, color):
@@ -43,7 +43,7 @@ def save(filepath, fig=None):
 
 def generate_cover(lesson_name, subtitle):
     name = " ".join([lesson_name, subtitle]).lower().replace(" ", "-")
-    name = name.replace(",", "-")
+    name = name.replace(",", "-").replace(":", "-")
     while "--" in name:
         name = name.replace("--", "-")
     print(name)
@@ -57,12 +57,12 @@ def generate_cover(lesson_name, subtitle):
         left = 0.0
         bot = trangle_height * i
         for j in range(width + 1):
-            c = color[rs.randint(0, 5)]
+            c = color[rs.randint(0, len(color))]
             triangle((left, bot), triangle_width, False, c)
             left += triangle_width
-            c = color[rs.randint(0, 5)]
+            c = color[rs.randint(0, len(color))]
             triangle((left, bot), triangle_width, True, c)
-        c = color[rs.randint(0, 5)]
+        c = color[rs.randint(0, len(color))]
         triangle((left, bot), triangle_width, False, c)
 
     ax = plt.gca()
@@ -87,7 +87,7 @@ def generate_cover(lesson_name, subtitle):
         15 * trangle_height,
         lesson_name,
         fontsize=3 * 72,
-        color=color[1],
+        color=color[2],
         fontweight="normal",
         fontname="Roboto Condensed",
     )
@@ -96,7 +96,7 @@ def generate_cover(lesson_name, subtitle):
         13.7 * trangle_height,
         subtitle,
         fontsize=3 * 48,
-        color=color[3],
+        color=color[4],
         fontname="Roboto Condensed",
         fontweight="light",
     )
@@ -115,7 +115,7 @@ def generate_cover(lesson_name, subtitle):
 
 content = [("Installation", "Anaconda, VS Code, and PyCharm")]
 
-files = glob.glob("../solutions/lesson*.ipynb")
+files = glob.glob("../solutions/introduction/lesson*.ipynb")
 for file_name in files:
     with open(file_name) as nb_file:
         nb = nbformat.reader.read(nb_file)

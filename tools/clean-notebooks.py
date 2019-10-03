@@ -14,18 +14,18 @@ from latex import key
 website_dir = os.path.join("..", "website")
 if not os.path.exists(website_dir):
     os.mkdir(website_dir)
-spyder_dir = os.path.join("..", "spyder")
+spyder_dir = os.path.join("..", "course", "introduction", "spyder")
 if not os.path.exists(spyder_dir):
     os.mkdir(spyder_dir)
 
-source_dir = "../solutions/"
+source_dir = "../solutions/introduction/"
 nb_files = glob.glob(os.path.join(source_dir, "*.ipynb"))
 nb_files = sorted(nb_files, key=lambda v: key(v))
 
 for nb_file in nb_files:
     print(f"Processing {nb_file}")
     nb = nbformat.read(nb_file, 4)
-    executed = pre.execute.executenb(nb, cwd=source_dir, kernel_name='python3')
+    executed = pre.execute.executenb(nb, cwd=source_dir, kernel_name="python3")
     print(f"Writing executed version of {nb_file}")
     nbformat.write(executed, nb_file, nbformat.NO_CONVERT)
     cop = pre.ClearOutputPreprocessor()
@@ -43,7 +43,7 @@ for nb_file in nb_files:
             if "metadata" in cell and "pycharm" in cell["metadata"]:
                 del cell["metadata"]["pycharm"]
     _, base = os.path.split(nb_file)
-    out = os.path.abspath(os.path.join("..", base))
+    out = os.path.abspath(os.path.join("..", "course", "introduction", base))
     print(f"Writing clean version to {out}")
     nbformat.write(nb, out, nbformat.NO_CONVERT)
 

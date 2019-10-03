@@ -6,7 +6,6 @@
 # This lesson covers:
 # 
 # * Mixing logic and loops 
-# * `all` and `any` 
 # 
 # Begin by loading the data in momentum.csv.
 # 
@@ -83,10 +82,3 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 
-
-# ## Exercises
-# 
-# ### Exercise: all and any
-# Use all to determine the number of days where all of the portfolio returns
-# were negative. Use any to compute the number of days with at least 1 negative
-# return and with no negative returns (Hint: use negation (~ or `logical_not`)). 

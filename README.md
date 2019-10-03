@@ -7,8 +7,8 @@ in Finance and Econometrics.
 ## Course Materials
 
 The introduction is contained in the Jupyter notebook files that are located
-in the root directory. These files can be used in VS Code, PyCharm Professional,
-or (not recommended) Jupyter notebook. 
+in the directory course/introduction. These files can be used in VS Code or
+PyCharm Professional, or (not recommended) Jupyter notebook.  
 
 A complete set of solutions is available in the solutions folder. 
 

@@ -27,7 +27,10 @@ def key(f):
     file_key = os.path.splitext(os.path.split(f)[-1])[0]
     print(file_key)
     if "-" in file_key:
-        return int(file_key.split("-")[-1])
+        try:
+            return int(file_key.split("-")[-1])
+        except ValueError:
+            pass
     return hash(file_key)
 
 

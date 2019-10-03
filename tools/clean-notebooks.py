@@ -24,8 +24,8 @@ nb_files = sorted(nb_files, key=lambda v: key(v))
 
 for nb_file in nb_files:
     print(f"Processing {nb_file}")
-    nb = nbformat.read(nb_file, nbformat.NO_CONVERT)
-    executed = pre.execute.executenb(nb, cwd=source_dir)
+    nb = nbformat.read(nb_file, 4)
+    executed = pre.execute.executenb(nb, cwd=source_dir, kernel_name='python3')
     print(f"Writing executed version of {nb_file}")
     nbformat.write(executed, nb_file, nbformat.NO_CONVERT)
     cop = pre.ClearOutputPreprocessor()

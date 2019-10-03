@@ -14,6 +14,7 @@ REPLACEMENTS = {
     r"\subsection{": r"\section{",
     r"\subsubsection{": r"\subsection{",
     r"\section{Problem": r"\subsection*{Problem",
+    r"\section{Question": r"\subsection*{Question",
     r"\section{\texorpdfstring": r"\subsection*{\texorpdfstring",
     r"\section{Exercises": r"\section*{Exercises",
     r"\subsection{Exercise": r"\subsection*{Exercise",
@@ -25,7 +26,6 @@ REPLACEMENTS = {
 
 def key(f):
     file_key = os.path.splitext(os.path.split(f)[-1])[0]
-    print(file_key)
     if "-" in file_key:
         try:
             return int(file_key.split("-")[-1])

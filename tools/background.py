@@ -4,6 +4,7 @@ import os
 import matplotlib.pyplot as plt
 import nbformat
 import numpy as np
+
 from PIL import Image
 
 width = 16 * 2

@@ -1,5 +1,6 @@
 import glob
 import os
+import hashlib
 
 import matplotlib.pyplot as plt
 import nbformat
@@ -9,7 +10,9 @@ from PIL import Image
 
 width = 16 * 2
 height = int(9 * 2 * np.sqrt(4 / 3))
-color = ("#eeeeee", "#83c6ff", "#6D6E73", "#FED201", "#214564", "#BDBCCC")
+#color = ("#eeeeee", "#83c6ff", "#6D6E73", "#FED201", "#19354C", "#BDBCCC")
+# "#83c6ff"
+color = ("#eeeeee", "#6D6E73", "#FED201", "#19354C", "#BDBCCC")
 
 
 def triangle(left, size, invert, color):
@@ -47,7 +50,14 @@ def generate_cover(lesson_name, subtitle):
     while "--" in name:
         name = name.replace("--", "-")
     print(name)
-    seed = np.array([hash(lesson_name + subtitle)]).view(np.uint32)
+    sha = hashlib.sha3_512()
+    sha.update((lesson_name + subtitle).encode('utf8'))
+    rem = int.from_bytes(sha.digest(), "little")
+    seed = []
+    while rem:
+        seed.append(rem % 2**32)
+        rem >>= 32
+    seed = np.array(seed, dtype=np.uint32)
     rs = np.random.RandomState(seed)
 
     fig = plt.figure(figsize=(66, 36))
@@ -87,7 +97,7 @@ def generate_cover(lesson_name, subtitle):
         15 * trangle_height,
         lesson_name,
         fontsize=3 * 72,
-        color=color[2],
+        color=color[1],
         fontweight="normal",
         fontname="Roboto Condensed",
     )
@@ -96,7 +106,7 @@ def generate_cover(lesson_name, subtitle):
         13.7 * trangle_height,
         subtitle,
         fontsize=3 * 48,
-        color=color[4],
+        color=color[3],
         fontname="Roboto Condensed",
         fontweight="light",
     )
@@ -111,6 +121,7 @@ def generate_cover(lesson_name, subtitle):
     img = Image.open("back.png")
     crop = img.crop(box)
     crop.save(f"{name}-back.png")
+    plt.close(fig)
 
 
 content = [("Installation", "Anaconda, VS Code, and PyCharm")]

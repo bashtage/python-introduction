@@ -13,13 +13,13 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: rgb(93, 94, 99);
-  background-color: rgb(93, 94, 99); }
+  background: #19354C;
+}
 
 .reveal {
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 2.2rem;
-  font-weight: normal;
+  font-weight: 300;
   color: #c8c8c8; }
 
 ::selection {
@@ -162,13 +162,23 @@ body {
   font-family: "Roboto Mono", monospace;
   line-height: 1.2em;
   word-wrap: break-word;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0); }
 
 .reveal code {
   color: #fff;
   font-family: "Roboto Mono";
   font-weight: 300;
-  text-transform: none; }
+  text-transform: none;
+}
+
+.reveal h1 code {
+  color: #FED201 !important;
+  font-weight: 100;
+}
+.reveal h2 code {
+  color: #83c6ff;
+  font-weight: 100;
+}
 
 .reveal pre code {
   display: block;

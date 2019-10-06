@@ -7,7 +7,7 @@ import subprocess
 
 RENAME = True
 
-files = glob.glob("../solutions/lesson-*.ipynb")
+files = glob.glob("../solutions/introduction/lesson-*.ipynb")
 notebooks = {}
 need_rename = False
 for nb in files:

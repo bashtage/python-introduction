@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Graphics: Other Plots
+# # Graphics: Line Plots
 # 
 # This lesson covers:
 # 
+# * Basic plotting 
+# * Subplots 
 # * Histograms 
 # * Scatter Plots
 
-# Plotting in notebooks requires using a magic command, which starts with `%`,
-# to initialize the plotting backend.
+# Plotting in notebooks requires using a magic command, which starts with
+# `%`, to initialize the plotting backend.
 
 # Setup
 get_ipython().run_line_magic('matplotlib', 'inline')
@@ -22,27 +24,33 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 
-# ## Problem: Histogram
+# ## Problem: Basic Plotting
 # 
-# Produce a histogram of MSFT 1-minute returns (Hint: you have to produce
-# the 1-minute Microsoft returns first using `resample` and `pct_change`).
+# 1. Plot the `ibm` series which contains the price of IBM. 
+# 2. Add a title and label the axes. 
+# 3. Add markers and remove the line. 
 
 
 
 
-# ## Problem: Scatter Plot
+
+
+
+
+
+
+# ## Problem: Subplot
 # 
-# Scatter the 5-minute MSFT returns against the 5-minute IBM returns.
+# Create a 2 by 1 subplot with the price of IBM in the top subplot and the
+# price of MSFT in the bottom subplot. 
+
+
+
+
+# ## Problem: Plot with Dates
 # 
-# *Hint*: You will need to create both 5-minute return series, merge them,
-# and then plot using the combined DataFrame. 
-
-
-
-
-# ## Problem: Saving plots
-# 
-# Save the previous plot to PNG and PDF.
+# Use `matplotlib` to directly plot `ibm` against its `index`. This is a
+# repeat of a previous plot but shows how to use the `plot` command directly. 
 
 
 

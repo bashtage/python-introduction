@@ -31,7 +31,7 @@
 
 # Strings (`str`)
 
-* Entered using either `'`_string_`'` or `"`_string_`"`
+* Entered using either `"`_string_`"` or `"`_string_`"`
   * Quotation mark must match
 * Join string with `+`
   * `"apple" + "banana"` produces `"applebanana"` 
@@ -46,7 +46,7 @@
   * Numbers, strings, lists, etc.
   * Heterogeneous
 * Initialized using `[]` syntax
-  * `lst = ['a', 1, 1.0, ['b', 2, '2.0']]`
+  * `lst = ["a", 1, 1.0, ["b", 2, "2.0"]]`
 * List of list is important in numerical Python
   * Represents a 2-dimensional array or matrix
   * Each inner list is a row
@@ -73,7 +73,7 @@ direct = [[1, 3, 5], [2, 4, 6]]
   * `remove` to remove elements
     * `lst.remove(1)`
   * `extend` to extend one list with the contents of another
-    * `lst.extend(['c', 3, 3.0])`
+    * `lst.extend(["c", 3, 3.0])`
 
 
 
@@ -349,7 +349,7 @@ a.reshape((3, 1))
 * Required inputs:
   * `x`, `y`: Columns names to plot
 * Key optional inputs:
-  * `marker`: Marker shape (`'o'`,`'x'`,`'+'`,`'v'`,`'^'`,...)
+  * `marker`: Marker shape (`"o"`,`"x"`,`"+"`,`"v"`,`"^"`,...)
   * `s`: Size of marker
   * `c`: Marker color
 * Wrapper around `plt.scatter`
@@ -395,6 +395,7 @@ func(a, index=b)
 ```
 
 
+
 # Calling methods on objects
 
 * Python objects expose methods 
@@ -410,7 +411,7 @@ a.mean()
 a.reshape((3, 1))
 ```
 
- 
+
 
 # Saving Figures
 ## `plt.savefig`
@@ -442,3 +443,68 @@ ax.set_xticks([0,.33,.66,1])
   * `xticklabels`, `yticklabels`: Change labels of ticks
 * Mirrored by `get_`_property_ to read current value
 
+
+
+# Importing CSV Data
+## `pd.read_csv`
+
+* Only file name is required
+```python
+df = pd.read_csv('data.csv')
+```
+* Key optional inputs
+  * `index_col`: The name of the column to set as the index
+  * `parse_dates`: `True`/`False` that parses strings that look like dates
+  * `skiprows`: The number of row to skip before reading data
+* Dozens of optional inputs to handle most text file formats
+
+
+
+# Importing Excel Data
+## `pd.read_excel`
+
+* Imports old (xls) and new Excel (xlsx) files
+* Only file name is required
+```python
+df = pd.read_excel('data.xlsx')
+```
+* Key optional inputs
+  * `index_col`: The name of the column to set as the index
+  * `sheet_name`: The name of the sheet to import
+  * `skiprows`: The number of row to skip before reading data
+* Many other of optional inputs to import complex sheets
+
+
+
+# Saving 
+## CSV and Excel
+
+* `DataFrame.to_csv` exports to CSV
+```python
+df.to_csv('file-name.csv')
+```
+* `DataFrame.to_excel` exports to Excel (xls/xlsx)
+```python
+df.to_excel('file-name.xlsx')
+```
+  * Can use `sheet_name="some name"` to specify a sheet name
+
+
+
+# Storing HDF
+## `DataFrame.to_hdf`
+
+* Best approximation of a pandas "native" format
+* Requires a file name and key
+```python
+df.to_hdf("data-file.h5", "df")
+```
+  * Overwrites existing files by default 
+* `mode="a"` appends additional `DataFrame`s and `Series` &nbsp;&nbsp;&nbsp; 
+```python
+second_df.to_hdf("data-file.h5", "second_df", mode="a")
+``` 
+* Read using `pd.read_hdf`
+```python
+df = pd.read_hdf("data-file.h5", "df")
+```

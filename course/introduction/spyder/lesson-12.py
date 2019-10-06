@@ -48,6 +48,8 @@
 # %matplotlib inline
 # 
 # import matplotlib.pyplot as plt
+# plt.rc('figure', figsize=(16,9))
+# 
 # plt.plot(y)
 # ```
 # 
@@ -59,35 +61,21 @@
 
 
 # ## Problem: Nested Loops
-# Begin by loading momentum data used in an earlier lesson. Begin by adding 1 to
-# the returns to produce gross returns. The gross return is the total value in
-# the current period of £1 invested in the previous period. A net return
-# subtracts the original investment to produce the net gain or loss. Use two
-# loops to loop both across time and across the 10 portfolios to compute the 
-# total compound return. 
+# Begin by loading momentum data used in an earlier lesson. Compute a
+# 22-day moving-window standard deviation for each of the columns. Store
+# the value at the end of the window.
 # 
-# For example, if only interested in a single series,
-# 
-# ```python
-# n = mom_01.shape[0]
-# cr=np.zeros(n) 
-# gr = 1 + mom_01 
-# cr[0] = 1+mom_01[0] 
-# for t in range(1, n):
-#     cr[t]=cr[t-1]*gr[t] 
-# ```
-# computes the cumulative return.
-# 
-# When finished, plot the cumulative returns using `plt.plot(cr)`. After
-# finishing this problem, have a look at `np.cumsum?` and `np.cumprod?`. 
+# When finished, plot the annualized percentage standard deviations using
+# `plt.plot(100 * np.sqrt(252) * std_dev)`.  
 
 # Setup: Load the momentum data
 
 import pandas as pd
 momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
 momentum = momentum / 100  # Convert to numeric values from percentages
-# Convert to a plain numpy array
-momentum = momentum.to_numpy()
+
+
+
 
 
 

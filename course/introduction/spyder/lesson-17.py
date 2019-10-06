@@ -1,66 +1,26 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Saving and Exporting Data
+# # Importing Data
 # 
 # This lesson covers:
 # 
-# * Saving and reloading data
+# * Importing data 
+# * Converting dates 
+
+# ## Problem: Reading in data with Dates
 # 
-# This first block loads the data that was used in the previous lesson.
-
-# Setup: Load the data to use later
-import pandas as pd
-
-gs10_csv = pd.read_csv("data/GS10.csv", index_col="DATE", parse_dates=True)
-gs10_excel = pd.read_excel("data/GS10.xls", skiprows=10,
-                           index_col="observation_date")
+# Read in the files `GS10.csv` and `GS10.xls` which have both been downloaded
+# from [FRED](https://fred.stlouisfed.org/).
 
 
-# ## Problem: Export to Excel
+
+
+# ## Problem: Converting Dates
 # 
-# Export `gs10_csv` to the Excel file `gs10-exported.xlsx`.
-# 
-
-
-
-
-# ## Problem: Export to Excel sheets
-# 
-# Export both `gs10_excel` and `gs10_csv` to the same Excel file.
-
-
-
-
-# ## Problem: Export to CSV
-# 
-# Export `gs10_excel` to CSV. 
-
-
-
-
-# ## Problem: Export to HDF
-# 
-# Export both to an HDF file (the closest thing to a "native" format in pandas)
-
-
-
-
-# ## Problem: Export to Pickle
-# 
-# 1. Export `gs10_excel` to a pickle file.
-# 2. Combine `gs10_excel` and `gs10_csv` into a dictionary and pickle the
-#    dictionary.
-
-
-
-
-
-
-
-# ## Problem: Import from HDF and Pickle.
-# 
-# Import the data saved in steps 3-5 of the previous problem.
+# 1. Load the CSV file without converting the dates in `read_csv`.
+# 2. Convert the date column, remove it from the DataFrame, and set it as the
+#    index. 
 
 
 

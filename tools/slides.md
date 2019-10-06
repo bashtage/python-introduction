@@ -227,6 +227,82 @@ d = {key1 : value1, key2: value2, ...}
 
 
 
+
+
+
+# pandas `DataFrame`
+## Heterogeneous 2-d arrays
+
+* Something...
+
+
+
+# pandas `Series`
+## Homogeneous 1-d arrays
+
+* Each column of a `DataFrame` is a Seris
+* Constructed using
+```python
+pd.Series([1,2,3])
+```
+* Optional arguments
+  * `index` is the index for the `Series`
+  * `name` is same as the column name in a `DataFrame`
+
+
+
+# Calling Functions
+* Positional arguments
+```python
+func(a)
+func(a, b)
+```
+* Keyword arguments &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+```python
+func(data=a)
+func(data=a, index=b)
+```
+* Mixed
+```python
+func(a, index=b)
+```
+
+
+
+# Calling methods on objects
+
+* Python objects expose methods 
+* Methods operate on the object
+* May also take additional inputs
+* Important examples
+  * NumPy arrays
+  * pandas `DataFrames` and `Series` all
+* Called using `.`_function_ syntax
+```python
+a = np.array([1, 2, 3])
+a.mean()
+a.reshape((3, 1))
+```
+
+
+
+# Line Plots
+## `DataFrame.plot.line`
+
+* Same as `plt.plot(df.index, df.values)`
+* Key optional inputs:
+  * `x`: the column name to use as the x values
+  * `y`: the column names to plot
+* Many optional argument that affect plot appearance
+  * `linewdith`: Integer width of line
+  * `linstyle`: (`"none"`, `"-""`, `"--"`, `"-."`, `":"`)
+  * `marker`: Adds a marker (`"o"`, `"x"`, `"v"`,...)
+  * `color`: Color (hex: `"#abcdef"`, name: `"red""` )
+  * See `matplotlib.pyplot.plot` help for full list
+
+
+
+
 # Graphics: Other Plots
 ## Overview
 
@@ -277,6 +353,7 @@ d = {key1 : value1, key2: value2, ...}
   * `s`: Size of marker
   * `c`: Marker color
 * Wrapper around `plt.scatter`
+
 
 
 
@@ -334,3 +411,34 @@ a.reshape((3, 1))
 ```
 
  
+
+# Saving Figures
+## `plt.savefig`
+
+* Supports output to common formats
+  * pdf, png, jpeg, svg
+* Required inputs:
+  * `fname`: filename with extension to indicate export format
+* Key optional inputs:
+  * `dpi`: Figure resolution in dots per inch
+  * `transparent`: Use a transparent background
+* Also available as a method `Figure.savefig`
+
+
+
+# Altering Plot Appearance
+
+* Large set of figure properties available
+* Mode important are methods off an axis
+```python
+ax.set_xlim(0, 1)
+ax.set_xticks([0,.33,.66,1])
+```
+* Use pattern `ax.set_`_property_
+* Key properties:
+  * `xlim` and `ylim`: Set axis limits
+  * `xlabel`, `ylabel` and `title`: Label a plot
+  * `xticks`, `yticks`: Set location for ticks
+  * `xticklabels`, `yticklabels`: Change labels of ticks
+* Mirrored by `get_`_property_ to read current value
+

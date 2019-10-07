@@ -508,3 +508,46 @@ second_df.to_hdf("data-file.h5", "second_df", mode="a")
 ```python
 df = pd.read_hdf("data-file.h5", "df")
 ```
+
+
+
+# pandas `Series`
+
+* Building block of pandas `DataFrame`
+* Homogeneous
+  * `int`, `float`, `datatime`, `str`
+* Handle missing values
+* Support non-numeric indexing
+  * Dates, Company Name, ...
+* Provide many common statistical operations
+  * Mean, Standard Deviation, Variance
+  * Skewness and Kurtosis
+  * Quantile
+* Operations ignore missing values by default
+
+
+
+# Constructing  a `Series`
+
+* Series constructed from lists
+```python
+s = pd.Series([1.0, 2.0, 3.0])
+```
+* Key optional inputs
+  * `index`: Set the index for the seris
+  * `name`: The series' name
+```python
+index = ["a", "b", 'c']
+s =pd.Series([1.0, 2.0, 3.0], index="ndex, name="data")
+```
+
+
+# `pd.DataFrame`
+
+
+
+# Custom Functions
+
+
+
+# 

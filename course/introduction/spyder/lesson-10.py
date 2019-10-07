@@ -33,15 +33,11 @@
 # and so on until the last element has position `n-1` in an array that contains `n` elements in
 # total.
 # 
-# ## Problem: Picking elements out of arrays
-# 1. Select the number 2 in all three, `x`, `y`, and `z`.
-# 2. Select the number 11 in `x` 
-# 3. Using double index notation, select the (0,2) and the (2,0) element of `x`.
+# ## Problem: Scalar selection
+# Select the number 2 in all three, `x`, `y`, and `z`.
 # 
-# **Issues to ponder**
 # 
-# * Which index is rows and which index is columns?
-# * Does NumPy count across first then down or down first then across? 
+# **Question**:  Which index is rows and which index is columns?
 
 
 
@@ -52,18 +48,29 @@
 
 
 
-
-
-
-# ## Problem: Selecting Single Rows
-# 1. Select the 2nd row of `x` and `z`
-# 2. Select the 2nd element `y`.
+# ## Problem: Scalar selection of a single row
 # 
-# **Issues to ponder**
+# Select row 2 in `x` and `z` using a single integer value.
+#  
+# **Question**: What is the dimension of `x` and the second row of `x`
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ## Problem: Slice selection of a single row
 # 
-# * What happens to the dimension in each case? **Hint** Use `np.ndim` on the
-# output of each. 
+# Use a slice to select the 2nd row of `x` and the 2nd element of `y` and `z`.
 # 
+# **Question**: What are the dimension selections?
 
 
 
@@ -74,12 +81,11 @@
 
 
 
-# ## Problem: Preserving Dimensions 
+# ## Problem: List selection of a single row
 # 
-# Repeat the previous selection using:
+# Use a list to select the 2nd row of `x` and the 2nd element of `y` and `z`.
 # 
-# * A slice
-# * A list
+# **Question**: What are the dimension selections?
 
 
 
@@ -91,7 +97,9 @@
 
 
 # ## Problem: Selecting a single Column
-# Select the 2nd column of x using the colon (:) operator. 
+# Select the 2nd column of x using a scalar integer, a slice and a list.
+# 
+# **Question**: What the the dimensions of the selected elemets? 
 
 
 
@@ -113,7 +121,7 @@
 
 
 
-# ## Problem: Use `ix_` to select rows and columns using list
+# ## Problem: Use `ix_` to select rows and columns using lists
 # Use `ix_` to select the 2nd and 4th rows and 1st and 3rd columns of `x`.
 
 

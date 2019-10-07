@@ -7,10 +7,24 @@
 * List
   * Hold other objects
   * Access by position
+  * Closely related to tuples
 * Dictionary
   * Hold other objects
   * Access by key
 
+
+
+# Python Types
+## Summary
+
+* Focus on a small number of native Python types:
+  * Numeric: `float` and `int`
+  * Strings: `str`
+  * Lists: `list`
+    * Tuples: `tuple`, list-like but cannot be changed once created
+  * Dictionary: `dict`
+* Floats, integers and strings are basic data types  
+* Lists and dictionaries are used to hold other objects
 
 
 # Numeric Types
@@ -58,7 +72,6 @@ direct = [[1, 3, 5], [2, 4, 6]]
 ```
 
 
-
 # List Access
 
 * Access by position
@@ -74,6 +87,22 @@ direct = [[1, 3, 5], [2, 4, 6]]
     * `lst.remove(1)`
   * `extend` to extend one list with the contents of another
     * `lst.extend(["c", 3, 3.0])`
+
+
+
+# Tuples (`tuple`)
+
+* Tuples (`tuple`) are a close cousin of `list`
+* **Key difference**: Cannot be changed once created (_immutable_)
+* Created using `(item1, item2, ...)`
+```python
+tpl = (1, )
+tpl = ("a", 1, 1.0, ("b", 2, "2.0"))
+```
+* Convert to list using `list(tpl)`
+* Convert from list using `tuple(lst)`
+* Primarily encountered as output of other functions
+* Item access is identical to `list`
 
 
 
@@ -215,39 +244,103 @@ d = {key1 : value1, key2: value2, ...}
 
 
 
-
 # VS Code
 ## Overview
 
 * Modern text editor
 * Supports extensions to add features
   * First-class Python provided by Microsoft
-* Supports Jupyter notebooks
+* Supports importing and exporting Jupyter notebooks
+* Restricted support for Markdown cells
 
 
 
+# VS Code
+## Summary
 
-
-
-
-# pandas `DataFrame`
-## Heterogeneous 2-d arrays
-
-* Something...
+* First-class support for Python provided by Microsoft
+* Jupyter notebooks must be imported to use
+  * Must be exported to share
+* Relies on Magic Python cells 
+  * Cells demarcated with `#%%`
+* Limited support for Markdown cells
+  * Must comment all lines or use multi-line string
+```python
+"""
+# Markdown
+This is a multi-line cell containing Markdown
+content in VS Code.
+"""
+```   
 
 
 
 # pandas `Series`
 ## Homogeneous 1-d arrays
 
-* Each column of a `DataFrame` is a Seris
+* Each column of a `DataFrame` is a `Series`
 * Constructed using
 ```python
-pd.Series([1,2,3])
+s = pd.Series([1,2,3])
 ```
-* Optional arguments
+* Key Optional arguments
   * `index` is the index for the `Series`
-  * `name` is same as the column name in a `DataFrame`
+  * `name` is same as the column name in a `DataFrame` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+```python
+idx = ["a","b","c"]
+s = pd.Series([1,2,3], index=idx, name="data")
+```
+
+
+
+# pandas `DataFrame`
+## Heterogeneous 2-d arrays
+
+* Each column is a `Series`
+* Data types can vary by column
+  * Allows mix of integer, floating and string data
+* Directly initialized using a list of lists
+```python
+data = [[1, 2, 3], [4, 5, 6]]
+df = pd.DataFrame(data)
+```
+* Can be created from `Series` or by merging `DataFrames`
+
+
+
+# pandas `DataFrame`
+## Extended options
+
+* Key optional parameters
+  * `columns` takes a list of column names
+  * `index` is the index for the `DataFrame`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+```python
+data = [[1, 2, 3], [4, 5, 6]]
+cols = ['A','B','C']
+idx = ['x', 'y', 'z']
+df = pd.DataFrame(data, columns=cols, index=idx)
+```
+
+
+
+# Creating `DataFrame`
+## Building from  multiple `Series`
+
+* From a list of `Series`
+```python
+df = pd.DataFrame([s1, s2])
+```
+  * Each `Series` represents row
+  * `Series` `name` becomes index
+  * `Series` `index` become columns
+    * Component `Series` should have identical `index`
+  * Use `.T` to transpose a `DataFrame`
+* Using a dictionary &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+```python
+df = pd.DataFrame({'a': s1, 'b': s2})
+```
+  * Keys are column names
+  * Component `Series` should have identical `index`
 
 
 
@@ -542,12 +635,45 @@ s =pd.Series([1.0, 2.0, 3.0], index="ndex, name="data")
 ```
 
 
-# `pd.DataFrame`
+
+# Custom Functions
+# Overview
+
+* Custom functions simplify repetitive code
+* Required in some applications
+  * Function optimization
+  * Numerical integration
+* Begin with keyword `def`
+* End when indentation level return to previous level
+* **Important**: Python is white-space sensitive
 
 
 
 # Custom Functions
+## Basic structure
+```python
+def func(x):
+    function code
+    return value
+```
+  * `def`
+  * Function Name (`func`)
+  * Arguments surrounded by parentheses `(x)`
+    * Support for positional and keyword arguments
+    * Keyword argument have default values
+  * Colon
+  * Function code uses consistent indentation
+  * Returned value preceded by `return`
+ 
 
+ 
+# Custom Functions
+# Summary
 
-
-# 
+* Function begin with `def`
+* Returned value uses `return`
+* Function code is indented
+  * **Important**: Python is white-space sensitive
+  * Use 4 spaces to indent
+    * Do not use tab character to indent
+    * Configure editor to convert tab to 4 spaces 

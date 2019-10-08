@@ -47,10 +47,15 @@
 
 * Entered using either `"`_string_`"` or `"`_string_`"`
   * Quotation mark must match
-* Join string with `+`
+* Join strings with `+`
   * `"apple" + "banana"` produces `"applebanana"` 
 * Repeat string with `*`
   * `"-" * 80` produces `"-----...-----"`
+* F-strings allow mixing strings and code
+  * Variables in curly braces `{}` are replaced with string versions
+  * Equivalent strings
+    * f"This is a {number}"
+    * "This is a " + str(number)
 
 
 
@@ -61,6 +66,8 @@
   * Heterogeneous
 * Initialized using `[]` syntax
   * `lst = ["a", 1, 1.0, ["b", 2, "2.0"]]`
+* Lists are 0-indexed
+  * `lst[0]` is the first element
 * List of list is important in numerical Python
   * Represents a 2-dimensional array or matrix
   * Each inner list is a row
@@ -128,6 +135,8 @@ tpl = ("a", 1, 1.0, ("b", 2, "2.0"))
 
 * Container for other objects
 * Always stored as a key-value pair
+* Keys are any _hashable_ object in Python
+  * Focus here on strings
 * Initialized using `{}`
 ```python
 d = {}
@@ -138,8 +147,6 @@ d = {key1 : value1, key2: value2, ...}
   * Element added is `key` not in `d`, otherwise replaced
 * Delete elements using `del d[key]`  
 * Access by key `value = d[key]`
-* Keys can be any _hashable_ object in Python
-  * Focus here on strings
 
 
 

@@ -5,6 +5,9 @@
 # 
 # This lesson introduced method to construct a DataFrame from multiple
 # Series.
+# 
+# This first block loads the variables created in an earlier lesson.  A
+# later lesson will cover loading and saving data.
 
 # Setup: Load data created in an earlier lesson
 

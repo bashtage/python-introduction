@@ -7,6 +7,7 @@
 # 
 # * Inputting scalars and strings
 # * Lists
+# * Tuples
 # * Dictionaries
 # 
 
@@ -35,7 +36,8 @@
 # 
 # 1. Create a list containing `scalar_float` and `scalar_int`
 # 2. Add `a_string` to the list.
-# 3. Select the the lst two elements of the list
+# 3. Select the second element from the list 
+# 4. Select the the lst two elements of the list
 
 
 
@@ -44,6 +46,22 @@
 # 
 # 1. Create a list containing the two lists `[1, 2, 3]` and `[4, 5, 6]`
 # 2. Select the element 5 from the nested list
+
+
+
+
+# ## Problem: Create a tuple
+# 
+# 1. Create a tuple containing the values (1, 2.0, "c")
+# 2. Select the element "c" from the tuple
+
+
+
+
+# ## Problem: Convert a list to a tuple and back
+# 
+# 1. Convert the list-of-lists created to a tuple-of-tuples
+# 2. Convert the tuple-of-tuples back to a list of lists
 
 
 

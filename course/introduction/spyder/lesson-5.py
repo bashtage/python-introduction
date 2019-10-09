@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#%%
 # # Constructing DataFrames from Series
 # 
 # This lesson introduced method to construct a DataFrame from multiple
@@ -9,6 +10,7 @@
 # This first block loads the variables created in an earlier lesson.  A
 # later lesson will cover loading and saving data.
 
+#%%
 # Setup: Load data created in an earlier lesson
 
 import pandas as pd
@@ -37,6 +39,7 @@ dates = pd.to_datetime(pd.read_hdf(hdf_file, "dates"))
 prices = pd.read_hdf(hdf_file, "prices")
 
 
+#%%
 # ## Problem: Construct a DataFrame from rows
 # 
 # Create a DataFrame named `prices_row` from the row vectors previously
@@ -56,9 +59,10 @@ prices = pd.read_hdf(hdf_file, "prices")
 # print(prices_row - prices)
 # ```
 
+#%%
 
 
-
+#%%
 # ## Problem: Construct a DataFrame from columns
 # 
 # Create a DataFrame named `prices_col` from the 3 column vectors entered
@@ -70,9 +74,10 @@ prices = pd.read_hdf(hdf_file, "prices")
 # Verify that the DataFrame identical by printing the difference with
 # `prices` 
 
+#%%
 
 
-
+#%%
 # ## Problem: Construct a DataFrame from a dictionary
 # 
 # Create a DataFrame named `prices_dict` from the 3 column vectors entered
@@ -81,5 +86,5 @@ prices = pd.read_hdf(hdf_file, "prices")
 # Verify that the DataFrame identical by printing the difference with
 # `prices` 
 
-
+#%%
 

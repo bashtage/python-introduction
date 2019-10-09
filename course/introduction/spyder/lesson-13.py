@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#%%
 # # Logical Operators
 # 
 # This lesson covers:
@@ -10,6 +11,7 @@
 # 
 # Begin by loading the data in momentum.csv.
 
+#%%
 # Setup: Load the momentum data
 
 import pandas as pd
@@ -23,6 +25,7 @@ mom_10 = momentum["mom_10"]
 mom_05 = momentum["mom_05"]
 
 
+#%%
 # ## Problem: Basic Logical Statements
 # 
 # For portfolio 1 and portfolio 10, count the number of elements that are
@@ -31,32 +34,34 @@ mom_05 = momentum["mom_05"]
 # the standard deviation of the returns in that portfolio. 
 # 
 
+#%%
 
 
+#%%
 
 
-
-
+#%%
 # ## Problem: Compound Statements
 # Count the number of times that the returns in both portfolio 1 and portfolio
 # 10 are negative. Next count the number of times that the returns in portfolios
 # 1 and 10 are both greater, in absolute value, that 2 times their respective
 # standard deviations. 
 
+#%%
 
 
+#%%
 
 
-
-
+#%%
 # ## Combining Scalar Boolean Values
 # 
 # Use `and`, `or` and `not` to determine if the return on mom_01 on
 # February 14, 2016 is inside or outside an interval of 1 standard deviation
 # of the mean of all of the return of mom_01.
 
+#%%
 
 
-
-
+#%%
 

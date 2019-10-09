@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#%%
 # # Logic and Loops
 # 
 # This lesson covers:
@@ -10,6 +11,7 @@
 # Begin by loading the data in momentum.csv.
 # 
 
+#%%
 # Setup: Load the momentum data
 
 import numpy as np
@@ -24,6 +26,7 @@ mom_10 = momentum["mom_10"]
 mom_05 = momentum["mom_05"]
 
 
+#%%
 # ## Problem: Logical Statements and for Loops
 # Use a for loop along with an `if` statement to simulate an asymmetric random
 # walk of the form 
@@ -36,9 +39,10 @@ mom_05 = momentum["mom_05"]
 # the code in the cell below.
 #  
 
+#%%
 
 
-
+#%%
 # Plot the two random walks using the code.  We will cover data visualization
 # in a later lesson. 
 # 
@@ -50,35 +54,39 @@ mom_05 = momentum["mom_05"]
 # plt.legend(["y", "z"])
 # ```
 
+#%%
 
 
-
+#%%
 # ## Problem: Simulate the asymmetricc random walk without an `if`-`then`
 # 
 # Use boolean multiplication to simulate the same random walk without using
 # an `if`-`then` statement. 
 
+#%%
 
 
-
+#%%
 # Setup: Plot the data
+from IPython import get_ipython
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
+#%%
 
 
-
+#%%
 # ## Problem: Selecting Elements using Logical Statements
 # For portfolio 1 and portfolio 10, select the elements that are $<0$,
 # $\geq 0$ and exactly equal to $0$. Next select the elements where both
 # portfolios are less than $0$. 
 # 
 
+#%%
 
 
+#%%
 
 
-
-
-
+#%%
 

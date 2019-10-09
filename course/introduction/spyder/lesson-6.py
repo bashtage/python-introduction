@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#%%
 # # Calling Functions
 # 
 # This lesson covers:
@@ -8,9 +9,11 @@
 # * Calling functions with more than one input and output 
 # * Calling functions when some inputs are not used
 
+#%%
 # Read the data in momentum.csv and creating some variable. This cell uses
 # some magic to automate repeated typing.
 
+#%%
 # Setup: Load the momentum data
 import pandas as pd
 
@@ -22,10 +25,12 @@ mom_01 = momentum["mom_01"]
 mom_10 = momentum["mom_10"]
 
 
+#%%
 # This data set contains 2 years of data on the 10 momentum portfolios from
-# 2016–2018. The variables are named mom_XX where XX ranges from 01 (work
+# 2016â€“2018. The variables are named mom_XX where XX ranges from 01 (work
 # return over the past 12 months) to 10 (best return over the past 12 months). 
 
+#%%
 # ## Problem: Calling Functions
 # Functions were used in the previous lesson. Get used to calling functions
 # by computing the mean, std, kurtosis, max, and min of the 10 momentum
@@ -34,17 +39,19 @@ mom_10 = momentum["mom_10"]
 # Use the DataFrame functions `mean`, `std`, `skew` and `kurt` to print the
 # values for `mom_01`.
 
+#%%
 
 
-
+#%%
 # ## Problem: Use NumPy and SciPy functions
 # 
 # Use the NumPy functions `mean` and `std` and the SciPy `stats` functions
 # `skew` and `kurtosis` to produce the same output.
 
+#%%
 
 
-
+#%%
 # ## Problem: Calling Functions with 2 Outputs
 # 
 # Some useful functions return 2 or more outputs. One example is ``np.linalg.slogdet`` 
@@ -58,18 +65,20 @@ mom_10 = momentum["mom_10"]
 # 2  9
 # ```  
 
+#%%
 
 
-
+#%%
 # ## Problem: Calling Functions with 2 Inputs
 # 
 # Many functions take two or more inputs. Like outputs, the inputs are simply
 # listed in order separated by commas. Use `np.linspace` to produce a series
 # of 11 points evenly spaced between 0 and 1.  
 
+#%%
 
 
-
+#%%
 # ## Problem: Calling Functions using Keyword Arguments
 # 
 # Many functions have optional arguments. You can see these in a docstring since
@@ -87,25 +96,28 @@ mom_10 = momentum["mom_10"]
 # 
 # Compute the number of distinct combinations of 5 objects from a set of 10.
 
+#%%
 
 
-
+#%%
 # Compute the total number of combinations allowing for repetition 
 # using the `repetition=True` keyword argument.
 
+#%%
 
 
-
+#%%
 # Compute the number of combinations using the exact representation using 
 # only positional arguments for all 3 inputs.  Repeat using the keyword
 # argument for `exact`.
 
+#%%
 
 
+#%%
 
 
-
-
+#%%
 # ## Problem: Function Help
 # 
 # Explore the help available for calling functions `?` operator. For example,
@@ -126,8 +138,8 @@ mom_10 = momentum["mom_10"]
 # 
 # shows the help in the console.
 
+#%%
 
 
-
-
+#%%
 

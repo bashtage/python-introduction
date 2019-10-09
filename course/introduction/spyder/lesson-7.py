@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#%%
 # # Custom Functions
 # 
 # This lesson covers:
 # 
 # * Writing a custom function 
 
+#%%
 # ## Problem: Writing a Custom Function
 # Custom functions will play an important role later in the course when
 # estimating parameters. Construct a custom function that takes two arguments,
@@ -20,9 +22,10 @@
 # 
 # The text in the triple quotes is the docstring which is optional.
 
+#%%
 
 
-
+#%%
 # ## Exercises
 # 
 # ### Exercise: Custom Function
@@ -32,9 +35,10 @@
 # there were columns in the original data where the columns contain the mean,
 # standard deviation, skewness and kurtosis of x.
 
+#%%
 
 
-
+#%%
 # ### Exercise: Custom Function
 # 
 # Change your previous function to return 4 outputs, each a pandas Series for the mean,
@@ -45,5 +49,5 @@
 # return w, x, y, z
 # ```
 
-
+#%%
 

@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#%%
 # # Importing Modules
 # 
 # This lesson covers:
 # 
 # * Module import
 
+#%%
 # ## Problem: Importing Modules
 # 
 # Python is a general-purpose programming language and is not specialized for
@@ -27,9 +29,10 @@
 # 
 # Begin by importing the important modules.
 
+#%%
 
 
-
+#%%
 # ## Problem: Canonical Names
 # 
 # Use the `as` keyword to import the modules using their canonical names:
@@ -46,14 +49,15 @@
 # 
 # Import the core modules using `import` _module_ `as` _canonical_.
 
+#%%
 
 
-
+#%%
 # ## Problem: Importing individual functions
 # 
 # 1. Import `array`, `sqrt`, `log` and `exp` from NumPy.
 # 2. Import `OLS` from `statsmodels.regression.linear_model`
 # 3. Import the `stats` module from `scipy`
 
-
+#%%
 

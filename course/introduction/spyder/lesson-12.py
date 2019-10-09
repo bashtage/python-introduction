@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#%%
 # # Program Flow
 # 
 # This lesson covers:
@@ -10,6 +11,7 @@
 # 
 # 
 
+#%%
 # ## Problem: Basic For Loops
 # 
 # Construct a for loop to sum the numbers between 1 and N for any N. A for loop
@@ -22,19 +24,21 @@
 # ```
 # 
 
+#%%
 
 
-
+#%%
 # ## Problem: Compute a compound return
 # The compound return on a bond that pays interest annually at rate r is given
 # by $cr_{t}=\prod_{i=1}^{T}(1+r)=(1+r)^{T}$. Use a for loop compute the total
-# return for £100 invested today for $1,2,\ldots,10$ years. Store this variable
+# return for Â£100 invested today for $1,2,\ldots,10$ years. Store this variable
 # in a 10 by 1 vector cr. 
 # 
 
+#%%
 
 
-
+#%%
 # ## Problem: Simulate a random walk
 # (Pseudo) Normal random variables can be simulated using the command
 # `np.random.standard_normal(shape)` where `shape` is a tuple (or a scalar)
@@ -54,12 +58,13 @@
 # ```
 # 
 
+#%%
 
 
+#%%
 
 
-
-
+#%%
 # ## Problem: Nested Loops
 # Begin by loading momentum data used in an earlier lesson. Compute a
 # 22-day moving-window standard deviation for each of the columns. Store
@@ -68,6 +73,7 @@
 # When finished, plot the annualized percentage standard deviations using
 # `plt.plot(100 * np.sqrt(252) * std_dev)`.  
 
+#%%
 # Setup: Load the momentum data
 
 import pandas as pd
@@ -75,15 +81,16 @@ momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
 momentum = momentum / 100  # Convert to numeric values from percentages
 
 
+#%%
 
 
+#%%
 
 
+#%%
 
 
-
-
-
+#%%
 # ## Exercises
 # 
 # ### Exercise

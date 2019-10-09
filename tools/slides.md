@@ -27,6 +27,7 @@
 * Lists and dictionaries are used to hold other objects
 
 
+
 # Numeric Types
 
 * Floating point (`float`)
@@ -77,6 +78,7 @@ row2 = [2, 4, 6]
 matrix = [row1, row2]
 direct = [[1, 3, 5], [2, 4, 6]]
 ```
+
 
 
 # List Access
@@ -147,6 +149,87 @@ d = {key1 : value1, key2: value2, ...}
   * Element added is `key` not in `d`, otherwise replaced
 * Delete elements using `del d[key]`  
 * Access by key `value = d[key]`
+
+
+
+# Importing Modules
+## Overview
+
+* Python 3.7 provides 64 built-in functions and types
+* Core features extended by importing modules
+* Standard library modules
+  * `math`, `statistics`, `io`
+* Key modules for data science and econometrics
+  * NumPy, pandas, SciPy, matplotlib, statsmodels
+
+
+
+
+# The `import` statement
+
+* Basic use
+```python
+import module
+```
+* Using short names
+```python
+import module as mod
+```
+* Importing specific functions or types
+```python
+from module import func, type
+```
+
+
+
+# The PyData Ecosystem
+* NumPy
+  * Basic array and key functions
+```python
+import numpy as np
+```
+* pandas
+  * User-friendly container for data
+```python
+import pandas as pd
+```
+* SciPy
+  * Optimization and integration &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  * Manipulating random variables
+```python
+import scipy as sp
+import scipy.stats as stats
+```
+
+
+
+# The PyData Ecosystem
+* matplotlib's PyPlot module
+  * Plotting and data visualization
+```python
+import matplotlib.pyplot as plt
+```
+  * See `seaborn`
+* statsmodels
+  * Key statistical model (OLS, ARMA)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+```python
+import statsmodels.api as sm
+import statsmodels.tsa.api
+```
+
+
+
+# Importing Modules
+## Summary
+
+* Modules are added to Python using `import`
+* Standard syntax `import` _module_ `as` _canonical_
+* Five key modules with canonical names
+  * NumPy (`np`)
+  * pandas (`pd`)
+  * SciPy's Stats module (`stats`)
+  * matplotlib's PyPlot (`plt`)
+  * statsmodels (`sm` and `tsa`)
 
 
 
@@ -634,11 +717,11 @@ df = pd.read_hdf("data-file.h5", "df")
 s = pd.Series([1.0, 2.0, 3.0])
 ```
 * Key optional inputs
-  * `index`: Set the index for the seris
+  * `index`: Set the index for the Series &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   * `name`: The series' name
 ```python
-index = ["a", "b", 'c']
-s =pd.Series([1.0, 2.0, 3.0], index="ndex, name="data")
+idx = ["a", "b", 'c']
+s = pd.Series([1.0, 2.0, 3.0], index=idx, name="data")
 ```
 
 
@@ -671,9 +754,9 @@ def func(x):
   * Colon
   * Function code uses consistent indentation
   * Returned value preceded by `return`
- 
 
- 
+
+
 # Custom Functions
 # Summary
 

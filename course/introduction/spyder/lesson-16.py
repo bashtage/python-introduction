@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#%%
 # # Using Boolean arrays 
 # 
 # This lesson covers:
@@ -11,6 +12,7 @@
 # Begin by loading the data in momentum.csv.
 # 
 
+#%%
 # Setup: Load the momentum data
 
 import numpy as np
@@ -25,20 +27,22 @@ mom_10 = momentum["mom_10"]
 mom_05 = momentum["mom_05"]
 
 
+#%%
 # ## Problem: Using `where`
 # Use `where` to select the index of the elements in portfolio 5 that are
 # negative. Next, use the `where` command in its two output form to determine
 # which elements of the portfolio return matrix are less than -2%.
 
+#%%
 
 
+#%%
 
 
+#%%
 
 
-
-
-
+#%%
 # ## Problem: Combining flow control
 # For momentum portfolios 1 and 10, compute the length of the runs in the
 # series. In pseudo code,
@@ -53,9 +57,10 @@ mom_05 = momentum["mom_05"]
 #    location of the longest run. Was it positive or negative?
 # 2. How many distinct runs lasted 5 or more days?
 
+#%%
 
 
-
+#%%
 # Plot the runs using 
 # 
 # ```python
@@ -65,28 +70,31 @@ mom_05 = momentum["mom_05"]
 # plt.plot(run)
 # ```
 
+#%%
 
 
-
+#%%
 # ## Problem: Use `any` to find large losses
 # 
 # Use any to determine if any of the 10 portfolios experienced a loss
 # greater than -5%.
 
+#%%
 
 
+#%%
 
 
+#%%
 
 
-
-
-
+#%%
 # Use `all` and negation to do the same check as `any`.
 
+#%%
 
 
-
+#%%
 # ## Exercises
 # 
 # ### Exercise: all and any

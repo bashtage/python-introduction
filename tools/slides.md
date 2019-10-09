@@ -291,6 +291,7 @@ import statsmodels.tsa.api
 * Native Python development environment
 * Included in Anaconda
 * Most friendly for beginners
+* **No** native support for Jupyter notebooks
 
 
 
@@ -306,6 +307,21 @@ import statsmodels.tsa.api
   * Cell mode
 * Cons:
   * No integrated support for Jupyter Notebooks
+
+
+
+# Converting notebooks to Python
+## `nbconvert`
+
+* Jupyter nbconvert can convert a notebook to many format
+```bash
+jupyter nbconvert --to python notebook.ipynb
+```
+* Requires jupyter_contrib_nbextensions
+  * Install using `pip` and the Anaconda prompt
+```bash
+pip install jupyter_contrib_nbextensions
+```
 
 
 
@@ -337,11 +353,12 @@ import statsmodels.tsa.api
 # VS Code
 ## Overview
 
-* Modern text editor
+* Free, modern text editor
 * Supports extensions to add features
   * First-class Python provided by Microsoft
-* Supports importing and exporting Jupyter notebooks
-* Restricted support for Markdown cells
+  * AI assistant using Intellicode
+* Native supports for Jupyter notebooks
+* Support execution of Magic Python files (cell mode)
 
 
 
@@ -349,19 +366,13 @@ import statsmodels.tsa.api
 ## Summary
 
 * First-class support for Python provided by Microsoft
-* Jupyter notebooks must be imported to use
-  * Must be exported to share
-* Relies on Magic Python cells 
+* Other extensions add usefule features
+  * Intellicode: AI assistant
+  * Code Spell Checker: Spell checking
+* Native support for Jupyter notebooks
+  * Requires up-to-date Python extension
+* Supports Magic Python cells 
   * Cells demarcated with `#%%`
-* Limited support for Markdown cells
-  * Must comment all lines or use multi-line string
-```python
-"""
-# Markdown
-This is a multi-line cell containing Markdown
-content in VS Code.
-"""
-```   
 
 
 

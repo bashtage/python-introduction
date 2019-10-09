@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#%%
 # # Getting Started
 # 
 # This lesson covers:
@@ -14,6 +15,7 @@
 #   * Jupyter notebooks in [VSCode](https://code.visualstudio.com/docs/python/jupyter-support)
 #   * Jupyter notebooks in [PyCharm Professional](https://jetbrains.com/student/)
 
+#%%
 # ## Opening an Anaconda Terminal
 # 
 # An Anaconda terminal allows `python` to be run directly.  It also allows other
@@ -37,6 +39,7 @@
 # and then reopen your terminal.
 # 
 
+#%%
 # ## Running IPython in a Terminal
 # 
 # 1. Open a terminal.
@@ -46,6 +49,7 @@
 # 
 # ![IPython in Windows Terminal](images/ipython-windows.png "IPython in Windows Terminal")
 
+#%%
 # ## Launching Jupyter notebook
 # 
 # 1. Launch Jupyter Notebook from the Start Menu or launcher.
@@ -53,6 +57,7 @@
 # 
 # ![Jupyter Notebook](images/jupyter-notebook.png "Jupyter Notebook")
 
+#%%
 # ## Executing a standalone Python file in IPython
 # 
 # 1. Open a text editor and enter the following lines. Save the file as
@@ -77,6 +82,7 @@
 # exp(1)=2.718281828459045, log(exp(1))=1.0
 # ```
 
+#%%
 # ## Jupyter notebooks in VSCode
 # 
 # [Visual Studio Code](https://code.visualstudio.com/) (or VS Code) is a
@@ -133,6 +139,7 @@
 # ![VS Code Notebook](images/vscode-notebook.png "VS Code Notebook")
 # 
 
+#%%
 # ### Importing an exiting notebook in VS Code
 # 
 # VS Code only understands Magic Python files as notebook-like documents, and so
@@ -143,6 +150,7 @@
 # 
 # ![VS Code Export](images/vscode-export.png "VS Code Export")
 
+#%%
 # ### Exporting to an Jupyter notebook
 # 
 # To export a Magic Python file, open the command palette and enter "import jupyter". 
@@ -150,6 +158,7 @@
 # 
 # ![VS Code Import](images/vscode-import.png "VS Code Import")
 
+#%%
 # ## Jupyter notebooks in PyCharm Professional
 # 
 # <div class="alert alert-info">

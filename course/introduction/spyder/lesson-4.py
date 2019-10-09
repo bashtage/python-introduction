@@ -122,6 +122,7 @@
 
 # Only run if prices has been defined
 if "prices" in globals():
+    import pandas as pd
     dates = pd.Series(dates)
     variables = ["sep_04", "sep_05", "sep_06", "sep_07", "sep_10", "sep_11",
                  "sep_12", "sep_13", "sep_14", "sep_17", "sep_18", "sep_19",

@@ -83,19 +83,39 @@
 # ```
 
 #%%
-# ## Jupyter notebooks in VSCode
+# ## Jupyter Notebooks in VSCode
 # 
 # [Visual Studio Code](https://code.visualstudio.com/) (or VS Code) is a
 # lightweight IDE that supports adding features through extensions.  The
 # key extension for working with notebooks is 
 # [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
-# With this extension installed, it is possible to use a special file
+# The most recent version of VS Code integrates native support for Jupyter Notebooks. To create
+# a Jupyter notebook:
+# 
+# 1. Open VS Code
+# 2. Open the directory where your notebooks are stored
+# 3. Open View, then Command Palette and enter the two word create jupyter. Select
+#    the only option. Finally save the notebook using File, Save. **NOTE** The
+#    current version may be buggy.  If you cannot use File, Save, then you can close 
+#    the notebook and save it as part of closing it. 
+# 
+# ![VS Code New Notebook](images/vscode-new-notebook.png "VS Code New Notebook")
+# 
+# VS Code's notebook mode stores the notebook in a Jupyter notebook file (`.ipynb`),
+# which means that you can trivially open it in any other Jupyter notebook aware app. 
+# This differs from [VS code's Magic Python](#jupyter-notebooks-in-vsCode) which stores the
+# file as a plain Python file (`.py`). 
+# 
+
+#%%
+# ## Magic Python in VSCode
+# 
+# With the Python extension installed, it is possible to use a special file
 # format called Magic Python to write notebook-like files that can be
 # exported to Jupyter notebook files.  
 # 
 # 1. Install VS Code and the Python extension
-# 2. Open the command palette and enter "Jupyter start" and select the only
-#    available item.
+# 2. Select File, New File and save with the extension .py (e.g., example.py).
 # 3. This is a Python file that supports a cell demarcation using `#%%` for
 #    code cells and `#%% [markdown]` for cells that contain markdown code.
 #    Note that markdown text **must** be either:
@@ -168,7 +188,7 @@
 # </div>
 # 
 # PyCharm Professional has deeply integrated Jupyter Notebooks. To create
-# an IPython notebook:
+# an Jupyter notebook:
 # 
 # 1. Open PyCharm Profession
 # 2. Open the directory where your notebooks are stored

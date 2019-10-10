@@ -375,6 +375,31 @@ pip install jupyter_contrib_nbextensions
   * Cells demarcated with `#%%`
 
 
+# `Series` and `DataFrames`
+## Overview
+
+* pandas provides two essential containers
+  * `Series`: 1-d homogeneous array
+  * `DataFrame`: 2-d heterogeneous array
+* A `Series` is 1 column from a `DataFrame` 
+* Both support `index`
+  * Defaults to integers: 0, 1, 2, ...
+  * Can assign meaningful data: date, company name, ...
+* DataFrame supports named columns
+
+
+
+# `Series` and `DataFrames`
+## Summary
+
+* A `Series` is a 1-d homogeneous array
+* A `DataFrame` is a 2-d heterogeneous array
+  * A `Series` is 1 column from a `DataFrame` 
+* The `index` contains a set of keys corresponding to rows
+* `DataFrame` supports keys for columns as well (`columns`)
+  * `Series` supports `name` since always 1 column  
+
+
 
 # pandas `Series`
 ## Homogeneous 1-d arrays

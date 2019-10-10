@@ -17,7 +17,7 @@
 # Setup: Load the momentum data
 import pandas as pd
 
-momentum = pd.read_csv("data/momentum.csv")
+momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
 
 print(momentum.head())
 
@@ -31,13 +31,16 @@ mom_10 = momentum["mom_10"]
 # return over the past 12 months) to 10 (best return over the past 12 months). 
 
 #%%
-# ## Problem: Calling Functions
-# Functions were used in the previous lesson. Get used to calling functions
-# by computing the mean, std, kurtosis, max, and min of the 10 momentum
-# portfolios. 
+# ## Problem: Calling Methods
+# Get used to calling methods by computing the mean, standard deviation, skewness, kurtosis, max, and min. 
 # 
-# Use the DataFrame functions `mean`, `std`, `skew` and `kurt` to print the
+# Use the DataFrame functions `mean`, `std`, `skew` and `kurt`, `min` and `max` to print the
 # values for `mom_01`.
+# 
+# In the second cell, call `describe`, a method that summariezes `Series` and `DataFrames` on `mom_01`.
+
+#%%
+
 
 #%%
 
@@ -45,7 +48,7 @@ mom_10 = momentum["mom_10"]
 #%%
 # ## Problem: Use NumPy and SciPy functions
 # 
-# Use the NumPy functions `mean` and `std` and the SciPy `stats` functions
+# Use the NumPy functions `mean`, `std`, `min`, `max` and the SciPy `stats` functions
 # `skew` and `kurtosis` to produce the same output.
 
 #%%
@@ -123,20 +126,20 @@ mom_10 = momentum["mom_10"]
 # Explore the help available for calling functions `?` operator. For example,
 # 
 # ```python
-# import numpy as np
+# import scipy.stats as stats
 # 
-# np.mean?
+# stats.kurtosis?
 # ```  
 # 
 # opens a help window that shows the inputs and output, while
 # 
 # ```python
-# import numpy as np
-# 
-# help(np.mean)
+# help(stats.kurtosis)
 # ```
 # 
 # shows the help in the console.
+# 
+# **Note**: VS Code does **not** support the `?` form of help
 
 #%%
 

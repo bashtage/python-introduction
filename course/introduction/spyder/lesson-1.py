@@ -83,39 +83,34 @@
 # ```
 
 #%%
-# ## Jupyter Notebooks in VSCode
+# ## Jupyter notebooks in VSCode
 # 
 # [Visual Studio Code](https://code.visualstudio.com/) (or VS Code) is a
 # lightweight IDE that supports adding features through extensions.  The
 # key extension for working with notebooks is 
 # [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
-# The most recent version of VS Code integrates native support for Jupyter Notebooks. To create
-# a Jupyter notebook:
+# With this extension installed, VS code provides native support for 
+# Jupyter notebooks.   
 # 
-# 1. Open VS Code
-# 2. Open the directory where your notebooks are stored
-# 3. Open View, then Command Palette and enter the two word create jupyter. Select
-#    the only option. Finally save the notebook using File, Save. **NOTE** The
-#    current version may be buggy.  If you cannot use File, Save, then you can close 
-#    the notebook and save it as part of closing it. 
+# 1. Install VS Code and the Python extension
+# 2. Open the command palette and enter "create jupyter" and select the only
+#    available item.
 # 
-# ![VS Code New Notebook](images/vscode-new-notebook.png "VS Code New Notebook")
+# See the screenshot below for an example of the experience of using Jupyter notebooks in 
+# VS Code. 
 # 
-# VS Code's notebook mode stores the notebook in a Jupyter notebook file (`.ipynb`),
-# which means that you can trivially open it in any other Jupyter notebook aware app. 
-# This differs from [VS code's Magic Python](#jupyter-notebooks-in-vsCode) which stores the
-# file as a plain Python file (`.py`). 
+# ![VS Code Notebook](images/vscode-notebook-new.png "VS Code Notebook")
 # 
 
 #%%
 # ## Magic Python in VSCode
 # 
-# With the Python extension installed, it is possible to use a special file
-# format called Magic Python to write notebook-like files that can be
-# exported to Jupyter notebook files.  
+# 
+# [Visual Studio Code](https://code.visualstudio.com/) supports Magic Python mode in 
+# standard Python files that can be executed cell-by-cell.   
 # 
 # 1. Install VS Code and the Python extension
-# 2. Select File, New File and save with the extension .py (e.g., example.py).
+# 2. Select File, New and then save your file with the exteniosn .py (e.g., file.py).
 # 3. This is a Python file that supports a cell demarcation using `#%%` for
 #    code cells and `#%% [markdown]` for cells that contain markdown code.
 #    Note that markdown text **must** be either:
@@ -156,11 +151,11 @@
 # is also an interactive console at the bottom left where commands can be 
 # directly executed.
 # 
-# ![VS Code Notebook](images/vscode-notebook.png "VS Code Notebook")
+# ![VS Code Notebook](images/vscode-magic-python.png "VS Code Notebook")
 # 
 
 #%%
-# ### Importing an exiting notebook in VS Code
+# ### Importing an exiting notebook into Magic Python
 # 
 # VS Code only understands Magic Python files as notebook-like documents, and so
 # `.ipynb` files must be converted to use. The process of importing is simple:
@@ -171,7 +166,7 @@
 # ![VS Code Export](images/vscode-export.png "VS Code Export")
 
 #%%
-# ### Exporting to an Jupyter notebook
+# ### Exporting Magic Python to a Jupyter notebook
 # 
 # To export a Magic Python file, open the command palette and enter "import jupyter". 
 # Select the option to import the notebook.
@@ -188,7 +183,7 @@
 # </div>
 # 
 # PyCharm Professional has deeply integrated Jupyter Notebooks. To create
-# an Jupyter notebook:
+# an IPython notebook:
 # 
 # 1. Open PyCharm Profession
 # 2. Open the directory where your notebooks are stored
@@ -210,7 +205,7 @@
 # 
 # ![PyCharm Notebook](images/pycharm-notebook.png "Pycharm Notebook")
 # 
-# ### Magic Python in PyCharm
+# ## Magic Python in PyCharm
 # PyCharm supports Magic Python cell execution. To use Magic Python, you need
 # to enable *Scientific Mode* in the View menu. You can then use `#%%` to
 # indicate the start and end of cells. Individual Cells can be executed in

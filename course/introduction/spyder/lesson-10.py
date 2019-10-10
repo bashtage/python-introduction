@@ -105,7 +105,7 @@
 # ## Problem: Selecting a single Column
 # Select the 2nd column of x using a scalar integer, a slice and a list.
 # 
-# **Question**: What the the dimensions of the selected elemets? 
+# **Question**: What the the dimensions of the selected elemets?
 
 #%%
 
@@ -114,13 +114,23 @@
 
 
 #%%
-# ## Problem: Selecting Specific Rows or Columns
-# 1. Select the 2nd and 3rd columns of x using a slice.
-# 2. Select the 2nd and 4th rows of x using both a slice and a list. 
-# 3. Combine these be combined to select columns 2 and 3 and rows 2 and 4. 
+# ## Problem: Selecting a block of specific columns
+# Select the 2nd and 3rd columns of x using a slice.
 
 #%%
 
+
+#%%
+# ## Problem: Selecting a block of specific rows
+# Select the 2nd and 4th rows of x using both a slice and a list. 
+# 
+
+#%%
+
+
+#%%
+# ## Problem: Selecting a block of specific rows and columns
+# Combine these be combined to select columns 2 and 3 and rows 2 and 4.
 
 #%%
 
@@ -160,7 +170,7 @@ print(x_df)
 #%%
 # ## Problem: Use `np.asarray` to convert to an array
 # 
-# Use  `np.asarray` to convert a DataFrame toa NumPy array.
+# Use  `np.asarray` to convert a DataFrame to a NumPy array.
 
 #%%
 

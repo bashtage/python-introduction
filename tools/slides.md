@@ -375,6 +375,7 @@ pip install jupyter_contrib_nbextensions
   * Cells demarcated with `#%%`
 
 
+
 # `Series` and `DataFrames`
 ## Overview
 
@@ -446,10 +447,43 @@ cols = ['A','B','C']
 idx = ['x', 'y', 'z']
 df = pd.DataFrame(data, columns=cols, index=idx)
 ```
+  * Both can be assigned after initialization
+```python
+df = pd.DataFrame(data)
+df.columns = cols
+df.index = index
+```
+
+
+# `DataFrames` from `Series`
+## Overview
+
+* Two standard ways to build `DataFrames`
+  * Treat each `Series` as a row
+```python
+df = pd.DataFrame([s1, s2, s3])
+```
+  * Use a dictionary containing columns
+```python
+df = pd.DataFrame({'A': a, 'B': b, 'C': c})
+```
+    * Keys are column names
+* Advanced methods
+  * `pd.concat` concatenates `DataFrames`
+  * `DataFrame.merge` and `DataFrame.join` are SQL-like
 
 
 
-# Creating `DataFrame`
+# `DataFrames` from `Series`
+## Summary
+
+* Build `DataFrame` from `Series`
+  * `Series` as rows using a list
+  * `Series` as columns using a dictionary
+
+
+
+# Creating `DataFrame`s
 ## Building from  multiple `Series`
 
 * From a list of `Series`
@@ -461,13 +495,18 @@ df = pd.DataFrame([s1, s2])
   * `Series` `index` become columns
     * Component `Series` should have identical `index`
   * Use `.T` to transpose a `DataFrame`
+
+
+
+# Creating `DataFrame`s
+## Building from  multiple `Series`
+
 * Using a dictionary &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ```python
 df = pd.DataFrame({'a': s1, 'b': s2})
 ```
   * Keys are column names
   * Component `Series` should have identical `index`
-
 
 
 # Calling Functions
@@ -487,19 +526,54 @@ func(a, index=b)
 ```
 
 
+# Methods and Functions
+## Overview
+
+* Methods are functions attached to an object
+* Method is just a function that takes its object as the first (hidden) input
+```python
+a = np.array([1, 2, 3])
+a.mean()
+np.mean(a)
+```
+* Functions and methods rely on positional and keyword arguments
+* Function can return one or more outputs
+  * Multiple outputs are tuples
+  * Directly unpack by matching the number of output
+
+
+
+# Methods and Functions
+## Summary
+
+* Methods and functions are widely used
+  * Basic statistics
+  * Estimation of model parameters (later)
+  * Plotting data
+  * ...
+* Methods are functions attached to objects
+* Calling either is virtually the same
+* Parameters either positional or using parameter name
+```python
+f(1, option="yes")
+```
+
+
 
 # Calling methods on objects
 
 * Python objects expose methods 
 * Methods operate on the object
-* May also take additional inputs
 * Important examples
   * NumPy arrays
   * pandas `DataFrames` and `Series` all
-* Called using `.`_function_ syntax
+* Called using `.`_method_ syntax
 ```python
 a = np.array([1, 2, 3])
 a.mean()
+```
+* Methods can take additional inputs
+```python
 a.reshape((3, 1))
 ```
 
@@ -763,7 +837,7 @@ s = pd.Series([1.0, 2.0, 3.0], index=idx, name="data")
 
 
 # Custom Functions
-# Overview
+## Overview
 
 * Custom functions simplify repetitive code
 * Required in some applications
@@ -778,8 +852,8 @@ s = pd.Series([1.0, 2.0, 3.0], index=idx, name="data")
 # Custom Functions
 ## Basic structure
 ```python
-def func(x):
-    function code
+def func(x, y=1):
+    function body
     return value
 ```
   * `def`
@@ -794,7 +868,7 @@ def func(x):
 
 
 # Custom Functions
-# Summary
+## Summary
 
 * Function begin with `def`
 * Returned value uses `return`

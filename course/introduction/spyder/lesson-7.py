@@ -26,6 +26,12 @@
 
 
 #%%
+
+
+#%%
+
+
+#%%
 # ## Exercises
 # 
 # ### Exercise: Custom Function
@@ -34,6 +40,23 @@
 # a DataFrame and return a DataFrame with 4 columns and as many rows as
 # there were columns in the original data where the columns contain the mean,
 # standard deviation, skewness and kurtosis of x.
+# 
+# Check your function by running
+# ```python
+# summary_stats(momentum)
+# ```
+
+#%%
+# Setup: Load the momentum data
+import pandas as pd
+momentum = pd.read_csv("data\momentum.csv",index_col="date", parse_dates=True)
+
+
+#%%
+
+
+#%%
+# Test your function using the momentum data in the next cell.
 
 #%%
 
@@ -48,6 +71,14 @@
 # ```python
 # return w, x, y, z
 # ```
+# 
+# Test your function using the momentum data.
+
+#%%
+
+
+#%%
+# Test your function using the momentum data in the next cell.
 
 #%%
 

@@ -9,8 +9,6 @@
 # * Computing returns (percentage change)
 # * Basic mathematical operations on DataFrames
 # 
-# * Common DataFrame methods (functions)
-# 
 # This first cell load data for use in this lesson.
 
 #%%

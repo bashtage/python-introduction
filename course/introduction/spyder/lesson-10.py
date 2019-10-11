@@ -39,7 +39,9 @@
 # ## Problem: Selecting a column by name
 # 
 # Select the 2nd columns of `x_name` using  both `[]` and `.loc`.
-# 
+
+#%%
+
 
 #%%
 
@@ -52,6 +54,12 @@
 # 
 # Select the 2nd element of `y_name` using both `[]` and `loc`.
 # 
+
+#%%
+
+
+#%%
+
 
 #%%
 

@@ -455,6 +455,7 @@ df.index = index
 ```
 
 
+
 # `DataFrames` from `Series`
 ## Overview
 
@@ -463,7 +464,7 @@ df.index = index
 ```python
 df = pd.DataFrame([s1, s2, s3])
 ```
-  * Use a dictionary containing columns
+  * Use a dictionary containing columns &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ```python
 df = pd.DataFrame({'A': a, 'B': b, 'C': c})
 ```
@@ -509,6 +510,7 @@ df = pd.DataFrame({'a': s1, 'b': s2})
   * Component `Series` should have identical `index`
 
 
+
 # Calling Functions
 * Positional arguments
 ```python
@@ -526,37 +528,42 @@ func(a, index=b)
 ```
 
 
-# Methods and Functions
+
+# Functions and Methods
 ## Overview
 
+* Functions are used to transform inputs
 * Methods are functions attached to an object
-* Method is just a function that takes its object as the first (hidden) input
+  * Method is a function that always take its object as the first input
+  * The object is hidden in the method call
 ```python
 a = np.array([1, 2, 3])
 a.mean()
 np.mean(a)
 ```
-* Functions and methods rely on positional and keyword arguments
-* Function can return one or more outputs
+* Both use positional and keyword arguments
+* May return one or more outputs
   * Multiple outputs are tuples
   * Directly unpack by matching the number of output
 
 
 
-# Methods and Functions
+# Functions and Methods
 ## Summary
 
-* Methods and functions are widely used
+* Functions and methods are widely used
   * Basic statistics
   * Estimation of model parameters (later)
   * Plotting data
-  * ...
 * Methods are functions attached to objects
-* Calling either is virtually the same
-* Parameters either positional or using parameter name
+  * Methods operate on the object
+  * May take additional inputs
+* Parameters either positional or use parameter name
 ```python
 f(1, option="yes")
 ```
+* Help available using `?`, `help` or the web
+
 
 
 
@@ -567,7 +574,7 @@ f(1, option="yes")
 * Important examples
   * NumPy arrays
   * pandas `DataFrames` and `Series` all
-* Called using `.`_method_ syntax
+* Called using _object`.`method_ syntax
 ```python
 a = np.array([1, 2, 3])
 a.mean()
@@ -576,6 +583,60 @@ a.mean()
 ```python
 a.reshape((3, 1))
 ```
+
+
+
+# Multiple Outputs
+* Multiple outputs are returned as a tuple
+```python
+multi_output = func(x, y)
+first = multi_output[0]
+second = multi_output[1]
+```
+  * Use positional indexing to unpack
+* Can directly unpack multiple returned values
+```python
+first, second = func(x, y)
+```
+  * **Warning**: Number of outputs must _exactly_ match the count returned
+
+
+
+# Getting Help
+
+* Use `?` to get help in Jupyter notebooks
+```python
+import pandas as pd
+pd.read_csv?
+```
+  * Does **not** work in VS Code (October 2019)
+* Use the `help` built-in
+
+```python
+help(pd.read_csv)
+```
+```python
+df = pd.DataFrame([[1],[2]])
+help(df.to_csv)
+```
+* Formatted web-based help easy to find using Google
+
+
+
+# Function Signatures
+## Required and Optional Arguments
+
+* Python function can have required or optional arguments
+* Function signature indicates type
+  * `=` used in optional parameters
+  * Value to right of `=` is the default
+* Signature for `np.linspace`  
+```python
+linspace(start, stop, num=50, endpoint=True,
+           retstep=False, dtype=None, axis=0)
+```
+  * `start` and `stop` are required
+  * 5 other inputs are optional 
 
 
 
@@ -877,3 +938,97 @@ def func(x, y=1):
   * Use 4 spaces to indent
     * Do not use tab character to indent
     * Configure editor to convert tab to 4 spaces 
+
+
+
+# Key methods
+## Univariate Moments
+
+* Standard behavior
+  * Operate column-by-column in a `DataFrame`
+  * Return a `Series`
+  * Column names are index of `Series` returned
+* `mean`: Mean
+* `var`: Variance
+* `std`: Standard Deviation
+* `skew`: Skewness
+* `kurt`: Excess kurtosis (standard definition - 3)
+* `sum`: Sum
+
+
+# Key methods
+## Quantiles and Extremes
+
+* `median`: Median
+* `max`: Maximum
+* `min`: Minimum
+* `quantile(q)`: User-specified quantile(s), `q` required
+  * `quantile` returns a `DataFrame` if `q` is list input
+```python
+df.quantile([0.25, 0.75])
+```
+  * `index` matches `q`
+  * `columns` match `df.columns`
+
+
+
+# Key methods
+## Covariance and correlation
+
+* `cov`: Covariance
+* `corr`: Correlation
+  * Return a diagonally symmetric `DataFrame`
+  * Columns and index match
+
+
+
+
+# Key methods
+## Mathematics
+
+* Cumulative Statistics 
+  * `cummax`: Cumulative max
+  * `cummin`: Cumulative min
+  * `cumprod`: Cumulative product
+  * `cumsum`: Cumulative sum
+    * Output has same shape as input
+* `abs`: Absolute value (element-by-element)
+  * Output has same shape as input
+* Linear-algebra product  
+  * `dot`
+    * $ x' x\Rightarrow $ `x.T.dot(x)`
+    * Output shape depends on inputs
+
+
+
+# Key methods
+## `DataFrame` specific
+* Content information 
+  * `count`: Number of non-missing values
+  * `describe`: Basic summary statistics
+* Display
+  * `head`: Show first 5 rows
+  * `tail`: Show last 5 rows
+* Sorting
+  * `sort_index`: Sort by index values
+  * `sort_values(columns)`: Sort by values of one or mroe columns
+* Size information   
+  * `ndim`: Number of dimensiona (1 or 2)
+  * `shape`: Shape of data (`ndim` element tuple)
+
+
+
+# Key methods
+## Other 
+* `transpose` (shortcut `.T`)
+  * Swap columns and row
+* `dropna`: Remove missing
+  * Input `how` determines behavior
+  * Input `axis` selects to drop rows or columns
+* Logical Aggregation
+  * `all`: Check if all elements true
+  * `any`: Check if any element is true
+* Transformation
+  * `diff`: Arithmetic change
+  * `pct_change`: Percentage change
+  * `shift(n)`: Shift values forward or backward

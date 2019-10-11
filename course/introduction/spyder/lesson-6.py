@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# # Calling Functions
+# # Methods and Functions
 # 
 # This lesson covers:
 # 
@@ -72,11 +72,18 @@ mom_10 = momentum["mom_10"]
 
 
 #%%
+
+
+#%%
 # ## Problem: Calling Functions with 2 Inputs
 # 
 # Many functions take two or more inputs. Like outputs, the inputs are simply
 # listed in order separated by commas. Use `np.linspace` to produce a series
-# of 11 points evenly spaced between 0 and 1.  
+# of 11 points evenly spaced between 0 and 1.
+# 
+# ```
+# np.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)
+# ```  
 
 #%%
 
@@ -143,6 +150,14 @@ mom_10 = momentum["mom_10"]
 
 #%%
 
+
+#%%
+
+
+#%%
+# ## Problem: Use `help` with a method
+# 
+# Use `help` to get the help for the `kurt` method attached to `momentum`.
 
 #%%
 

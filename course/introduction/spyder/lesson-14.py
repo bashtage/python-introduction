@@ -2,36 +2,66 @@
 # coding: utf-8
 
 #%%
-# # Conditional Execution
+# # Logical Operators
 # 
-# * `if`-`elif`-`else` blocks
+# This lesson covers:
+# 
+# * Basic logical operators 
+# * Compound operators 
+# 
+# Begin by loading the data in momentum.csv.
 
 #%%
-# ## Problem: Print value if negative
+# Setup: Load the momentum data
+
+import pandas as pd
+
+momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
+
+print(momentum.head())
+
+mom_01 = momentum["mom_01"]
+mom_10 = momentum["mom_10"]
+mom_05 = momentum["mom_05"]
+
+
+#%%
+# ## Problem: Basic Logical Statements
 # 
-# Draw a standard normal value using `np.random.standard_normal` and print the
-# value if it is negative.
+# For portfolio 1 and portfolio 10, count the number of elements that are
+# $<0$, $\geq0$, and exactly equal to 0. Next count the number of times that
+# the returns in portfolio 5 are greater, in absolute value, that 2 times
+# the standard deviation of the returns in that portfolio. 
 # 
-# **Note**: Rerun the cell a few time to see different output.
 
 #%%
 
 
 #%%
-# ## Problem: Print different messages based on value
-# 
-# Draw a standard normal value and print "Positive" if it is positive
-# and "Negative" if not.
+
+
+#%%
+# ## Problem: Compound Statements
+# Count the number of times that the returns in both portfolio 1 and portfolio
+# 10 are negative. Next count the number of times that the returns in portfolios
+# 1 and 10 are both greater, in absolute value, that 2 times their respective
+# standard deviations. 
 
 #%%
 
 
 #%%
-# ## Problem: 
+
+
+#%%
+# ## Combining Scalar Boolean Values
 # 
-# Draw a standard t random variable with 2 degrees of freedom using
-# `np.random.standard_t(2)` and print "Negative Outlier" if less than -2,
-# "Positive Outlier" if larger than 2, and "Inlier" if between -2 and 2.
+# Use `and`, `or` and `not` to determine if the return on mom_01 on
+# February 14, 2016 is inside or outside an interval of 1 standard deviation
+# of the mean of all of the return of mom_01.
+
+#%%
+
 
 #%%
 

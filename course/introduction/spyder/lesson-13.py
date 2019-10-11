@@ -2,66 +2,102 @@
 # coding: utf-8
 
 #%%
-# # Logical Operators
+# # Program Flow
 # 
 # This lesson covers:
 # 
-# * Basic logical operators 
-# * Compound operators 
+# * for loops 
+# * Nested loops 
 # 
-# Begin by loading the data in momentum.csv.
+# 
+
+#%%
+# ## Problem: Basic For Loops
+# 
+# Construct a for loop to sum the numbers between 1 and N for any N. A for loop
+# that does nothing can be written:
+# 
+# ```python
+# n = 10
+# for i in range(n):
+#     pass
+# ```
+# 
+
+#%%
+
+
+#%%
+# ## Problem: Compute a compound return
+# The compound return on a bond that pays interest annually at rate r is given
+# by $cr_{t}=\prod_{i=1}^{T}(1+r)=(1+r)^{T}$. Use a for loop compute the total
+# return for £100 invested today for $1,2,\ldots,10$ years. Store this variable
+# in a 10 by 1 vector cr. 
+# 
+
+#%%
+
+
+#%%
+# ## Problem: Simulate a random walk
+# (Pseudo) Normal random variables can be simulated using the command
+# `np.random.standard_normal(shape)` where `shape` is a tuple (or a scalar)
+# containing the dimensions of the desired random numbers. Simulate 100 normals
+# in a 100 by 1 vector and name the result `e`. Initialize a vector `p`
+# containing zeros using the function zeros. Add the 1st element of `e` to the
+# first element of `p`. Use a for loop to simulate a process
+# $y_{i}=y_{i-1}+e_{i}$. When finished plot the results using
+# 
+# ```python
+# %matplotlib inline
+# 
+# import matplotlib.pyplot as plt
+# plt.rc('figure', figsize=(16,9))
+# 
+# plt.plot(y)
+# ```
+# 
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: Nested Loops
+# Begin by loading momentum data used in an earlier lesson. Compute a
+# 22-day moving-window standard deviation for each of the columns. Store
+# the value at the end of the window.
+# 
+# When finished, plot the annualized percentage standard deviations using
+# `plt.plot(100 * np.sqrt(252) * std_dev)`.  
 
 #%%
 # Setup: Load the momentum data
 
 import pandas as pd
-
 momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
-
-print(momentum.head())
-
-mom_01 = momentum["mom_01"]
-mom_10 = momentum["mom_10"]
-mom_05 = momentum["mom_05"]
+momentum = momentum / 100  # Convert to numeric values from percentages
 
 
 #%%
-# ## Problem: Basic Logical Statements
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Exercises
 # 
-# For portfolio 1 and portfolio 10, count the number of elements that are
-# $<0$, $\geq0$, and exactly equal to 0. Next count the number of times that
-# the returns in portfolio 5 are greater, in absolute value, that 2 times
-# the standard deviation of the returns in that portfolio. 
+# ### Exercise
+# 1. Simulate a 1000 by 10 matrix consisting of 10 standard random walks using
+#    both nested loops and `np.cumsum`. 
+# 2. Plot the results. 
 # 
-
-#%%
-
-
-#%%
-
-
-#%%
-# ## Problem: Compound Statements
-# Count the number of times that the returns in both portfolio 1 and portfolio
-# 10 are negative. Next count the number of times that the returns in portfolios
-# 1 and 10 are both greater, in absolute value, that 2 times their respective
-# standard deviations. 
-
-#%%
-
-
-#%%
-
-
-#%%
-# ## Combining Scalar Boolean Values
+# **Question to think about**
 # 
-# Use `and`, `or` and `not` to determine if the return on mom_01 on
-# February 14, 2016 is inside or outside an interval of 1 standard deviation
-# of the mean of all of the return of mom_01.
-
-#%%
-
-
-#%%
-
+# If you rerun the code in this Exercise, do the results change? Why? 

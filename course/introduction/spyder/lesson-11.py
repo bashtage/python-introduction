@@ -2,60 +2,22 @@
 # coding: utf-8
 
 #%%
-# # Numeric Indexing of DataFrames
+# # Accessing Elements in NumPy Arrays
 # 
 # This lesson covers:
 # 
-# * Accessing specific elements in DataFrames using numeric indices
+# * Accessing specific elements in NumPy arrays
 # 
-# Accessing elements in a DataFrame is a common task. To begin this lesson,
-# clear the workspace set up some vectors and a $5\times5$ array. These vectors
-# and matrix will make it easy to determine which elements are selected by a
-# command.
+# Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
+# workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
+# to determine which elements are selected by a command.
 # 
-# Begin by creating:
 # 
-# * A 5-by-5 DataFrame `x_df` containing `np.arange(25).reshape((5,5))`.
-# * A 5-element Series `y_s` containing `np.arange(5)`.
-# * A 5-by-5 DataFrame `x_named` that is `x_df` with columns "c0", "c1", ...,
-#   "c4" and rows "r0", "r1", ..., "r4".
-# * A 5-element Series `y_named` with index "r0", "r1", ..., "r4". 
-
-#%%
-
-
-#%%
-# ## Problem: Picking an Element out of a DataFrame
+# Using `arange` and `reshape` to create 3 arrays:
 # 
-# Using double index notation, select the (0,2) and the (2,0) element of
-# `x_named`.
-
-#%%
-
-
-#%%
-# ## Problem: Select Elements from Series
-# 
-# Select the 2nd element of `y_named`.
-
-#%%
-
-
-#%%
-# ## Problem: Selecting Rows as Series
-# 
-# Select the 2nd row of `x_named` using the colon (:) operator.
-# 
-
-#%%
-
-
-#%%
-# ## Problem: Selecting Rows as DataFrames
-# 
-# 1. Select the 2nd row of `x_named` using a slice so that the selection
-#    remains a DataFrame.
-# 2. Repeat using a list of indices to retain the DataFrame. 
+# * 5-by-5 array `x` containing the values 0,1,...,24 
+# * 5-element, 1-dimensional array `y` containing 0,1,...,4
+# * 5-by-1 array `z` containing 0,1,...,4
 # 
 
 #%%
@@ -65,67 +27,150 @@
 
 
 #%%
-# ## Problem: Selecting Entire Columns as Series
-# Select the 2nd column of `x_named` using the colon (:) operator. 
+
+
+#%%
+# ## Zero-based indexing
+# Python indexing is 0 based so that the first element has position `0`, the second has position `1`
+# and so on until the last element has position `n-1` in an array that contains `n` elements in
+# total.
+# 
+# ## Problem: Scalar selection
+# Select the number 2 in all three, `x`, `y`, and `z`.
+# 
+# 
+# **Question**:  Which index is rows and which index is columns?
 
 #%%
 
 
 #%%
-# ## Problem: Selecting Single Columns as DataFrames
-# Select the 2nd column of `x_named`  so that the selection remains a DataFrame. 
+
+
+#%%
+
+
+#%%
+# ## Problem: Scalar selection of a single row
+# 
+# Select row 2 in `x` and `z` using a single integer value.
+#  
+# **Question**: What is the dimension of `x` and the second row of `x`
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: Slice selection of a single row
+# 
+# Use a slice to select the 2nd row of `x` and the 2nd element of `y` and `z`.
+# 
+# **Question**: What are the dimension selections?
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: List selection of a single row
+# 
+# Use a list to select the 2nd row of `x` and the 2nd element of `y` and `z`.
+# 
+# **Question**: What are the dimension selections?
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: Selecting a single Column
+# Select the 2nd column of x using a scalar integer, a slice and a list.
+# 
+# **Question**: What the the dimensions of the selected elemets?
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: Selecting a block of specific columns
+# Select the 2nd and 3rd columns of x using a slice.
+
+#%%
+
+
+#%%
+# ## Problem: Selecting a block of specific rows
+# Select the 2nd and 4th rows of x using both a slice and a list. 
 # 
 
 #%%
 
 
 #%%
-
-
-#%%
-# ## Problem: Selecting Specific Columns
-# Select the 2nd and 3rd columns of `x_named` using a slice.
+# ## Problem: Selecting a block of specific rows and columns
+# Combine these be combined to select columns 2 and 3 and rows 2 and 4.
 
 #%%
 
 
 #%%
-# ## Problem: Select Specific Rows
+
+
+#%%
+# ## Problem: Use `ix_` to select rows and columns using lists
+# Use `ix_` to select the 2nd and 4th rows and 1st and 3rd columns of `x`.
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: Convert a DataFrame to a NumPy array
 # 
-# Select the 2nd and 4th rows of `x_named` using a slice.  Repeat the 
-# selection using a list of integers.
+# Use  `.to_numpy` to convert a DataFrame to a NumPy array.
+
+#%%
+# Setup: Create a DataFrame
+import pandas as pd
+import numpy as np
+
+names = ["a", "b", "c", "d", "e"]
+x = np.arange(25).reshape((5,5))
+x_df = pd.DataFrame(x, index=names, columns=names)
+print(x_df)
+
 
 #%%
 
 
 #%%
-
-
-#%%
-# ## Problem: Select arbitrary rows and columns
+# ## Problem: Use `np.asarray` to convert to an array
 # 
-# Combine the previous selections to select columns 2 and 3 and rows 2 and 4
-# of `x_named`. 
-# 
-# **Note**: This is the only important difference with NumPy.  Arbitrary
-# row/column selection using `DataFrame.iloc` is simpler but less flexible.
-# 
-# print(x_named.iloc[1:4:2, 1:3])
-# print(x_named.iloc[[1, 3],[1, 2]])
-# print(x_named.iloc[[1,3], 1:3])
-
-#%%
-# ## Problem: Mixed selection
-# 
-# Select the columns c1 and c2 and rows 0, 2 and 4.
-
-#%%
-
-
-#%%
-# ## Problem: Mixed selection 2
-# 
-# Select the rows r1 and r2 and columns 0, 2 and 4.
+# Use  `np.asarray` to convert a DataFrame to a NumPy array.
 
 #%%
 

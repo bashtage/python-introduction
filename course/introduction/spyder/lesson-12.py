@@ -2,84 +2,61 @@
 # coding: utf-8
 
 #%%
-# # Program Flow
+# # Numeric Indexing of DataFrames
 # 
 # This lesson covers:
 # 
-# * for loops 
-# * Nested loops 
+# * Accessing specific elements in DataFrames using numeric indices
 # 
+# Accessing elements in a DataFrame is a common task. To begin this lesson,
+# clear the workspace set up some vectors and a $5\times5$ array. These vectors
+# and matrix will make it easy to determine which elements are selected by a
+# command.
 # 
-
-#%%
-# ## Problem: Basic For Loops
+# Begin by creating:
 # 
-# Construct a for loop to sum the numbers between 1 and N for any N. A for loop
-# that does nothing can be written:
-# 
-# ```python
-# n = 10
-# for i in range(n):
-#     pass
-# ```
-# 
+# * A 5-by-5 DataFrame `x_df` containing `np.arange(25).reshape((5,5))`.
+# * A 5-element Series `y_s` containing `np.arange(5)`.
+# * A 5-by-5 DataFrame `x_named` that is `x_df` with columns "c0", "c1", ...,
+#   "c4" and rows "r0", "r1", ..., "r4".
+# * A 5-element Series `y_named` with index "r0", "r1", ..., "r4". 
 
 #%%
 
 
 #%%
-# ## Problem: Compute a compound return
-# The compound return on a bond that pays interest annually at rate r is given
-# by $cr_{t}=\prod_{i=1}^{T}(1+r)=(1+r)^{T}$. Use a for loop compute the total
-# return for £100 invested today for $1,2,\ldots,10$ years. Store this variable
-# in a 10 by 1 vector cr. 
+# ## Problem: Picking an Element out of a DataFrame
 # 
+# Using double index notation, select the (0,2) and the (2,0) element of
+# `x_named`.
 
 #%%
 
 
 #%%
-# ## Problem: Simulate a random walk
-# (Pseudo) Normal random variables can be simulated using the command
-# `np.random.standard_normal(shape)` where `shape` is a tuple (or a scalar)
-# containing the dimensions of the desired random numbers. Simulate 100 normals
-# in a 100 by 1 vector and name the result `e`. Initialize a vector `p`
-# containing zeros using the function zeros. Add the 1st element of `e` to the
-# first element of `p`. Use a for loop to simulate a process
-# $y_{i}=y_{i-1}+e_{i}$. When finished plot the results using
+# ## Problem: Select Elements from Series
 # 
-# ```python
-# %matplotlib inline
+# Select the 2nd element of `y_named`.
+
+#%%
+
+
+#%%
+# ## Problem: Selecting Rows as Series
 # 
-# import matplotlib.pyplot as plt
-# plt.rc('figure', figsize=(16,9))
-# 
-# plt.plot(y)
-# ```
+# Select the 2nd row of `x_named` using the colon (:) operator.
 # 
 
 #%%
 
 
 #%%
-
-
-#%%
-# ## Problem: Nested Loops
-# Begin by loading momentum data used in an earlier lesson. Compute a
-# 22-day moving-window standard deviation for each of the columns. Store
-# the value at the end of the window.
+# ## Problem: Selecting Rows as DataFrames
 # 
-# When finished, plot the annualized percentage standard deviations using
-# `plt.plot(100 * np.sqrt(252) * std_dev)`.  
-
-#%%
-# Setup: Load the momentum data
-
-import pandas as pd
-momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
-momentum = momentum / 100  # Convert to numeric values from percentages
-
+# 1. Select the 2nd row of `x_named` using a slice so that the selection
+#    remains a DataFrame.
+# 2. Repeat using a list of indices to retain the DataFrame. 
+# 
 
 #%%
 
@@ -88,16 +65,67 @@ momentum = momentum / 100  # Convert to numeric values from percentages
 
 
 #%%
+# ## Problem: Selecting Entire Columns as Series
+# Select the 2nd column of `x_named` using the colon (:) operator. 
+
+#%%
 
 
 #%%
-# ## Exercises
+# ## Problem: Selecting Single Columns as DataFrames
+# Select the 2nd column of `x_named`  so that the selection remains a DataFrame. 
 # 
-# ### Exercise
-# 1. Simulate a 1000 by 10 matrix consisting of 10 standard random walks using
-#    both nested loops and `np.cumsum`. 
-# 2. Plot the results. 
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: Selecting Specific Columns
+# Select the 2nd and 3rd columns of `x_named` using a slice.
+
+#%%
+
+
+#%%
+# ## Problem: Select Specific Rows
 # 
-# **Question to think about**
+# Select the 2nd and 4th rows of `x_named` using a slice.  Repeat the 
+# selection using a list of integers.
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: Select arbitrary rows and columns
 # 
-# If you rerun the code in this Exercise, do the results change? Why? 
+# Combine the previous selections to select columns 2 and 3 and rows 2 and 4
+# of `x_named`. 
+# 
+# **Note**: This is the only important difference with NumPy.  Arbitrary
+# row/column selection using `DataFrame.iloc` is simpler but less flexible.
+# 
+# print(x_named.iloc[1:4:2, 1:3])
+# print(x_named.iloc[[1, 3],[1, 2]])
+# print(x_named.iloc[[1,3], 1:3])
+
+#%%
+# ## Problem: Mixed selection
+# 
+# Select the columns c1 and c2 and rows 0, 2 and 4.
+
+#%%
+
+
+#%%
+# ## Problem: Mixed selection 2
+# 
+# Select the rows r1 and r2 and columns 0, 2 and 4.
+
+#%%
+

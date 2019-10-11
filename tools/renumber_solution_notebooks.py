@@ -31,4 +31,8 @@ if need_rename and RENAME:
         nb_file = notebooks[key]
         new_file_name = nb_file.split("-")[0]
         new_file_name = f"{new_file_name}-{new_number}.ipynb"
-        subprocess.call(["git", "mv", notebooks[key], new_file_name])
+        import os
+        src = os.path.abspath(notebooks[key])
+        dest = os.path.abspath(new_file_name)
+        if src != dest:
+            subprocess.call(["git", "mv", src, dest])

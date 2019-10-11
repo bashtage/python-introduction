@@ -2,146 +2,106 @@
 # coding: utf-8
 
 #%%
-# # Accessing Elements in DataFrames
+# # Common DataFrame methods
 # 
-# This lesson covers:
+# This lesson introduces the common `DataFrame` methods that
+# we will repeatedly use in the course. 
 # 
-# * Assessing specific elements in Pandas Series and DataFrames 
-# 
-# Accessing elements in an array or a DataFrame is a common task. To begin this
-# lesson, clear the workspace set up some vectors and a $5\times5$ array. These
-# vectors and matrix will make it easy to determine which elements are selected
-# by a command.
-# 
-# Start by creating 2 DataFrame and 2 Series. Define `x=np.arange(24).reshape(5,5)` 
-# which is a 5 by 5 array and `y=np.arange(5)` which is a 5-element 1-d array.
-# We need:
-# 
-# * `x_df`: A default `DataFrame` containing `x`
-# * `x_named`: A `DataFrame` containing `x` with index `"r0"`, `"r1"`, ..., `"r4"` and
-#   columns `"c0"`, `"c1"`, ... `"c4"`.
-# * `y_s`: A default `Series` containing `y`
-# * `y_named`: A `Series` containing `y` that has the index `"r0"`, `"r1"`, ..., `"r4"`
+# This first cell load data for use in this lesson.
 
 #%%
-
-
-#%%
-# ## Problem: Selecting a row by name
-# 
-# Select the 2nd row of `x_name` using `.loc`.
-# 
-
-#%%
-
-
-#%%
-# ## Problem: Selecting a column by name
-# 
-# Select the 2nd columns of `x_name` using  both `[]` and `.loc`.
-# 
-
-#%%
-
-
-#%%
-
-
-#%%
-# ## Problem: Selecting a elements of a Series by name
-# 
-# Select the 2nd element of `y_name` using both `[]` and `loc`.
-# 
-
-#%%
-
-
-#%%
-# ## Problem: Selecting rows and columns by name
-# 
-# Select the 2nd and 4th rows and 1st and 3rd columns of `x_name`.
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-# ## Problem: DataFrame selection with default index and column names
-# 
-# Select the 2nd and 4th rows and 1st and 3rd columns of `x_df`.
-# 
-
-#%%
-
-
-#%%
-# ## Problem: Series selection with the default index
-# 
-# Select the final element in `y_s`
-
-#%%
-
-
-#%%
-
-
-#%%
-# ## Problem: Subseries selection
-# Select the subseries of `y_named` and `y_s` containing the first, fourth and fifth element.
-
-#%%
-
-
-#%%
-
-
-#%%
-# Load the data in momentum.csv.
-
-#%%
-# Setup: Load the momentum data
-
+# Setup: Load prices
 import pandas as pd
-
-momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
-momentum.head()
+prices = pd.read_hdf("data/dataframes.h5", "prices")
+sep_04 = pd.read_hdf("data/dataframes.h5", "sep_04")
+goog = pd.read_hdf("data/dataframes.h5", "goog")
+returns = prices.pct_change().dropna()
+spy_returns = returns.SPY
+aapl_returns = returns.AAPL
+goog_returns = returns.GOOG
 
 
 #%%
-# ## Problem: Selecting data on a single day
+# ## Problem: Constructing portfolio returns
 # 
-# Select returns on February 16, 2016.
+# Compute the return of a portfolio with weight $\frac{1}{3}$ in each security using
+# multiplication (`*`) and `.sum()`.
+# 
+# **Note**: You need to use the `axis` keyword for the sum.
+
+#%%
+
+
+#%%
+# ## Problem: Compute the Mean and Standard Deviation
+# 
+# Using the function mean, compute the mean of the three returns series one at a time. For example  
+# ```python
+# goog_mean = goog_returns.mean()
+# ```
+# Next, compute the mean of the matrix of returns using  
+# 
+# ```python
+# retmean = returns.mean()
+# ```
+# 
+# What is the relationship between these two? Repeat this exercise for the standard deviation (`std()`).
 # 
 
 #%%
 
 
 #%%
-# ## Problem: Selecting data in a single month
-# 
-# Select return in March 2016.
+
 
 #%%
 
 
 #%%
-# ## Problem: Selecting data in a single year
-# 
-# Select return in 2016.
-# 
+# ## Problem: Compute Correlation
+# Compute the correlation of the matrix of returns (`corr()`). 
 
 #%%
 
 
 #%%
-# ## Problem: Selecting data in a date range
+# ## Problem: Summing all elements
 # 
-# Select returns between May 1, 2016, and June 15, 2016.
+# Compute the sum of the columns of returns using `.sum()`. How is this related to the mean computed 
+# in the previous step? 
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: Maximum and Minimum Values
+# Compute the minimum and maximum values of the columns of returns using the `min()` and `max()` commands. 
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: Rounding Up, Down and to the Closest Integer
+# 
+# Rounding up is handled by ceil, rounding down is handled by floor and rounding to the closest 
+# integer is handled by round. Try all of these commands on 100 times returns. For example,  
+# ```python
+# rounded = (100*returns).round()
+# ``` 
+# 
+# Use `ceil` and `floor` to round up and down, respectively.
+
+#%%
+
+
+#%%
+
 
 #%%
 

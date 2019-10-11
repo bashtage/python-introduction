@@ -8,6 +8,7 @@
 # 
 # * Computing returns (percentage change)
 # * Basic mathematical operations on DataFrames
+# 
 # * Common DataFrame methods (functions)
 # 
 # This first cell load data for use in this lesson.
@@ -62,7 +63,7 @@ goog = pd.read_hdf("data/dataframes.h5", "goog")
 
 
 #%%
-# ## Problem: Basic Mathematical Operations
+# ## Basic Mathematical Operations
 # 
 # |  Operation            | Symbol | Precedence |
 # |:----------------------|:------:|:----------:|
@@ -79,11 +80,12 @@ goog = pd.read_hdf("data/dataframes.h5", "goog")
 # **Note**: Higher precedence operators are evaluated first, and ties are
 # evaluated left to right. 
 # 
+# 
+# ## Problem: Scalar Operations
 # 1. Add 1 to all returns
 # 2. Square the returns
 # 3. Multiply the price of Google by 2. 
 # 4. Extract the fractional return using floor division and modulus
-# 5. Add the returns on SPY to those of AAPL 
 
 #%%
 
@@ -99,6 +101,27 @@ goog = pd.read_hdf("data/dataframes.h5", "goog")
 
 #%%
 
+
+#%%
+# ## Problem: Addition on Series
+# Add the returns on SPY to those of AAPL 
+# 
+
+#%%
+
+
+#%%
+# ## Problem: Addition on Series
+# Using only basic mathematical operations compute the 
+# correlation between the returns on AAPL and SPY. 
+
+#%%
+
+
+#%%
+# ## Problem: Addition of DataFrames
+# Construct a `DataFrame` that only contains the SPY column from returns
+# and add it to the return `DataFrame`  
 
 #%%
 
@@ -119,83 +142,6 @@ goog = pd.read_hdf("data/dataframes.h5", "goog")
 # 
 # and compute the return of a portfolio with weight $\frac{1}{3}$ in each security.
 # 
-
-#%%
-
-
-#%%
-# Repeat the previous calcuation using multiplication (`*`) and `.sum()`.
-# **Note**: You need to use the `axis` keyword for the sum.
-
-#%%
-
-
-#%%
-# ## Problem: Mean, Standard Deviation and Correlation
-# 
-# Using the function mean, compute the mean of the three returns series one at a time. For example  
-# ```python
-# goog_mean = goog_returns.mean()
-# ```
-# Next, compute the mean of the matrix of returns using  
-# 
-# ```python
-# retmean = returns.mean()
-# ```
-# 
-# What is the relationship between these two? Repeat this exercise for the standard deviation (`std()`).
-# Finally, compute the correlation of the matrix of returns (`corr()`). 
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-# ## Problem: Summing all elements
-# 
-# Compute the sum of the columns of returns using `.sum()`. How is this related to the mean computed 
-# in the previous step? 
-
-#%%
-
-
-#%%
-
-
-#%%
-# ## Problem: Maximum and Minimum Values
-# Compute the minimum and maximum values of the columns of returns using the `min()` and `max()` commands. 
-
-#%%
-
-
-#%%
-
-
-#%%
-# ## Problem: Rounding Up, Down and to the Closest Integer
-# 
-# Rounding up is handled by ceil, rounding down is handled by floor and rounding to the closest 
-# integer is handled by round. Try all of these commands on 100 times returns. For example,  
-# ```python
-# rounded = (100*returns).round()
-# ``` 
-# 
-# Use `ceil` and `floor` to round up and down, respectively.
-
-#%%
-
-
-#%%
-
 
 #%%
 

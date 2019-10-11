@@ -366,7 +366,7 @@ pip install jupyter_contrib_nbextensions
 ## Summary
 
 * First-class support for Python provided by Microsoft
-* Other extensions add usefule features
+* Other extensions add useful features
   * Intellicode: AI assistant
   * Code Spell Checker: Spell checking
 * Native support for Jupyter notebooks
@@ -721,7 +721,7 @@ linspace(start, stop, num=50, endpoint=True,
 # pandas `Series`
 ## Homogeneous 1-d arrays
 
-* Each column of a `DataFrame` is a Seris
+* Each column of a `DataFrame` is a `Series`
 * Constructed using
 ```python
 pd.Series([1,2,3])
@@ -1011,9 +1011,9 @@ df.quantile([0.25, 0.75])
   * `tail`: Show last 5 rows
 * Sorting
   * `sort_index`: Sort by index values
-  * `sort_values(columns)`: Sort by values of one or mroe columns
+  * `sort_values(columns)`: Sort by values of one or more columns
 * Size information   
-  * `ndim`: Number of dimensiona (1 or 2)
+  * `ndim`: Number of dimensional (1 or 2)
   * `shape`: Shape of data (`ndim` element tuple)
 
 
@@ -1104,7 +1104,7 @@ df.quantile([0.25, 0.75])
 df.loc["row", ["col1", "col2"]]
 ```   
 * Use `:` to select all elements in either
-  * Columns are optional if selectind all elements
+  * Columns are optional if selecting all elements
 ```python
 df.loc[:, ["col1", "col2"]]
 df.loc["row", :]
@@ -1142,7 +1142,7 @@ series[["row1", "row2"]]
 ## Dimension reduction
 
 * Single-value selection reduces dimension
-* Selection in a `DataFrame` produces a `Series` or a sclaar
+* Selection in a `DataFrame` produces a `Series` or a scalar
   * `Series` if selecting in one dimension
   * Scalar if selecting in both
 
@@ -1202,3 +1202,90 @@ df.loc['1999-12-31':'2000-12-31']
 ```
   * **Caveat**: Slice selection is _inclusive_ of the stop value
   * Different behavior from integer slicing, which is exclusive
+
+
+# Accessing Elements in NumPy Arrays
+## Overview
+
+* NumPy `array`s support selection using
+  * Scalar integers
+  * Slices
+  * Lists/arrays of integers
+* Selection uses `[]` like a `list`
+* Selection can be simultaneously applied to all dimensions
+  * Different from `list`
+
+```python
+a = np.array([[1,2,3],[4,5,6]])
+a[0, :2]
+```
+
+
+# Accessing Elements in NumPy Arrays
+## Summary
+
+* Three methods to select elements
+  * Scalar
+  * Slice
+  * Lists of integers
+* Can mix the difference selectors
+  * Should only use 1 list unless using `ix_`
+  
+
+
+# Scalar Selection
+## Dimension reduction
+
+* Scalar selection reduces dimension
+* Selection dimension is original dimension minus number of scalar selectors
+```python
+a = np.array([[1,2,3],[4,5,6]])
+a[0]  # 1-dim
+a[0, 1]  # scalar (0-dim)
+```
+* Use list to preserve dimension
+```python
+a[[0]]  # 2-dim, 1 by 3
+```
+
+# Slice Selection
+## Dimension preserving
+
+* NumPy `arrays` support slicing
+* Can use as many slices as the dimension
+
+```python
+a = np.array([[1,2,3],[4,5,6]])
+a[:1]
+a[:, :2]
+```
+* Trivial slice `:` selects all elements in a dimension
+  * Trailing `:`  can be omitted
+
+```python
+a[:1]  
+a[:1, :]  
+```
+* Slicing preserved array dimension  
+
+
+
+# List Selection
+## Dimension preserving
+
+* Individual elements can be selected using ` list` of integers`
+
+```python
+a = np.array([[1,2,3],[4,5,6]])
+a[:, [0, 2]]
+```
+* Can only safely use 1 list
+  * Safe to mix with scalar or slice selection
+* Should use `ix_` to select blocks using lists
+
+```python
+a = np.array([[1,2,3],[4,5,6]])
+a[np.ix_([0, 1], [0, 2])]  # wrong
+a[[0, 1], [0, 2]]  # wrong
+```
+* `ix_` transforms `list`s into correctly shaped `array`s

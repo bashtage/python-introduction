@@ -1032,3 +1032,173 @@ df.quantile([0.25, 0.75])
   * `diff`: Arithmetic change
   * `pct_change`: Percentage change
   * `shift(n)`: Shift values forward or backward
+
+
+
+
+# Math on pandas types
+## Label matching
+
+* Items matched using index or columns
+* Missing matches produce missing values
+* Repeated indices or column names produce multiplicity of results
+  * Care need if not unique
+
+
+
+# Specific Cases
+
+* `Series` - `Series`
+  * Match on index only, name ignored
+* `Series` - `DataFrame`
+  * Match `Series` index to `DataFrame` column
+  * All values in column use same value from `Series`
+* `DataFrame` - `DataFrame`
+  * Match on `index` and `columns`
+* Exception is `@` (`dot` method)
+  * Must confirm using rules of linear algebra
+
+
+
+# Selection in `DataFrames`
+## Overview
+
+* Two ways to select using index values or column names
+  * `.loc[`_rows_ `,`_cols_ `]`
+  * Dictionary-like syntax
+    * Selects columns in a `DataFrame`
+    * Selects index in a `Series`
+* Selection _may_ reduce dimension and change type    
+* Special features for selecting dates
+  * Day, Month, Year
+  * Continuous range of dates    
+
+
+
+# Selection in `DataFrames`
+## Summary
+
+* Consistently using `.loc` is simplest
+* Dictionary syntax depends on type
+  * `columns` in a `DataFrame`
+  * `index` in a `Series`
+* Single-value selection reduces dimension
+  * `DataFrame` becomes `Series` or scalar
+  * `Series` becomes scalar
+* Special features with `DateTimeIndex`
+  * String selection of dates
+    * Day, Month, Year
+    * Range of dates
+      * **Caveat**: End point is included   
+
+
+
+# `DataFrame.loc`
+## Selection by index and column
+
+* `.loc[`_rows_ `,`_cols_ `]`
+  * _rows_ contains element(s) from `index`
+  * _columns_ contains element(s) from `columns`
+* A single value or a list of values
+```python
+df.loc["row", ["col1", "col2"]]
+```   
+* Use `:` to select all elements in either
+  * Columns are optional if selectind all elements
+```python
+df.loc[:, ["col1", "col2"]]
+df.loc["row", :]
+df.loc["row"]
+```
+
+
+
+# Dictionary-like selection
+## Selection by index or column
+
+* `DataFrame`s support dictionary-like syntax
+* Selection of columns
+
+```python
+df["col"]
+df.loc[:, "col"]
+``` 
+* List of column names to select multiple
+
+```python
+df[["col1", "col2"]]
+df.loc[:, ["col1", "col2"]]
+``` 
+* `Series` selects using the index
+
+```python
+series["row"]
+series[["row1", "row2"]]
+```
+
+
+
+# Single-value Selection
+## Dimension reduction
+
+* Single-value selection reduces dimension
+* Selection in a `DataFrame` produces a `Series` or a sclaar
+  * `Series` if selecting in one dimension
+  * Scalar if selecting in both
+
+```python
+series = df["col"]
+series = df.loc["row"]
+scalar = df.loc["row", "col"]
+```
+* Selection in a `Series` produces a scalar value 
+
+```python
+scalar = series["row"]
+scalar = series.loc["row"]
+```
+
+
+
+# Multiple Selection
+## Dimension preservation
+
+* List selection preserves dimension
+  * Trivial slice `:` also preserves dimension
+
+```python
+new_df = df[["col1", "col2"]]
+new_df = df.loc[["row1", "row2"]]
+new_df = df.loc[:, ["col1", "col2"]]
+```
+
+* Mixed list/single-value reduces dimension
+
+```python
+series = df.loc[["row1", "row2"], "col"]
+```
+
+* Single-item list preserves dimension 
+
+```python
+new_df = df.loc[:, ["col"]]
+```
+* List selection also preserves dimension in `Series`
+
+
+
+# Date Selection
+## Special features of `DateTimeIndex`
+
+* Selection by day, month or year using `.loc`
+```python
+df.loc['1999-12-31']
+df.loc['1999-12']
+df.loc['1999']
+```
+* Selection by date-like slice
+```python
+df.loc['1999-12-31':'2000-12-31']
+```
+  * **Caveat**: Slice selection is _inclusive_ of the stop value
+  * Different behavior from integer slicing, which is exclusive

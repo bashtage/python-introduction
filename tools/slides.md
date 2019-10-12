@@ -1289,3 +1289,36 @@ a[np.ix_([0, 1], [0, 2])]  # wrong
 a[[0, 1], [0, 2]]  # wrong
 ```
 * `ix_` transforms `list`s into correctly shaped `array`s
+
+
+
+# Boolean Arrays
+## Overview
+
+* Created when a NumPy array, `DataFrame` or `Series` is compared using one fo the 5 logical operators 
+* Always contains `True` or `False`
+  * `True` is 1, `False` is 0
+* Combining boolean arrays uses `&`, `|` or `~`
+  * Equivalent ot `locigal_and`, `logical_or` and `logical_not` functions
+  * `and`, `or` and `not` are scalar only
+* Uses
+  * Selection of elements
+  * Summarizing contents
+  * Interaction variables
+
+
+
+# Boolean Arrays
+## Summary
+
+* Boolean arrays are created using `<`, `<=`, `==`, `>=`, `>`
+* Arrays of `True` and `False`
+  * `True` is 1 in math ops
+* Must use `&`, `|` and `~`
+  * Function equivalents: `logical_and`, `logical_or`, `logical_not` 
+  * `and`, `or` and `not` produce errors
+* Boolean selection is identical to integer selection using a list
+  * `where(bool_arr)` returns the indices selected
+* Use `loc` in pandas to perform logical selection
+* In Numpy must use `ix_` with boolean selection in multiple dimensions
+

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'm_1mlight';
+    src: url('mplus-1m-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'm_1mregular';
+    src: url('mplus-1m-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'm_1mmedium';
+    src: url('mplus-1m-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'm_1mbold';
+    src: url('mplus-1m-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'm_1mthin';
+    src: url('mplus-1m-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

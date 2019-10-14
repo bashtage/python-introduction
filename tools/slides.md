@@ -1,3 +1,129 @@
+# Installation
+
+
+# Installation
+## Overview
+
+* Three core components
+* Anaconda
+  * Python distribution
+  * High performance mathematical libraries
+* Development environments
+  * Visual Studio Code (VS Code)
+  * Pycharm Professional
+  * Spyder is included in Anaconda
+
+
+# Installation
+## Summary
+
+* Three core components
+* Anaconda
+* Visual Studio Code (VS Code)
+  * Require Python extension
+* Pycharm Professional
+  * Might need to set the Project Interpreter on OSX and Linux
+
+
+
+# Lesson 1: Spyder
+
+
+# Spyder
+## Overview
+
+* Native Python development environment
+* Included in Anaconda
+* Most friendly for beginners
+* **No** native support for Jupyter notebooks
+
+
+# Converting notebooks to Python
+## `nbconvert`
+
+* Jupyter nbconvert can convert a notebook to many format
+```bash
+jupyter nbconvert --to python notebook.ipynb
+```
+* Requires jupyter_contrib_nbextensions
+  * Install using `pip` and the Anaconda prompt
+```bash
+pip install jupyter_contrib_nbextensions
+```
+
+  
+# Spyder
+## Summary
+
+* Pros:
+  * Free
+  * Included in Anaconda
+  * Dedicated Python environment
+  * Beginner friendly
+  * Cell mode
+* Cons:
+  * No integrated support for Jupyter Notebooks
+
+
+
+# Lesson 1: PyCharm Professional
+
+
+# PyCharm Professional
+## Overview
+
+* Commercial Development Environment specialized for Python
+* First class support for both Jupyter Notebooks and Cell Mode
+
+
+# PyCharm Professional
+## Summary
+
+* Pros:
+  * Feature Rich DE
+  * First-class support for Jupyter Notebooks
+  * First-class support for cell model (Magic Python)
+  * Supports complete spectrum of user needs from stand alone scripts to complete applications
+  * Free for most students
+    * Deep discount for other academic users
+    * **Note**: The free Community Edition is missing required features
+* Cons:
+  * Resource Heavy
+  * Complexity can be intimidating
+
+
+
+# Lesson 1: Visual Studio Code
+
+
+# VS Code
+## Overview
+
+* Free, modern text editor
+* Supports extensions to add features
+  * First-class Python provided by Microsoft
+  * AI assistant using Intellicode
+* Native supports for Jupyter notebooks
+* Support execution of Magic Python files (cell mode)
+
+
+# VS Code
+## Summary
+
+* First-class support for Python provided by Microsoft
+* Other extensions add useful features
+  * Intellicode: AI assistant
+  * Code Spell Checker: Spell checking
+* Native support for Jupyter notebooks
+  * Requires up-to-date Python extension
+* Supports Magic Python cells 
+  * Cells demarcated with `#%%`
+
+
+
+# Lesson 2
+
+
 # Python Types
 ## Overview
 
@@ -11,21 +137,6 @@
 * Dictionary
   * Hold other objects
   * Access by key
-
-
-
-# Python Types
-## Summary
-
-* Focus on a small number of native Python types:
-  * Numeric: `float` and `int`
-  * Strings: `str`
-  * Lists: `list`
-    * Tuples: `tuple`, list-like but cannot be changed once created
-  * Dictionary: `dict`
-* Floats, integers and strings are basic data types  
-* Lists and dictionaries are used to hold other objects
-
 
 
 # Numeric Types
@@ -43,7 +154,6 @@
   * `2.0 * 2.0` produces `4.0`  
 
 
-
 # Strings (`str`)
 
 * Entered using either `"`_string_`"` or `"`_string_`"`
@@ -57,7 +167,6 @@
   * Equivalent strings
     * f"This is a {number}"
     * "This is a " + str(number)
-
 
 
 # Lists (`list`)
@@ -80,7 +189,6 @@ direct = [[1, 3, 5], [2, 4, 6]]
 ```
 
 
-
 # List Access
 
 * Access by position
@@ -98,7 +206,6 @@ direct = [[1, 3, 5], [2, 4, 6]]
     * `lst.extend(["c", 3, 3.0])`
 
 
-
 # Tuples (`tuple`)
 
 * Tuples (`tuple`) are a close cousin of `list`
@@ -112,7 +219,6 @@ tpl = ("a", 1, 1.0, ("b", 2, "2.0"))
 * Convert from list using `tuple(lst)`
 * Primarily encountered as output of other functions
 * Item access is identical to `list`
-
 
 
 # Slices
@@ -130,7 +236,6 @@ tpl = ("a", 1, 1.0, ("b", 2, "2.0"))
   * `lst[:stop]` is the same as `lst[0:stop]`
   * `lst[start:]` is the same as `lst[start:len(lst)]` 
     * `len(lst)` is the number of elements in the list
-
 
 
 # Dictionaries (`dict`)
@@ -151,6 +256,22 @@ d = {key1 : value1, key2: value2, ...}
 * Access by key `value = d[key]`
 
 
+# Python Types
+## Summary
+
+* Focus on a small number of native Python types:
+  * Numeric: `float` and `int`
+  * Strings: `str`
+  * Lists: `list`
+    * Tuples: `tuple`, list-like but cannot be changed once created
+  * Dictionary: `dict`
+* Floats, integers and strings are basic data types  
+* Lists and dictionaries are used to hold other objects
+
+
+
+# Lesson 3
+
 
 # Importing Modules
 ## Overview
@@ -161,8 +282,6 @@ d = {key1 : value1, key2: value2, ...}
   * `math`, `statistics`, `io`
 * Key modules for data science and econometrics
   * NumPy, pandas, SciPy, matplotlib, statsmodels
-
-
 
 
 # The `import` statement
@@ -179,7 +298,6 @@ import module as mod
 ```python
 from module import func, type
 ```
-
 
 
 # The PyData Ecosystem
@@ -202,7 +320,6 @@ import scipy.stats as stats
 ```
 
 
-
 # The PyData Ecosystem
 * matplotlib's PyPlot module
   * Plotting and data visualization
@@ -216,7 +333,6 @@ import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import statsmodels.tsa.api
 ```
-
 
 
 # Importing Modules
@@ -233,147 +349,7 @@ import statsmodels.tsa.api
 
 
 
-# Logic and Loops
-## Overview
-
-* `if`-`else` blocks
-* Using boolean values as 0-1 integers
-* Selection from arrays using booleans
-* `where` and integer selection
-* `any` and `all` 
-
-
-
-# Logic and Loops
-## Summary
-
-* `if`-`else` blocks allow code to conditionally execute
-  * Extendable using multiple `elif` statements
-* Boolean `True` is 1 and `False` is 0
-  * Multiplication treats boolean as an indicator
-* Boolean Series can be used to select elements using `loc`
-* `np.where` returns the indices where a Series is `True`
-* `any` and `all` aggregate boolean values
-  * `np.any` is different from `DataFrame.any`
-
-
-
-# Installation
-## Overview
-
-* Three core components
-* Anaconda
-  * Python distribution
-  * High performance mathematical libraries
-* Development environments
-  * Visual Studio Code (VS Code)
-  * Pycharm Professional
-  * Spyder is included in Anaconda
-
-
-
-
-# Installation
-## Summary
-
-* Three core components
-* Anaconda
-* Visual Studio Code (VS Code)
-  * Require Python extension
-* Pycharm Professional
-  * Might need to set the Project Interpreter on OSX and Linux
-
-
-
-# Spyder
-## Overview
-
-* Native Python development environment
-* Included in Anaconda
-* Most friendly for beginners
-* **No** native support for Jupyter notebooks
-
-
-
-  
-# Spyder
-## Summary
-
-* Pros:
-  * Free
-  * Included in Anaconda
-  * Dedicated Python environment
-  * Beginner friendly
-  * Cell mode
-* Cons:
-  * No integrated support for Jupyter Notebooks
-
-
-
-# Converting notebooks to Python
-## `nbconvert`
-
-* Jupyter nbconvert can convert a notebook to many format
-```bash
-jupyter nbconvert --to python notebook.ipynb
-```
-* Requires jupyter_contrib_nbextensions
-  * Install using `pip` and the Anaconda prompt
-```bash
-pip install jupyter_contrib_nbextensions
-```
-
-
-
-# PyCharm Professional
-## Overview
-
-* Commercial Development Environment specialized for Python
-* First class support for both Jupyter Notebooks and Cell Mode
-
-
-
-# PyCharm Professional
-## Summary
-
-* Pros:
-  * Feature Rich DE
-  * First-class support for Jupyter Notebooks
-  * First-class support for cell model (Magic Python)
-  * Supports complete spectrum of user needs from stand alone scripts to complete applications
-  * Free for most students
-    * Deep discount for other academic users
-    * **Note**: The free Community Edition is missing required features
-* Cons:
-  * Resource Heavy
-  * Complexity can be intimidating
-
-
-
-# VS Code
-## Overview
-
-* Free, modern text editor
-* Supports extensions to add features
-  * First-class Python provided by Microsoft
-  * AI assistant using Intellicode
-* Native supports for Jupyter notebooks
-* Support execution of Magic Python files (cell mode)
-
-
-
-# VS Code
-## Summary
-
-* First-class support for Python provided by Microsoft
-* Other extensions add useful features
-  * Intellicode: AI assistant
-  * Code Spell Checker: Spell checking
-* Native support for Jupyter notebooks
-  * Requires up-to-date Python extension
-* Supports Magic Python cells 
-  * Cells demarcated with `#%%`
-
+# Lesson 4
 
 
 # `Series` and `DataFrames`
@@ -387,19 +363,6 @@ pip install jupyter_contrib_nbextensions
   * Defaults to integers: 0, 1, 2, ...
   * Can assign meaningful data: date, company name, ...
 * DataFrame supports named columns
-
-
-
-# `Series` and `DataFrames`
-## Summary
-
-* A `Series` is a 1-d homogeneous array
-* A `DataFrame` is a 2-d heterogeneous array
-  * A `Series` is 1 column from a `DataFrame` 
-* The `index` contains a set of keys corresponding to rows
-* `DataFrame` supports keys for columns as well (`columns`)
-  * `Series` supports `name` since always 1 column  
-
 
 
 # pandas `Series`
@@ -419,7 +382,6 @@ s = pd.Series([1,2,3], index=idx, name="data")
 ```
 
 
-
 # pandas `DataFrame`
 ## Heterogeneous 2-d arrays
 
@@ -432,7 +394,6 @@ data = [[1, 2, 3], [4, 5, 6]]
 df = pd.DataFrame(data)
 ```
 * Can be created from `Series` or by merging `DataFrames`
-
 
 
 # pandas `DataFrame`
@@ -455,6 +416,20 @@ df.index = index
 ```
 
 
+# `Series` and `DataFrames`
+## Summary
+
+* A `Series` is a 1-d homogeneous array
+* A `DataFrame` is a 2-d heterogeneous array
+  * A `Series` is 1 column from a `DataFrame` 
+* The `index` contains a set of keys corresponding to rows
+* `DataFrame` supports keys for columns as well (`columns`)
+  * `Series` supports `name` since always 1 column  
+
+
+
+# Lesson 5
+
 
 # `DataFrames` from `Series`
 ## Overview
@@ -474,16 +449,6 @@ df = pd.DataFrame({'A': a, 'B': b, 'C': c})
   * `DataFrame.merge` and `DataFrame.join` are SQL-like
 
 
-
-# `DataFrames` from `Series`
-## Summary
-
-* Build `DataFrame` from `Series`
-  * `Series` as rows using a list
-  * `Series` as columns using a dictionary
-
-
-
 # Creating `DataFrame`s
 ## Building from  multiple `Series`
 
@@ -498,7 +463,6 @@ df = pd.DataFrame([s1, s2])
   * Use `.T` to transpose a `DataFrame`
 
 
-
 # Creating `DataFrame`s
 ## Building from  multiple `Series`
 
@@ -510,23 +474,16 @@ df = pd.DataFrame({'a': s1, 'b': s2})
   * Component `Series` should have identical `index`
 
 
+# `DataFrames` from `Series`
+## Summary
 
-# Calling Functions
-* Positional arguments
-```python
-func(a)
-func(a, b)
-```
-* Keyword arguments &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-```python
-func(data=a)
-func(data=a, index=b)
-```
-* Mixed
-```python
-func(a, index=b)
-```
+* Build `DataFrame` from `Series`
+  * `Series` as rows using a list
+  * `Series` as columns using a dictionary
 
+
+
+# Lesson 6
 
 
 # Functions and Methods
@@ -547,24 +504,21 @@ np.mean(a)
   * Directly unpack by matching the number of output
 
 
-
-# Functions and Methods
-## Summary
-
-* Functions and methods are widely used
-  * Basic statistics
-  * Estimation of model parameters (later)
-  * Plotting data
-* Methods are functions attached to objects
-  * Methods operate on the object
-  * May take additional inputs
-* Parameters either positional or use parameter name
+# Calling Functions
+* Positional arguments
 ```python
-f(1, option="yes")
+func(a)
+func(a, b)
 ```
-* Help available using `?`, `help` or the web
-
-
+* Keyword arguments &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+```python
+func(data=a)
+func(data=a, index=b)
+```
+* Mixed
+```python
+func(a, index=b)
+```
 
 
 # Calling methods on objects
@@ -585,7 +539,6 @@ a.reshape((3, 1))
 ```
 
 
-
 # Multiple Outputs
 * Multiple outputs are returned as a tuple
 ```python
@@ -599,7 +552,6 @@ second = multi_output[1]
 first, second = func(x, y)
 ```
   * **Warning**: Number of outputs must _exactly_ match the count returned
-
 
 
 # Getting Help
@@ -622,7 +574,6 @@ help(df.to_csv)
 * Formatted web-based help easy to find using Google
 
 
-
 # Function Signatures
 ## Required and Optional Arguments
 
@@ -639,262 +590,25 @@ linspace(start, stop, num=50, endpoint=True,
   * 5 other inputs are optional 
 
 
-
-# Line Plots
-## `DataFrame.plot.line`
-
-* Same as `plt.plot(df.index, df.values)`
-* Key optional inputs:
-  * `x`: the column name to use as the x values
-  * `y`: the column names to plot
-* Many optional argument that affect plot appearance
-  * `linewdith`: Integer width of line
-  * `linstyle`: (`"none"`, `"-""`, `"--"`, `"-."`, `":"`)
-  * `marker`: Adds a marker (`"o"`, `"x"`, `"v"`,...)
-  * `color`: Color (hex: `"#abcdef"`, name: `"red""` )
-  * See `matplotlib.pyplot.plot` help for full list
-
-
-
-
-# Graphics: Other Plots
-## Overview
-
-* Histograms
-* Scatter plots
-* Saving figure to common formats
-
-
-
-
-# Graphics: Other Plots
+# Functions and Methods
 ## Summary
 
-* `DataFrame.plot.hist` produces histograms
-* `DataFrame.plot.scatter` produces scatter plots
-  * Two required arguments: `x` and `y`
-* `Figure.savefig` exports figures to common formats
-  * Most useful: pdf, png, jpg, svg
-  * Use fig = ax.get_figure() to get handle
-* `ax.set_`_property_ allows many figure properties to be set
-  * `set_xlim` and `set_ylim`
-  * `set_xlabel`, `set_ylabel`, `set_title`
-
-
-
-  
-# Histograms
-## `DataFrame.plot.hist`
-
-* Histogram of values
-* Key optional inputs:
-  * `bins`: Number of bins
-  * `density`: `True`/`False` indicating whether to normalize heights to sum to 1
-* Additional features available using `DataFrame.hist`
-* Wrapper around `plt.hist`
-
-
-
-
-# Scatter plots
-## `DataFrame.plot.scatter`
-
-* Scatter plot of two variables
-* Required inputs:
-  * `x`, `y`: Columns names to plot
-* Key optional inputs:
-  * `marker`: Marker shape (`"o"`,`"x"`,`"+"`,`"v"`,`"^"`,...)
-  * `s`: Size of marker
-  * `c`: Marker color
-* Wrapper around `plt.scatter`
-
-
-
-
-# pandas `DataFrame`
-## Heterogeneous 2-d arrays
-
-* Something...
-
-
-
-# pandas `Series`
-## Homogeneous 1-d arrays
-
-* Each column of a `DataFrame` is a `Series`
-* Constructed using
+* Functions and methods are widely used
+  * Basic statistics
+  * Estimation of model parameters (later)
+  * Plotting data
+* Methods are functions attached to objects
+  * Methods operate on the object
+  * May take additional inputs
+* Parameters either positional or use parameter name
 ```python
-pd.Series([1,2,3])
+f(1, option="yes")
 ```
-* Optional arguments
-  * `index` is the index for the `Series`
-  * `name` is same as the column name in a `DataFrame`
+* Help available using `?`, `help` or the web
 
 
 
-# Calling Functions
-* Positional arguments
-```python
-func(a)
-func(a, b)
-```
-* Keyword arguments &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-```python
-func(data=a)
-func(data=a, index=b)
-```
-* Mixed
-```python
-func(a, index=b)
-```
-
-
-
-# Calling methods on objects
-
-* Python objects expose methods 
-* Methods operate on the object
-* May also take additional inputs
-* Important examples
-  * NumPy arrays
-  * pandas `DataFrames` and `Series` all
-* Called using `.`_function_ syntax
-```python
-a = np.array([1, 2, 3])
-a.mean()
-a.reshape((3, 1))
-```
-
-
-
-# Saving Figures
-## `plt.savefig`
-
-* Supports output to common formats
-  * pdf, png, jpeg, svg
-* Required inputs:
-  * `fname`: filename with extension to indicate export format
-* Key optional inputs:
-  * `dpi`: Figure resolution in dots per inch
-  * `transparent`: Use a transparent background
-* Also available as a method `Figure.savefig`
-
-
-
-# Altering Plot Appearance
-
-* Large set of figure properties available
-* Mode important are methods off an axis
-```python
-ax.set_xlim(0, 1)
-ax.set_xticks([0,.33,.66,1])
-```
-* Use pattern `ax.set_`_property_
-* Key properties:
-  * `xlim` and `ylim`: Set axis limits
-  * `xlabel`, `ylabel` and `title`: Label a plot
-  * `xticks`, `yticks`: Set location for ticks
-  * `xticklabels`, `yticklabels`: Change labels of ticks
-* Mirrored by `get_`_property_ to read current value
-
-
-
-# Importing CSV Data
-## `pd.read_csv`
-
-* Only file name is required
-```python
-df = pd.read_csv('data.csv')
-```
-* Key optional inputs
-  * `index_col`: The name of the column to set as the index
-  * `parse_dates`: `True`/`False` that parses strings that look like dates
-  * `skiprows`: The number of row to skip before reading data
-* Dozens of optional inputs to handle most text file formats
-
-
-
-# Importing Excel Data
-## `pd.read_excel`
-
-* Imports old (xls) and new Excel (xlsx) files
-* Only file name is required
-```python
-df = pd.read_excel('data.xlsx')
-```
-* Key optional inputs
-  * `index_col`: The name of the column to set as the index
-  * `sheet_name`: The name of the sheet to import
-  * `skiprows`: The number of row to skip before reading data
-* Many other of optional inputs to import complex sheets
-
-
-
-# Saving 
-## CSV and Excel
-
-* `DataFrame.to_csv` exports to CSV
-```python
-df.to_csv('file-name.csv')
-```
-* `DataFrame.to_excel` exports to Excel (xls/xlsx)
-```python
-df.to_excel('file-name.xlsx')
-```
-  * Can use `sheet_name="some name"` to specify a sheet name
-
-
-
-# Storing HDF
-## `DataFrame.to_hdf`
-
-* Best approximation of a pandas "native" format
-* Requires a file name and key
-```python
-df.to_hdf("data-file.h5", "df")
-```
-  * Overwrites existing files by default 
-* `mode="a"` appends additional `DataFrame`s and `Series` &nbsp;&nbsp;&nbsp; 
-```python
-second_df.to_hdf("data-file.h5", "second_df", mode="a")
-``` 
-* Read using `pd.read_hdf`
-```python
-df = pd.read_hdf("data-file.h5", "df")
-```
-
-
-
-# pandas `Series`
-
-* Building block of pandas `DataFrame`
-* Homogeneous
-  * `int`, `float`, `datatime`, `str`
-* Handle missing values
-* Support non-numeric indexing
-  * Dates, Company Name, ...
-* Provide many common statistical operations
-  * Mean, Standard Deviation, Variance
-  * Skewness and Kurtosis
-  * Quantile
-* Operations ignore missing values by default
-
-
-
-# Constructing  a `Series`
-
-* Series constructed from lists
-```python
-s = pd.Series([1.0, 2.0, 3.0])
-```
-* Key optional inputs
-  * `index`: Set the index for the Series &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  * `name`: The series' name
-```python
-idx = ["a", "b", 'c']
-s = pd.Series([1.0, 2.0, 3.0], index=idx, name="data")
-```
-
+# Lesson 7
 
 
 # Custom Functions
@@ -906,8 +620,7 @@ s = pd.Series([1.0, 2.0, 3.0], index=idx, name="data")
   * Numerical integration
 * Begin with keyword `def`
 * End when indentation level return to previous level
-* **Important**: Python is white-space sensitive
-
+* **Important**: Python is whitespace sensitive
 
 
 # Custom Functions
@@ -927,18 +640,46 @@ def func(x, y=1):
   * Returned value preceded by `return`
 
 
-
 # Custom Functions
 ## Summary
 
 * Function begin with `def`
 * Returned value uses `return`
 * Function code is indented
-  * **Important**: Python is white-space sensitive
+  * **Important**: Python is whitespace sensitive
   * Use 4 spaces to indent
     * Do not use tab character to indent
     * Configure editor to convert tab to 4 spaces 
 
+
+
+# Lesson 8
+
+
+# Math on pandas types
+## Label matching
+
+* Items matched using index or columns
+* Missing matches produce missing values
+* Repeated indices or column names produce multiplicity of results
+  * Care need if not unique
+
+
+# Specific Cases
+
+* `Series` - `Series`
+  * Match on index only, name ignored
+* `Series` - `DataFrame`
+  * Match `Series` index to `DataFrame` column
+  * All values in column use same value from `Series`
+* `DataFrame` - `DataFrame`
+  * Match on `index` and `columns`
+* Exception is `@` (`dot` method)
+  * Must confirm using rules of linear algebra
+
+
+
+# Lesson 9
 
 
 # Key methods
@@ -971,7 +712,6 @@ df.quantile([0.25, 0.75])
   * `columns` match `df.columns`
 
 
-
 # Key methods
 ## Covariance and correlation
 
@@ -979,8 +719,6 @@ df.quantile([0.25, 0.75])
 * `corr`: Correlation
   * Return a diagonally symmetric `DataFrame`
   * Columns and index match
-
-
 
 
 # Key methods
@@ -1000,7 +738,6 @@ df.quantile([0.25, 0.75])
     * Output shape depends on inputs
 
 
-
 # Key methods
 ## `DataFrame` specific
 * Content information 
@@ -1015,7 +752,6 @@ df.quantile([0.25, 0.75])
 * Size information   
   * `ndim`: Number of dimensional (1 or 2)
   * `shape`: Shape of data (`ndim` element tuple)
-
 
 
 # Key methods
@@ -1035,29 +771,7 @@ df.quantile([0.25, 0.75])
 
 
 
-
-# Math on pandas types
-## Label matching
-
-* Items matched using index or columns
-* Missing matches produce missing values
-* Repeated indices or column names produce multiplicity of results
-  * Care need if not unique
-
-
-
-# Specific Cases
-
-* `Series` - `Series`
-  * Match on index only, name ignored
-* `Series` - `DataFrame`
-  * Match `Series` index to `DataFrame` column
-  * All values in column use same value from `Series`
-* `DataFrame` - `DataFrame`
-  * Match on `index` and `columns`
-* Exception is `@` (`dot` method)
-  * Must confirm using rules of linear algebra
-
+# Lesson 10
 
 
 # Selection in `DataFrames`
@@ -1072,25 +786,6 @@ df.quantile([0.25, 0.75])
 * Special features for selecting dates
   * Day, Month, Year
   * Continuous range of dates    
-
-
-
-# Selection in `DataFrames`
-## Summary
-
-* Consistently using `.loc` is simplest
-* Dictionary syntax depends on type
-  * `columns` in a `DataFrame`
-  * `index` in a `Series`
-* Single-value selection reduces dimension
-  * `DataFrame` becomes `Series` or scalar
-  * `Series` becomes scalar
-* Special features with `DateTimeIndex`
-  * String selection of dates
-    * Day, Month, Year
-    * Range of dates
-      * **Caveat**: End point is included   
-
 
 
 # `DataFrame.loc`
@@ -1110,7 +805,6 @@ df.loc[:, ["col1", "col2"]]
 df.loc["row", :]
 df.loc["row"]
 ```
-
 
 
 # Dictionary-like selection
@@ -1137,7 +831,6 @@ series[["row1", "row2"]]
 ```
 
 
-
 # Single-value Selection
 ## Dimension reduction
 
@@ -1157,7 +850,6 @@ scalar = df.loc["row", "col"]
 scalar = series["row"]
 scalar = series.loc["row"]
 ```
-
 
 
 # Multiple Selection
@@ -1183,8 +875,6 @@ series = df.loc[["row1", "row2"], "col"]
 ```python
 new_df = df.loc[:, ["col"]]
 ```
-* List selection also preserves dimension in `Series`
-
 
 
 # Date Selection
@@ -1204,7 +894,28 @@ df.loc['1999-12-31':'2000-12-31']
   * Different behavior from integer slicing, which is exclusive
 
 
-# Accessing Elements in NumPy Arrays
+# Selection in `DataFrames`
+## Summary
+
+* Consistently using `.loc` is simplest
+* Dictionary syntax depends on type
+  * `columns` in a `DataFrame`
+  * `index` in a `Series`
+* Single-value selection reduces dimension
+  * `DataFrame` becomes `Series` or scalar
+  * `Series` becomes scalar
+* Special features with `DateTimeIndex`
+  * String selection of dates
+    * Day, Month, Year
+    * Range of dates
+      * **Caveat**: End point is included   
+
+
+
+# Lesson 11
+
+
+# Accessing Elements in Arrays
 ## Overview
 
 * NumPy `array`s support selection using
@@ -1221,18 +932,6 @@ a[0, :2]
 ```
 
 
-# Accessing Elements in NumPy Arrays
-## Summary
-
-* Three methods to select elements
-  * Scalar
-  * Slice
-  * Lists of integers
-* Can mix the difference selectors
-  * Should only use 1 list unless using `ix_`
-  
-
-
 # Scalar Selection
 ## Dimension reduction
 
@@ -1247,6 +946,7 @@ a[0, 1]  # scalar (0-dim)
 ```python
 a[[0]]  # 2-dim, 1 by 3
 ```
+
 
 # Slice Selection
 ## Dimension preserving
@@ -1267,7 +967,6 @@ a[:1]
 a[:1, :]  
 ```
 * Slicing preserved array dimension  
-
 
 
 # List Selection
@@ -1291,11 +990,359 @@ a[[0, 1], [0, 2]]  # wrong
 * `ix_` transforms `list`s into correctly shaped `array`s
 
 
+# Accessing Elements in Arrays
+## Summary
+
+* Three methods to select elements
+  * Scalar
+  * Slice
+  * Lists of integers
+* Can mix the difference selectors
+  * Should only use 1 list unless using `ix_`
+
+
+
+# Lesson 12
+
+
+# Numeric Indexing of DataFrames
+## Overview
+
+
+# `DataFrame.iloc`
+## Numeric indexing
+
+* `df.iloc[` _args_ `]` uses numeric position instead of index
+  * For example, when computing statistics over a fixed-window
+
+```python
+df.iloc[0:60]
+df.iloc[1:61]
+```   
+
+* Support rows only, or rows and columns
+
+```python
+df.iloc[0:60]
+df.iloc[0:60, 2:4]
+```   
+
+* Can pass slice, list of integers or scalar integer
+  * **Note**: Scalar integer reduces dimension
+
+
+# `DataFrame.iloc`
+## Relationship to `loc`
+* Identical `loc` if 
+  * `index` is 0, 1, ..., `df.shape[0]-1`
+  * `columns` is 0, 1, ..., `df.shape[1]-1`
+* Equivalent expressions 
+
+```python
+df.iloc[0:60]
+df.loc[df.index[0:60]]
+df.iloc[0:60, 2:4]
+df.loc[df.index[0:60], df.columns[2:4]]
+```  
+* Saves looking up in index/columns &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+# `DataFrame.iloc`
+## Differences with NumPy
+
+* Different from NumPy when using 2 lists 
+  * Always selects block
+  * No need to use `np.ix_`
+
+```python
+rows = [0, 2, 5]
+cols = [1, 3, 9]
+df.iloc[rows, cols]
+a[np.ix_(rows, cols)]
+```
+
+
+# Numeric Indexing of DataFrames
+## Summary
+
+
+
+# Lesson 13
+
+
+# `for` Loops
+## Overview
+
+
+# Basic `for` loop
+## Core components
+```python
+for i in range(10):
+    print(i)
+``` 
+* `for`:  Required keyword
+* `i`: value that changes in iterations
+* `in`: Required keyword
+* `range`: An iterable that generates an integer sequence
+  * Alternatives:
+    * `list`: Values in the `list`
+    * `DataFrame`: Column names (`dict`-like)
+    * `Series`: Values in `Series` (`list`-like)
+    * NumPy array: First axis
+* colon (`:`) required to end declaration
+
+
+# `for` loop body
+## Importance of whitespace
+* Loop body **must** be consistently indented
+  * **Important**: Python is whitespace sensitive
+  * Use 4 spaces
+  * **Do not** use tabs, unless tabs converted to spaces
+    * Standard features of most Python-focused editors 
+* body ends when code is dedented (unindented, outdented)
+
+```python
+for i in range(10):
+    loop_body = 3
+    print("Still in body")
+
+not_in_body = "All done"
+``` 
+
+
+# `range`
+## Integer sequence generation
+ 
+```python
+range(stop)
+range(start, stop)
+```
+
+* `start`: First index
+* `stop`: End of range (**not included** in sequence)
+```python
+ start, start+1, \ldots, stop-1
+```
+* `range(stop)` is shorthand for `range(0, stop)`
+* Three input variant: `range(start, stop, step)`  
+  * `step`: Step between values if not 1
+  * Usually encountered in decreasing sequences 
+
+```python
+range(10, 0, -1)  # 10, 9, 8, ..., 1
+```  
+
+
+# Nested loops
+
+* Nested using indentation
+
+```python
+for i in range(10):
+    outer_loop = 1.0
+    for j in range(7):
+        inner_loop = "!"
+        print(f"Still in inner: {j}")
+    print(f"Back in outer now: {i}")
+
+print("All done now")
+```
+* Not recommended to use more than 3 nested loops
+  * Use a _function_ if you need more
+
+# `for` Loops
+## Summary
+
+
+
+# Lesson 14
+
+
+# Comparison and Logical Operators
+# Overview
+
+
+# Operators
+
+* Comparison operators
+  * `<`: Less than
+  * `<=`: Less than or equal
+  * `==`: Equal
+  * `>=`: Greater than or equal
+  * `>`: Greater than
+  * `!=`: Unequal
+* Scalar logical operators
+  * `and`: `True` if both are `True`
+  * `or`: `True` if either is `True`
+  * `not`: `True` if input is `False`
+
+
+# Numerical Conversion
+
+* Boolean values are 0/1
+* Mathematical operations case to integers
+  * `sum` counts boolean arrays
+  * `mean` computes frequency
+  * Multiplication (`*`) produces interactions
+
+```python
+x = np.array([-3, 3, 2, -2, -1, 1, 0])
+x_neg = x * (x < 0)
+```  
+
+
+# Best Practices
+
+* Good to use parentheses in complex expressions
+
+```python
+x > 0 and y < 10
+(x > 0) and (y < 10)
+not ((x <= 0) or (y >= 10))
+```  
+
+* Use explicit boolean test
+
+
+# Comparison and Logical Operators
+## Summary
+
+
+
+# Lesson 15
+
+
+# Conditional Statements
+## Overview
+
+
+# `if`
+
+* Basic conditional statement
+* Execute code in block if condition is `True`
+  * Nothing executed if `False`
+
+```python
+if x >= 0:
+    print(x)
+```
+
+* `if`:  Required keyword
+* _condition_ is evaluated to `True`/`False`
+* colon (`:`) required to end declaration
+* Conditional statement **must** be consistently indented
+  * **Important**: Python is whitespace sensitive
+  * Use 4 spaces
+
+
+# `if`-`else`
+
+```python
+if x > 0:
+    print("x is positive")
+else:
+    print("x is negative or zero")
+```
+
+* Extends `if` statement to always execute _something_
+* `else` executes if _condition_ is `False`
+* `else` is dedented to same level as `if`
+* Blocks end when code is dedented
+
+```python
+if x >= 0:
+    print("Shown if x is non-negative")
+else: 
+    print("Shown if x is negative")
+print("Always printed: not part of conditional statement")
+```
+
+
+# `if`-`elif`-`else`
+
+* `elif` allows arbitray execution
+* At most one of `if`, the `elif`s or `else` executed
+
+```python
+if x > 0:
+    print("x is positive")
+elif x > -1:
+    print("x is not too small")
+elif x > -4:
+    print("x is pretty small")
+else:
+    print("x is very negative")
+```
+
+* Unlimited number of `elif` statements
+
+
+# Conditional Statements
+## Summary
+
+
+
+# Lesson 16
+
+
+# Logic and Loops
+## Overview
+
+* `if`-`else` blocks
+* Using boolean values as 0-1 integers
+
+
+# Nesting Blocks
+## Consistent indentation
+
+* Python uses indentation to mark compound statements
+  * Function (`def`)
+  * Loops (`for`/`while`)
+  * Conditional Statements (`if`-`elif`-`else`)
+  * Exception Handling (`try`-`except`)
+  * Context managers (`with`)
+* Nesting requires maintaining consistent indentation
+
+
+# Complex Nesting
+
+```python
+for i in range(5):
+    if i < 2:
+        for j in range(7):
+            def f():
+                print(i,j)
+            f()
+            print("In the loop")
+        print("If but not for")
+    elif i < 4:
+        print("i is in the middle of its range")
+    print("Still in the loop")
+
+print("Finished")
+```  
+* Best practice is to limit nesting
+* Good editor provide vertical guides
+  * Essential in complex code  
+
+
+# Logic and Loops
+## Summary
+
+* `if`-`else` blocks allow code to conditionally execute
+  * Extendable using multiple `elif` statements
+* Boolean `True` is 1 and `False` is 0
+  * Multiplication treats boolean as an indicator
+
+
+
+# Lesson 17
+
 
 # Boolean Arrays
 ## Overview
 
-* Created when a NumPy array, `DataFrame` or `Series` is compared using one fo the 5 logical operators 
+* Created when a NumPy array, `DataFrame` or `Series`  compared using a logical operators 
 * Always contains `True` or `False`
   * `True` is 1, `False` is 0
 * Combining boolean arrays uses `&`, `|` or `~`
@@ -1305,7 +1352,6 @@ a[[0, 1], [0, 2]]  # wrong
   * Selection of elements
   * Summarizing contents
   * Interaction variables
-
 
 
 # Boolean Arrays
@@ -1322,3 +1368,226 @@ a[[0, 1], [0, 2]]  # wrong
 * Use `loc` in pandas to perform logical selection
 * In Numpy must use `ix_` with boolean selection in multiple dimensions
 
+
+# Array logical operators
+```python
+c = a & b
+c = np.logical_and(a, b)
+```
+* Elementwise _and_: `c[i]` `True` if `a[i]` and `b[i]` are `True`
+```python
+c =a | b
+c = np.logical_or(a, b)
+```
+* Elementwise _or_: `c[i]` `True` if `a[i]` or `b[i]` are `True`
+```python
+c = ~a
+c = np.logical_not(a)
+```
+* Elementwise _not_: `c[i]` `True` if `a[i]` is False
+
+
+# `any` and `all`
+
+
+
+# Lesson 18
+
+
+# Boolean Selection
+## Overview 
+
+
+# Selection using `.loc`
+## `DataFrame` and `Series`
+
+* Logical selection must use `loc`
+* Equivalent
+```python
+sel = (df > 0).any(axis=1)
+df.loc[sel]
+df.loc[df.index[sel]]
+```
+* Logical selector must match dimension or rows/columns
+
+
+# Logical Selection in array
+## Matches list selection
+
+* Logical selection in NumPy array matches list selection
+* Equivalent to using `np.where` to convert boolean ot position
+* Can only be directly used for 1 axis
+  * Use `np.ix_` when using list/boolean in multiple dimensions
+
+
+# Boolean Selection
+## Summary
+
+
+
+# Lesson 19
+
+
+# Importing CSV Data
+## `pd.read_csv`
+
+* Only file name is required
+```python
+df = pd.read_csv('data.csv')
+```
+* Key optional inputs
+  * `index_col`: The name of the column to set as the index
+  * `parse_dates`: `True`/`False` that parses strings that look like dates
+  * `skiprows`: The number of row to skip before reading data
+* Dozens of optional inputs to handle most text file formats
+
+
+# Importing Excel Data
+## `pd.read_excel`
+
+* Imports old (xls) and new Excel (xlsx) files
+* Only file name is required
+```python
+df = pd.read_excel('data.xlsx')
+```
+* Key optional inputs
+  * `index_col`: The name of the column to set as the index
+  * `sheet_name`: The name of the sheet to import
+  * `skiprows`: The number of row to skip before reading data
+* Many other of optional inputs to import complex sheets
+
+
+
+# Lesson 20
+
+
+# Saving 
+## CSV and Excel
+
+* `DataFrame.to_csv` exports to CSV
+```python
+df.to_csv('file-name.csv')
+```
+* `DataFrame.to_excel` exports to Excel (xls/xlsx)
+```python
+df.to_excel('file-name.xlsx')
+```
+  * Can use `sheet_name="some name"` to specify a sheet name
+
+
+# Storing HDF
+## `DataFrame.to_hdf`
+
+* Best approximation of a pandas "native" format
+* Requires a file name and key
+```python
+df.to_hdf("data-file.h5", "df")
+```
+  * Overwrites existing files by default 
+* `mode="a"` appends additional `DataFrame`s and `Series` &nbsp;&nbsp;&nbsp; 
+```python
+second_df.to_hdf("data-file.h5", "second_df", mode="a")
+``` 
+* Read using `pd.read_hdf`
+```python
+df = pd.read_hdf("data-file.h5", "df")
+```
+
+
+
+# Lesson 21
+
+
+# Line Plots
+## `DataFrame.plot.line`
+
+* Same as `plt.plot(df.index, df.values)`
+* Key optional inputs:
+  * `x`: the column name to use as the x values
+  * `y`: the column names to plot
+* Many optional argument that affect plot appearance
+  * `linewdith`: Integer width of line
+  * `linstyle`: (`"none"`, `"-""`, `"--"`, `"-."`, `":"`)
+  * `marker`: Adds a marker (`"o"`, `"x"`, `"v"`,...)
+  * `color`: Color (hex: `"#abcdef"`, name: `"red""` )
+  * See `matplotlib.pyplot.plot` help for full list
+
+
+
+# Lesson 22
+
+
+# Graphics: Other Plots
+## Overview
+
+* Histograms
+* Scatter plots
+* Saving figure to common formats
+
+
+# Histograms
+## `DataFrame.plot.hist`
+
+* Histogram of values
+* Key optional inputs:
+  * `bins`: Number of bins
+  * `density`: `True`/`False` indicating whether to normalize heights to sum to 1
+* Additional features available using `DataFrame.hist`
+* Wrapper around `plt.hist`
+
+
+# Scatter plots
+## `DataFrame.plot.scatter`
+
+* Scatter plot of two variables
+* Required inputs:
+  * `x`, `y`: Columns names to plot
+* Key optional inputs:
+  * `marker`: Marker shape (`"o"`,`"x"`,`"+"`,`"v"`,`"^"`,...)
+  * `s`: Size of marker
+  * `c`: Marker color
+* Wrapper around `plt.scatter`
+
+
+# Altering Plot Appearance
+
+* Large set of figure properties available
+* Mode important are methods off an axis
+```python
+ax.set_xlim(0, 1)
+ax.set_xticks([0,.33,.66,1])
+```
+* Use pattern `ax.set_`_property_
+* Key properties:
+  * `xlim` and `ylim`: Set axis limits
+  * `xlabel`, `ylabel` and `title`: Label a plot
+  * `xticks`, `yticks`: Set location for ticks
+  * `xticklabels`, `yticklabels`: Change labels of ticks
+* Mirrored by `get_`_property_ to read current value
+
+
+# Saving Figures
+## `plt.savefig`
+
+* Supports output to common formats
+  * pdf, png, jpeg, svg
+* Required inputs:
+  * `fname`: filename with extension to indicate export format
+* Key optional inputs:
+  * `dpi`: Figure resolution in dots per inch
+  * `transparent`: Use a transparent background
+* Also available as a method `Figure.savefig`
+
+
+# Graphics: Other Plots
+## Summary
+
+* `DataFrame.plot.hist` produces histograms
+* `DataFrame.plot.scatter` produces scatter plots
+  * Two required arguments: `x` and `y`
+* `Figure.savefig` exports figures to common formats
+  * Most useful: pdf, png, jpg, svg
+  * Use fig = ax.get_figure() to get handle
+* `ax.set_`_property_ allows many figure properties to be set
+  * `set_xlim` and `set_ylim`
+  * `set_xlabel`, `set_ylabel`, `set_title`

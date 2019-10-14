@@ -174,10 +174,12 @@ body {
 .reveal h1 code {
   color: #FED201 !important;
   font-weight: 100;
+  font-family: m_1mlight;
 }
 .reveal h2 code {
   color: #83c6ff;
   font-weight: 100;
+  font-family: m_1mlight;
 }
 
 .reveal pre code {

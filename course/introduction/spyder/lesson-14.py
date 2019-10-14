@@ -9,59 +9,47 @@
 # * Basic logical operators 
 # * Compound operators 
 # 
-# Begin by loading the data in momentum.csv.
 
 #%%
-# Setup: Load the momentum data
+# Setup: Reproducible random numbers
 
-import pandas as pd
-
-momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
-
-print(momentum.head())
-
-mom_01 = momentum["mom_01"]
-mom_10 = momentum["mom_10"]
-mom_05 = momentum["mom_05"]
+import numpy as np
+rs = np.random.RandomState(20000101)
 
 
 #%%
 # ## Problem: Basic Logical Statements
 # 
-# For portfolio 1 and portfolio 10, count the number of elements that are
-# $<0$, $\geq0$, and exactly equal to 0. Next count the number of times that
-# the returns in portfolio 5 are greater, in absolute value, that 2 times
-# the standard deviation of the returns in that portfolio. 
+# Create the variables (in order)
 # 
-
-#%%
-
-
-#%%
-
-
-#%%
-# ## Problem: Compound Statements
-# Count the number of times that the returns in both portfolio 1 and portfolio
-# 10 are negative. Next count the number of times that the returns in portfolios
-# 1 and 10 are both greater, in absolute value, that 2 times their respective
-# standard deviations. 
-
-#%%
-
-
-#%%
-
-
-#%%
-# ## Combining Scalar Boolean Values
+# * `x` as `rs.sample()`, a uniform on $[0, 1)$
+# * `y` as `rs.standard_normal()`, a standard normal ($N(0,1)$)
+# * `z` as `rs.randint(1, 11)`, a uniform ranomd integer on $[1, 2,\ldots, 10]$
 # 
-# Use `and`, `or` and `not` to determine if the return on mom_01 on
-# February 14, 2016 is inside or outside an interval of 1 standard deviation
-# of the mean of all of the return of mom_01.
+# Check whether each of these are above their expected value.
 
 #%%
 
+
+#%%
+
+
+#%%
+# ## Problem: Using comparison operators
+# 
+# 1. Check if `z` if 7
+# 2. Check is `z` is not 5
+# 3. Check if `z` is greater than or equal to 9
+
+#%%
+
+
+#%%
+# ## Problem: Combining booleans 
+# 
+# 1. Determine if $2\leq z < 8$
+# 2. Determine if $z < 2 \cup z \geq 8$ using `or`
+# 3. Rewrite 2 using `not` and your result from 1.
 
 #%%
 

@@ -2,11 +2,12 @@
 # coding: utf-8
 
 #%%
-# # Logic and Loops
+# # Boolean Selection 
 # 
 # This lesson covers:
 # 
-# * Mixing logic and loops 
+# * Boolean selection
+# * `where`
 # 
 # Begin by loading the data in momentum.csv.
 # 
@@ -21,55 +22,44 @@ momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
 
 print(momentum.head())
 
-mom_01 = momentum["mom_01"]
-mom_10 = momentum["mom_10"]
-mom_05 = momentum["mom_05"]
-
 
 #%%
-# ## Problem: Logical Statements and for Loops
-# Use a for loop along with an `if` statement to simulate an asymmetric random
-# walk of the form 
+# ## Problem: Selecting rows with boolean conditions
 # 
-# $$y_{i}=y_{i-1}+e_{i}+I_{[e_{i}<0]}e_{i}$$
+# Select the rows in `momentum` where all returns on a day are negative.
+
+#%%
+
+
+#%%
+# ## Problem: Selecting rows
 # 
-# where $I_{[e_{i}<0]}$ is known as an indicator variable that takes the value
-# 1 if the statement in brackets is true. Plot y. $e$ is a standard normal
-# shock. Use `cumsum` to simulate a symmetric one (`z`), and plot the two using
-# the code in the cell below.
-#  
+# Select the rows in `momentum` where 50% or more of the returns on a day are negative.
 
 #%%
 
 
 #%%
-# Plot the two random walks using the code.  We will cover data visualization
-# in a later lesson. 
+# ## Problem: Selecting columns
 # 
-# ```python
-# %matplotlib inline
-# import matplotlib.pyplot as plt
-# plt.plot(y)
-# plt.plot(z)
-# plt.legend(["y", "z"])
-# ```
+# Select the columns in `momentum` what have the smallest and second smallest average returns.
 
 #%%
 
 
 #%%
-# ## Problem: Simulate the asymmetricc random walk without an `if`-`then`
+
+
+#%%
+
+
+#%%
+# ## Problem: Selecting rows and columns
 # 
-# Use boolean multiplication to simulate the same random walk without using
-# an `if`-`then` statement. 
+# Select the returns for the column with the single most negative return
+# on days where all of the returns are negative. 
 
 #%%
-
-
-#%%
-# Setup: Plot the data
-from IPython import get_ipython
-get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 #%%
@@ -77,10 +67,47 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 #%%
 # ## Problem: Selecting Elements using Logical Statements
-# For portfolio 1 and portfolio 10, select the elements that are $<0$,
-# $\geq 0$ and exactly equal to $0$. Next select the elements where both
-# portfolios are less than $0$. 
+# For portfolio 1 and portfolio 10 compute the correlation when both 
+# returns are negative and when both are positive.
 # 
+
+#%%
+
+
+#%%
+
+
+#%%
+# Setup: Reproducible random numbers
+
+rs = np.random.RandomState(19991231)
+x = rs.randint(1, 11, size=(10,3))
+x
+
+
+#%%
+# ## Problem: Select the columns of x that means >= $E[x]$
+
+#%%
+
+
+#%%
+# ## Problem: Select the rows of x that means >= $E[x]$
+
+#%%
+
+
+#%%
+# ## Problem: Select the rows and column of x where both have means < $E[x]$
+
+#%%
+
+
+#%%
+# ## Problem: Using `where`
+# Use `where` to select the index of the elements in portfolio 5 that are
+# negative. Next, use the `where` command in its two output form to determine
+# which elements of the portfolio return matrix are less than -2%.
 
 #%%
 

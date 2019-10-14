@@ -2,63 +2,52 @@
 # coding: utf-8
 
 #%%
-# # Graphics: Line Plots
+# # Saving and Exporting Data
 # 
 # This lesson covers:
 # 
-# * Basic plotting 
-# * Subplots 
-# * Histograms 
-# * Scatter Plots
-
-#%%
-# Plotting in notebooks requires using a magic command, which starts with
-# `%`, to initialize the plotting backend.
-
-#%%
-# Setup
-from IPython import get_ipython
-get_ipython().run_line_magic('matplotlib', 'inline')
-
-
-#%%
-# Begin by loading the data in hf.h5. This data set contains high-frequency
-# price data for IBM and MSFT on a single day stored as two Series. IBM is
-# stored as "IBM" in the HDF file, and MSFT is stored as "MSFT.
-
-#%%
-
-
-#%%
-# ## Problem: Basic Plotting
+# * Saving and reloading data
 # 
-# 1. Plot the `ibm` series which contains the price of IBM. 
-# 2. Add a title and label the axes. 
-# 3. Add markers and remove the line. 
+# This first block loads the data that was used in the previous lesson.
 
 #%%
+# Setup: Load the data to use later
+import pandas as pd
 
-
-#%%
-
-
-#%%
+gs10_csv = pd.read_csv("data/GS10.csv", index_col="DATE", parse_dates=True)
+gs10_excel = pd.read_excel("data/GS10.xls", skiprows=10,
+                           index_col="observation_date")
 
 
 #%%
-# ## Problem: Subplot
+# ## Problem: Export to Excel
 # 
-# Create a 2 by 1 subplot with the price of IBM in the top subplot and the
-# price of MSFT in the bottom subplot. 
-
-#%%
-
-
-#%%
-# ## Problem: Plot with Dates
+# Export `gs10_csv` to the Excel file `gs10-exported.xlsx`.
 # 
-# Use `matplotlib` to directly plot `ibm` against its `index`. This is a
-# repeat of a previous plot but shows how to use the `plot` command directly. 
+
+#%%
+
+
+#%%
+# ## Problem: Export to CSV
+# 
+# Export `gs10_excel` to CSV. 
+
+#%%
+
+
+#%%
+# ## Problem: Export to HDF
+# 
+# Export both to a single HDF file (the closest thing to a "native" format in pandas).
+
+#%%
+
+
+#%%
+# ## Problem: Import from HDF and 
+# 
+# Import the data saved as HDF.
 
 #%%
 

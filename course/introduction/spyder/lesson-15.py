@@ -2,36 +2,93 @@
 # coding: utf-8
 
 #%%
-# # Conditional Execution
+# # Boolean Arrays 
 # 
-# * `if`-`elif`-`else` blocks
-
-#%%
-# ## Problem: Print value if negative
+# This lesson covers:
 # 
-# Draw a standard normal value using `np.random.standard_normal` and print the
-# value if it is negative.
+# * Creating Boolean arrays
+# * Combining Boolean arrays
+# * `all` and `any`
 # 
-# **Note**: Rerun the cell a few time to see different output.
-
-#%%
-
-
-#%%
-# ## Problem: Print different messages based on value
+# Begin by loading the data in momentum.csv.
 # 
-# Draw a standard normal value and print "Positive" if it is positive
-# and "Negative" if not.
+
+#%%
+# Setup: Load the momentum data
+
+import numpy as np
+import pandas as pd
+
+momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
+
+print(momentum.head())
+
+mom_01 = momentum["mom_01"]
+mom_10 = momentum["mom_10"]
+mom_05 = momentum["mom_05"]
+
+
+#%%
+# ## Problem: Boolean arrays
+# For portfolios 1 and 10, determine whether each return is $<0$ (separately).
 
 #%%
 
 
 #%%
-# ## Problem: 
+# ## Problem: Combining boolean arrays
+# Count the number of times that the returns in both portfolio 1 and portfolio
+# 10 are negative. Next count the number of times that the returns in portfolios
+# 1 and 10 are both greater, in absolute value, that 2 times their respective
+# standard deviations. 
+
+#%%
+
+
+#%%
+
+
+#%%
+# ## Problem: Combining boolean arrays
+# For portfolios 1 and 10, count the number of times either of the returns is $<0$.
 # 
-# Draw a standard t random variable with 2 degrees of freedom using
-# `np.random.standard_t(2)` and print "Negative Outlier" if less than -2,
-# "Positive Outlier" if larger than 2, and "Inlier" if between -2 and 2.
 
 #%%
 
+
+#%%
+# ## Problem: Count the frequency of negative returns
+# 
+# What percent of returns are negative for each of the 10 momentum portfolios?
+
+#%%
+
+
+#%%
+# ## Problem: Use `any` to find large losses
+# 
+# Use any to determine if any of the 10 portfolios experienced a loss
+# greater than -5%.
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# Use `all` and negation to do the same check as `any`.
+
+#%%
+
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: all and any
+# Use all to determine the number of days where all of the portfolio returns
+# were negative. Use any to compute the number of days with at least 1 negative
+# return and with no negative returns (Hint: use negation (~ or `logical_not`)). 

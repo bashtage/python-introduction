@@ -1212,6 +1212,95 @@ not ((x <= 0) or (y >= 10))
 # Lesson 15
 
 
+# Boolean Arrays
+## Overview
+
+* Created when a NumPy array, `DataFrame` or `Series`  compared using a logical operators 
+* Always contains `True` or `False`
+  * `True` is 1, `False` is 0
+* Combining boolean arrays uses `&`, `|` or `~`
+  * Equivalent ot `locigal_and`, `logical_or` and `logical_not` functions
+  * `and`, `or` and `not` are scalar only
+* Uses
+  * Selection of elements
+  * Summarizing contents
+  * Interaction variables
+
+
+# Boolean Arrays
+## Summary
+
+* Boolean arrays are created using `<`, `<=`, `==`, `>=`, `>`
+* Arrays of `True` and `False`
+  * `True` is 1 in math ops
+* Must use `&`, `|` and `~`
+  * Function equivalents: `logical_and`, `logical_or`, `logical_not` 
+  * `and`, `or` and `not` produce errors
+* Boolean selection is identical to integer selection using a list
+  * `where(bool_arr)` returns the indices selected
+* Use `loc` in pandas to perform logical selection
+* In Numpy must use `ix_` with boolean selection in multiple dimensions
+
+
+# Array logical operators
+```python
+c = a & b
+c = np.logical_and(a, b)
+```
+* Elementwise _and_: `c[i]` `True` if `a[i]` and `b[i]` are `True`
+```python
+c =a | b
+c = np.logical_or(a, b)
+```
+* Elementwise _or_: `c[i]` `True` if `a[i]` or `b[i]` are `True`
+```python
+c = ~a
+c = np.logical_not(a)
+```
+* Elementwise _not_: `c[i]` `True` if `a[i]` is False
+
+
+# `any` and `all`
+
+
+
+# Lesson 16
+
+
+# Boolean Selection
+## Overview 
+
+
+# Selection using `.loc`
+## `DataFrame` and `Series`
+
+* Logical selection must use `loc`
+* Equivalent
+```python
+sel = (df > 0).any(axis=1)
+df.loc[sel]
+df.loc[df.index[sel]]
+```
+* Logical selector must match dimension or rows/columns
+
+
+# Logical Selection in array
+## Matches list selection
+
+* Logical selection in NumPy array matches list selection
+* Equivalent to using `np.where` to convert boolean ot position
+* Can only be directly used for 1 axis
+  * Use `np.ix_` when using list/boolean in multiple dimensions
+
+
+# Boolean Selection
+## Summary
+
+
+
+# Lesson 17
+
+
 # Conditional Statements
 ## Overview
 
@@ -1282,7 +1371,7 @@ else:
 
 
 
-# Lesson 16
+# Lesson 18
 
 
 # Logic and Loops
@@ -1333,95 +1422,6 @@ print("Finished")
   * Extendable using multiple `elif` statements
 * Boolean `True` is 1 and `False` is 0
   * Multiplication treats boolean as an indicator
-
-
-
-# Lesson 17
-
-
-# Boolean Arrays
-## Overview
-
-* Created when a NumPy array, `DataFrame` or `Series`  compared using a logical operators 
-* Always contains `True` or `False`
-  * `True` is 1, `False` is 0
-* Combining boolean arrays uses `&`, `|` or `~`
-  * Equivalent ot `locigal_and`, `logical_or` and `logical_not` functions
-  * `and`, `or` and `not` are scalar only
-* Uses
-  * Selection of elements
-  * Summarizing contents
-  * Interaction variables
-
-
-# Boolean Arrays
-## Summary
-
-* Boolean arrays are created using `<`, `<=`, `==`, `>=`, `>`
-* Arrays of `True` and `False`
-  * `True` is 1 in math ops
-* Must use `&`, `|` and `~`
-  * Function equivalents: `logical_and`, `logical_or`, `logical_not` 
-  * `and`, `or` and `not` produce errors
-* Boolean selection is identical to integer selection using a list
-  * `where(bool_arr)` returns the indices selected
-* Use `loc` in pandas to perform logical selection
-* In Numpy must use `ix_` with boolean selection in multiple dimensions
-
-
-# Array logical operators
-```python
-c = a & b
-c = np.logical_and(a, b)
-```
-* Elementwise _and_: `c[i]` `True` if `a[i]` and `b[i]` are `True`
-```python
-c =a | b
-c = np.logical_or(a, b)
-```
-* Elementwise _or_: `c[i]` `True` if `a[i]` or `b[i]` are `True`
-```python
-c = ~a
-c = np.logical_not(a)
-```
-* Elementwise _not_: `c[i]` `True` if `a[i]` is False
-
-
-# `any` and `all`
-
-
-
-# Lesson 18
-
-
-# Boolean Selection
-## Overview 
-
-
-# Selection using `.loc`
-## `DataFrame` and `Series`
-
-* Logical selection must use `loc`
-* Equivalent
-```python
-sel = (df > 0).any(axis=1)
-df.loc[sel]
-df.loc[df.index[sel]]
-```
-* Logical selector must match dimension or rows/columns
-
-
-# Logical Selection in array
-## Matches list selection
-
-* Logical selection in NumPy array matches list selection
-* Equivalent to using `np.where` to convert boolean ot position
-* Can only be directly used for 1 axis
-  * Use `np.ix_` when using list/boolean in multiple dimensions
-
-
-# Boolean Selection
-## Summary
 
 
 

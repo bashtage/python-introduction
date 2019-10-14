@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# # Program Flow
+# # `for` Loops
 # 
 # This lesson covers:
 # 
@@ -40,6 +40,7 @@
 
 #%%
 # ## Problem: Simulate a random walk
+# 
 # (Pseudo) Normal random variables can be simulated using the command
 # `np.random.standard_normal(shape)` where `shape` is a tuple (or a scalar)
 # containing the dimensions of the desired random numbers. Simulate 100 normals
@@ -66,6 +67,7 @@
 
 #%%
 # ## Problem: Nested Loops
+# 
 # Begin by loading momentum data used in an earlier lesson. Compute a
 # 22-day moving-window standard deviation for each of the columns. Store
 # the value at the end of the window.

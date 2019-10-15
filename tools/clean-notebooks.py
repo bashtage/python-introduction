@@ -2,6 +2,7 @@
 Execute and then clear code and output from solutions notebooks.
 """
 from collections.abc import MutableMapping
+import copy
 import glob
 import os
 
@@ -70,7 +71,7 @@ for nb_file in nb_files:
     nbformat.write(nb, out, nbformat.NO_CONVERT)
 
     # Export for Spyder
-    code = export_for_spyder(nb)
+    code = export_for_spyder(copy.deepcopy(nb))
     py_name = os.path.split(nb_file)[-1].replace(".ipynb", ".py")
     with open(os.path.join(spyder_dir, py_name), "w", encoding="utf8") as python_file:
         python_file.write(code)

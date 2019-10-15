@@ -1,3 +1,32 @@
+# Introduction
+
+
+# Goals
+
+* Familiarity with the PyData stack
+  * NumPy
+  * pandas
+  * SciPy
+  * matplotlib
+  * statsmodels
+* Sufficient knowledge to use Python for data analysis
+  * Data analysis
+  * Simulation
+  * Visualization
+
+
+# Non-goals
+
+* Mastery of the NumPy/pandas API
+* Writing complete applications
+* Modeling data
+  * Follow-up course
+* Expertise in machine learning
+* Writing high-performance code
+  * Focus on _good_ practice
+
+
+
 # Installation
 
 
@@ -51,7 +80,7 @@ jupyter nbconvert --to python notebook.ipynb
 pip install jupyter_contrib_nbextensions
 ```
 
-  
+
 # Spyder
 ## Summary
 
@@ -656,6 +685,20 @@ def func(x, y=1):
 # Lesson 8
 
 
+# Using DataFrames
+## Overview
+
+* `pct_change` creates returns
+  * Always creates at least 1 missing value
+  * Use `dropna` to remove
+* pandas math depends on index and column
+  * Does not follow linear algebra rules
+  * Exception is matrix multiplication
+* Items missing from index or columns produce missing values
+* Non-unique index or columns produces duplicates
+* Mixing with NumPy falls back to NumPy rules
+
+
 # Math on pandas types
 ## Label matching
 
@@ -678,9 +721,43 @@ def func(x, y=1):
   * Must confirm using rules of linear algebra
 
 
+# Math with NumPy arrays
+
+* NumPy rules apply when mixing pandas and numpy
+* NumPy rules match linear algebra
+* Shape determines if conformable
+* Simplest rule: **match dimensions**
+* NumPy supports _broadcasting_ 
+  * Allows smaller dimension arrays to be resized
+  * Specific circumstances
+  * Efficient but complex
+
+
+# Using DataFrames
+## Summary
+
+* Use `pct_change` to create returns
+* pandas math matches on index and column 
+* Care is needed if index/columns is not unique
+* Mixing with NumPy uses linear algebra rules
+  * Match `DataFrame`/`Series` shape with array
+
+
 
 # Lesson 9
 
+
+# Common DataFrame methods
+## Overview
+
+* pandas is batteries included
+* Many built-in functions for common tasks
+  * Moments
+  * Quantiles and Extremes
+  * Covariance and Correlation
+  * Common `DataFrame` and `Series` specific
+* Most operate column-by-column
+   
 
 # Key methods
 ## Univariate Moments
@@ -768,6 +845,21 @@ df.quantile([0.25, 0.75])
   * `diff`: Arithmetic change
   * `pct_change`: Percentage change
   * `shift(n)`: Shift values forward or backward
+
+
+# Common DataFrame methods
+## Summary
+
+* pandas includes function for common statistics
+  * Moments
+  * Quantiles and Extremes
+  * Covariance and Correlation
+* Many pandas-specific functions
+  * `DataFrame`/`Series` information
+  * Sorting
+  * Transformation
+* Most functions operate column-by-column
+* Familiarity with the pandas API simplifies coding    
 
 
 
@@ -1008,6 +1100,13 @@ a[[0, 1], [0, 2]]  # wrong
 # Numeric Indexing of DataFrames
 ## Overview
 
+* Numeric indexing complements label indexing
+* Uses `.iloc` in place of `.loc`
+* Identical to indexing of Numpy Arrays
+  * One exception: multiple list selection
+  * Always selects blocks
+  * As-if `np.ix_` is always used   
+
 
 # `DataFrame.iloc`
 ## Numeric indexing
@@ -1065,6 +1164,14 @@ a[np.ix_(rows, cols)]
 # Numeric Indexing of DataFrames
 ## Summary
 
+* Numeric indexing supports
+  * Scalars
+  * Lists of integers
+  * Slices
+* Replaces `.loc` with `.iloc`
+* Similar to  NumPy array selection
+  * Key difference: selection using 2 lists
+
 
 
 # Lesson 13
@@ -1072,6 +1179,15 @@ a[np.ix_(rows, cols)]
 
 # `for` Loops
 ## Overview
+
+* Loops simplify repetitive tasks
+* Python supports two types of loops
+  * `for`
+  * `while`
+* Focus on simpler `for` loops
+  * Two structures are equivalent
+* **Whitespace** sensitive
+  * Indentation demarcates loop block
 
 
 # Basic `for` loop
@@ -1153,13 +1269,27 @@ print("All done now")
 # `for` Loops
 ## Summary
 
+* `for` loops iterate across iterable objects
+  * `range`: Sequence generator
+  * `list`, `dict`, `DataFrame`, `Series`, Numpy array
+* **Whitespace** sensitive: Use consistent indentation
+* Nesting uses different levels of indentation
+
 
 
 # Lesson 14
 
 
 # Comparison and Logical Operators
-# Overview
+## Overview
+
+* 6 comparison operators
+  * `<`, `<=`, `==`, `!=`, `>=`, `>`
+  * Scalar or vector
+* 3 logical operators
+  * `and`, `or`, `not`
+  * Scalar only
+* Operators produce `bool`: `True` or `False`
 
 
 # Operators
@@ -1201,11 +1331,16 @@ x > 0 and y < 10
 not ((x <= 0) or (y >= 10))
 ```  
 
-* Use explicit boolean test
-
 
 # Comparison and Logical Operators
 ## Summary
+
+* 6 comparison operators
+* 3 logical operators
+* `bool` type
+  * `True` and `False`
+  * `True` is 1
+  * `False` is 0
 
 
 
@@ -1227,21 +1362,6 @@ not ((x <= 0) or (y >= 10))
   * Interaction variables
 
 
-# Boolean Arrays
-## Summary
-
-* Boolean arrays are created using `<`, `<=`, `==`, `>=`, `>`
-* Arrays of `True` and `False`
-  * `True` is 1 in math ops
-* Must use `&`, `|` and `~`
-  * Function equivalents: `logical_and`, `logical_or`, `logical_not` 
-  * `and`, `or` and `not` produce errors
-* Boolean selection is identical to integer selection using a list
-  * `where(bool_arr)` returns the indices selected
-* Use `loc` in pandas to perform logical selection
-* In Numpy must use `ix_` with boolean selection in multiple dimensions
-
-
 # Array logical operators
 ```python
 c = a & b
@@ -1261,6 +1381,32 @@ c = np.logical_not(a)
 
 
 # `any` and `all`
+## Logical aggregation
+
+* Common to use `any` or `all` on arrays
+* `any` returns `True` is any value is `True`
+* `all` returns `True` is all values are `True`
+* Reduce vectors to scalars
+* Key difference in `DataFrame` methods and NumPy functions
+  * `df.any` and `df.all` operator column-by-column
+  * `np.any` and `np.all` default to entire array
+    * Use `np.any(axis=0)` for column-by-column
+* Using `axis=1` operates row-by-row
+
+
+# Boolean Arrays
+## Summary
+
+* Boolean arrays are created using `<`, `<=`, `==`, `>=`, `>`
+* Arrays of `True` and `False`
+  * `True` is 1 in math ops
+* Must use `&`, `|` and `~`
+  * Function equivalents: `logical_and`, `logical_or`, `logical_not` 
+  * `and`, `or` and `not` produce errors
+* Boolean selection is identical to integer selection using a list
+  * `where(bool_arr)` returns the indices selected
+* Use `loc` in pandas to perform logical selection
+* In Numpy must use `ix_` with boolean selection in multiple dimensions
 
 
 
@@ -1268,7 +1414,14 @@ c = np.logical_not(a)
 
 
 # Boolean Selection
-## Overview 
+## Overview
+
+* Boolean arrays can be used to select
+  * `True` includes
+  * `False` excludes
+* Use `.loc` in pandas
+* NumPy selection behaves like list of integers
+  * Use `np.ix_` when selecting 2 or more axes   
 
 
 # Selection using `.loc`
@@ -1296,6 +1449,11 @@ df.loc[df.index[sel]]
 # Boolean Selection
 ## Summary
 
+* Use `.loc` with boolean arrays
+* Array dimension must match axis shape
+* NumPy converts boolean array to list of integers
+  * Care needed when selecting in 2 or more axes
+
 
 
 # Lesson 17
@@ -1303,6 +1461,11 @@ df.loc[df.index[sel]]
 
 # Conditional Statements
 ## Overview
+
+* `if` statements allow conditional execution
+* `else` extends an `if` to ensure code execution
+* `elif` can be used to add additional paths
+* Must use consistent indentation in `if`-`elif`-`else` blocks
 
 
 # `if`
@@ -1349,7 +1512,7 @@ print("Always printed: not part of conditional statement")
 
 # `if`-`elif`-`else`
 
-* `elif` allows arbitray execution
+* `elif` allows arbitrary execution
 * At most one of `if`, the `elif`s or `else` executed
 
 ```python
@@ -1369,6 +1532,13 @@ else:
 # Conditional Statements
 ## Summary
 
+* `if`-`elif`-`else` allows complete control of execution
+  * `if` is required
+  * `elif` and `else` are optional
+* At most one of the blocks is executed
+* When `else` included exactly one block is executed
+* **Important**: Python is whitespace sensitive
+
 
 
 # Lesson 18
@@ -1377,8 +1547,12 @@ else:
 # Logic and Loops
 ## Overview
 
-* `if`-`else` blocks
-* Using boolean values as 0-1 integers
+* Blocks are mixed to achieve complex control flow
+  * `for`
+  * `if`-`elif`-`else`
+* Consistent indentation is **essential** 
+* Best practice limits nesting to 2 or 3 levels
+  * Use function to limit depth
 
 
 # Nesting Blocks
@@ -1418,15 +1592,27 @@ print("Finished")
 # Logic and Loops
 ## Summary
 
-* `if`-`else` blocks allow code to conditionally execute
-  * Extendable using multiple `elif` statements
-* Boolean `True` is 1 and `False` is 0
-  * Multiplication treats boolean as an indicator
+* Consistent indentation is **essential** when nesting blocks
+* Use a good editor that highlights depth 
+* Limits nesting to 2 or 3 levels
 
 
 
 # Lesson 19
 
+
+# Importing Data
+## Overview
+
+* pandas exposes many methods to import data
+* Readers for a wide range of formats
+  * **CSV**
+  * **Excel**
+  * Database: SQL
+  * Web: JSON and HTML
+  * Statistical Software: Stata, SAS and SPSS
+  * Big Data: HDF, Parquet, Feather
+  
 
 # Importing CSV Data
 ## `pd.read_csv`
@@ -1457,8 +1643,33 @@ df = pd.read_excel('data.xlsx')
 * Many other of optional inputs to import complex sheets
 
 
+# Importing Data
+## Summary
+
+* Two key functions to interface with external data
+  * `pd.read_csv`: CSV and other delimited text
+    * `index_col` sets the index
+    * `parse_dates` converts dates
+  * `pd.read_excel`: Excel (xlsx and xls)
+    * `index_col` sets the index
+    * `sheet_name` reads from a specific sheet
+
+
 
 # Lesson 20
+
+
+# Saving and Exporting Data
+## Overview
+
+* Export formats match import
+  * **CSV**
+  * **Excel**
+  * **HDF**: _native_ pandas format
+  * Database: SQL
+  * Web: JSON and HTML
+  * Statistical Software: Stata and SPSS
+  * Big Data: Parquet, Feather
 
 
 # Saving 
@@ -1494,8 +1705,35 @@ df = pd.read_hdf("data-file.h5", "df")
 ```
 
 
+# Saving and Exporting Data
+## Summary
+
+* `df.to_csv` writes csv files
+* `df.to_excel` exports to Excel
+  * `sheet_name` choose the sheet name
+* `df.to_hdf` output to HDF format
+  * Closest format to native
+  * Must set a key
+  * `append=True` allows multiple variables to be saved
+  * Import with `pd.read_hdf(` _filename_ `,` _key_ `)` 
+
+
 
 # Lesson 21
+
+
+# Graphics: Line Plots
+## Overview
+
+* `df.plot.`_method_ exposes plotting interface
+  * `line`: Line plot
+  * `hist`: Histograms
+  * `kde`: Kernel density
+  * `scatter`: Scatter plots
+  * Others: `area`, `bar`, `box`, `density`, `hexbin`, `pie`
+* Wrappers around `matplotlib.pyplot`
+  * Matplotlib provides core documentation for options
+* `seaborn` package improves default aesthetics
 
 
 # Line Plots
@@ -1511,6 +1749,16 @@ df = pd.read_hdf("data-file.h5", "df")
   * `marker`: Adds a marker (`"o"`, `"x"`, `"v"`,...)
   * `color`: Color (hex: `"#abcdef"`, name: `"red""` )
   * See `matplotlib.pyplot.plot` help for full list
+
+
+# Graphics: Line Plots 
+## Summary
+
+* `df.plot.line` produces line plots
+* Wrapper for `plt.plot(df.index, df.values)`
+* Axis `set_`_property_ adds important features
+  * `title`
+  * `xlabel`, `ylabel`
 
 
 

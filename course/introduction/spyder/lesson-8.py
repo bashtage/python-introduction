@@ -101,7 +101,7 @@ goog = pd.read_hdf("data/dataframes.h5", "goog")
 
 
 #%%
-# ## Problem: Addition on Series
+# ## Problem: Addition of Series
 # Add the returns on SPY to those of AAPL 
 # 
 
@@ -109,7 +109,7 @@ goog = pd.read_hdf("data/dataframes.h5", "goog")
 
 
 #%%
-# ## Problem: Addition on Series
+# ## Problem: Combining methods and mathematical operations
 # Using only basic mathematical operations compute the 
 # correlation between the returns on AAPL and SPY. 
 

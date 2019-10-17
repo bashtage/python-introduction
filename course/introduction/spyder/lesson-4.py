@@ -114,7 +114,7 @@
 # This block saves prices to a HDF file for use in later lessons. The
 # function used to save the data is covered in a later lesson.
 # 
-# This function uses some sophisticated ggeatures of Python. Do not
+# This function uses some sophisticated features of Python. Do not
 # worry if it is unclear at this point.
 
 #%%

@@ -145,7 +145,7 @@ pip install jupyter_contrib_nbextensions
   * Code Spell Checker: Spell checking
 * Native support for Jupyter notebooks
   * Requires up-to-date Python extension
-* Supports Magic Python cells 
+* Supports Magic Python cells
   * Cells demarcated with `#%%`
 
 
@@ -180,7 +180,7 @@ pip install jupyter_contrib_nbextensions
 * If any term is a float, then mathematical operation is a float
   * `2 * 2` produces `4`
   * `2 * 2.0` produces `4.0`
-  * `2.0 * 2.0` produces `4.0`  
+  * `2.0 * 2.0` produces `4.0`
 
 
 # Strings (`str`)
@@ -188,7 +188,7 @@ pip install jupyter_contrib_nbextensions
 * Entered using either `"`_string_`"` or `"`_string_`"`
   * Quotation mark must match
 * Join strings with `+`
-  * `"apple" + "banana"` produces `"applebanana"` 
+  * `"apple" + "banana"` produces `"applebanana"`
 * Repeat string with `*`
   * `"-" * 80` produces `"-----...-----"`
 * F-strings allow mixing strings and code
@@ -225,7 +225,7 @@ direct = [[1, 3, 5], [2, 4, 6]]
   * 0-indexed
     * 0 is first element, 1 is second, etc.
 * Subset using _slice_
-  * `lst[3:9]`  
+  * `lst[3:9]`
 * Add new elements with `.append` method
   * `lst.append("one")`
 * Other useful methods
@@ -255,7 +255,7 @@ tpl = ("a", 1, 1.0, ("b", 2, "2.0"))
 
 * Slices are widely used in numerical python
   * Lists
-  * NumPy arrays 
+  * NumPy arrays
   * pandas `DataFrames` and `Series`
 * Basic syntax
   * `lst[start:stop]`
@@ -263,7 +263,7 @@ tpl = ("a", 1, 1.0, ("b", 2, "2.0"))
     * `i = start`, `start+1`, `start+2`, ..., `stop-1`
 * Common use
   * `lst[:stop]` is the same as `lst[0:stop]`
-  * `lst[start:]` is the same as `lst[start:len(lst)]` 
+  * `lst[start:]` is the same as `lst[start:len(lst)]`
     * `len(lst)` is the number of elements in the list
 
 
@@ -281,7 +281,7 @@ d = {key1 : value1, key2: value2, ...}
 ```
 * Add or change elements using `d[key] = value`
   * Element added is `key` not in `d`, otherwise replaced
-* Delete elements using `del d[key]`  
+* Delete elements using `del d[key]`
 * Access by key `value = d[key]`
 
 
@@ -294,7 +294,7 @@ d = {key1 : value1, key2: value2, ...}
   * Lists: `list`
     * Tuples: `tuple`, list-like but cannot be changed once created
   * Dictionary: `dict`
-* Floats, integers and strings are basic data types  
+* Floats, integers and strings are basic data types
 * Lists and dictionaries are used to hold other objects
 
 
@@ -387,7 +387,7 @@ import statsmodels.tsa.api
 * pandas provides two essential containers
   * `Series`: 1-d homogeneous array
   * `DataFrame`: 2-d heterogeneous array
-* A `Series` is 1 column from a `DataFrame` 
+* A `Series` is 1 column from a `DataFrame`
 * Both support `index`
   * Defaults to integers: 0, 1, 2, ...
   * Can assign meaningful data: date, company name, ...
@@ -450,10 +450,10 @@ df.index = index
 
 * A `Series` is a 1-d homogeneous array
 * A `DataFrame` is a 2-d heterogeneous array
-  * A `Series` is 1 column from a `DataFrame` 
+  * A `Series` is 1 column from a `DataFrame`
 * The `index` contains a set of keys corresponding to rows
 * `DataFrame` supports keys for columns as well (`columns`)
-  * `Series` supports `name` since always 1 column  
+  * `Series` supports `name` since always 1 column
 
 
 
@@ -552,7 +552,7 @@ func(a, index=b)
 
 # Calling methods on objects
 
-* Python objects expose methods 
+* Python objects expose methods
 * Methods operate on the object
 * Important examples
   * NumPy arrays
@@ -603,6 +603,12 @@ help(df.to_csv)
 * Formatted web-based help easy to find using Google
 
 
+# Help in Jupyter Server
+
+
+# Help in PyCharm
+
+
 # Function Signatures
 ## Required and Optional Arguments
 
@@ -610,13 +616,13 @@ help(df.to_csv)
 * Function signature indicates type
   * `=` used in optional parameters
   * Value to right of `=` is the default
-* Signature for `np.linspace`  
+* Signature for `np.linspace`
 ```python
 linspace(start, stop, num=50, endpoint=True,
            retstep=False, dtype=None, axis=0)
 ```
   * `start` and `stop` are required
-  * 5 other inputs are optional 
+  * 5 other inputs are optional
 
 
 # Functions and Methods
@@ -678,7 +684,7 @@ def func(x, y=1):
   * **Important**: Python is whitespace sensitive
   * Use 4 spaces to indent
     * Do not use tab character to indent
-    * Configure editor to convert tab to 4 spaces 
+    * Configure editor to convert tab to 4 spaces
 
 
 
@@ -727,7 +733,7 @@ def func(x, y=1):
 * NumPy rules match linear algebra
 * Shape determines if conformable
 * Simplest rule: **match dimensions**
-* NumPy supports _broadcasting_ 
+* NumPy supports _broadcasting_
   * Allows smaller dimension arrays to be resized
   * Specific circumstances
   * Efficient but complex
@@ -737,7 +743,7 @@ def func(x, y=1):
 ## Summary
 
 * Use `pct_change` to create returns
-* pandas math matches on index and column 
+* pandas math matches on index and column
 * Care is needed if index/columns is not unique
 * Mixing with NumPy uses linear algebra rules
   * Match `DataFrame`/`Series` shape with array
@@ -757,7 +763,7 @@ def func(x, y=1):
   * Covariance and Correlation
   * Common `DataFrame` and `Series` specific
 * Most operate column-by-column
-   
+
 
 # Key methods
 ## Univariate Moments
@@ -801,7 +807,7 @@ df.quantile([0.25, 0.75])
 # Key methods
 ## Mathematics
 
-* Cumulative Statistics 
+* Cumulative Statistics
   * `cummax`: Cumulative max
   * `cummin`: Cumulative min
   * `cumprod`: Cumulative product
@@ -809,7 +815,7 @@ df.quantile([0.25, 0.75])
     * Output has same shape as input
 * `abs`: Absolute value (element-by-element)
   * Output has same shape as input
-* Linear-algebra product  
+* Linear-algebra product
   * `dot`
     * $ x' x\Rightarrow $ `x.T.dot(x)`
     * Output shape depends on inputs
@@ -817,7 +823,7 @@ df.quantile([0.25, 0.75])
 
 # Key methods
 ## `DataFrame` specific
-* Content information 
+* Content information
   * `count`: Number of non-missing values
   * `describe`: Basic summary statistics
 * Display
@@ -826,13 +832,13 @@ df.quantile([0.25, 0.75])
 * Sorting
   * `sort_index`: Sort by index values
   * `sort_values(columns)`: Sort by values of one or more columns
-* Size information   
+* Size information
   * `ndim`: Number of dimensional (1 or 2)
   * `shape`: Shape of data (`ndim` element tuple)
 
 
 # Key methods
-## Other 
+## Other
 * `transpose` (shortcut `.T`)
   * Swap columns and row
 * `dropna`: Remove missing
@@ -859,7 +865,7 @@ df.quantile([0.25, 0.75])
   * Sorting
   * Transformation
 * Most functions operate column-by-column
-* Familiarity with the pandas API simplifies coding    
+* Familiarity with the pandas API simplifies coding
 
 
 
@@ -874,10 +880,10 @@ df.quantile([0.25, 0.75])
   * Dictionary-like syntax
     * Selects columns in a `DataFrame`
     * Selects index in a `Series`
-* Selection _may_ reduce dimension and change type    
+* Selection _may_ reduce dimension and change type
 * Special features for selecting dates
   * Day, Month, Year
-  * Continuous range of dates    
+  * Continuous range of dates
 
 
 # `DataFrame.loc`
@@ -889,7 +895,7 @@ df.quantile([0.25, 0.75])
 * A single value or a list of values
 ```python
 df.loc["row", ["col1", "col2"]]
-```   
+```
 * Use `:` to select all elements in either
   * Columns are optional if selecting all elements
 ```python
@@ -908,13 +914,13 @@ df.loc["row"]
 ```python
 df["col"]
 df.loc[:, "col"]
-``` 
+```
 * List of column names to select multiple
 
 ```python
 df[["col1", "col2"]]
 df.loc[:, ["col1", "col2"]]
-``` 
+```
 * `Series` selects using the index
 
 ```python
@@ -936,7 +942,7 @@ series = df["col"]
 series = df.loc["row"]
 scalar = df.loc["row", "col"]
 ```
-* Selection in a `Series` produces a scalar value 
+* Selection in a `Series` produces a scalar value
 
 ```python
 scalar = series["row"]
@@ -962,7 +968,7 @@ new_df = df.loc[:, ["col1", "col2"]]
 series = df.loc[["row1", "row2"], "col"]
 ```
 
-* Single-item list preserves dimension 
+* Single-item list preserves dimension
 
 ```python
 new_df = df.loc[:, ["col"]]
@@ -1000,7 +1006,7 @@ df.loc['1999-12-31':'2000-12-31']
   * String selection of dates
     * Day, Month, Year
     * Range of dates
-      * **Caveat**: End point is included   
+      * **Caveat**: End point is included
 
 
 
@@ -1055,10 +1061,10 @@ a[:, :2]
   * Trailing `:`  can be omitted
 
 ```python
-a[:1]  
-a[:1, :]  
+a[:1]
+a[:1, :]
 ```
-* Slicing preserved array dimension  
+* Slicing preserved array dimension
 
 
 # List Selection
@@ -1105,7 +1111,7 @@ a[[0, 1], [0, 2]]  # wrong
 * Identical to indexing of Numpy Arrays
   * One exception: multiple list selection
   * Always selects blocks
-  * As-if `np.ix_` is always used   
+  * As-if `np.ix_` is always used
 
 
 # `DataFrame.iloc`
@@ -1117,14 +1123,14 @@ a[[0, 1], [0, 2]]  # wrong
 ```python
 df.iloc[0:60]
 df.iloc[1:61]
-```   
+```
 
 * Support rows only, or rows and columns
 
 ```python
 df.iloc[0:60]
 df.iloc[0:60, 2:4]
-```   
+```
 
 * Can pass slice, list of integers or scalar integer
   * **Note**: Scalar integer reduces dimension
@@ -1132,24 +1138,24 @@ df.iloc[0:60, 2:4]
 
 # `DataFrame.iloc`
 ## Relationship to `loc`
-* Identical `loc` if 
+* Identical `loc` if
   * `index` is 0, 1, ..., `df.shape[0]-1`
   * `columns` is 0, 1, ..., `df.shape[1]-1`
-* Equivalent expressions 
+* Equivalent expressions
 
 ```python
 df.iloc[0:60]
 df.loc[df.index[0:60]]
 df.iloc[0:60, 2:4]
 df.loc[df.index[0:60], df.columns[2:4]]
-```  
+```
 * Saves looking up in index/columns &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 # `DataFrame.iloc`
 ## Differences with NumPy
 
-* Different from NumPy when using 2 lists 
+* Different from NumPy when using 2 lists
   * Always selects block
   * No need to use `np.ix_`
 
@@ -1195,7 +1201,7 @@ a[np.ix_(rows, cols)]
 ```python
 for i in range(10):
     print(i)
-``` 
+```
 * `for`:  Required keyword
 * `i`: value that changes in iterations
 * `in`: Required keyword
@@ -1214,7 +1220,7 @@ for i in range(10):
   * **Important**: Python is whitespace sensitive
   * Use 4 spaces
   * **Do not** use tabs, unless tabs converted to spaces
-    * Standard features of most Python-focused editors 
+    * Standard features of most Python-focused editors
 * body ends when code is dedented (unindented, outdented)
 
 ```python
@@ -1223,12 +1229,12 @@ for i in range(10):
     print("Still in body")
 
 not_in_body = "All done"
-``` 
+```
 
 
 # `range`
 ## Integer sequence generation
- 
+
 ```python
 range(stop)
 range(start, stop)
@@ -1240,13 +1246,13 @@ range(start, stop)
  start, start+1, \ldots, stop-1
 ```
 * `range(stop)` is shorthand for `range(0, stop)`
-* Three input variant: `range(start, stop, step)`  
+* Three input variant: `range(start, stop, step)`
   * `step`: Step between values if not 1
-  * Usually encountered in decreasing sequences 
+  * Usually encountered in decreasing sequences
 
 ```python
 range(10, 0, -1)  # 10, 9, 8, ..., 1
-```  
+```
 
 
 # Nested loops
@@ -1318,7 +1324,7 @@ print("All done now")
 ```python
 x = np.array([-3, 3, 2, -2, -1, 1, 0])
 x_neg = x * (x < 0)
-```  
+```
 
 
 # Best Practices
@@ -1329,7 +1335,7 @@ x_neg = x * (x < 0)
 x > 0 and y < 10
 (x > 0) and (y < 10)
 not ((x <= 0) or (y >= 10))
-```  
+```
 
 
 # Comparison and Logical Operators
@@ -1350,7 +1356,7 @@ not ((x <= 0) or (y >= 10))
 # Boolean Arrays
 ## Overview
 
-* Created when a NumPy array, `DataFrame` or `Series`  compared using a logical operators 
+* Created when a NumPy array, `DataFrame` or `Series`  compared using a logical operators
 * Always contains `True` or `False`
   * `True` is 1, `False` is 0
 * Combining boolean arrays uses `&`, `|` or `~`
@@ -1401,7 +1407,7 @@ c = np.logical_not(a)
 * Arrays of `True` and `False`
   * `True` is 1 in math ops
 * Must use `&`, `|` and `~`
-  * Function equivalents: `logical_and`, `logical_or`, `logical_not` 
+  * Function equivalents: `logical_and`, `logical_or`, `logical_not`
   * `and`, `or` and `not` produce errors
 * Boolean selection is identical to integer selection using a list
   * `where(bool_arr)` returns the indices selected
@@ -1421,7 +1427,7 @@ c = np.logical_not(a)
   * `False` excludes
 * Use `.loc` in pandas
 * NumPy selection behaves like list of integers
-  * Use `np.ix_` when selecting 2 or more axes   
+  * Use `np.ix_` when selecting 2 or more axes
 
 
 # Selection using `.loc`
@@ -1504,7 +1510,7 @@ else:
 ```python
 if x >= 0:
     print("Shown if x is non-negative")
-else: 
+else:
     print("Shown if x is negative")
 print("Always printed: not part of conditional statement")
 ```
@@ -1550,7 +1556,7 @@ else:
 * Blocks are mixed to achieve complex control flow
   * `for`
   * `if`-`elif`-`else`
-* Consistent indentation is **essential** 
+* Consistent indentation is **essential**
 * Best practice limits nesting to 2 or 3 levels
   * Use function to limit depth
 
@@ -1583,17 +1589,17 @@ for i in range(5):
     print("Still in the loop")
 
 print("Finished")
-```  
+```
 * Best practice is to limit nesting
 * Good editor provide vertical guides
-  * Essential in complex code  
+  * Essential in complex code
 
 
 # Logic and Loops
 ## Summary
 
 * Consistent indentation is **essential** when nesting blocks
-* Use a good editor that highlights depth 
+* Use a good editor that highlights depth
 * Limits nesting to 2 or 3 levels
 
 
@@ -1612,7 +1618,7 @@ print("Finished")
   * Web: JSON and HTML
   * Statistical Software: Stata, SAS and SPSS
   * Big Data: HDF, Parquet, Feather
-  
+
 
 # Importing CSV Data
 ## `pd.read_csv`
@@ -1672,7 +1678,7 @@ df = pd.read_excel('data.xlsx')
   * Big Data: Parquet, Feather
 
 
-# Saving 
+# Saving
 ## CSV and Excel
 
 * `DataFrame.to_csv` exports to CSV
@@ -1694,11 +1700,11 @@ df.to_excel('file-name.xlsx')
 ```python
 df.to_hdf("data-file.h5", "df")
 ```
-  * Overwrites existing files by default 
-* `mode="a"` appends additional `DataFrame`s and `Series` &nbsp;&nbsp;&nbsp; 
+  * Overwrites existing files by default
+* `mode="a"` appends additional `DataFrame`s and `Series` &nbsp;&nbsp;&nbsp;
 ```python
 second_df.to_hdf("data-file.h5", "second_df", mode="a")
-``` 
+```
 * Read using `pd.read_hdf`
 ```python
 df = pd.read_hdf("data-file.h5", "df")
@@ -1715,7 +1721,7 @@ df = pd.read_hdf("data-file.h5", "df")
   * Closest format to native
   * Must set a key
   * `append=True` allows multiple variables to be saved
-  * Import with `pd.read_hdf(` _filename_ `,` _key_ `)` 
+  * Import with `pd.read_hdf(` _filename_ `,` _key_ `)`
 
 
 
@@ -1751,7 +1757,7 @@ df = pd.read_hdf("data-file.h5", "df")
   * See `matplotlib.pyplot.plot` help for full list
 
 
-# Graphics: Line Plots 
+# Graphics: Line Plots
 ## Summary
 
 * `df.plot.line` produces line plots

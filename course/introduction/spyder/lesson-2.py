@@ -99,3 +99,88 @@
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Manipulating lists
+# 
+# 1. Create an empty list called `lst`
+# 2. Add the elements `9`, `"Eight"` and `7.0` (in order) to the list.
+# 3. Extend the list with the list `["Six", 5, 4.0]` using `extend`
+# 4. Select first 4 elements of `lst`
+# 5. Select last 3 elements of `lst`
+# 
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Dictionary Manipulation
+# 
+# 1. Create a empty dictionary called `dct`
+# 2. Add the pairs "apple" and 1, "banana" and 2.0, and "cherry" and "iii"
+# 3. Replace the value of "apple" with "I"
+# 4. Remove the entry for "banana"
+# 5. Add an entry "date" with the value 4
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Directly create a Dictionary
+# 
+# Using the final verion of `dct` from the previous exercise:
+# 
+# 1. Directly initialize a new dictionary called `other_dct`.
+# 2. Use an f-string to print the values associated with each key.
+# 
+# **Hint** You must use both types of quotes. For example, to access a value in
+# an f-string.
+# 
+# ```python
+# f"{other_dct['apple']}"
+# ```
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Tuple Manipulation
+# 
+# 1. Create a tuple `tpl` containing 100 and 4
+# 2. Convert to a list, add the elements 101 and 5
+# 3. Convert back toa tuple
+
+#%%
+
+
+#%%
+
+
+#%%
+

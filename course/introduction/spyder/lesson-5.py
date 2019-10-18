@@ -47,9 +47,10 @@ prices = pd.read_hdf(hdf_file, "prices")
 # two days worth of data are:
 # 
 # ```python
-# pricess_row = pd.DataFrame([sep_04, sep_05])
+# dates_2 = pd.to_datetime(["1998-09-04", "1998-09-05"])
+# prices_row = pd.DataFrame([sep_04, sep_05])
 # # Set the index after using concat to join
-# pricess_row.index = dates_2
+# prices_row.index = dates_2
 # ```
 # 
 # Verify that the DataFrame identical by printing the difference with

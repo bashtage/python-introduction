@@ -105,7 +105,7 @@
 # ## Problem: Selecting a single Column
 # Select the 2nd column of x using a scalar integer, a slice and a list.
 # 
-# **Question**: What the the dimensions of the selected elemets?
+# **Question**: What the the dimensions of the selected elements?
 
 #%%
 

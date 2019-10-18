@@ -11,7 +11,6 @@
 #%%
 # Setup: Load the momentum data
 
-import numpy as np
 import pandas as pd
 
 momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
@@ -52,7 +51,7 @@ print(momentum.head())
 
 
 #%%
-# ## Problem: Simulate the asymmetricc random walk without an `if`-`then`
+# ## Problem: Simulate the asymmetric random walk without an `if`-`then`
 # 
 # Use boolean multiplication to simulate the same random walk without using
 # an `if`-`then` statement. 

@@ -61,3 +61,37 @@
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Import `det`
+# 
+# The determinant function is located at `numpy.linalg.det`. Access this function
+# using:
+# 
+# 1. `numpy`
+# 2. `np`
+# 3. By importing `linalg` from `numpy` and accessing it from `linalg`
+# 4. By directly importing the function
+# 
+# You can `x` in the setup code to call the function as _func_`(x)`.
+
+#%%
+# Setup: A simple 2 by 2 array to use with det
+import numpy as np
+x = np.array([[2,3],[1,2]])
+print(x)
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+

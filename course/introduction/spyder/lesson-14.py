@@ -24,7 +24,7 @@ rs = np.random.RandomState(20000101)
 # 
 # * `x` as `rs.sample()`, a uniform on $[0, 1)$
 # * `y` as `rs.standard_normal()`, a standard normal ($N(0,1)$)
-# * `z` as `rs.randint(1, 11)`, a uniform ranomd integer on $[1, 2,\ldots, 10]$
+# * `z` as `rs.randint(1, 11)`, a uniform random integer on $[1, 2,\ldots, 10]$
 # 
 # Check whether each of these are above their expected value.
 
@@ -50,6 +50,37 @@ rs = np.random.RandomState(20000101)
 # 1. Determine if $2\leq z < 8$
 # 2. Determine if $z < 2 \cup z \geq 8$ using `or`
 # 3. Rewrite 2 using `not` and your result from 1.
+
+#%%
+
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Classify two points
+# 
+# Generate two standard normal values `x` and `y` using
+# two calls to `rs.standard_normal()`. Use an `if`-`elif`-`else` 
+# clause to print the quadrant they are in.  The four quadrants are
+# upper right, upper left, lower left and lower right.
+# 
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Generate a contaminated normal
+# 
+# Generate a uniform using `u = rs.sample()`. Using this value and an 
+# `if`-`else` clause, generate a contaminated normal which is a draw from a
+# $N(0,1)$ ($N(\mu,sigma^2)$) if $u<0.95$ or a draw from a $N(0,10)$ otherwise.
+# Use `rs.normal` to generate the normal variable.
 
 #%%
 

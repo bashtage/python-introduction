@@ -45,9 +45,12 @@ gs10_excel = pd.read_excel("data/GS10.xls", skiprows=10,
 
 
 #%%
-# ## Problem: Import from HDF and 
+# ## Problem: Import from HDF 
 # 
-# Import the data saved as HDF.
+# Import the data saved as HDF and verify it is the same as the original data.
+
+#%%
+
 
 #%%
 

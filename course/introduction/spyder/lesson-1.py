@@ -110,7 +110,7 @@
 # standard Python files that can be executed cell-by-cell.   
 # 
 # 1. Install VS Code and the Python extension
-# 2. Select File, New and then save your file with the exteniosn .py (e.g., file.py).
+# 2. Select File, New and then save your file with the extension .py (e.g., file.py).
 # 3. This is a Python file that supports a cell demarcation using `#%%` for
 #    code cells and `#%% [markdown]` for cells that contain markdown code.
 #    Note that markdown text **must** be either:

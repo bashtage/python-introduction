@@ -876,10 +876,13 @@ df.quantile([0.25, 0.75])
 ## Overview
 
 * Two ways to select using index values or column names
-  * `.loc[`_rows_ `,`_cols_ `]`
+  * `df.loc[`_rows_ `,`_cols_ `]`
   * Dictionary-like syntax
     * Selects columns in a `DataFrame`
     * Selects index in a `Series`
+  * `df.`_variable_
+    * _variable_ must be a valid Python name
+    * Name cannot conflict with a `Series`/`DataFrame` method (`mean`)
 * Selection _may_ reduce dimension and change type
 * Special features for selecting dates
   * Day, Month, Year

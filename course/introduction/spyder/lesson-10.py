@@ -153,3 +153,30 @@ momentum.head()
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Subset time-series
+# 
+# Select the data for May 2017 for momentum portfolios 1 and 10.
+
+#%%
+
+
+#%%
+# ### Exercise: Select using Months
+# 
+# Using a slice of YYYY-MM, select the returns for momentum portfolio
+# 5 in the final 6 months of 2016 as `Series`
+
+#%%
+
+
+#%%
+# ### Exercise: Ensure DataFrame
+# 
+# Repeat the previous problem but ensure the selection is a DataFrame.
+
+#%%
+

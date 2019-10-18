@@ -37,7 +37,7 @@ mom_10 = momentum["mom_10"]
 # Use the DataFrame functions `mean`, `std`, `skew` and `kurt`, `min` and `max` to print the
 # values for `mom_01`.
 # 
-# In the second cell, call `describe`, a method that summariezes `Series` and `DataFrames` on `mom_01`.
+# In the second cell, call `describe`, a method that summarizes `Series` and `DataFrames` on `mom_01`.
 
 #%%
 

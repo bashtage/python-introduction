@@ -129,3 +129,41 @@
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Select fixed length block
+# 
+# Compute the mean return of the momentum data in the first 66
+# observations and the last 66 observations.
+
+#%%
+# Setup: Load the momentum data
+
+import pandas as pd
+
+momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
+momentum.head()
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Compute values using % sample
+# 
+# Compute the correlation of momentum portfolio 1, 5, and 10 in the first half of
+# the sample and in the second half. 
+
+#%%
+
+
+#%%
+

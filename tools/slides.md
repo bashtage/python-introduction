@@ -1734,7 +1734,8 @@ df = pd.read_hdf("data-file.h5", "df")
 # Graphics: Line Plots
 ## Overview
 
-* `df.plot.`_method_ exposes plotting interface
+* `df.plot()` produces line plots 
+* `df.plot.`_method_ exposes a rich sets of visualizations
   * `line`: Line plot
   * `hist`: Histograms
   * `kde`: Kernel density
@@ -1746,15 +1747,17 @@ df = pd.read_hdf("data-file.h5", "df")
 
 
 # Line Plots
-## `DataFrame.plot.line`
+## `DataFrame.plot()`
 
-* Same as `plt.plot(df.index, df.values)`
+* Similar to
+  * `DataFrame.plot.line()`
+  * `plt.plot(df.index, df.values)` 
 * Key optional inputs:
   * `x`: the column name to use as the x values
   * `y`: the column names to plot
 * Many optional argument that affect plot appearance
-  * `linewdith`: Integer width of line
-  * `linstyle`: (`"none"`, `"-""`, `"--"`, `"-."`, `":"`)
+  * `linewidth`: Integer width of line
+  * `linestyle`: (`"none"`, `"-""`, `"--"`, `"-."`, `":"`)
   * `marker`: Adds a marker (`"o"`, `"x"`, `"v"`,...)
   * `color`: Color (hex: `"#abcdef"`, name: `"red""` )
   * See `matplotlib.pyplot.plot` help for full list
@@ -1763,11 +1766,12 @@ df = pd.read_hdf("data-file.h5", "df")
 # Graphics: Line Plots
 ## Summary
 
-* `df.plot.line` produces line plots
+* `df.plot` and `df.plot.line` produces line plots
 * Wrapper for `plt.plot(df.index, df.values)`
 * Axis `set_`_property_ adds important features
   * `title`
   * `xlabel`, `ylabel`
+* seaborn's `set_style` improves the default appearance of plots
 
 
 

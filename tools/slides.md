@@ -1812,8 +1812,8 @@ df = pd.read_hdf("data-file.h5", "df")
 
 # Altering Plot Appearance
 
-* Large set of figure properties available
-* Mode important are methods off an axis
+* Large set of properties available to modify
+* Important properties are methods off axes
 ```python
 ax.set_xlim(0, 1)
 ax.set_xticks([0,.33,.66,1])

@@ -54,3 +54,31 @@ gs10_excel = pd.read_excel("data/GS10.xls", skiprows=10,
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Import, export and verify
+# 
+# * Import the data in "data/fred-md.csv"
+# * Parse the dates and set the index column to "sasdate"
+# * Remove first row labeled "Transform:" (**Hint**: Transpose, `del` and
+#   transpose back, or use `drop`)
+# * Re-parse the dates on the index
+# * Remove columns that have more than 10% missing values
+# * Save to "data/fred-md.h5" as HDF.
+# * Load the data into the variable `reloaded` and verify it is identical.
+
+#%%
+
+
+#%%
+# ### Exercise: Looping Export
+# 
+# Export the columns RPI, INDPRO, and HWI from the FRED-MD data to
+# `"data/`_variablename_`.csv"` so that, e.g., RPI is exported to `data/RPI.csv`:
+# 
+# **Note** You need to complete the previous exercise first (or at least the first 4 steps).
+
+#%%
+

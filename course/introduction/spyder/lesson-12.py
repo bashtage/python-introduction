@@ -34,6 +34,9 @@
 
 
 #%%
+
+
+#%%
 # ## Problem: Select Elements from Series
 # 
 # Select the 2nd element of `y_named`.
@@ -109,10 +112,15 @@
 # 
 # **Note**: This is the only important difference with NumPy.  Arbitrary
 # row/column selection using `DataFrame.iloc` is simpler but less flexible.
-# 
-# print(x_named.iloc[1:4:2, 1:3])
-# print(x_named.iloc[[1, 3],[1, 2]])
-# print(x_named.iloc[[1,3], 1:3])
+
+#%%
+
+
+#%%
+
+
+#%%
+
 
 #%%
 # ## Problem: Mixed selection

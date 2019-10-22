@@ -165,7 +165,7 @@ momentum.head()
 
 
 #%%
-# ### Exercise: Compute values using % sample
+# ### Exercise: Compute values using fraction of sample
 # 
 # Compute the correlation of momentum portfolio 1, 5, and 10 in the first half of
 # the sample and in the second half. 

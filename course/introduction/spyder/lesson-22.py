@@ -79,7 +79,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # 
 # Produce a 2 by 2 subplot with:
 # 
-# * Set the figure size to be 10 by 10
+# * Create a square figure with a size of 10 by 10 using `plt.rc`
 # * Histograms of IBM and MSFT on the diagonals
 # * Scatter plots on the off-diagonals where the x and y line up with the
 #   histogram on the diagonal.

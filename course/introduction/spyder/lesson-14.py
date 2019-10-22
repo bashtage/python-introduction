@@ -53,3 +53,45 @@ rs = np.random.RandomState(20000101)
 
 #%%
 
+
+#%%
+# ## Exercises
+
+#%%
+# Setup: Data for Exercise
+import numpy as np
+rs = np.random.RandomState(19991213)
+
+# Like range, lower included, upper excluded
+# u in (0, 1, 2, ..., 5)
+u = rs.randint(0, 6) 
+# v in (-2, -1, 0, 1, 2)
+v = rs.randint(-2, 3) 
+
+
+#%%
+
+
+#%%
+# ### Exercise
+# Is the product $uv$ 0 and only one of $u$ and $v$ is 0?
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise
+# 
+# Write three logical statements that will determine if $0\leq u \leq 2$ and $0\leq v \leq 2$. 
+
+#%%
+
+
+#%%
+
+
+#%%
+

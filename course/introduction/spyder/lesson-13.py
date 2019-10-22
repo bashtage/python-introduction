@@ -103,3 +103,15 @@ momentum = momentum / 100  # Convert to numeric values from percentages
 # **Question to think about**
 # 
 # If you rerun the code in this Exercise, do the results change? Why? 
+# 
+# 
+# ### Exercise: Compute Drawdown
+# 
+# Using the momentum data, compute the maximum drawdown over all
+# 22-day consecutive periods defined as the smallest cumulative 
+# produce of the gross return (1+r) for 1, 2, .., 22 days.
+# 
+# Finally, compute the mean drawdown for each of the portfolios.
+
+#%%
+

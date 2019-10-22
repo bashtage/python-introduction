@@ -121,4 +121,32 @@ x
 #%%
 # ## Exercises
 # 
-# ### Exercise
+# ### Exercise: Select the Most Volatile Portfolio
+# 
+# Select the column in momentum that has the highest standard deviation.
+
+#%%
+
+
+#%%
+# ### Exercise: Select the High Kurtosis Portfolios
+# 
+# Select the columns that have kurtoses above the median kurtosis.
+
+#%%
+
+
+#%%
+# ### Exercise: Select 
+# 
+# Select the rows where all of the returns in the row are less than the 25%
+# quantile for their portfolio.
+# 
+# **Note**: Comparisons between `DataFrame`s and `Series` works like mathematical
+# operations (`+`, `-`, etc.).
+
+#%%
+
+
+#%%
+

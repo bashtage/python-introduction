@@ -89,3 +89,39 @@ prices = pd.read_hdf(hdf_file, "prices")
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Create a DataFrame from rows
+# 
+# Use the three series populated below to create a DataFrame using each
+# as a row.
+# 
+# **Note**: Notice what happens in the resulting `DataFrame` since one of the
+# `Series` has 4 elements while the others have 3.
+
+#%%
+# Setup: Data for the Exercises
+import pandas as pd
+index = ["Num", "Let", "Date"]
+a = pd.Series([1, "A", pd.Timestamp(2018,12,31)], name="a", index=index)
+b = pd.Series([2, "B", pd.Timestamp(2018,12,31)], name="b", index=index)
+index = ["Num", "Let", "Date", "Float"]
+c = pd.Series([3, "C", pd.Timestamp(2018,12,31), 3.0], name="c", index=index)
+
+
+#%%
+
+
+#%%
+# ### Exercise: Build a DataFrame from Columns
+# 
+# Build a `DataFrame` from the three series where each is used as a column.
+# 
+
+#%%
+
+
+#%%
+

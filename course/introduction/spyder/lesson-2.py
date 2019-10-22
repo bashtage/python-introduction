@@ -125,6 +125,15 @@
 
 
 #%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
 # ### Exercise: Dictionary Manipulation
 # 
 # 1. Create a empty dictionary called `dct`

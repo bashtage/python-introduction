@@ -131,3 +131,21 @@ if "prices" in globals():
         for var in variables:
             h5.put(var, globals()[var])
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Creating DataFrames
+# 
+# Turn the table below into a DataFrame where the index is set as the index and
+# the column names are used in the `DataFrame`.
+# 
+# | index | Firm         | Profit    |  
+# |:------|:-------------|----------:| 
+# | A     | Alcoa        | 3,428     |
+# | B     | Berkshire    | 67,421    |
+# | C     | Coca Cola    | 197.4     |
+# | D     | Dannon       | -342.1    |
+
+#%%
+

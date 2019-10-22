@@ -161,3 +161,46 @@ mom_10 = momentum["mom_10"]
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Use `info`
+# 
+# Use the `info` method on `momentum` to get information about this `DataFrame`.
+
+#%%
+
+
+#%%
+# ### Exercise: Compute the day-by-day mean
+# 
+# Compute the day-by-day mean return of the portfolios in the momentum `DataFrame` using
+# the `axis` keyword argument. Use `head` and `tail` to show
+# the first 5 rows and last 5 rows 
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Compute the standard deviation of mean returns
+# 
+# Compute the standard deviation of the mean returns by chaining methods.
+
+#%%
+
+
+#%%
+# ### Exercise: Compute the average standard deviation
+# 
+# Compute the mean standard deviation as:
+# 
+# $$ \sqrt{N^{-1} \sum_{i=1}^N V[r_i]} $$
+# 
+# where $V[r_i]$ is the variance of portfolio $i$.
+
+#%%
+

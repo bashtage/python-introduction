@@ -72,8 +72,13 @@
 # 22-day moving-window standard deviation for each of the columns. Store
 # the value at the end of the window.
 # 
-# When finished, plot the annualized percentage standard deviations using
-# `plt.plot(100 * np.sqrt(252) * std_dev)`.  
+# When finished, make sure that `std_dev` is a `DataFrame` and 
+# plot the annualized percentage standard deviations using:
+# 
+# ```python
+# ann_std_dev = 100 * np.sqrt(252) * std_dev
+# ann_std_dev.plot()
+# ```  
 
 #%%
 # Setup: Load the momentum data
@@ -105,7 +110,7 @@ momentum = momentum / 100  # Convert to numeric values from percentages
 # If you rerun the code in this Exercise, do the results change? Why? 
 # 
 # 
-# ### Exercise: Compute Drawdown
+# ### Exercise: Compute Drawdowns
 # 
 # Using the momentum data, compute the maximum drawdown over all
 # 22-day consecutive periods defined as the smallest cumulative 

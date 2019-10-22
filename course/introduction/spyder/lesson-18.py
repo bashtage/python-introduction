@@ -107,7 +107,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # Simulate 100 observations of a time series with heteroskedasticity 
 # that follows a random walk of the form: 
 # 
-# $$ y_t = y_{t-1} + \sigma_t \epsilon_t$
+# $$ y_t = y_{t-1} + \sigma_t \epsilon_t $$
 # 
 # where $\epsilon_t\sim N(0,1)$, $y_0=0$ and $\sigma_t$ is:
 # 

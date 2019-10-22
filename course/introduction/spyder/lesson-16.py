@@ -117,3 +117,8 @@ x
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise

@@ -98,3 +98,17 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Compute Drawdown
+# 
+# Using the momentum data, compute the maximum drawdown over all
+# 22-day consequitive periods defined as the smallest cumulative 
+# produce of the gross return (1+r) for 1, 2, .., 22 days.
+# 
+# Finally, compute the mean drawdown for each of the portfolios.
+
+#%%
+

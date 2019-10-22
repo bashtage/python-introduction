@@ -143,3 +143,66 @@ goog = pd.read_hdf("data/dataframes.h5", "goog")
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Combine math with function
+# 
+# Add 1 to the output of `np.arange` to produce the sequence 1, 2, ..., 10.
+
+#%%
+
+
+#%%
+# ### Exercise: Understand pandas math
+# 
+# Use the `Series` and `DataFrame` below to compute the sums 
+# 
+# * `a+b`
+# * `a+c`
+# * `b+c`
+# * `a+b+c`
+# 
+# to understand how missing values are treated by pandas
+
+#%%
+# Setup: Data for exercise
+import pandas as pd
+import numpy as np
+
+rs = np.random.RandomState(19991231)
+
+idx = ["A","a","B",3]
+columns = ["A",1,"B",3]
+a = pd.Series([1,2,3,4], index=idx)
+b = pd.Series([10,9,8,7], index=columns)
+values = rs.randint(1, 11, size=(4,4))
+c = pd.DataFrame(values, columns=columns, index=idx)
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Math with duplicates
+# 
+# Add the Series `d` to `a` to see what happens with delays.
+
+#%%
+# Setup: Data for exercise
+
+d = pd.Series([10, 101], index=["A","A"])
+
+
+#%%
+

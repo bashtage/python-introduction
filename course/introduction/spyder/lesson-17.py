@@ -35,3 +35,34 @@
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Classify two points
+# 
+# Generate two standard normal values `x` and `y` using
+# two calls to `rs.standard_normal()`. Use an `if`-`elif`-`else` 
+# clause to print the quadrant they are in.  The four quadrants are
+# upper right, upper left, lower left and lower right.
+# 
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Generate a contaminated normal
+# 
+# Generate a uniform using `u = rs.sample()`. Using this value and an 
+# `if`-`else` clause, generate a contaminated normal which is a draw from a
+# $N(0,1)$ ($N(\mu,sigma^2)$) if $u<0.95$ or a draw from a $N(0,10)$ otherwise.
+# Use `rs.normal` to generate the normal variable.
+
+#%%
+

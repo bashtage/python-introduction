@@ -105,3 +105,74 @@ goog_returns = returns.GOOG
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Compute Quantiles
+# 
+# Compute the 5%, 25%, 50%, 75% and 95% quantiles of momentum using the `quantile`
+# method.
+# 
+
+#%%
+# Setup: Load data
+import pandas as pd
+momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
+mom_10 = momentum.mom_10
+
+
+#%%
+
+
+#%%
+# ### Exercise: Sorting
+# 
+# Use `sort_values` to sort momentum by the column `mom_10`. Verify that the
+# sort was successful by looking at the minimum of a diff.
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Sort Descending
+# 
+# Use `sort_values` to sort momentum by by the column `mom_10` using a descending
+# sort (see the help for `sort_values`). Verify the sort worked by looking at the maximum of
+# a diff.
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Get Number of Elements
+# 
+# Use the `shape` property to get the number of observations in momentum. Use it
+# again to get the number of columns.
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Use `shift` to Compute Returns
+# 
+# Compute the percentage change using only `shift`, division (`/`) and
+# subtraction (`-`) on the `Series` `mom_10`. Verify that your result matches what `pct_change` produces.
+
+#%%
+

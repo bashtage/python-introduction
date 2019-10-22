@@ -22,7 +22,7 @@ rs = np.random.RandomState(20000101)
 # 
 # Create the variables (in order)
 # 
-# * `x` as `rs.sample()`, a uniform on $[0, 1)$
+# * `x` as `rs.random_sample()`, a uniform on $[0, 1)$
 # * `y` as `rs.standard_normal()`, a standard normal ($N(0,1)$)
 # * `z` as `rs.randint(1, 11)`, a uniform random integer on $[1, 2,\ldots, 10]$
 # 
@@ -37,7 +37,7 @@ rs = np.random.RandomState(20000101)
 #%%
 # ## Problem: Using comparison operators
 # 
-# 1. Check if `z` if 7
+# 1. Check if `z` is 7
 # 2. Check is `z` is not 5
 # 3. Check if `z` is greater than or equal to 9
 

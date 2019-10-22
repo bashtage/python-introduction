@@ -89,6 +89,28 @@ mom_05 = momentum["mom_05"]
 # ## Exercises
 # 
 # ### Exercise: all and any
-# Use all to determine the number of days where all of the portfolio returns
-# were negative. Use any to compute the number of days with at least 1 negative
+# Use `all` and `sum` to count the number of days where all of the portfolio returns
+# were negative. Use `any` to compute the number of days with at least 1 negative
 # return and with no negative returns (Hint: use negation (~ or `logical_not`)). 
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Count Extreme Days
+# 
+# Count the number of days where each of the portfolio returns is less than the 
+# 5% quantile for the portfolio. Also report the fraction of days where all are in their
+# lower 5% tail.
+
+#%%
+
+
+#%%
+

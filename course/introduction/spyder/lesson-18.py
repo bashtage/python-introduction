@@ -102,13 +102,31 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 #%%
 # ## Exercises
 # 
-# ### Exercise: Compute Drawdown
+# ### Exercise: Simulate a Process with Heteroskedasticity
 # 
-# Using the momentum data, compute the maximum drawdown over all
-# 22-day consequitive periods defined as the smallest cumulative 
-# produce of the gross return (1+r) for 1, 2, .., 22 days.
+# Simulate 100 observations of a time series with heteroskedasticity 
+# that follows a random walk of the form: 
 # 
-# Finally, compute the mean drawdown for each of the portfolios.
+# $$ y_t = y_{t-1} + \sigma_t \epsilon_t$
+# 
+# where $\epsilon_t\sim N(0,1)$, $y_0=0$ and $\sigma_t$ is:
+# 
+# * 0.5 if the 0 of the past 3 shocks are negative
+# * 1 if 1 of the past 3 shocks are negative
+# * 2 if 2 of the past 3 shocks are negative
+# * 6 if 3 of the past 3 shocks are negative
+# 
+# Plot the result.
+# 
+# **Notes**
+# 
+# * When generating the first 3 values, treat $\epsilon_{-1}$, $\epsilon_{-2}$ and
+#   $\epsilon_{-3}$ as 0 (non-negative).
+# * Re-run the simulation to see different paths.
+#  
+
+#%%
+
 
 #%%
 

@@ -174,3 +174,58 @@ print(x_df)
 
 #%%
 
+
+#%%
+# ## Exercises
+# 
+# ### Exercise: Block selection
+# 
+# Select the second and third rows of `a` and the first and last column.
+# Use at least three different methods including all slices, `np.ix_`, and
+# mixed slice-list selection.
+
+#%%
+# Setup: Data for Exercises
+
+import numpy as np
+rs = np.random.RandomState(20000214)
+a = rs.randint(1, 10, (4,3))
+b = rs.randint(1, 10, (6,4))
+
+print(f"a = \n {a}")
+print()
+print(f"b = \n {b}")
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise: Row Assign
+# 
+# Assign the first three elements of the first row of `b` to `a`.
+# 
+# **Note** Assignment sets one selected block in one array equal to another 
+# block.
+# 
+# ```python
+# x[0:2,0:3] = y[1:3,1:4]
+# ```
+
+#%%
+
+
+#%%
+# ### Exercise: Block Assign
+# 
+# Assign the block consisting the first and third columns and the second and last rows of `b`
+# to the last two rows and last two columns of `a`
+
+#%%
+

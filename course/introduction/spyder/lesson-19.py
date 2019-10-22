@@ -31,10 +31,10 @@
 #%%
 # ## Exercises
 # 
-# ### Exercises: Selectively Load Columns
+# ### Exercise: Selectively Load Columns
 # 
 # 1. Load the data in `data/fred-md.csv` in the columns sasdate,
-#    RPI and INDPRO.
+#    RPI and INDPRO using the `usecols` keyword.
 # 2. Remove the first row by selecting the second to the end.
 # 3. Convert sasdate to dates
 # 4. Set sasdate as the index and remove it from the `DataFrame`.

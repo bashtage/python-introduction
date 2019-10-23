@@ -9,7 +9,7 @@ import subprocess
 from latex import execute_and_clear, strip_latex
 
 base_dir = os.path.abspath("..")
-latex_dir = os.path.join("..", "tex")
+latex_dir = os.path.join("tex")
 source_dir = "../solutions/autumn/"
 nb_files = glob.glob(os.path.join(source_dir, "*.ipynb"))
 
@@ -35,7 +35,7 @@ subprocess.run(["pdflatex", tex_file], cwd=cwd)
 print("Copying file to final location.")
 pdf_file = tex_file.replace(".tex", ".pdf")
 pdf_file_name = os.path.split(pdf_file)[1]
-target = os.path.abspath(os.path.join("..", pdf_file_name))
+target = os.path.abspath(os.path.join("..", "..", "course", pdf_file_name))
 print(pdf_file)
 print(target)
 shutil.copyfile(pdf_file, target)

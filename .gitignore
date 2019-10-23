@@ -30,6 +30,12 @@ tools/tex/regression-*.tex
 tools/tex/arma-*.tex
 tools/tex/images/
 tools/*.png
+equity-indices.h5
+ff-pdr.h5
+ff.h5
+ff_daily.h5
+fx-pdf.h5
+fx.h5
 gs10.h5
 ibm.csv
 import-hf-data.py

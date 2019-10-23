@@ -8,14 +8,14 @@
 # 
 # `RandomState.permute`, `sm.OLS`, `set`, `scipy.random.norm.ppf`, `np.linspace`, `np.mean`
 # 
-# ### Exercise 52
+# ### Exercise 51
 # For these portfolios, and considering all 8 sets of regressors which range from no factor to all 3 factors, which model is preferred by AIC, BIC, GtS and StG?
 
 #%%
 
 
 #%%
-# ### Exercise 53
+# ### Exercise 52
 # Cross-validation is a method of analyzing the in-sample forecasting ability of a
 # cross-sectional model by using $\alpha\%$ of the data to estimate the model and
 # then measuring the fit using the remaining $100-\alpha\%$. The most common forms

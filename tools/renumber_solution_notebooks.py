@@ -32,6 +32,7 @@ if need_rename and RENAME:
         new_file_name = nb_file.split("-")[0]
         new_file_name = f"{new_file_name}-{new_number}.ipynb"
         import os
+
         src = os.path.abspath(notebooks[key])
         dest = os.path.abspath(new_file_name)
         if src != dest:

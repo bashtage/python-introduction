@@ -90,6 +90,25 @@
 # ### Exercise 23
 # 
 # Estimate the asymptotic covariance of the estimated parameters in the previous.
+# 
+# The derivative of the log-likelihood for a single observation is
+# 
+# $$ \frac{\partial \left\{y_i \ln\left(\Phi\left(\alpha_0+\alpha_1 x_i \right)\right) + \left(1-y_i\right) \ln\left(1-\Phi\left(\alpha_0+\alpha_1 x_i \right)\right)\right\}}{\partial \alpha_j} $$
+# 
+# which is
+# 
+# $$ y_i \frac{\phi\left(\alpha_0+\alpha_1 x_i \right)}{\Phi\left(\alpha_0+\alpha_1 x_i \right)} - \left(1-y_i\right)\frac{\phi\left(\alpha_0+\alpha_1 x_i \right)}{1-\Phi\left(\alpha_0+\alpha_1 x_i \right)} $$
+# 
+# for $\alpha_0$ and 
+# 
+# $$ y_i x_i \frac{\phi\left(\alpha_0+\alpha_1 x_i \right)}{\Phi\left(\alpha_0+\alpha_1 x_i \right)} - \left(1-y_i\right)x_i\frac{\phi\left(\alpha_0+\alpha_1 x_i \right)}{1-\Phi\left(\alpha_0+\alpha_1 x_i \right)} $$
+# 
+# for $\alpha_1$ where $\Phi(\cdot)$ is the cdf of a standard Normal random variable and
+# $\phi(\cdot)$ is the pdf of a standard Normal random variable.
+# 
+
+#%%
+
 
 #%%
 

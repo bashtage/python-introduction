@@ -20,4 +20,3 @@ def export_for_spyder(nb):
             code.insert(i, "from IPython import get_ipython")
             imported_get_python = True
     return "\n".join(code)
-

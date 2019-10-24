@@ -6,8 +6,7 @@
 # 
 # Functions
 # 
-# `RandomState.permute`, `sm.OLS`, `set`, `scipy.random.norm.ppf`, `np.linspace`, `np.mean`,
-# `np.unpackbits`
+# `RandomState.permute`, `sm.OLS`, `set`, `scipy.random.norm.ppf`, `np.linspace`, `np.mean`
 # 
 # ### Exercise 39
 # For four portfolios we have been looking at, and considering all 8 sets of

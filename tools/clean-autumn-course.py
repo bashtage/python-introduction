@@ -19,11 +19,13 @@ source_dir = "../solutions/autumn/"
 nb_files = glob.glob(os.path.join(source_dir, "*.ipynb"))
 
 # Ensure data-dataset-construction is run first so that data is available
+first = None
 for nb_file in nb_files:
     if "construction" in nb_file:
         first = nb_file
-nb_files.remove(first)
-nb_files.insert(0, first)
+if first:
+    nb_files.remove(first)
+    nb_files.insert(0, first)
 
 for nb_file in nb_files:
     print(f"Processing {nb_file}")
@@ -33,18 +35,19 @@ for nb_file in nb_files:
     nbformat.write(executed, nb_file, nbformat.NO_CONVERT)
     cop = pre.ClearOutputPreprocessor()
     nb, _ = cop.preprocess(executed, {})
-
+    retain = []
     for cell in nb["cells"]:
-        if isinstance(cell, MutableMapping):
-            if (
-                "cell_type" not in cell
-                or cell["cell_type"] != "code"
-                or "# Setup" in cell["source"]
-            ):
-                continue
+        cell_type = cell.get("cell_type", None)
+        source = cell.get("source", "")
+        if cell_type == "markdown" and "### Explanation" in source:
+            continue
+        if cell_type == "code" and "# Setup" not in cell["source"]:
             cell["source"] = ""
-            if "metadata" in cell and "pycharm" in cell["metadata"]:
-                del cell["metadata"]["pycharm"]
+        if "metadata" in cell and "pycharm" in cell["metadata"]:
+            del cell["metadata"]["pycharm"]
+        retain.append(cell)
+    nb["cells"] = retain
+
     _, base = os.path.split(nb_file)
     out = os.path.abspath(os.path.join("..", "course", "autumn", base))
     print(f"Writing clean version to {out}")

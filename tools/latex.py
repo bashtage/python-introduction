@@ -38,12 +38,13 @@ def execute_and_clear(notebook_file_name, source_dir):
     nb = nbformat.read(notebook_file_name, nbformat.NO_CONVERT)
     replacements = []
     for cell in nb["cells"]:
-        if isinstance(cell, MutableMapping):
-            if cell["cell_type"] == "code" and "# Setup" not in cell["source"]:
-                continue
-            if "metadata" in cell and "pycharm" in cell["metadata"]:
-                del cell["metadata"]["pycharm"]
-            replacements.append(cell)
+        code_cell = cell.get("cell_type", None) == "code"
+        source = cell.get("source", "")
+        if code_cell and ("# Setup" not in source or "### Explanation" in source):
+            continue
+        if "metadata" in cell and "pycharm" in cell["metadata"]:
+            del cell["metadata"]["pycharm"]
+        replacements.append(cell)
     nb["cells"] = replacements
     executed = pre.execute.executenb(nb, cwd=source_dir)
     cop = pre.ClearOutputPreprocessor()

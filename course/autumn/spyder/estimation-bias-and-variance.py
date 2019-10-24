@@ -9,7 +9,7 @@
 # `mean`, `var`, `RandomState`, `RandomState.chisquare`, `array`, `DataFrame.plot.kde`, `stats.norm.ppf`
 
 #%%
-# ### Exercise 24.
+# ### Exercise 25
 # Simulate a set of i.i.d. $\chi_{5}^{2}$ random variables and use the method of moments
 # to estimate the mean and variance.
 
@@ -17,14 +17,14 @@
 
 
 #%%
-# ### Exercise 25.
+# ### Exercise 26
 # Compute the asymptotic variance of the method of moment estimator.
 
 #%%
 
 
 #%%
-# ### Exercise 26.
+# ### Exercise 27
 # Repeat Exercises 24 and 25 a total of 1000 times.
 # Examine the finite sample bias of these estimators relative to the true values.
 
@@ -32,7 +32,7 @@
 
 
 #%%
-# ### Exercise 27.
+# ### Exercise 28
 # Repeat Exercises 24 and 25 a total of 1000 times.
 # Compare the covariance of the estimated means and variance (1000 of each) to the asymptotic covariance of the parameters (use the average of the 1000 estimated variance-covariances). Are these close? How does the sample size affect this?
 
@@ -40,7 +40,7 @@
 
 
 #%%
-# ### Exercise 28.
+# ### Exercise 29
 # In the previous problem, for each parameter, form a standardized parameter estimate as
 # 
 # $$z_{i}=\frac{\sqrt{n}\left(\hat{\theta}_{i}-\theta_{i,0}\right)}{\sqrt{\hat{\Sigma}_{ii}}}$$ 
@@ -56,14 +56,14 @@
 
 
 #%%
-# ### Exercise 29.
+# ### Exercise 30
 # Produce a density plot of the $z_{i}$ standardized parameters and compare to a standard normal.
 
 #%%
 
 
 #%%
-# ### Exercise 30.
+# ### Exercise 31
 # Repeat the same exercise for the Bernoulli problem from the previous question.
 
 #%%

@@ -8,7 +8,7 @@
 # 
 # `DataFrame.mean`, `DatFrame.sum`, `plt.subplots`, `plt.plot`, `stats.kurtosis`, `stats.skewness`
 # 
-# ### Exercise 15
+# ### Exercise 16
 # Estimate the mean, variance, skewness and kurtosis of the S&P 500 and Hang Seng using
 # the method of moments using monthly data.
 
@@ -22,7 +22,7 @@
 
 
 #%%
-# ### Exercise 16
+# ### Exercise 17
 # Estimate the asymptotic covariance of the mean and variance of the two series (separately,
 # but not the skewness and kurtosis). 
 
@@ -33,7 +33,7 @@
 
 
 #%%
-# ### Exercise 17
+# ### Exercise 18
 # Estimate the Sharpe ratio of the two series and compute the asymptotic variance of
 # the Sharpe ratio. See Chapter 2 of the notes for more on this problem.
 # 
@@ -57,7 +57,7 @@
 
 #%%
 # 
-# ### Exercise 18
+# ### Exercise 19
 # Plot rolling estimates of the four moments using 120 months of consecutive data using a
 # 4 by 1 subplot against the dates.
 # 

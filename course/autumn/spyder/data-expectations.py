@@ -10,7 +10,7 @@
 # `np.exp`, `np.mean`, `np.std`, `scipy.integrate.quadrature`, `scipy.integrate.quad`
 
 #%%
-# ### Exercise 10
+# ### Exercise 11
 # 
 # Compute $E\left[X\right]$, $E\left[X^{2}\right]$, $V\left[X\right]$ and the kurtosis of $X$ using Monte Carlo integration when $X$ is distributed:
 # 
@@ -37,7 +37,7 @@
 
 
 #%%
-# ### Exercise 11 
+# ### Exercise 12 
 # 
 # 1. Compute $E\left[\exp\left(X\right)\right]$ when $X\sim N\left(0.08,0.2^{2}\right)$.
 # 2. Compare this to the analytical result for a Log-Normal random variable.
@@ -50,7 +50,7 @@
 
 
 #%%
-# ### Exercise 12
+# ### Exercise 13
 # 
 # Explore the role of uncertainty in Monte Carlo integration by increasing the number of simulations 300% relative to the base case.
 # 
@@ -59,7 +59,7 @@
 
 
 #%%
-# ### Exercise 13
+# ### Exercise 14
 # 
 # Compute the expectation in exercise 11 using quadrature.
 # 
@@ -72,7 +72,7 @@
 
 
 #%%
-# ### Exercise 14 
+# ### Exercise 15 
 # 
 # **Optional** (Much more challenging)
 # 

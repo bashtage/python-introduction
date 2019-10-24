@@ -8,8 +8,9 @@
 # 
 # `sm.tsa.stattools.adfuller`, `arch.unitroot.ADF` 
 # 
-# ### Exercise 62
-# Download data on the AAA and BAA yeilds (Moodys) from FRED and construct the default premium.
+# ### Exercise 48
+# Download data on the AAA and BAA yields (Moodys) from FRED and construct the
+# default premium as the difference between these two.
 # 
 # 1. Test the default premium for a unit root. 
 # 2. If you find a unit root, test the change.
@@ -18,9 +19,39 @@
 
 
 #%%
-# ### Exercise 63
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+# ### Exercise 49
 # 
 # Download data on consumer prices in the UK from the ONS.
 # 
 # 1. Test the log of CPI for a unit root. 
 # 2. If you find a unit root, test inflation for one.
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+
+
+#%%
+

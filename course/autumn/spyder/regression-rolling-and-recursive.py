@@ -8,7 +8,7 @@
 # 
 # `sm.OLS`, `plt.title`, `plt.legend`, `plt.subplots`, `plt.plot`
 # 
-# ### Exercise 47
+# ### Exercise 35
 # For the same portfolios in the previous exercise, compute rolling $\beta$s
 # using 60 consecutive observations.
 
@@ -19,7 +19,7 @@
 
 
 #%%
-# ### Exercise 48
+# ### Exercise 36
 # 
 # For each of the four $\beta$s, produce a plot containing four series: 
 # 
@@ -36,7 +36,7 @@
 
 
 #%%
-# ### Exercise 49
+# ### Exercise 37
 # 
 # Do the factor exposures appear constant?
 
@@ -44,7 +44,7 @@
 
 
 #%%
-# ### Exercise 50
+# ### Exercise 38
 # 
 # What happens if only the market is used as a factor (repeat the exercise excluding SMB and HML).
 

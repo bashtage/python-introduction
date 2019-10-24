@@ -83,3 +83,12 @@
 
 #%%
 
+
+#%%
+# ### Exercise 4
+# Download data on 1 year and 10 year US government bond rates from FRED, and construct the
+# term premium as the different in yields on 10 year and 1 year bonds. Combine the two
+# yield series and the term premium into a `DataFrame` and save it as HDF.
+
+#%%
+

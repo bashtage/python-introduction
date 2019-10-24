@@ -10,7 +10,7 @@
 # `np.log`, `scipy.special.gamma`, `scipy.special.gammaln`, `scipy.stats.norm.cdf`, `scipy.optimize.minimize`,
 # `scipy.stats.t`, `np.var`, `np.std`, `scipy.stats.norm.pdf`
 # 
-# ### Exercise 19
+# ### Exercise 20
 # 
 # Simulate a set of i.i.d. Student's t random variables with degree of freedom
 # parameter $\nu=10$. Standardize the residuals so that they have unit variance
@@ -32,7 +32,7 @@
 
 
 #%%
-# ### Exercise 20
+# ### Exercise 21
 # 
 # Repeat the previous exercise using daily, weekly and monthly S&P 500 and Hang Seng data.
 # Note that it is necessary to remove the mean and standardize by the standard deviation
@@ -45,7 +45,7 @@
 
 
 #%%
-# ### Exercise 21
+# ### Exercise 22
 # 
 # Repeat the previous problem by estimating the mean and variance simultaneously with
 # the degree of freedom parameter.
@@ -63,7 +63,7 @@
 
 
 #%%
-# ### Exercise 22
+# ### Exercise 23
 # 
 # Simulate a set of Bernoulli random variables $y_{i}$ where
 # 
@@ -87,7 +87,7 @@
 
 
 #%%
-# ### Exercise 23
+# ### Exercise 24
 # 
 # Estimate the asymptotic covariance of the estimated parameters in the previous.
 # 

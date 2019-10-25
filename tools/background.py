@@ -95,7 +95,7 @@ def generate_cover(lesson_name, subtitle):
     ax.text(
         1.5 * triangle_width,
         15 * trangle_height,
-        lesson_name,
+        lesson_name.replace("`", ""),
         fontsize=3 * 72,
         color=color[1],
         fontweight="normal",
@@ -104,7 +104,7 @@ def generate_cover(lesson_name, subtitle):
     ax.text(
         1.5 * triangle_width,
         13.7 * trangle_height,
-        subtitle,
+        subtitle.replace("`", ""),
         fontsize=3 * 48,
         color=color[3],
         fontname="Roboto Condensed",
@@ -116,11 +116,11 @@ def generate_cover(lesson_name, subtitle):
     px = img.size[0] // (width + 1)
     box = [px // 2, 0, img.size[0] - px // 2, img.size[1]]
     crop = img.crop(box)
-    crop.save(f"{name}-cover.png")
+    crop.save(f"{name.replace('`','')}-cover.png")
 
     img = Image.open("back.png")
     crop = img.crop(box)
-    crop.save(f"{name}-back.png")
+    crop.save(f"{name.replace('`','')}-back.png")
     plt.close(fig)
 
 

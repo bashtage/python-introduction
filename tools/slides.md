@@ -1246,7 +1246,7 @@ range(start, stop)
 * `start`: First index
 * `stop`: End of range (**not included** in sequence)
 ```python
- start, start+1, \ldots, stop-1
+ start, start+1, ..., stop-1
 ```
 * `range(stop)` is shorthand for `range(0, stop)`
 * Three input variant: `range(start, stop, step)`

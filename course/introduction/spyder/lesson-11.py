@@ -53,7 +53,7 @@
 #%%
 # ## Problem: Scalar selection of a single row
 # 
-# Select row 2 in `x` and `z` using a single integer value.
+# Select the 2nd row in `x` and `z` using a single integer value.
 #  
 # **Question**: What is the dimension of `x` and the second row of `x`
 
@@ -130,7 +130,7 @@
 
 #%%
 # ## Problem: Selecting a block of specific rows and columns
-# Combine these be combined to select columns 2 and 3 and rows 2 and 4.
+# Combine these be combined to select the 2nd and 3rd columns and 2nd and 4th rows.
 
 #%%
 

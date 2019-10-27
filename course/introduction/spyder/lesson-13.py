@@ -53,7 +53,7 @@
 # %matplotlib inline
 # 
 # import matplotlib.pyplot as plt
-# plt.rc('figure', figsize=(16,9))
+# plt.rc('figure', figsize=(16,6))
 # 
 # plt.plot(y)
 # ```

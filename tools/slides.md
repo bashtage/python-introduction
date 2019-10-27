@@ -875,7 +875,7 @@ df.quantile([0.25, 0.75])
 # Selection in `DataFrames`
 ## Overview
 
-* Two ways to select using index values or column names
+* Three ways to select using index values or column names
   * `df.loc[`_rows_ `,`_cols_ `]`
   * Dictionary-like syntax
     * Selects columns in a `DataFrame`
@@ -894,7 +894,7 @@ df.quantile([0.25, 0.75])
 
 * `.loc[`_rows_ `,`_cols_ `]`
   * _rows_ contains element(s) from `index`
-  * _columns_ contains element(s) from `columns`
+  * _cols_ contains element(s) from `columns`
 * A single value or a list of values
 ```python
 df.loc["row", ["col1", "col2"]]

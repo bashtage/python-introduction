@@ -107,7 +107,7 @@
 #%%
 # ## Problem: Select arbitrary rows and columns
 # 
-# Combine the previous selections to select columns 2 and 3 and rows 2 and 4
+# Combine the previous selections to the 2nd and 3rd columns and the 2nd and 4th rows
 # of `x_named`. 
 # 
 # **Note**: This is the only important difference with NumPy.  Arbitrary
@@ -125,7 +125,7 @@
 #%%
 # ## Problem: Mixed selection
 # 
-# Select the columns c1 and c2 and rows 0, 2 and 4.
+# Select the columns c1 and c2 and the 1st, 3rd and 5th row.
 
 #%%
 
@@ -133,7 +133,7 @@
 #%%
 # ## Problem: Mixed selection 2
 # 
-# Select the rows r1 and r2 and columns 0, 2 and 4.
+# Select the rows r1 and r2 and the 1st, 3rd and final column.
 
 #%%
 

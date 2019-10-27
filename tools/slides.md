@@ -1091,6 +1091,45 @@ a[[0, 1], [0, 2]]  # wrong
 * `ix_` transforms `list`s into correctly shaped `array`s
 
 
+
+# The Trivial Slice
+## Using `:`
+
+* Trivial slice `:` selects all elements
+* Always selects from 0 to length of a dimension
+* `x[:]` is equivalent to `x[0:x.shape[0]]`
+* `x[0, :]` is equivalent to `x[:, 0:x.shape[1]]`
+* Required when selecting all elements in leading dimensions
+
+```python
+x[:, [0, 3]]
+```
+
+* Optional in trailing dimensions
+
+```python
+x[[0, 3]]
+x[[0, 3], :]
+```
+
+
+# Advanced Slicing
+
+* `start:stop:step`
+  * `start`, `start+step`, `start+2*step`, `...`
+  * Ends when `start + m*step` $\geq$ `stop`
+  * `stop` never included
+* `-n:`
+  * Select the final `n` elements
+  * Tail selection
+* `-n:-m`
+  * Select starting `n` from the end, stop `m` from the end
+  * `m` $<$ `n`  
+* `::-1`
+  * Reverses the order
+
+
+
 # Accessing Elements in Arrays
 ## Summary
 
@@ -1099,7 +1138,7 @@ a[[0, 1], [0, 2]]  # wrong
   * Slice
   * Lists of integers
 * Can mix the difference selectors
-  * Should only use 1 list unless using `ix_`
+  * Should only use 1 list unless using `np.ix_`
 
 
 

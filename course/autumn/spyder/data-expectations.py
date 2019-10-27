@@ -101,6 +101,3 @@
 # and $\mu=E_{t}\left[r_{p}\right]$. Use Monte Carlo integration to examine how the weight in
 # the stock market varies as the risk aversion varies from 1.5 to 10. Note that when $\gamma=1$, $U\left(W\right)=\ln\left(W\right)$.
 # Use $W_{t}=1$ without loss of generality since the portfolio problem is homogeneous of degree 0 in wealth.
-
-#%%
-

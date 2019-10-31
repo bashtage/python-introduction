@@ -1091,7 +1091,6 @@ a[[0, 1], [0, 2]]  # wrong
 * `ix_` transforms `list`s into correctly shaped `array`s
 
 
-
 # The Trivial Slice
 ## Using `:`
 
@@ -1127,7 +1126,6 @@ x[[0, 3], :]
   * `m` $<$ `n`  
 * `::-1`
   * Reverses the order
-
 
 
 # Accessing Elements in Arrays
@@ -1354,20 +1352,7 @@ print("All done now")
   * `and`: `True` if both are `True`
   * `or`: `True` if either is `True`
   * `not`: `True` if input is `False`
-
-
-# Numerical Conversion
-
-* Boolean values are 0/1
-* Mathematical operations case to integers
-  * `sum` counts boolean arrays
-  * `mean` computes frequency
-  * Multiplication (`*`) produces interactions
-
-```python
-x = np.array([-3, 3, 2, -2, -1, 1, 0])
-x_neg = x * (x < 0)
-```
+* Logical operators are **scalar** only
 
 
 # Best Practices
@@ -1385,11 +1370,10 @@ not ((x <= 0) or (y >= 10))
 ## Summary
 
 * 6 comparison operators
-* 3 logical operators
 * `bool` type
   * `True` and `False`
-  * `True` is 1
-  * `False` is 0
+* 3 logical operators
+* Best practice uses parentheses to separate comparison from logical operators  
 
 
 
@@ -1441,6 +1425,20 @@ c = np.logical_not(a)
   * `np.any` and `np.all` default to entire array
     * Use `np.any(axis=0)` for column-by-column
 * Using `axis=1` operates row-by-row
+
+
+# Numerical Conversion
+
+* Boolean values are 0/1
+* Mathematical operations cast Booleans to integers
+  * `sum` counts boolean arrays
+  * `mean` computes frequency
+  * Multiplication (`*`) produces interactions
+
+```python
+x = np.array([-3, 3, 2, -2, -1, 1, 0])
+x_neg = x * (x < 0)
+```
 
 
 # Boolean Arrays

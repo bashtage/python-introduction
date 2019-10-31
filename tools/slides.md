@@ -1383,44 +1383,43 @@ not ((x <= 0) or (y >= 10))
 # Boolean Arrays
 ## Overview
 
-* Created when a NumPy array, `DataFrame` or `Series`  compared using a logical operators
+* Produced by applying a comparison operator to a NumPy array, `DataFrame` or `Series` 
+  * Summarizing array contents
+  * Creating interaction variables
+  * Selection of elements
 * Always contains `True` or `False`
   * `True` is 1, `False` is 0
 * Combining boolean arrays uses `&`, `|` or `~`
-  * Equivalent ot `locigal_and`, `logical_or` and `logical_not` functions
+  * Equivalent to `locigal_and`, `logical_or` and `logical_not` functions
   * `and`, `or` and `not` are scalar only
-* Uses
-  * Selection of elements
-  * Summarizing contents
-  * Interaction variables
 
 
 # Array logical operators
+* Elementwise _and_ : `c[i]` `True` if `a[i]` and `b[i]` are `True`
 ```python
 c = a & b
 c = np.logical_and(a, b)
 ```
-* Elementwise _and_: `c[i]` `True` if `a[i]` and `b[i]` are `True`
+* Elementwise _or_ : `c[i]` `True` if `a[i]` or `b[i]` are `True`
 ```python
 c =a | b
 c = np.logical_or(a, b)
 ```
-* Elementwise _or_: `c[i]` `True` if `a[i]` or `b[i]` are `True`
+* Elementwise _not_ : `c[i]` `True` if `a[i]` is False
 ```python
 c = ~a
 c = np.logical_not(a)
 ```
-* Elementwise _not_: `c[i]` `True` if `a[i]` is False
 
 
 # `any` and `all`
 ## Logical aggregation
 
 * Common to use `any` or `all` on arrays
-* `any` returns `True` is any value is `True`
-* `all` returns `True` is all values are `True`
+  * `any` returns `True` is any value is `True`
+  * `all` returns `True` is all values are `True`
 * Reduce vectors to scalars
-* Key difference in `DataFrame` methods and NumPy functions
+* Key difference between `DataFrame` methods and NumPy functions
   * `df.any` and `df.all` operator column-by-column
   * `np.any` and `np.all` default to entire array
     * Use `np.any(axis=0)` for column-by-column
@@ -1437,23 +1436,22 @@ c = np.logical_not(a)
 
 ```python
 x = np.array([-3, 3, 2, -2, -1, 1, 0])
-x_neg = x * (x < 0)
+x * (x < 0)
+```
+```
+array([-3, 0, 0, -2, -1, 0, 0])
 ```
 
 
 # Boolean Arrays
 ## Summary
 
-* Boolean arrays are created using `<`, `<=`, `==`, `>=`, `>`
+* Boolean arrays are created using `<`, `<=`, `==`, `!=`,  `>=`, `>`
 * Arrays of `True` and `False`
   * `True` is 1 in math ops
 * Must use `&`, `|` and `~`
   * Function equivalents: `logical_and`, `logical_or`, `logical_not`
   * `and`, `or` and `not` produce errors
-* Boolean selection is identical to integer selection using a list
-  * `where(bool_arr)` returns the indices selected
-* Use `loc` in pandas to perform logical selection
-* In Numpy must use `ix_` with boolean selection in multiple dimensions
 
 
 

@@ -710,8 +710,18 @@ def func(x, y=1):
 
 * Items matched using index or columns
 * Missing matches produce missing values
-* Repeated indices or column names produce multiplicity of results
-  * Care need if not unique
+* Repeated indices or column names results in multiplicity
+  * **Only** if `Series` have different sizes
+  * Substantial care needed if using duplicate indices
+```python
+s1 = pd.Series([2, 4], index=["a", "a"])
+s2 = pd.Series([3, 5, 7], index=["a", "a", "a"])
+s1 + s2
+```  
+```
+a  a  a  a  a  a
+5  7  9  7  9  11
+```
 
 
 # Specific Cases

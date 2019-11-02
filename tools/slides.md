@@ -1492,11 +1492,11 @@ df.loc[df.index[sel]]
 * Logical selector must match dimension or rows/columns
 
 
-# Logical Selection in array
+# Boolean Selection in array
 ## Matches list selection
 
-* Logical selection in NumPy array matches list selection
-* Equivalent to using `np.where` to convert boolean ot position
+* Boolean selection in NumPy array matches list selection
+* Equivalent to using `np.where` to convert boolean to position
 * Can only be directly used for 1 axis
   * Use `np.ix_` when using list/boolean in multiple dimensions
 

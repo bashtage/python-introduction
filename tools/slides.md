@@ -183,6 +183,50 @@ pip install jupyter_contrib_nbextensions
   * `2.0 * 2.0` produces `4.0`
 
 
+# Variable Names
+
+* Legal variable names contain
+  * Letters
+  * Underscores
+  * Numbers
+    * **Cannot** start with a number
+
+```python
+x
+x1
+some_long_variable
+```    
+
+* Should avoid starting and ending with underscore
+  * Single underscore used to represent private variables
+  * Leading/trailing double underscore represent special variables
+
+```python
+_private_variable
+__special__
+```   
+
+
+# `print`
+## Printing string representations
+
+* `print` is a function
+* Can print any object in Python
+  * Printed representation _may not_ be meaningful
+
+```python
+print("a string")
+
+a = 1.0
+print(a)
+```  
+* Can print any number of items using commas
+
+```python
+print(a, b, c, d)
+```
+
+
 # Strings (`str`)
 
 * Entered using either `"`_string_`"` or `"`_string_`"`
@@ -276,8 +320,8 @@ tpl = ("a", 1, 1.0, ("b", 2, "2.0"))
 * Initialized using `{}`
 ```python
 d = {}
-d = {key : value}
-d = {key1 : value1, key2: value2, ...}
+d = {key: value}
+d = {key1: value1, key2: value2, ...}
 ```
 * Add or change elements using `d[key] = value`
   * Element added is `key` not in `d`, otherwise replaced

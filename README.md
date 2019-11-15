@@ -4,6 +4,8 @@ The repository contains a set of notebooks that provide an introduction to Pytho
 This site contains both an introduction and a course focused on using Python
 in Finance and Econometrics. 
 
+Further details about the course and its objectives are [available on my site](https://www.kevinsheppard.com/teaching/python/course/).
+
 ## Course Materials
 
 The introduction is contained in the Jupyter notebook files that are located

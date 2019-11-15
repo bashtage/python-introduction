@@ -793,6 +793,20 @@ a  a  a  a  a  a
   * Efficient but complex
 
 
+# Missing Values 
+
+* Missing values are coded as not-a-number (`NaN`)
+* `DataFrame.dropna` removes missing values
+* Key Optional arguments
+  * `how` 
+    * `"any"`: Remove if any value is missing
+    * `"all"`: Remove if all values are missing
+  * `axis`
+    * `0`: Drop columns (variables)
+    * `1`: Drop rows (observations)
+* `DataFrame.fillna(rv)` fills missing values with `rv`
+
+
 # Using DataFrames
 ## Summary
 

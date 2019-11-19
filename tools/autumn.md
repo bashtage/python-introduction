@@ -16,8 +16,16 @@ combined = pd.concat([a, b, c], axis=1)
 
 
 # Reproducible Random Numbers
+## Compatibility (Legacy)
 
-* TODO
+
+# Reproducible Random Numbers
+## Current Best Practice
+
+
+# Reproducible Random Numbers
+## Using `scipy.stats`
+
 * **Warning**: `scipy.stats.`_dist_`.rvs` does **not** support the modern generator
   * To make reproducible, you must set the state of default NumPy `RanomState`
  
@@ -30,3 +38,28 @@ print(stats.chi2(5).rvs(2))
 np.random.set_state(state)
 print(stats.chi2(5).rvs(2))  # Match
 ```
+
+
+# Quadrature
+## `scipy.integrate`
+
+* Key functions:
+  * `quadrature`: Adaptive Gaussian quadrature
+  * `romberg`: Romberg integration
+  * Others: `newton_cotes`, `fixed_quad`, `dblquad`
+* Common signature
+  * First input is a function to integrate
+    * One input: the integration variable
+    * One output: the function value
+  * Next two are integration bounds
+
+```python
+from scipy.integrate import quadrature
+def f(x):
+    return x**2
+quadrature(f, 0, 1)
+```
+
+* Returns integral and accuracy information
+
+

@@ -4,9 +4,10 @@
 # Concatenations
 ## `pd.concat`
 
-* Concatentation directly extends `Series` and `DataFrames
-* Use `axis=1` for horizontal concatentation (columns)
-  * Default is `axis=0`, vertical concatentation (rows)
+* Concatenation directly extends `Series` and `DataFrames`
+  * Essentially _stacks_ multiple pandas objects
+* Use `axis=1` for horizontal concatenation (columns)
+  * Default is `axis=0`, vertical concatenation (rows)
  
 ```python
 combined = pd.concat([a, b, c], axis=1)
@@ -18,26 +19,62 @@ combined = pd.concat([a, b, c], axis=1)
 # Reproducible Random Numbers
 ## Compatibility (Legacy)
 
+* `np.random.RandomState` is seedable
+* Using the same produces the same set of random numbers
+
+```python
+import numpy as np
+seed = 2725404939
+rs = np.random.RandomState(seed)
+print(rs.standard_normal())
+rs_alt = np.random.RandomState(seed)
+# Identical
+print(rs_alt.standard_normal())
+```
+
+* Seeds need to be in $[0, 2^{32})$
+  * Can also be array of values in same range
+
 
 # Reproducible Random Numbers
-## Current Best Practice
+## NumPy v1.17 or later
+
+* New code to generate random values in NumPy 1.17+
+* Uses `np.random.Generator` in place of `RandomState`
+* Initialize using `np.random.default_rng`
+
+```python
+import numpy as np
+seed = 161932852906181212798210784490480099595
+gen = np.random.default_rng(seed)
+print(gen.standard_normal())
+alt_gen = np.random.default_rng(seed)
+# Identical
+print(alt_gen.standard_normal()) 
+```
+
+* Can easily use integer seeds of any length
 
 
 # Reproducible Random Numbers
 ## Using `scipy.stats`
 
-* **Warning**: `scipy.stats.`_dist_`.rvs` does **not** support the modern generator
-  * To make reproducible, you must set the state of default NumPy `RanomState`
+* **Warning**: `scipy.stats.`_dist_ `.rvs` relies on hidden default `RandomState` instance
+  * To make reproducible, you must set the seed of default `RandomState`
  
 ```python
 import numpy as np
 from scipy import stats
 
-state = np.random.get_state()
+seed = 2725404939
+np.random.seed(seed)
 print(stats.chi2(5).rvs(2))
-np.random.set_state(state)
-print(stats.chi2(5).rvs(2))  # Match
+np.random.seed(seed)
+# Identical
+print(stats.chi2(5).rvs(2))
 ```
+
+* Alternatively use `get_state` and then `set_state`
 
 
 # Quadrature
@@ -59,7 +96,3 @@ def f(x):
     return x**2
 quadrature(f, 0, 1)
 ```
-
-* Returns integral and accuracy information
-
-

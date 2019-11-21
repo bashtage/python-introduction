@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# ## Unit Root Testing
+# ## ARMA Modeling: Unit Root Testing
 # 
 # **Functions**
 # 

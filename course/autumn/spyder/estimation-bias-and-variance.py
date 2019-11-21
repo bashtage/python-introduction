@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# ## Bias and Verification of Standard Errors
+# ## Estimation: Bias and Verification of Standard Errors
 # 
 # Methods/Functions
 # 

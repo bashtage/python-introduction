@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# ## Method of Moments
+# ## Method of Moment Estimation
 # 
 # **Functions**
 # 

@@ -3,7 +3,7 @@
 
 #%%
 # 
-# ## Maximum Likelihood
+# ## Maximum Likelihood Estimation
 # 
 # **Functions**
 # 

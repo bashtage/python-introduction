@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# ## ARMA Estimation
+# ## ARMA Modeling: Estimation
 # 
 # **Functions**
 # 

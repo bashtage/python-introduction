@@ -25,13 +25,31 @@
 
 
 #%%
+# Standard Normal
 
+#%%
+
+
+#%%
+# $t_8$
 
 #%%
 
 
 #%%
+# $\chi^2_5$
 
+#%%
+
+
+#%%
+# $N(8\%, 20\%^2)$
+
+#%%
+
+
+#%%
+# Function are useful for avoiding many blocks of repetitive code.
 
 #%%
 
@@ -53,7 +71,6 @@
 # ### Exercise 13
 # 
 # Explore the role of uncertainty in Monte Carlo integration by increasing the number of simulations 300% relative to the base case.
-# 
 
 #%%
 
@@ -61,7 +78,7 @@
 #%%
 # ### Exercise 14
 # 
-# Compute the expectation in exercise 11 using quadrature.
+# Compute the $N(8\%, 20\%^2)$  expectation in exercise 11 using quadrature.
 # 
 # **Note**: This requires writing a function which will return $\exp\left(x\right)\times\phi\left(x\right)$ where $\phi\left(x\right)$ is the pdf evaluated at $x$.
 

@@ -2,14 +2,14 @@
 # coding: utf-8
 
 #%%
-# ## Model Selection and Cross-Validation
+# ## Linear Regression: Model Selection and Cross-Validation
 # 
 # Functions
 # 
 # `RandomState.permute`, `sm.OLS`, `set`, `scipy.random.norm.ppf`, `np.linspace`, `np.mean`
 # 
 # ### Exercise 39
-# For four portfolios we have been looking at, and considering all 8 sets of
+# Four portfolios we have been looking at, and considering all 8 sets of
 # regressors which range from no factor to all 3 factors, which model is preferred
 # by AIC, BIC, GtS and StG?
 

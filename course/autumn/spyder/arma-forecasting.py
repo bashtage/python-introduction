@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# ## ARMA Forecasting
+# ## ARMA Modeling: Forecasting
 # 
 # **Functions**
 # 

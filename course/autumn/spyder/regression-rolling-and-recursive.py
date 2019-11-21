@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# ## Rolling and Recursive Regressions
+# ## Linear Regression: Rolling and Recursive
 # 
 # **Functions**
 # 

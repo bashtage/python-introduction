@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# ## ARMA Model Selection
+# ## ARMA Modeling: Model Selection
 # 
 # **Functions**
 # 

@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# ## Basic Linear Regression
+# ## Linear Regression: Model Estimation
 # 
 # **Functions**
 # 

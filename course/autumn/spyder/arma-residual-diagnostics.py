@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #%%
-# ## ARMA Residual Diagnostics
+# ## ARMA Modeling: Residual Diagnostics
 # 
 # **Functions**
 # 

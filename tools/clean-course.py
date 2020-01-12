@@ -11,25 +11,34 @@ import nbformat
 
 from spyder import export_for_spyder
 
-spyder_dir = os.path.join("..", "course", "autumn", "spyder")
-if not os.path.exists(spyder_dir):
-    os.mkdir(spyder_dir)
+terms = ("autumn", "winter")
 
-source_dir = "../solutions/autumn/"
-nb_files = glob.glob(os.path.join(source_dir, "*.ipynb"))
+for term in terms:
+    spyder_dir = os.path.join("..", "course", term, "spyder")
+    os.makedirs(spyder_dir, exist_ok=True)
+
+nb_files = []
+for term in terms:
+    source_dir = os.path.join("../solutions/" + term)
+    files = glob.glob(os.path.join(source_dir, "*.ipynb"))
+    nb_files.extend(files)
 
 # Ensure data-dataset-construction is run first so that data is available
-first = None
+first = []
 for nb_file in nb_files:
     if "construction" in nb_file:
-        first = nb_file
+        first.append(nb_file)
 if first:
-    nb_files.remove(first)
-    nb_files.insert(0, first)
+    for nb in first:
+        nb_files.remove(nb)
+        nb_files.insert(0, nb)
 
 for nb_file in nb_files:
     print(f"Processing {nb_file}")
     nb = nbformat.read(nb_file, 4)
+    term = "autumn" if "autumn" in nb_file else "winter"
+    source_dir = os.path.join("../solutions/" + term)
+    spyder_dir = os.path.join("..", "course", term, "spyder")
     executed = pre.execute.executenb(nb, cwd=source_dir, kernel_name="python3")
     print(f"Writing executed version of {nb_file}")
     nbformat.write(executed, nb_file, nbformat.NO_CONVERT)
@@ -49,7 +58,7 @@ for nb_file in nb_files:
     nb["cells"] = retain
 
     _, base = os.path.split(nb_file)
-    out = os.path.abspath(os.path.join("..", "course", "autumn", base))
+    out = os.path.abspath(os.path.join("..", "course", term, base))
     print(f"Writing clean version to {out}")
     nbformat.write(nb, out, nbformat.NO_CONVERT)
 

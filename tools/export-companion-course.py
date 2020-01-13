@@ -10,11 +10,15 @@ from latex import execute_and_clear, strip_latex
 
 base_dir = os.path.abspath("..")
 latex_dir = os.path.join("tex")
-source_dir = "../solutions/autumn/"
-nb_files = glob.glob(os.path.join(source_dir, "*.ipynb"))
+nb_files = []
+for term in ("autumn", "winter"):
+    source_dir = f"../solutions/{term}/"
+    nb_files += glob.glob(os.path.join(source_dir, "*.ipynb"))
 
 for nb_file in nb_files:
     print(f"Processing {nb_file}")
+    term = "autumn" if "autumn" in nb_file else "winter"
+    source_dir = f"../solutions/{term}/"
     nb = execute_and_clear(nb_file, source_dir)
 
     _, base = os.path.split(nb_file)

@@ -7,6 +7,7 @@ import glob
 import os
 
 import nbconvert.preprocessors as pre
+from nbconvert.preprocessors import ExecutePreprocessor
 import nbformat
 
 from spyder import export_for_spyder
@@ -39,7 +40,9 @@ for nb_file in nb_files:
     term = "autumn" if "autumn" in nb_file else "winter"
     source_dir = os.path.join("../solutions/" + term)
     spyder_dir = os.path.join("..", "course", term, "spyder")
-    executed = pre.execute.executenb(nb, cwd=source_dir, kernel_name="python3")
+    ep = ExecutePreprocessor(timeout=600, kernel_name="python3")
+    executed = ep.preprocess(nb, {'metadata': {'path': source_dir}})
+    # executed = pre.execute.executenb(nb, cwd=source_dir, kernel_name="python3")
     print(f"Writing executed version of {nb_file}")
     nbformat.write(executed, nb_file, nbformat.NO_CONVERT)
     cop = pre.ClearOutputPreprocessor()

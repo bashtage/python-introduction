@@ -33,6 +33,7 @@ if first:
         nb_files.remove(nb)
         nb_files.insert(0, nb)
 
+nb_files = nb_files[-1:]
 for nb_file in nb_files:
     print(f"Processing {nb_file}")
     nb = nbformat.read(nb_file, 4)

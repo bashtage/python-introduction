@@ -17,31 +17,6 @@
 
 
 #%%
-
-
-#%%
-
-
-#%%
-# #### Discussion
-# 
-# For each of the portfolios, we start with a list of included variables 
-# that includes all three factors. We can then use a loop to see if any
-# of the included variables have insignificant t-stats.  We first create a
-# temporary set of regressors that uses the factors are are in `included`.
-# We can then check if any of the t-stats are less than our critical value
-# that is defined above.  If one is less than the value, we need to drop the
-# variable. We sort the absolute t-stats so that the minimum is first,
-# and then get the variable name from the index. Finally, we use `.remove`
-# to remove this name from the list of included variables. 
-# 
-# If no t-stat is less than our critical value, we can call `break` which 
-# terminates the loop early. 
-
-#%%
-
-
-#%%
 # ### Exercise 40
 # Cross-validation is a method of analyzing the in-sample forecasting ability of a
 # cross-sectional model by using $\alpha\%$ of the data to estimate the model and

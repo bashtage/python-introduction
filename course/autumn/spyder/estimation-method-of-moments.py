@@ -16,18 +16,9 @@
 
 
 #%%
-
-
-#%%
-
-
-#%%
 # ### Exercise 17
 # Estimate the asymptotic covariance of the mean and variance of the two series (separately,
 # but not the skewness and kurtosis). 
-
-#%%
-
 
 #%%
 
@@ -53,9 +44,6 @@
 
 
 #%%
-
-
-#%%
 # 
 # ### Exercise 19
 # Plot rolling estimates of the four moments using 120 months of consecutive data using a
@@ -67,15 +55,6 @@
 # 
 # The pandas-centric approach uses teh `rolling` method to compute rolling statistics and
 # then uses `.plot.line` with `subplots=True` to produce the plot.
-
-#%%
-
-
-#%%
-
-
-#%%
-
 
 #%%
 

@@ -26,12 +26,6 @@
 
 
 #%%
-
-
-#%%
-
-
-#%%
 # ### Exercise 21
 # 
 # Repeat the previous exercise using daily, weekly and monthly S&P 500 and Hang Seng data.
@@ -42,22 +36,10 @@
 
 
 #%%
-
-
-#%%
 # ### Exercise 22
 # 
 # Repeat the previous problem by estimating the mean and variance simultaneously with
 # the degree of freedom parameter.
-
-#%%
-
-
-#%%
-
-
-#%%
-
 
 #%%
 
@@ -73,15 +55,6 @@
 # success and $\Phi\left(\right)$ is the standard Normal CDF). Use this simulated data to
 # estimate the Probit model where $p_{i}=\Phi\left(\alpha_{0}+\alpha_{1}x_{i}\right)$ 
 # using maximum likelihood. 
-
-#%%
-
-
-#%%
-
-
-#%%
-
 
 #%%
 
@@ -106,9 +79,6 @@
 # for $\alpha_1$ where $\Phi(\cdot)$ is the cdf of a standard Normal random variable and
 # $\phi(\cdot)$ is the pdf of a standard Normal random variable.
 # 
-
-#%%
-
 
 #%%
 

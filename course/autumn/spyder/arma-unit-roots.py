@@ -19,39 +19,12 @@
 
 
 #%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
 # ### Exercise 49
 # 
 # Download data on consumer prices in the UK from the ONS.
 # 
 # 1. Test the log of CPI for a unit root. 
 # 2. If you find a unit root, test inflation for one.
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
 
 #%%
 

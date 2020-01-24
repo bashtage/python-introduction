@@ -18,30 +18,9 @@
 
 
 #%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
 # ### Exercise 55
 # 
 # Evaluate the accuracy of the forecasts.
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
 
 #%%
 
@@ -55,52 +34,7 @@
 
 
 #%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
 # ### Exercise 57
-# 
-# Compare the ARCH-model forecasts to a naive 2-year backward looking moving average using QLIKE.
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-# ### Exercise 49
-# 
-# Evaluate the accuracy of the forecasts.
-
-#%%
-
-
-#%%
-# ### Exercise 50
-# 
-# Evaluate the accuracy of forecasts from a 2-year backward moving average variance.
-
-#%%
-
-
-#%%
-# ### Exercise 51
 # 
 # Compare the ARCH-model forecasts to a naive 2-year backward looking moving average using QLIKE.
 

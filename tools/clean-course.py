@@ -33,7 +33,6 @@ if first:
         nb_files.remove(nb)
         nb_files.insert(0, nb)
 
-nb_files = nb_files[-1:]
 for nb_file in nb_files:
     print(f"Processing {nb_file}")
     nb = nbformat.read(nb_file, 4)
@@ -49,13 +48,32 @@ for nb_file in nb_files:
     for cell in nb["cells"]:
         cell_type = cell.get("cell_type", None)
         source = cell.get("source", "")
-        if cell_type == "markdown" and "### Explanation" in source:
+        if cell_type == "markdown" and "### Explanation" in source or "#### Discussion" in source:
             continue
         if cell_type == "code" and "# Setup" not in cell["source"]:
             cell["source"] = ""
         if "metadata" in cell and "pycharm" in cell["metadata"]:
             del cell["metadata"]["pycharm"]
         retain.append(cell)
+    # Filter repeated empty cells
+    keep = []
+    for i, cell in enumerate(reversed(retain)):
+        cell_type = cell.get("cell_type", None)
+        if cell_type != "code":
+            keep.append(len(retain)-i-1)
+            continue
+        if len(retain)-i-2 < 0:
+            break
+        if cell["source"].strip() != "":
+            keep.append(len(retain)-i-1)
+            continue
+        prev_cell = retain[len(retain)-i-2]
+        prev_cell_type = prev_cell.get("cell_type", None)
+        if prev_cell_type != cell_type:
+            keep.append(len(retain)-i-1)
+    keep = sorted(keep)
+    retain = [retain[i] for i in keep]
+
     nb["cells"] = retain
 
     _, base = os.path.split(nb_file)

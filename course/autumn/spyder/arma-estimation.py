@@ -12,14 +12,8 @@
 
 
 #%%
-
-
-#%%
 # ### Exercise 41
 # Estimate an AR(1) on the term premium, and compute standard errors for the parameters.
-
-#%%
-
 
 #%%
 
@@ -32,14 +26,8 @@
 
 
 #%%
-
-
-#%%
 # ### Exercise 43
 # Estimate an ARMA(1,1) on the term premium, and compute standard errors for the parameters.
-
-#%%
-
 
 #%%
 

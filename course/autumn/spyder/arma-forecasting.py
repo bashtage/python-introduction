@@ -21,54 +21,12 @@
 
 
 #%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
 # ### Exercise 47
 # 
 # Produce 3-step forecasts from the models selected in the previous exercises as well as a random walk model.
 # 
 # 1. Compare these forecasts to the random walk models using MSE and MAE.
 # 
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
 
 #%%
 

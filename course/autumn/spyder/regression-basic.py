@@ -18,21 +18,6 @@
 
 
 #%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
-
-
-#%%
 # ### Exercise 33
 # Are the parameter standard errors similar using the two covariance estimators?
 # If not, what does this mean? 
@@ -41,14 +26,8 @@
 
 
 #%%
-
-
-#%%
 # ### Exercise 34
 # How much of the variation is explained by these three regressors?
-
-#%%
-
 
 #%%
 

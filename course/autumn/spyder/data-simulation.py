@@ -51,19 +51,10 @@
 
 
 #%%
-
-
-#%%
-
-
-#%%
 # 
 # ### Exercise 10
 # 
 # Repeat exercise 7 using only `standard_normal`.
-
-#%%
-
 
 #%%
 

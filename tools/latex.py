@@ -34,13 +34,16 @@ def key(f):
     return hash(file_key)
 
 
-def execute_and_clear(notebook_file_name, source_dir):
+def execute_and_clear(notebook_file_name, source_dir, delete_repeated=True):
     nb = nbformat.read(notebook_file_name, nbformat.NO_CONVERT)
     replacements = []
     for cell in nb["cells"]:
         code_cell = cell.get("cell_type", None) == "code"
+        markdown_cell = cell.get("cell_type", None) == "markdown"
         source = cell.get("source", "")
         if code_cell and ("# Setup" not in source or "### Explanation" in source):
+            continue
+        if markdown_cell and ("#### Discussion" in cell["source"]):
             continue
         if "metadata" in cell and "pycharm" in cell["metadata"]:
             del cell["metadata"]["pycharm"]

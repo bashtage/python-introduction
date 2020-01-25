@@ -16,9 +16,6 @@
 
 
 #%%
-
-
-#%%
 # ### Exercise 36
 # 
 # For each of the four $\beta$s, produce a plot containing four series: 
@@ -47,12 +44,6 @@
 # ### Exercise 38
 # 
 # What happens if only the market is used as a factor (repeat the exercise excluding SMB and HML).
-
-#%%
-
-
-#%%
-
 
 #%%
 

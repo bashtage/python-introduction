@@ -41,12 +41,12 @@ for nb_file in nb_files:
     source_dir = os.path.join("../solutions/" + term)
     spyder_dir = os.path.join("..", "course", term, "spyder")
     ep = ExecutePreprocessor(timeout=600, kernel_name="python3")
-    executed = ep.preprocess(nb, {'metadata': {'path': source_dir}})
+    ep.preprocess(nb, {'metadata': {'path': source_dir}})
     # executed = pre.execute.executenb(nb, cwd=source_dir, kernel_name="python3")
     print(f"Writing executed version of {nb_file}")
-    nbformat.write(executed, nb_file, nbformat.NO_CONVERT)
+    nbformat.write(nb, nb_file, nbformat.NO_CONVERT)
     cop = pre.ClearOutputPreprocessor()
-    nb, _ = cop.preprocess(executed, {})
+    nb, _ = cop.preprocess(nb, {})
     retain = []
     for cell in nb["cells"]:
         cell_type = cell.get("cell_type", None)

@@ -29,6 +29,14 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 #%%
+# We can also use a weighted LS estimator where the variance is the inverse
+# of the squared forecast.  The creates the MZ-GLS test.
+# 
+
+#%%
+
+
+#%%
 # ### Exercise 56
 # 
 # Evaluate the accuracy of forecasts from a 2-year backward moving average variance.

@@ -1,16 +1,22 @@
 """
 Execute and then clear code and output from solutions notebooks.
 """
-from collections.abc import MutableMapping
 import copy
 import glob
+import json
 import os
+from hashlib import sha512
 
 import nbconvert.preprocessors as pre
-from nbconvert.preprocessors import ExecutePreprocessor
 import nbformat
-
+from nbconvert.preprocessors import ExecutePreprocessor
 from spyder import export_for_spyder
+
+if os.path.exists("course-hashes.json"):
+    with open("course-hashes.json", "r") as hash_file:
+        hashes = json.load(hash_file)
+else:
+    hashes = {}
 
 terms = ("autumn", "winter")
 
@@ -41,10 +47,19 @@ for nb_file in nb_files:
     source_dir = os.path.join("../solutions/" + term)
     spyder_dir = os.path.join("..", "course", term, "spyder")
     ep = ExecutePreprocessor(timeout=600, kernel_name="python3")
-    ep.preprocess(nb, {'metadata': {'path': source_dir}})
-    # executed = pre.execute.executenb(nb, cwd=source_dir, kernel_name="python3")
-    print(f"Writing executed version of {nb_file}")
-    nbformat.write(nb, nb_file, nbformat.NO_CONVERT)
+    nb_hash = "" if nb_file not in hashes else hashes[nb_file]
+
+    cell_source = ""
+    for cell in nb["cells"]:
+        source = "" if "source" not in cell else cell["source"]
+        cell_source += source.strip()
+    current = sha512(cell_source.encode("utf-8")).hexdigest()
+    nb_changed = current != nb_hash
+    if nb_changed:
+        ep.preprocess(nb, {'metadata': {'path': source_dir}})
+        print(f"Writing executed version of {nb_file}")
+        nbformat.write(nb, nb_file, nbformat.NO_CONVERT)
+        hashes[nb_file] = current
     cop = pre.ClearOutputPreprocessor()
     nb, _ = cop.preprocess(nb, {})
     retain = []
@@ -89,3 +104,6 @@ for nb_file in nb_files:
     py_name = os.path.split(nb_file)[-1].replace(".ipynb", ".py")
     with open(os.path.join(spyder_dir, py_name), "w", encoding="utf8") as python_file:
         python_file.write(code)
+
+with open("course-hashes.json", "w") as hash_file:
+    json.dump(hashes, hash_file)

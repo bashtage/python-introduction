@@ -3,13 +3,14 @@ Execute and then clear code and output from solutions notebooks.
 """
 import copy
 import glob
+from hashlib import sha512
 import json
 import os
-from hashlib import sha512
 
 import nbconvert.preprocessors as pre
-import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
+import nbformat
+
 from spyder import export_for_spyder
 
 if os.path.exists("course-hashes.json"):
@@ -56,7 +57,7 @@ for nb_file in nb_files:
     current = sha512(cell_source.encode("utf-8")).hexdigest()
     nb_changed = current != nb_hash
     if nb_changed:
-        ep.preprocess(nb, {'metadata': {'path': source_dir}})
+        ep.preprocess(nb, {"metadata": {"path": source_dir}})
         print(f"Writing executed version of {nb_file}")
         nbformat.write(nb, nb_file, nbformat.NO_CONVERT)
         hashes[nb_file] = current
@@ -66,7 +67,7 @@ for nb_file in nb_files:
     for cell in nb["cells"]:
         cell_type = cell.get("cell_type", None)
         source = cell.get("source", "")
-        if cell_type == "markdown" and "### Explanation" in source:
+        if cell_type == "markdown" and "#### Explanation" in source:
             continue
         if cell_type == "code" and "# Setup" not in cell["source"]:
             cell["source"] = ""
@@ -78,17 +79,17 @@ for nb_file in nb_files:
     for i, cell in enumerate(reversed(retain)):
         cell_type = cell.get("cell_type", None)
         if cell_type != "code":
-            keep.append(len(retain)-i-1)
+            keep.append(len(retain) - i - 1)
             continue
-        if len(retain)-i-2 < 0:
+        if len(retain) - i - 2 < 0:
             break
         if cell["source"].strip() != "":
-            keep.append(len(retain)-i-1)
+            keep.append(len(retain) - i - 1)
             continue
-        prev_cell = retain[len(retain)-i-2]
+        prev_cell = retain[len(retain) - i - 2]
         prev_cell_type = prev_cell.get("cell_type", None)
         if prev_cell_type != cell_type:
-            keep.append(len(retain)-i-1)
+            keep.append(len(retain) - i - 1)
     keep = sorted(keep)
     retain = [retain[i] for i in keep]
 

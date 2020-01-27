@@ -26,7 +26,7 @@ for nb_file in nb_files:
     base, _ = os.path.splitext(base)
     to_export = strip_latex(nb)
     if base == "lesson-1":
-        to_export = to_export.replace("\section{", "\section*{")
+        to_export = to_export.replace(r"\section{", r"\section*{")
     with open(os.path.join(latex_dir, base + ".tex"), "w") as output:
         output.write(to_export)
 

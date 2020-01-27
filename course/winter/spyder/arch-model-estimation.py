@@ -9,12 +9,6 @@
 # `arch.arch_model`
 
 #%%
-# ### Exercise 50
-# 
-# Download 10 years of data for the S&P 500 and the EUR/USD exchange rate from FRED.
-# 
-
-#%%
 # Setup
 from IPython import get_ipython
 get_ipython().run_line_magic('matplotlib', 'inline')

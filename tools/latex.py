@@ -41,9 +41,9 @@ def execute_and_clear(notebook_file_name, source_dir, delete_repeated=True):
         code_cell = cell.get("cell_type", None) == "code"
         markdown_cell = cell.get("cell_type", None) == "markdown"
         source = cell.get("source", "")
-        if code_cell and ("# Setup" not in source or "### Explanation" in source):
+        if code_cell and "# Setup" not in source:
             continue
-        if markdown_cell and ("#### Discussion" in cell["source"]):
+        if markdown_cell and ("### Explanation" in cell["source"]):
             continue
         if "metadata" in cell and "pycharm" in cell["metadata"]:
             del cell["metadata"]["pycharm"]

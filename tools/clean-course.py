@@ -66,7 +66,7 @@ for nb_file in nb_files:
     for cell in nb["cells"]:
         cell_type = cell.get("cell_type", None)
         source = cell.get("source", "")
-        if cell_type == "markdown" and "### Explanation" in source or "#### Discussion" in source:
+        if cell_type == "markdown" and "### Explanation" in source:
             continue
         if cell_type == "code" and "# Setup" not in cell["source"]:
             cell["source"] = ""

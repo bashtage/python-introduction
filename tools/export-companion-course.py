@@ -16,6 +16,9 @@ for term in ("autumn", "winter"):
     nb_files += glob.glob(os.path.join(source_dir, "*.ipynb"))
 
 for nb_file in nb_files:
+    print(os.path.split(nb_file)[-1])
+
+for nb_file in nb_files:
     print(f"Processing {nb_file}")
     term = "autumn" if "autumn" in nb_file else "winter"
     source_dir = f"../solutions/{term}/"

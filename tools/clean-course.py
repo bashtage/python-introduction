@@ -107,4 +107,4 @@ for nb_file in nb_files:
         python_file.write(code)
 
 with open("course-hashes.json", "w") as hash_file:
-    json.dump(hashes, hash_file)
+    json.dump(hashes, hash_file, indent=2, sort_keys=True)

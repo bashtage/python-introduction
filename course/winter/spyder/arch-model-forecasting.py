@@ -15,9 +15,6 @@
 # EUR/USD rate, and construct forecasts for the remaining period.
 
 #%%
-# Setup
-from IPython import get_ipython
-get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 #%%

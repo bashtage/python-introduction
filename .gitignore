@@ -29,6 +29,8 @@ tools/tex/lesson*.tex
 tools/tex/regression-*.tex
 tools/tex/arma-*.tex
 tools/tex/arch-*.tex
+tools/tex/value-at-risk-*.tex
+tools/tex/vector-ar-*.tex
 tools/tex/images/
 tools/*.png
 equity-indices.h5

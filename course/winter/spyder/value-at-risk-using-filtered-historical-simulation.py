@@ -6,7 +6,7 @@
 # 
 # **Functions**
 # 
-# `arch_model`, `ARCHModelResult.std_resid`
+# `arch_model`, `ARCHModelResult.std_resid`, `np.percentile`
 # 
 # ### Exercise 59
 # Use a GARCH(1,1) model to construct filtered historical VaR for the S&P 500 and
@@ -69,50 +69,78 @@
 
 #%%
 # ### Explanation
+# We can construct the 5-step ahead forecasts by simulating the model forward.
+# Note that the first out-of-sample variance is known at time $t$, and so we
+# only simulat for `i > 0`. Once we have the simulated $\epsilon$, we then then
+# simulate the 5 returns and the total return over 5 days using `sum`. Finally,
+# we use `percentile` to find the 5% quantile. 
 
 #%%
 
 
 #%%
 # ### Explanation
-
-#%%
-
-
-#%%
-# ### Explanation
-
-#%%
-
-
-#%%
-# ### Explanation
-
-#%%
-
-
-#%%
-# ### Explanation
-
-#%%
-
-
-#%%
-# ### Explanation
-
-#%%
-
-
-#%%
-# ### Explanation
-
-#%%
-# ### Exercise 60
 # 
-# Compare this VaR to the HS VaR in the previous example.
+# Finally, we shift it by 5 places so that the forecast lines up with the point
+# where we will evaluate it.
 
 #%%
 
 
 #%%
 # ### Explanation
+# 
+# We can plot the 1- and 5-day Value-at-Risks.
+
+#%%
+
+
+#%%
+# ### Explanation
+# 
+# Finally, we generalize the code above to allow simulation over any `horizon`.
+# Thie code is virtually identical to the 5-step forecasts except that it has
+# been wrapped in a function.
+
+#%%
+
+
+#%%
+# ### Explanation
+# 
+# We can use the function to produce the forecasts with a basic loop.
+
+#%%
+
+
+#%%
+# ### Explanation
+# 
+# We shift to the evaluation point. 
+
+#%%
+
+
+#%%
+# ### Explanation
+# 
+# Finally we can plot all three Value-at-Risks.
+
+#%%
+# #### EUR/USD Value-at-Risk
+# 
+# We can repeat the VaR calculation for the EUR/USR return using the function.
+
+#%%
+
+
+#%%
+# ### Explanation
+# 
+# We start by using the function to compute the FHS VaR for the EUR-USD rate for
+# all 3 horizons. We plot both VaRs. Finally, we save the VaRs to use in a later
+# lesson.
+# 
+
+#%%
+

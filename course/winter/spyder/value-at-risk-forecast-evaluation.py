@@ -4,8 +4,6 @@
 #%%
 # ## Value-at-Risk: Forecast Evaluation
 # 
-# 
-# 
 # **Functions**
 # 
 # `sm.OLS`, `stats.bernoulli`

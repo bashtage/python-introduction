@@ -6,13 +6,16 @@
 # 
 # **Functions**
 # 
-# `tsa.coint`
+# `tsa.adfuller`, `tsa.coint`
 # 
 # ### Exercise 74
-# Download data on $CAY$ from [Sydney Ludvigson’s site](https://www.sydneyludvigson.com/data-and-appendixes).
+# Download data on $CAY$ from [Martin Lettau’s site](https://sites.google.com/view/martinlettau/data).
 
 #%%
 
+
+#%%
+# We start by verifying that all three series have unit roots using `adfuller`.
 
 #%%
 # ### Exercise 75
@@ -24,6 +27,15 @@
 #%%
 # ### Exercise 76
 # What about in the post-Volker era (start in 1981)?
+
+#%%
+
+
+#%%
+# ### Exercise 77
+# 
+# Download monthlly WTI and Brent crude prices from the [EIA](https://www.eia.gov/) and import them.
+# Examine whether the log prices are cointegrated.
 
 #%%
 

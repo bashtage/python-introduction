@@ -9,7 +9,8 @@
 # `VARResults.irf`
 # 
 # ### Exercise 71
-# Plot the impulse responses from both a first order model and the model selected in the order selection exercise.
+# Plot the impulse responses from both a first order model and
+# the model selected in the order selection exercise.
 
 #%%
 
@@ -23,7 +24,7 @@
 
 #%%
 # ### Exercise 73
-# What happens when you re-order the series and use the Choleski factor in the impulse response?
+# What happens when you re-order the series and use the Cholesky factor in the impulse response?
 # 1. Which series should be first?
 # 2. Which should be last?
 

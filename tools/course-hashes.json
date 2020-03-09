@@ -46,7 +46,7 @@
   "../solutions/winter\\value-at-risk-using-historical-simulation.ipynb": "37081170884a36acf4a0a556e15eee250a39d7574f45a9edc424e6014e4590f289cb14afbb9c3bef029895d8e51a523fb09bbb737f0d3137d5ba60a59fdc4f61",
   "../solutions/winter\\vector-ar-engle-granger-cointegration-testing.ipynb": "5af1f6cc60500525b7a408a2d03f1242baec8164cf34890d35c838cbc6416a77efe8e46cbd1f1ea5be4078b600bd4aec32732d072649fc6d845a3e50e4d7ed71",
   "../solutions/winter\\vector-ar-estimation.ipynb": "b145a161ec5889494c98b119ddd03c9c987cbf42e821bac9a7aac26e8d8321b76fae23b686adcf640e4ab673945c46aef3dc5df07354b40cb2016e679c245302",
-  "../solutions/winter\\vector-ar-granger-causality-testing.ipynb": "eade965b99307d30f7b4788b676caef43094b252dfa3f0d2726fc651feac64b17d07e066a6a132a854f8b9f5b98611c8890e15d4e3958a196bdca27bde102dab",
-  "../solutions/winter\\vector-ar-impulse-response-analysis.ipynb": "8e9f08616f975790f6b1e6233449d2034a57949bafeb61b7e85859c483999c2d66968158619554a961283d39e239702b02c8965bd665e6e5a7cf933f78638e45",
+  "../solutions/winter\\vector-ar-granger-causality-testing.ipynb": "664c4e835cb44cc4f5ff15589b89a724e61269e7e4d9ac6fd6a9029caa7a15c9fc860932ae2bc7bb1f4dc410c5c9aaf629f32f5b6cf5a5e4c21f5691e240d2f5",
+  "../solutions/winter\\vector-ar-impulse-response-analysis.ipynb": "74bb5c990bf9e276e0668b7f036422fe1bb7ae4e61a87db42caaccd2ddbd20a8dc461dd9182f19721ee76670c48b4d2ed4bc4f122c825e7415143be1823ac240",
   "../solutions/winter\\vector-ar-order-selection.ipynb": "01d0ebeed286dbd61e70a8d163d6e11c6e89fd86beab60e7540ce2798b695a9e26065938cf49c435b179ae278cf4b7ce7ac47f6a12f1f48004fd29ded503762f"
 }

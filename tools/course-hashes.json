@@ -41,12 +41,12 @@
   "../solutions/winter\\arch-model-estimation.ipynb": "50284b8e46d7925e15bcce3a83a413a1f8daf510ee6f0fdbea20f7d84a3725c89f1234dcd3b1fe2a78a42f47c5b5c8a90b295235108768afb220a861bc83bdc0",
   "../solutions/winter\\arch-model-forecasting.ipynb": "cfb172f19b88855f6978c39344ed402271cef5c9969040e774dd6c4654b09a15e3980839becaebb905c044c79b5c90b39a796094f2025a8c21a75961da55b350",
   "../solutions/winter\\arch-model-selection.ipynb": "e5f4a84926b3bb357e366074875a626d7552c46dad2d3b2353cdc7311daa1255f0a8e4bd998d094f531d904f952f5f40c0266fb29d0bb25cbfc876294294fb5a",
-  "../solutions/winter\\value-at-risk-forecast-evaluation.ipynb": "4737a1c0cd0dc13f7af7faaedc4c4aca49c2cb861be7f032db59eec0eda7d8a88186779404fcc70232af503a98d5ff6ae95fc207eda04b0999ae6dc240e31fe4",
-  "../solutions/winter\\value-at-risk-using-filtered-historical-simulation.ipynb": "8cd597e57424ba6d53500adea1ecec0863dad34234fea746a838646365e78e100d1b4aeb05360bcf542521d16c0c22e7d4720ffeb5781d74366ba2ac44fc4355",
-  "../solutions/winter\\value-at-risk-using-historical-simulation.ipynb": "7c229316ddf69874b1edbfe65fbdfaa1fafea5b849f9c89a9e122a72c1ef2a3c4f7b59cc50ec374666be80261dbed3cff8e3c5315c0523c17f550926fbfac7d2",
-  "../solutions/winter\\vector-ar-engle-granger-cointegration-testing.ipynb": "628177770aa068aa042097639c03b63a2f507b7490701c095aa9d4d5fbf81b533bae3de39a43e037c3f729a181d2b1e565e4e5a526f90213cddf9877c4189efe",
-  "../solutions/winter\\vector-ar-estimation.ipynb": "86faffcae57ccdf6c7f6b9adb5d18a691c80d1062f8f1ef2165eac0faff871d0f2f9a3290154946b42d96a5ebfbbde0b52c0764de8b0a195df60986944fd9dd5",
-  "../solutions/winter\\vector-ar-granger-causality-testing.ipynb": "9cae1756d99b45eb1baeefe0a64a0e63cd30ef19b1dc1df49227f01fa23e62eee5463927b21333ab90b89de5af3f92c0a5af8790a998b830f6df06d03c8bedcc",
-  "../solutions/winter\\vector-ar-impulse-response-analysis.ipynb": "0ff23e3ca3a23bd9bc382ff6bdb699071a234a13386025c78b584f2b66305648e3a70d2db82413d4a1f5c8e1a3251bd9ac93e9defd599bfc8f9139cc0e2d3094",
-  "../solutions/winter\\vector-ar-order-selection.ipynb": "491fa4037c78d6ee115f53faa78bb2e9f93b0567d973154e037838dde85a3fa524f47b6504e9722e8a7543d8997ac8cd244caab51f59e3fc3788edfb23af2ead"
+  "../solutions/winter\\value-at-risk-forecast-evaluation.ipynb": "3510a70732be487af1650eb556dc14cf325f1f36fe075b0ce8b83929daf623fe8a4f807b90cf3902c48e7cdc3b0e9ef68737687aa37cd2ae0417aaf73edb5ff4",
+  "../solutions/winter\\value-at-risk-using-filtered-historical-simulation.ipynb": "20a8d28dc85872304943e394fb2bb5d57e7ed5fd10b8992a2eb25fc3d474aa73508a4f5e86f72958f887621d35e171defb42e03420978b2e98424417b7531f96",
+  "../solutions/winter\\value-at-risk-using-historical-simulation.ipynb": "37081170884a36acf4a0a556e15eee250a39d7574f45a9edc424e6014e4590f289cb14afbb9c3bef029895d8e51a523fb09bbb737f0d3137d5ba60a59fdc4f61",
+  "../solutions/winter\\vector-ar-engle-granger-cointegration-testing.ipynb": "5af1f6cc60500525b7a408a2d03f1242baec8164cf34890d35c838cbc6416a77efe8e46cbd1f1ea5be4078b600bd4aec32732d072649fc6d845a3e50e4d7ed71",
+  "../solutions/winter\\vector-ar-estimation.ipynb": "b145a161ec5889494c98b119ddd03c9c987cbf42e821bac9a7aac26e8d8321b76fae23b686adcf640e4ab673945c46aef3dc5df07354b40cb2016e679c245302",
+  "../solutions/winter\\vector-ar-granger-causality-testing.ipynb": "eade965b99307d30f7b4788b676caef43094b252dfa3f0d2726fc651feac64b17d07e066a6a132a854f8b9f5b98611c8890e15d4e3958a196bdca27bde102dab",
+  "../solutions/winter\\vector-ar-impulse-response-analysis.ipynb": "8e9f08616f975790f6b1e6233449d2034a57949bafeb61b7e85859c483999c2d66968158619554a961283d39e239702b02c8965bd665e6e5a7cf933f78638e45",
+  "../solutions/winter\\vector-ar-order-selection.ipynb": "01d0ebeed286dbd61e70a8d163d6e11c6e89fd86beab60e7540ce2798b695a9e26065938cf49c435b179ae278cf4b7ce7ac47f6a12f1f48004fd29ded503762f"
 }

@@ -49,7 +49,7 @@
 # Plot rolling estimates of the four moments using 120 months of consecutive data using a
 # 4 by 1 subplot against the dates.
 # 
-# The simple approach to this problem uses a loop accross 120, 121, ..., $n$ and computes
+# The simple approach to this problem uses a loop across 120, 121, ..., $n$ and computes
 # the statistics using 120 observations. The figure is then created with a call to `plt.subplots`
 # and the series can be directly plotted by calling `ax.plot`.
 # 

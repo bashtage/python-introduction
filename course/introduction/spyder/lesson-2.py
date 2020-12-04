@@ -160,7 +160,7 @@
 #%%
 # ### Exercise: Directly create a Dictionary
 # 
-# Using the final verion of `dct` from the previous exercise:
+# Using the final version of `dct` from the previous exercise:
 # 
 # 1. Directly initialize a new dictionary called `other_dct`.
 # 2. Use an f-string to print the values associated with each key.

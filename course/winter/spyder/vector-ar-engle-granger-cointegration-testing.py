@@ -34,7 +34,7 @@
 #%%
 # ### Exercise 77
 # 
-# Download monthlly WTI and Brent crude prices from the [EIA](https://www.eia.gov/) and import them.
+# Download monthly WTI and Brent crude prices from the [EIA](https://www.eia.gov/) and import them.
 # Examine whether the log prices are cointegrated.
 
 #%%

@@ -8,7 +8,7 @@
 # 
 # `tsa.VAR`
 # 
-# ### Exercise 68
+# ### Exercise 91
 # Using the same data as in the previous exercise, determine the optimal VAR order using:
 # 
 # 1. AIC

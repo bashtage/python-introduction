@@ -8,7 +8,7 @@
 # 
 # `arch_model`, `ARCHModelResult.std_resid`, `np.percentile`
 # 
-# ### Exercise 59
+# ### Exercise 82
 # Use a GARCH(1,1) model to construct filtered historical VaR for the S&P 500 and
 # the EUR/USD exchange rate, using 10 years of data.
 # 

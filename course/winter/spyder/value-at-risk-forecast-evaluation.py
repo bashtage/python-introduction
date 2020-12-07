@@ -9,7 +9,7 @@
 # `sm.OLS`, `stats.bernoulli`
 
 #%%
-# ### Exercise 60
+# ### Exercise 83
 #     
 # Compare this VaR to the HS VaR in the previous example.
 # 
@@ -19,7 +19,7 @@
 
 
 #%%
-# ### Exercise 61
+# ### Exercise 84
 # Evaluate the FHS and HS VaR forecasts constructed in the previous exercises using:
 # 
 # * HIT tests

@@ -1,17 +1,27 @@
 """
 Execute and then clear code and output from solutions notebooks.
 """
+import asyncio
 import copy
 import glob
-from hashlib import sha512
 import json
 import os
+import sys
+from hashlib import sha512
 
 import nbconvert.preprocessors as pre
-from nbconvert.preprocessors import ExecutePreprocessor
 import nbformat
+from nbconvert.preprocessors import ExecutePreprocessor
 
 from spyder import export_for_spyder
+
+# See https://bugs.python.org/issue37373 :(
+if (
+    sys.version_info[0] == 3
+    and sys.version_info[1] >= 8
+    and sys.platform.startswith("win")
+):
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 if os.path.exists("course-hashes.json"):
     with open("course-hashes.json", "r") as hash_file:

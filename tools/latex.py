@@ -1,12 +1,23 @@
 """
 Tools for manipulating the LaTeX produced from notebooks
 """
-from collections.abc import MutableMapping
+import asyncio
 import os
+import sys
+from collections.abc import MutableMapping
 
-from nbconvert import LatexExporter
+import nbclient
 import nbconvert.preprocessors as pre
 import nbformat
+from nbconvert import LatexExporter
+
+# See https://bugs.python.org/issue37373 :(
+if (
+    sys.version_info[0] == 3
+    and sys.version_info[1] >= 8
+    and sys.platform.startswith("win")
+):
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 REPLACEMENTS = {
     r"\maketitle": "",
@@ -49,7 +60,7 @@ def execute_and_clear(notebook_file_name, source_dir, delete_repeated=True):
             del cell["metadata"]["pycharm"]
         replacements.append(cell)
     nb["cells"] = replacements
-    executed = pre.execute.executenb(nb, cwd=source_dir)
+    executed = nbclient.execute(nb, cwd=source_dir)
     cop = pre.ClearOutputPreprocessor()
     nb, _ = cop.preprocess(executed, {})
     return nb

@@ -8,7 +8,7 @@
 # 
 # `sm.tsa.SARIMAX`
 # 
-# ### Exercise 44
+# ### Exercise 68
 # Perform a model selection exercise on the term premium using
 # 
 # 1. General-to-Specific

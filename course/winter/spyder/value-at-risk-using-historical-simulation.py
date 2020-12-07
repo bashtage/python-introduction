@@ -9,7 +9,7 @@
 # `Series.quantile`, `Series.rolling`
 
 #%%
-# ### Exercise 58
+# ### Exercise 81
 # Compute the 1-, 5- and 10-day historical simulation VaR for the S&P 500 and
 # the EUR/USD rate.
 # 

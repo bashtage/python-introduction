@@ -9,7 +9,7 @@
 # `tsa.SARIMAX`, `sm.stats.diagnostic.acorr_ljungbox`, `SARIMAXResults.test_serial_correlation`,
 # `statsmodels.sandbox.stats.diagnostic.acorr_lm`
 # 
-# ### Exercise 45
+# ### Exercise 69
 # Compute the residuals from your preferred model from the previous exercise, as well as a random-walk model.
 # 
 # 1. Plot the residuals

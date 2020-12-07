@@ -1,16 +1,27 @@
 """
 Execute and then clear code and output from solutions notebooks.
 """
-from collections.abc import MutableMapping
+import asyncio
 import copy
 import glob
 import os
+import sys
+from collections.abc import MutableMapping
 
+import nbclient
 import nbconvert
 import nbconvert.preprocessors as pre
 import nbformat
 
 from latex import key
+
+# See https://bugs.python.org/issue37373 :(
+if (
+    sys.version_info[0] == 3
+    and sys.version_info[1] >= 8
+    and sys.platform.startswith("win")
+):
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
 def export_for_spyder(nb):
@@ -48,7 +59,7 @@ nb_files = sorted(nb_files, key=lambda v: key(v))
 for nb_file in nb_files:
     print(f"Processing {nb_file}")
     nb = nbformat.read(nb_file, 4)
-    executed = pre.execute.executenb(nb, cwd=source_dir, kernel_name="python3")
+    executed = nbclient.execute(nb, cwd=source_dir, kernel_name="python3")
     print(f"Writing executed version of {nb_file}")
     nbformat.write(executed, nb_file, nbformat.NO_CONVERT)
     cop = pre.ClearOutputPreprocessor()
@@ -103,7 +114,7 @@ print("Exporting demo to python")
 demo = "../course/introduction/demo.ipynb"
 nb = nbformat.read(demo, 4)
 # Verify that it executes
-executed = pre.execute.executenb(nb, cwd=source_dir, kernel_name="python3")
+executed = nbclient.execute(nb, cwd=source_dir, kernel_name="python3")
 cop = pre.ClearOutputPreprocessor()
 nb, _ = cop.preprocess(executed, {})
 for cell in nb["cells"]:

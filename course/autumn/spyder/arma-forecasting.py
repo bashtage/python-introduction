@@ -8,7 +8,7 @@
 # 
 # `tsa.SARIMAX.forecast`
 # 
-# ### Exercise 46
+# ### Exercise 70
 # Produce 1-step forecasts from your preferred model in the previous exercise, as well
 # as a random-walk model. 
 # 
@@ -21,7 +21,7 @@
 
 
 #%%
-# ### Exercise 47
+# ### Exercise 71
 # 
 # Produce 3-step forecasts from the models selected in the previous exercises as well as a random walk model.
 # 

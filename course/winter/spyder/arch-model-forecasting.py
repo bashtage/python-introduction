@@ -9,7 +9,7 @@
 # `sm.OLS`, `sm.WLS`
 # 
 # 
-# ### Exercise 54
+# ### Exercise 77
 # 
 # Use 50% of the sample to estimate your preferred GARCH model for returns to the S&P 500 and the
 # EUR/USD rate, and construct forecasts for the remaining period.
@@ -18,7 +18,7 @@
 
 
 #%%
-# ### Exercise 55
+# ### Exercise 78
 # 
 # Evaluate the accuracy of the forecasts.
 
@@ -34,7 +34,7 @@
 
 
 #%%
-# ### Exercise 56
+# ### Exercise 79
 # 
 # Evaluate the accuracy of forecasts from a 2-year backward moving average variance.
 
@@ -42,7 +42,7 @@
 
 
 #%%
-# ### Exercise 57
+# ### Exercise 80
 # 
 # Compare the ARCH-model forecasts to a naive 2-year backward looking moving average using QLIKE.
 

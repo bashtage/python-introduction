@@ -8,7 +8,7 @@
 # 
 # `sm.tsa.stattools.adfuller`, `arch.unitroot.ADF` 
 # 
-# ### Exercise 48
+# ### Exercise 72
 # Download data on the AAA and BAA yields (Moodys) from FRED and construct the
 # default premium as the difference between these two.
 # 
@@ -19,7 +19,7 @@
 
 
 #%%
-# ### Exercise 49
+# ### Exercise 73
 # 
 # Download data on consumer prices in the UK from the ONS.
 # 

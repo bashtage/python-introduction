@@ -12,7 +12,7 @@
 
 
 #%%
-# ### Exercise 51
+# ### Exercise 74
 # 
 # Estimate a GARCH(1,1) and a GJR-GARCH(1,1,1) to the returns of both series.
 # 
@@ -30,7 +30,7 @@
 
 
 #%%
-# ### Exercise 52
+# ### Exercise 75
 # Comment on the asymmetry.
 # 
 #   * Compare robust and non-robust standard errors.

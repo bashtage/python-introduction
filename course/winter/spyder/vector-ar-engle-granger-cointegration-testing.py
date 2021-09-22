@@ -3,11 +3,11 @@
 
 #%%
 # ## Cointegration Testing using Engle-Granger
-# 
+#
 # **Functions**
-# 
+#
 # `tsa.adfuller`, `tsa.coint`
-# 
+#
 # ### Exercise 97
 # Download data on $CAY$ from [Martin Lettau’s site](https://sites.google.com/view/martinlettau/data).
 
@@ -33,9 +33,8 @@
 
 #%%
 # ### Exercise 100
-# 
+#
 # Download monthly WTI and Brent crude prices from the [EIA](https://www.eia.gov/) and import them.
 # Examine whether the log prices are cointegrated.
 
 #%%
-

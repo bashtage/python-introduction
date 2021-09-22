@@ -2,15 +2,15 @@
 # coding: utf-8
 
 #%%
-# # Boolean Selection 
-# 
+# # Boolean Selection
+#
 # This lesson covers:
-# 
+#
 # * Boolean selection
 # * `where`
-# 
+#
 # Begin by loading the data in momentum.csv.
-# 
+#
 
 #%%
 # Setup: Load the momentum data
@@ -25,7 +25,7 @@ print(momentum.head())
 
 #%%
 # ## Problem: Selecting rows with boolean conditions
-# 
+#
 # Select the rows in `momentum` where all returns on a day are negative.
 
 #%%
@@ -33,7 +33,7 @@ print(momentum.head())
 
 #%%
 # ## Problem: Selecting rows
-# 
+#
 # Select the rows in `momentum` where 50% or more of the returns on a day are negative.
 
 #%%
@@ -41,7 +41,7 @@ print(momentum.head())
 
 #%%
 # ## Problem: Selecting columns
-# 
+#
 # Select the columns in `momentum` what have the smallest and second smallest average returns.
 
 #%%
@@ -55,9 +55,9 @@ print(momentum.head())
 
 #%%
 # ## Problem: Selecting rows and columns
-# 
+#
 # Select the returns for the column with the single most negative return
-# on days where all of the returns are negative. 
+# on days where all of the returns are negative.
 
 #%%
 
@@ -67,9 +67,9 @@ print(momentum.head())
 
 #%%
 # ## Problem: Selecting Elements using Logical Statements
-# For portfolio 1 and portfolio 10 compute the correlation when both 
+# For portfolio 1 and portfolio 10 compute the correlation when both
 # returns are negative and when both are positive.
-# 
+#
 
 #%%
 
@@ -81,7 +81,7 @@ print(momentum.head())
 # Setup: Reproducible random numbers
 
 rs = np.random.RandomState(19991231)
-x = rs.randint(1, 11, size=(10,3))
+x = rs.randint(1, 11, size=(10, 3))
 x
 
 
@@ -120,9 +120,9 @@ x
 
 #%%
 # ## Exercises
-# 
+#
 # ### Exercise: Select the Most Volatile Portfolio
-# 
+#
 # Select the column in momentum that has the highest standard deviation.
 
 #%%
@@ -130,18 +130,18 @@ x
 
 #%%
 # ### Exercise: Select the High Kurtosis Portfolios
-# 
+#
 # Select the columns that have kurtoses above the median kurtosis.
 
 #%%
 
 
 #%%
-# ### Exercise: Select 
-# 
+# ### Exercise: Select
+#
 # Select the rows where all of the returns in the row are less than the 25%
 # quantile for their portfolio.
-# 
+#
 # **Note**: Comparisons between `DataFrame`s and `Series` works like mathematical
 # operations (`+`, `-`, etc.).
 
@@ -149,4 +149,3 @@ x
 
 
 #%%
-

@@ -3,10 +3,10 @@
 
 #%%
 # # Graphics: Other Plots
-# 
+#
 # This lesson covers:
-# 
-# * Histograms 
+#
+# * Histograms
 # * Scatter Plots
 
 #%%
@@ -16,7 +16,11 @@
 #%%
 # Setup
 from IPython import get_ipython
-get_ipython().run_line_magic('matplotlib', 'inline')
+
+get_ipython().run_line_magic("matplotlib", "inline")
+import matplotlib.pyplot as plt
+
+plt.rc("figure", figsize=(16, 6))  # Improves figure size
 
 
 #%%
@@ -29,7 +33,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 #%%
 # ## Problem: Histogram
-# 
+#
 # Produce a histogram of MSFT 1-minute returns (Hint: you have to produce
 # the 1-minute Microsoft returns first using `resample` and `pct_change`).
 
@@ -38,18 +42,18 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 #%%
 # ## Problem: Scatter Plot
-# 
+#
 # Scatter the 5-minute MSFT returns against the 5-minute IBM returns.
-# 
+#
 # *Hint*: You will need to create both 5-minute return series, merge them,
-# and then plot using the combined DataFrame. 
+# and then plot using the combined DataFrame.
 
 #%%
 
 
 #%%
 # ## Problem: Saving plots
-# 
+#
 # Save the previous plot to PNG and PDF.
 
 #%%
@@ -57,9 +61,9 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 #%%
 # ## Exercises
-# 
+#
 # ### Exercise: Visualize 5 and 10 minute returns
-# 
+#
 # Produce a 2 by 1 subplot with a histogram of the 5-minute returns of IBM in the
 # top panel and 10-minute returns of IBM in the bottom. Set an appropriate title on
 # each of the 2 plots.
@@ -68,17 +72,17 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 #%%
-# ### Exercise: Export the result of the previous exercise to JPEG and PDF   
-# 
+# ### Exercise: Export the result of the previous exercise to JPEG and PDF
+#
 
 #%%
 
 
 #%%
 # ## Exercise: Plot histograms and a scatter plot
-# 
+#
 # Produce a 2 by 2 subplot with:
-# 
+#
 # * Create a square figure with a size of 10 by 10 using `plt.rc`
 # * Histograms of IBM and MSFT on the diagonals
 # * Scatter plots on the off-diagonals where the x and y line up with the
@@ -92,8 +96,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 
 #%%
 # ### Exercise: Use pandas plotting tools
-# 
+#
 # Use `pandas.plotting.scatter_matrix` to produce a similar plot to the previous exercise.
 
 #%%
-

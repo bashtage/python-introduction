@@ -4,11 +4,11 @@
 #%%
 # Vector Autoregressions
 # ## Vector Autoregresion (VAR) Estimation
-# 
+#
 # **Functions**
-# 
+#
 # `tsa.VAR`
-# 
+#
 # ### Exercise 85
 # Download data on 10-year interest rates, 1-year interest rates and the
 # GDP deflator from FRED.
@@ -34,7 +34,7 @@
 #%%
 # ### Exercise 88
 # What are the “own” effects?
-# 
+#
 
 #%%
 
@@ -51,4 +51,3 @@
 # How could you get a sense of the persistence of this system?
 
 #%%
-

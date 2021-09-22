@@ -3,9 +3,9 @@
 
 #%%
 # ## ARMA Modeling: Estimation
-# 
+#
 # **Functions**
-# 
+#
 # `tsa.SARIMAX`
 
 #%%
@@ -30,4 +30,3 @@
 # Estimate an ARMA(1,1) on the term premium, and compute standard errors for the parameters.
 
 #%%
-

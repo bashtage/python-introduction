@@ -3,11 +3,11 @@
 
 #%%
 # ## Linear Regression: Model Estimation
-# 
+#
 # **Functions**
-# 
+#
 # `sm.OLS`
-# 
+#
 # ### Exercise 32
 # Use the OLS function to estimate the coefficients of the Fama-French portfolios (monthly data) on the
 # market, size and value factors. Include a constant in the regressions. Use only the four
@@ -20,7 +20,7 @@
 #%%
 # ### Exercise 33
 # Are the parameter standard errors similar using the two covariance estimators?
-# If not, what does this mean? 
+# If not, what does this mean?
 
 #%%
 
@@ -30,4 +30,3 @@
 # How much of the variation is explained by these three regressors?
 
 #%%
-

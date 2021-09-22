@@ -3,11 +3,11 @@
 
 #%%
 # ## Impulse Responses
-# 
+#
 # **Functions**
-# 
+#
 # `VARResults.irf`
-# 
+#
 # ### Exercise 94
 # Plot the impulse responses from both a first order model and
 # the model selected in the order selection exercise.
@@ -29,4 +29,3 @@
 # 2. Which should be last?
 
 #%%
-

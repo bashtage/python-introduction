@@ -3,11 +3,11 @@
 
 #%%
 # ## Linear Regression: Model Selection and Cross-Validation
-# 
+#
 # Functions
-# 
+#
 # `RandomState.permute`, `sm.OLS`, `set`, `scipy.random.norm.ppf`, `np.linspace`, `np.mean`
-# 
+#
 # ### Exercise 39
 # Four portfolios we have been looking at, and considering all 8 sets of
 # regressors which range from no factor to all 3 factors, which model is preferred
@@ -26,7 +26,7 @@
 # k-equally-sized groups, using k-1 of the groups to estimate parameters, and
 # then evaluating using the bin that was held out. This is then repeated so that
 # each bin is held out.
-# 
+#
 # 1. Implement cross-validation using the 5- and 10-fold methods for all 8 models.
 # 2. For each model, compute the full-sample sum of squared errors as well as the
 #    sum-of-squared errors using the held-out sample. Note that all data points
@@ -35,4 +35,3 @@
 #    to the full-sample $R^{2}$? (k-fold cross validated SSE by the TSS).
 
 #%%
-

@@ -12,7 +12,6 @@ from hashlib import sha512
 import nbconvert.preprocessors as pre
 import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
-
 from spyder import export_for_spyder
 
 # See https://bugs.python.org/issue37373 :(

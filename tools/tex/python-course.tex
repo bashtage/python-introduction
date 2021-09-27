@@ -56,6 +56,7 @@
 \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
                             % normalem makes italics be italics, not underlines
 \usepackage{mathrsfs}
+\usepackage{datetime}
 
 
 
@@ -385,11 +386,16 @@ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
 \renewcommand{\cfttabfont}{\sffamily\selectfont}
 \renewcommand{\cfttabpagefont}{\sffamily\selectfont}
 
+
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+
 \title{Python Companion Course}
 \author{Kevin Sheppard\\
 University of Oxford\\
 \href{https://www.kevinsheppard.com}{www.kevinsheppard.com}}
-\date{September 2019}
+\date{\monthyeardate \today}
 \begin{document}
 
 
@@ -403,7 +409,7 @@ University of Oxford\\
 \vfill{}
 
 \begin{center}
-\textsf{\footnotesize{}©}2019 Kevin Sheppard
+\textsf{\footnotesize{}©} \the\year{} Kevin Sheppard
 \par\end{center}
 \thispagestyle{empty}\tableofcontents{}\thispagestyle{empty}\pagenumbering{gobble}
 \mainmatter

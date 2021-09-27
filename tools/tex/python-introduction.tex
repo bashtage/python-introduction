@@ -56,6 +56,7 @@
 \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
                             % normalem makes italics be italics, not underlines
 \usepackage{mathrsfs}
+\usepackage{datetime}
 
 
 
@@ -338,14 +339,15 @@
     \llap{{\color{#2}[#3]: #4}}\vspace{-1.25em}
 }
 
-
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
 
 % Prevent overflowing lines due to hard-to-break entities
 \title{Python Introduction}
 \author{Kevin Sheppard\\
 University of Oxford\\
 \href{https://www.kevinsheppard.com}{www.kevinsheppard.com}}
-\date{September 2019}
+\date{\monthyeardate\today}
 
 \sloppy
 \pagestyle{plain}
@@ -409,22 +411,22 @@ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
 \vfill{}
 
 \begin{center}
-\textsf{\footnotesize{}©}2019 Kevin Sheppard
+\textsf{\footnotesize{}©} \the\year{} Kevin Sheppard
 \par\end{center}
 
 \thispagestyle{empty}\tableofcontents{}\thispagestyle{empty}\pagenumbering{gobble}
 \frontmatter
 \include{installation}
 \mainmatter
-\include{lesson-1}
-\include{lesson-2}
-\include{lesson-3}
-\include{lesson-4}
-\include{lesson-5}
-\include{lesson-6}
-\include{lesson-7}
-\include{lesson-8}
-\include{lesson-9}
+\include{lesson-01}
+\include{lesson-02}
+\include{lesson-03}
+\include{lesson-04}
+\include{lesson-05}
+\include{lesson-06}
+\include{lesson-07}
+\include{lesson-08}
+\include{lesson-09}
 \include{lesson-10}
 \include{lesson-11}
 \include{lesson-12}

@@ -6,9 +6,8 @@
 #
 # ## Install Anaconda
 #
-# 1. Download the [Anaconda Python/R Distribution](https://www.anaconda.com/distribution/#download-section) 2019.07 (or later).
+# 1. Download the [Anaconda Python/R Distribution](https://www.anaconda.com/distribution/#download-section) 2021.05 (or later).
 # 2. When the download is complete, install into your user account.
-#
 
 #%%
 # ## Install Visual Studio Code and the Python extension

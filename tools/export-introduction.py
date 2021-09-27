@@ -24,12 +24,17 @@ for nb_file in nb_files:
     base, _ = os.path.splitext(base)
     to_export = strip_latex(nb)
     if base == "installation":
-        to_export = to_export.replace(r"\section{", r"\section*{")
+        while r"\section{" in to_export:
+            to_export = to_export.replace(r"\section{", r"\section*{")
     if base == "final-exam":
         to_export = to_export.replace(r"\chapter{", r"\chapter*{")
         extra = "\\addcontentsline{toc}{chapter}{Final Exam}\n"
         loc = to_export.find("}}")
         to_export = to_export[: loc + 2] + extra + to_export[(loc + 2) :]
+    to_export = to_export.replace(r"\section{Course Structure}", r"\section*{Course Structure}")
+    to_export = to_export.replace(r"\subsection{Problems}", r"\subsection*{Problems}")
+    to_export = to_export.replace(r"\subsection{Final Exam}", r"\subsection*{Final Exam}")
+    #
     with open(os.path.join(latex_dir, base + ".tex"), "w") as output:
         output.write(to_export)
 

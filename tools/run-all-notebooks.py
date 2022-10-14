@@ -1,8 +1,9 @@
-import nbformat
-from nbconvert.preprocessors import ExecutePreprocessor
 import glob
 import os
-from asyncio import set_event_loop_policy, WindowsSelectorEventLoopPolicy
+from asyncio import WindowsSelectorEventLoopPolicy, set_event_loop_policy
+
+import nbformat
+from nbconvert.preprocessors import ExecutePreprocessor
 
 set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 
@@ -21,10 +22,20 @@ for name in AUTUMN_ORDER:
     final.extend(sorted([f for f in AUTUMN_NB if name in f]))
 for name in WINTER_ORDER:
     final.extend(sorted([f for f in WINTER_NB if name in f]))
+final = [f for f in final if not f.endswith("executed.ipynb")]
+# Reorder VaR notebooks
+to_reorder = [nb for nb in final if "value-at-risk-forecast-evaluation.ipynb" in nb]
+final.remove(to_reorder[0])
+for i, val in enumerate(final):
+    if val.startswith("vector"):
+        break
+final.insert(i, to_reorder[0])
+
 for notebook_filename in final:
     out = notebook_filename.replace(".ipynb", "-executed.ipynb")
     if os.path.exists(out):
         print(f"Skipping {notebook_filename}")
+        continue
     print(f"Reading {notebook_filename}")
     with open(notebook_filename) as f:
         nb = nbformat.read(f, as_version=4)

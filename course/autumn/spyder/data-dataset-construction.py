@@ -50,7 +50,7 @@
 #    monthly and daily horizon from [Ken French"s Data Library](http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html).
 #    **Note** It is much easier to clean to data file before importing than to find the precise
 #    command that will load the unmodified data.
-# 2. Import daily FX rate data for USD against AUD, Euro, JPY and GBP from the [Federal Reserve Economic Database (FRED)](http://research.stlouisfed.org/fred2/categories/94). Use Excel (xlsx) rather than csv files.
+# 2. Import daily FX rate data for USD against AUD, Euro, JPY and GBP from the [Federal Reserve Economic Database (FRED)](http://research.stlouisfed.org/fred2/categories/94). Use Excel (xls) rather than csv files.
 # 3. Save the data to the HDF files "fama-french.h5" and "fx.h5"
 
 # %%

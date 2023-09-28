@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # ## ARMA Modeling: Model Selection
 #
 # **Functions**
@@ -17,4 +17,4 @@
 #
 # **Note**: Some models, especially if not well specified, may show various warnings. These can be ignored
 
-#%%
+# %%

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # ## Expectations
 #
 # **Functions**
@@ -9,7 +9,7 @@
 # `np.random.RandomState`, `RandomState.standard_normal`, `RandomState.standard_t`, `RandomState.chi2`,
 # `np.exp`, `np.mean`, `np.std`, `scipy.integrate.quadrature`, `scipy.integrate.quad`
 
-#%%
+# %%
 # ### Exercise 11
 #
 # Compute $E\left[X\right]$, $E\left[X^{2}\right]$, $V\left[X\right]$ and the kurtosis of $X$ using Monte Carlo integration when $X$ is distributed:
@@ -21,68 +21,68 @@
 #
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 # Standard Normal
 
-#%%
+# %%
 
 
-#%%
+# %%
 # $t_8$
 
-#%%
+# %%
 
 
-#%%
+# %%
 # $\chi^2_5$
 
-#%%
+# %%
 
 
-#%%
+# %%
 # $N(8\%, 20\%^2)$
 
-#%%
+# %%
 
 
-#%%
+# %%
 # Function are useful for avoiding many blocks of repetitive code.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 12
 #
 # 1. Compute $E\left[\exp\left(X\right)\right]$ when $X\sim N\left(0.08,0.2^{2}\right)$.
 # 2. Compare this to the analytical result for a Log-Normal random variable.
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 13
 #
 # Explore the role of uncertainty in Monte Carlo integration by increasing the number of simulations 300% relative to the base case.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 14
 #
 # Compute the $N(8\%, 20\%^2)$  expectation in exercise 11 using quadrature.
 #
 # **Note**: This requires writing a function which will return $\exp\left(x\right)\times\phi\left(x\right)$ where $\phi\left(x\right)$ is the pdf evaluated at $x$.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 15
 #
 # **Optional** (Much more challenging)

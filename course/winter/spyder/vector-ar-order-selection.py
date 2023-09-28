@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # ## VAR Model Order Selection
 #
 # **Functions**
@@ -16,4 +16,4 @@
 # 3. BIC
 # 4. Likelihood-ratio testing using General-to-Specific
 
-#%%
+# %%

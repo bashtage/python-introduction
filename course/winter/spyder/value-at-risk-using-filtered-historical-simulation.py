@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # ## Value-at-Risk: Using Filtered Historical Simulation
 #
 # **Functions**
@@ -16,4 +16,4 @@
 # historical simulation at 25% of the data, and then build the additional forecasts
 # using a recursive scheme.
 
-#%%
+# %%

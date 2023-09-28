@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # # Custom Functions
 #
 # This lesson covers:
 #
 # * Writing a custom function
 
-#%%
+# %%
 # ## Problem: Writing a Custom Function
 # Custom functions will play an important role later in the course when
 # estimating parameters. Construct a custom function that takes two arguments,
@@ -22,16 +22,16 @@
 #
 # The text in the triple quotes is the docstring which is optional.
 
-#%%
+# %%
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Exercises
 #
 # ### Exercise: Custom Function
@@ -46,23 +46,23 @@
 # summary_stats(momentum)
 # ```
 
-#%%
+# %%
 # Setup: Load the momentum data
 import pandas as pd
 
 momentum = pd.read_csv("data\momentum.csv", index_col="date", parse_dates=True)
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 # Test your function using the momentum data in the next cell.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise: Custom Function
 #
 # Change your previous function to return 4 outputs, each a pandas Series for the mean,
@@ -75,10 +75,10 @@ momentum = pd.read_csv("data\momentum.csv", index_col="date", parse_dates=True)
 #
 # Test your function using the momentum data.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # Test your function using the momentum data in the next cell.
 
-#%%
+# %%

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # ## ARMA Modeling: Unit Root Testing
 #
 # **Functions**
@@ -15,10 +15,10 @@
 # 1. Test the default premium for a unit root.
 # 2. If you find a unit root, test the change.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 73
 #
 # Download data on consumer prices in the UK from the ONS.
@@ -26,4 +26,4 @@
 # 1. Test the log of CPI for a unit root.
 # 2. If you find a unit root, test inflation for one.
 
-#%%
+# %%

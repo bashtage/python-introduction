@@ -1,9 +1,19 @@
+import argparse
 import glob
 import os
 from asyncio import WindowsSelectorEventLoopPolicy, set_event_loop_policy
 
 import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
+
+parser = argparse.ArgumentParser(description="Run notebook files")
+parser.add_argument(
+    "--force", "-f", action="store_true", help="Force notebooks to execute"
+)
+parser.add_argument(
+    "--nonstop", "-n", action="store_true", help="Run ignoring exceptions"
+)
+args = parser.parse_args()
 
 set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 
@@ -33,7 +43,7 @@ final.insert(i, to_reorder[0])
 
 for notebook_filename in final:
     out = notebook_filename.replace(".ipynb", "-executed.ipynb")
-    if os.path.exists(out):
+    if os.path.exists(out) and not args.force:
         print(f"Skipping {notebook_filename}")
         continue
     print(f"Reading {notebook_filename}")
@@ -41,8 +51,17 @@ for notebook_filename in final:
         nb = nbformat.read(f, as_version=4)
     path = os.path.split(notebook_filename)[0]
     ep = ExecutePreprocessor(timeout=600, kernel_name="python3")
-    ep.preprocess(nb, {"metadata": {"path": path + "/"}})
-
-    print(f"Writing {out}")
-    with open(out, "w", encoding="utf-8") as f:
-        nbformat.write(nb, f)
+    write_file = True
+    try:
+        ep.preprocess(nb, {"metadata": {"path": path + "/"}})
+    except Exception as exc:
+        write_file = False
+        if args.nonstop:
+            print(f"!! FAILURE: Problem executing {notebook_filename} !!.")
+        else:
+            raise exc
+        
+    if write_file:
+        print(f"Writing {out}")
+        with open(out, "w", encoding="utf-8") as f:
+            nbformat.write(nb, f)

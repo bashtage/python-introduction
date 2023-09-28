@@ -54,7 +54,7 @@ def generate_cover(lesson_name, subtitle):
     rem = int.from_bytes(sha.digest(), "little")
     seed = []
     while rem:
-        seed.append(rem % 2 ** 32)
+        seed.append(rem % 2**32)
         rem >>= 32
     seed = np.array(seed, dtype=np.uint32)
     rs = np.random.RandomState(seed)

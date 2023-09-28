@@ -31,9 +31,13 @@ for nb_file in nb_files:
         extra = "\\addcontentsline{toc}{chapter}{Final Exam}\n"
         loc = to_export.find("}}")
         to_export = to_export[: loc + 2] + extra + to_export[(loc + 2) :]
-    to_export = to_export.replace(r"\section{Course Structure}", r"\section*{Course Structure}")
+    to_export = to_export.replace(
+        r"\section{Course Structure}", r"\section*{Course Structure}"
+    )
     to_export = to_export.replace(r"\subsection{Problems}", r"\subsection*{Problems}")
-    to_export = to_export.replace(r"\subsection{Final Exam}", r"\subsection*{Final Exam}")
+    to_export = to_export.replace(
+        r"\subsection{Final Exam}", r"\subsection*{Final Exam}"
+    )
     #
     with open(os.path.join(latex_dir, base + ".tex"), "w") as output:
         output.write(to_export)

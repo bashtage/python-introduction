@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # # Final Exam
 #
 # This self-grading notebook serves as a final exam for the introductory course.
@@ -19,14 +19,14 @@
 #
 # _Note_: This answer is not assessed.
 
-#%%
+# %%
 # Setup: The solution is used as a model
 import numpy as np
 
 QUESTION_0 = np.ones(3)
 
 
-#%%
+# %%
 # ## Question 1
 #
 # Construct the correlation matrix
@@ -35,10 +35,10 @@ QUESTION_0 = np.ones(3)
 #
 # as a NumPy array.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 2
 #
 # Construct the correlation matrix
@@ -47,29 +47,29 @@ QUESTION_0 = np.ones(3)
 #
 # as a DataFrame with columns and index both equal to `['A', 'B', 'C']`.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 3
 #
 # Load the momentum data in the CSV file `momentum.csv`, set the column `date`
 # as the index, and ensure that `date` is a `DateTimeIndex`.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 4
 #
 # Construct a DataFrame using the data loaded in the previous question
 # that contains the returns from momentum portfolio 5 in March and April 2016.
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 5
 #
 # What is the standard deviation of the data:
@@ -78,20 +78,20 @@ QUESTION_0 = np.ones(3)
 #
 # **Note** Use 1 degree of freedom in the denominator.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 6
 #
 # Compute the correlation matrix of momentum portfolios 1, 4, 6, and 10 as a DataFrame
 # where the index and columns are the portfolio names (e.g., 'mom_01') in the order
 # listed above.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 7
 #
 # Compute the percentage of returns of each of the 10 momentum portfolios
@@ -104,20 +104,20 @@ QUESTION_0 = np.ones(3)
 # names ordered from 1 to 10.
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 8
 #
 # Import the data the data in the sheet `question 8` in `final-exam.xlsx` into
 # a DataFrame where the index contains the dates and variable name is the column
 # name.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 9
 #
 # Enter the DataFrame in the table below and save it to HDF with the key 'question9'. The answer to
@@ -141,10 +141,10 @@ QUESTION_0 = np.ones(3)
 # full_path = os.path.join(os.getcwd(), file_name)
 # ```
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 10
 #
 # Compute the cumulative return on a portfolio the longs mom_10 and shorts mom_01. The
@@ -156,10 +156,10 @@ QUESTION_0 = np.ones(3)
 # **Note**: The data in the momentum return file is in percentages, i.e., a return of
 # 4.2% is recorded as 4.2.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 11
 #
 # Write a function named QUESTION_11 that take 1 numerical input `x` and returns:
@@ -168,10 +168,10 @@ QUESTION_0 = np.ones(3)
 # * $log(1+x)$ if `x` is greater than or equal to 0
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 12
 #
 # Produce a scatter plot of the momentum returns of portfolios 1 (x-axis) and 10 using only
@@ -180,10 +180,10 @@ QUESTION_0 = np.ones(3)
 # theme from seaborn.  Assign the **figure** handle to QUESTION_12.
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 13
 #
 # Compute the excess kurtosis of daily, weekly (using Friday and the end of the week) and monthly
@@ -192,19 +192,19 @@ QUESTION_0 = np.ones(3)
 # 'daily', 'weekly', or 'monthly' as the columns (in order). When computing weekly or monthly returns
 # from daily data, use the sum of the daily returns.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 14
 #
 # Simulate a random walk using 100 normal observations from a
 # NumPy `RandomState` initialized with a seed of `19991231`.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 15
 #
 # Defining
@@ -220,10 +220,10 @@ QUESTION_0 = np.ones(3)
 # are the variables names.
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 16
 #
 # Simulate 100 observations from the model
@@ -234,10 +234,10 @@ QUESTION_0 = np.ones(3)
 # $y_1=\epsilon_0 + \epsilon_1$. The solution should be a 1-d NumPy array with 100 elements. Use
 # a RandomState with a seed value of 19991231.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 17
 # What is the ratio of the largest eigenvalue to the smallest eigenvalue
 # of the correlation matrix of the 10 momentum returns?
@@ -247,10 +247,10 @@ QUESTION_0 = np.ones(3)
 # the correlation matrix using `np.linalg.eigs`.  See the help of this function
 # for more details.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 18
 #
 # Write a function that takes a single input 'x' and return the string
@@ -258,19 +258,19 @@ QUESTION_0 = np.ones(3)
 # then the returned value should be "The value of x is 3.14". The function name
 # must be QUESTION_18.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 19
 #
 # Compute the percentage of days where all 10 returns are positive and subtract the
 # percentage of days where all 10 momentum returns are negative on the same day.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Question 20
 #
 # Write the function `QUESTION_20` that will take a single input `s`, which is a string
@@ -289,4 +289,4 @@ QUESTION_0 = np.ones(3)
 # ```
 # * `str.lower` can be used to get the lower case version of a string
 
-#%%
+# %%

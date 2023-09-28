@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # # Logic and Loops
 #
 # This lesson covers:
 #
 # * Mixing logic and loops
 
-#%%
+# %%
 # Setup: Load the momentum data
 
 import pandas as pd
@@ -19,7 +19,7 @@ mom_01 = momentum.mom_01
 print(momentum.head())
 
 
-#%%
+# %%
 # ## Problem: Logical Statements and for Loops
 # Use a for loop along with an `if` statement to simulate an asymmetric random
 # walk of the form
@@ -32,10 +32,10 @@ print(momentum.head())
 # the code in the cell below.
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 # Plot the two random walks using the code.  We will cover data visualization
 # in a later lesson.
 #
@@ -47,19 +47,19 @@ print(momentum.head())
 # plt.legend(["y", "z"])
 # ```
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Simulate the asymmetric random walk without an `if`-`then`
 #
 # Use boolean multiplication to simulate the same random walk without using
 # an `if`-`then` statement.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # Setup: Plot the data
 from IPython import get_ipython
 
@@ -71,10 +71,10 @@ plt.rc("figure", figsize=(16, 6))  # Improve figure size
 plt.rc("font", size=14)  # Improve figure size
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Combining flow control
 # For momentum portfolios 1 and 10, compute the length of the runs in the
 # series. In pseudo code,
@@ -89,10 +89,10 @@ plt.rc("font", size=14)  # Improve figure size
 #    location of the longest run. Was it positive or negative?
 # 2. How many distinct runs lasted 5 or more days?
 
-#%%
+# %%
 
 
-#%%
+# %%
 # Plot the runs using
 #
 # ```python
@@ -102,10 +102,10 @@ plt.rc("font", size=14)  # Improve figure size
 # plt.plot(run)
 # ```
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Exercises
 #
 # ### Exercise: Simulate a Process with Heteroskedasticity
@@ -131,7 +131,7 @@ plt.rc("font", size=14)  # Improve figure size
 # * Re-run the simulation to see different paths.
 #
 
-#%%
+# %%
 
 
-#%%
+# %%

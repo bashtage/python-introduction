@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # # Series and DataFrames
 #
 # This lesson covers:
@@ -33,10 +33,10 @@
 # **Prices in September 2018**
 #
 
-#%%
+# %%
 #
 
-#%%
+# %%
 # ## Problem: Input a pandas Series
 #
 # Create vectors for each of the days in the [Table](#stock-data) named `sep_xx`
@@ -49,10 +49,10 @@
 #
 # Using the ticker names as the `index` of each series
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Create a Vector of Dates
 #
 # Use the pandas function `pd.to_datetime` to convert a list of string dates to
@@ -73,10 +73,10 @@
 #
 # Create a vector containing all of the dates in the table.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Input a Series with Dates
 #
 # Create vectors for each of the ticker symbols in [Table](#stock-data) named
@@ -91,10 +91,10 @@
 #
 # Set the `name` of each series as the series" ticker.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Create a DataFrame
 #
 # Create a DataFrame named `prices` containing [Table](#stock-data). Set the
@@ -105,10 +105,10 @@
 #                       columns = ["SPY", "AAPL", "GOOG"],index=dates_2)
 # ```
 
-#%%
+# %%
 
 
-#%%
+# %%
 # Save the price data
 #
 # This block saves prices to a HDF file for use in later lessons. The
@@ -117,7 +117,7 @@
 # This function uses some sophisticated features of Python. Do not
 # worry if it is unclear at this point.
 
-#%%
+# %%
 # Setup: Save prices, goog and sep_04 into a single file for use in other lessons
 
 # Only run if prices has been defined
@@ -149,7 +149,7 @@ if "prices" in globals():
             h5.put(var, globals()[var])
 
 
-#%%
+# %%
 # ## Exercises
 #
 # ### Exercise: Creating DataFrames
@@ -164,4 +164,4 @@ if "prices" in globals():
 # | C     | Coca Cola    | 197.4     |
 # | D     | Dannon       | -342.1    |
 
-#%%
+# %%

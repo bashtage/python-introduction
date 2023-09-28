@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 #
 # ## Maximum Likelihood Estimation
 #
@@ -22,29 +22,29 @@
 #
 # where $\Gamma\left(\right)$ is known as the gamma function.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 21
 #
 # Repeat the previous exercise using daily, weekly and monthly S&P 500 and Hang Seng data.
 # Note that it is necessary to remove the mean and standardize by the standard deviation
 # error before estimating the degree of freedom. What happens over longer horizons?
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 22
 #
 # Repeat the previous problem by estimating the mean and variance simultaneously with
 # the degree of freedom parameter.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 23
 #
 # Simulate a set of Bernoulli random variables $y_{i}$ where
@@ -56,10 +56,10 @@
 # estimate the Probit model where $p_{i}=\Phi\left(\alpha_{0}+\alpha_{1}x_{i}\right)$
 # using maximum likelihood.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 24
 #
 # Estimate the asymptotic covariance of the estimated parameters in the previous.
@@ -80,4 +80,4 @@
 # $\phi(\cdot)$ is the pdf of a standard Normal random variable.
 #
 
-#%%
+# %%

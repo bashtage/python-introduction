@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # ## ARMA Modeling: Residual Diagnostics
 #
 # **Functions**
@@ -17,4 +17,4 @@
 # 3. Compute the Q statistic from both sets of residuals. Is there evidence of serial correlation?
 # 4. Compute the LM test for serial correlation. Is there evidence of serial correlation?
 
-#%%
+# %%

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # ## ARCH Model Selection
 #
 # ### Exercise 76
@@ -11,4 +11,4 @@
 # b. GJR-GARCH
 # c. EGARCH
 
-#%%
+# %%

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # # Methods and Functions
 #
 # This lesson covers:
@@ -9,11 +9,11 @@
 # * Calling functions with more than one input and output
 # * Calling functions when some inputs are not used
 
-#%%
+# %%
 # Read the data in momentum.csv and creating some variable. This cell uses
 # some magic to automate repeated typing.
 
-#%%
+# %%
 # Setup: Load the momentum data
 import pandas as pd
 
@@ -25,12 +25,12 @@ mom_01 = momentum["mom_01"]
 mom_10 = momentum["mom_10"]
 
 
-#%%
+# %%
 # This data set contains 2 years of data on the 10 momentum portfolios from
 # 2016–2018. The variables are named mom_XX where XX ranges from 01 (work
 # return over the past 12 months) to 10 (best return over the past 12 months).
 
-#%%
+# %%
 # ## Problem: Calling Methods
 # Get used to calling methods by computing the mean, standard deviation, skewness, kurtosis, max, and min.
 #
@@ -39,22 +39,22 @@ mom_10 = momentum["mom_10"]
 #
 # In the second cell, call `describe`, a method that summarizes `Series` and `DataFrames` on `mom_01`.
 
-#%%
+# %%
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Use NumPy and SciPy functions
 #
 # Use the NumPy functions `mean`, `std`, `min`, `max` and the SciPy `stats` functions
 # `skew` and `kurtosis` to produce the same output.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Calling Functions with 2 Outputs
 #
 # Some useful functions return 2 or more outputs. One example is ``np.linalg.slogdet``
@@ -68,13 +68,13 @@ mom_10 = momentum["mom_10"]
 # 2  9
 # ```
 
-#%%
+# %%
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Calling Functions with 2 Inputs
 #
 # Many functions take two or more inputs. Like outputs, the inputs are simply
@@ -85,10 +85,10 @@ mom_10 = momentum["mom_10"]
 # np.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)
 # ```
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Calling Functions using Keyword Arguments
 #
 # Many functions have optional arguments. You can see these in a docstring since
@@ -106,28 +106,28 @@ mom_10 = momentum["mom_10"]
 #
 # Compute the number of distinct combinations of 5 objects from a set of 10.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # Compute the total number of combinations allowing for repetition
 # using the `repetition=True` keyword argument.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # Compute the number of combinations using the exact representation using
 # only positional arguments for all 3 inputs.  Repeat using the keyword
 # argument for `exact`.
 
-#%%
+# %%
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Function Help
 #
 # Explore the help available for calling functions `?` operator. For example,
@@ -148,52 +148,52 @@ mom_10 = momentum["mom_10"]
 #
 # **Note**: VS Code does **not** support the `?` form of help
 
-#%%
+# %%
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Use `help` with a method
 #
 # Use `help` to get the help for the `kurt` method attached to `momentum`.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Exercises
 #
 # ### Exercise: Use `info`
 #
 # Use the `info` method on `momentum` to get information about this `DataFrame`.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise: Compute the day-by-day mean
 #
 # Compute the day-by-day mean return of the portfolios in the momentum `DataFrame` using
 # the `axis` keyword argument. Use `head` and `tail` to show
 # the first 5 rows and last 5 rows
 
-#%%
+# %%
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise: Compute the standard deviation of mean returns
 #
 # Compute the standard deviation of the mean returns by chaining methods.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise: Compute the average standard deviation
 #
 # Compute the mean standard deviation as:
@@ -202,4 +202,4 @@ mom_10 = momentum["mom_10"]
 #
 # where $V[r_i]$ is the variance of portfolio $i$.
 
-#%%
+# %%

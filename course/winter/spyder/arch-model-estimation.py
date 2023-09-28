@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # ## ARCH Model Estimation
 #
 # **Functions**
 #
 # `arch.arch_model`
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 74
 #
 # Estimate a GARCH(1,1) and a GJR-GARCH(1,1,1) to the returns of both series.
@@ -26,10 +26,10 @@
 #
 # Documentation and examples for the arch package [are available online](https://bashtage.github.io/arch).
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 75
 # Comment on the asymmetry.
 #
@@ -38,4 +38,4 @@
 #   * Plot the standardized residuals.
 #
 
-#%%
+# %%

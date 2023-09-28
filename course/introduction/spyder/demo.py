@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # # Demonstration
 #
 # This file is used to demonstrate interacting with Jupyter notebooks
@@ -16,21 +16,21 @@
 # of the course.  The introduction will provide explanation of code used
 # here.
 
-#%%
+# %%
 import numpy as np
 
 x = 2 * np.pi
 print(f"The value of 2π is {2 * np.pi}")
 
 
-#%%
+# %%
 import pandas as pd
 
 df = pd.read_csv("data/momentum.csv", parse_dates=True, index_col="date")
 df.head()
 
 
-#%%
+# %%
 from IPython import get_ipython
 
 get_ipython().run_line_magic("matplotlib", "inline")
@@ -46,7 +46,7 @@ y = np.cumsum(e)
 ax = plt.plot(y)
 
 
-#%%
+# %%
 # # Title
 # ## Chapter
 # ### Section
@@ -73,4 +73,4 @@ ax = plt.plot(y)
 # | $\alpha$  | 0.05  |
 # | $\beta$   | 0.90  |
 
-#%%
+# %%

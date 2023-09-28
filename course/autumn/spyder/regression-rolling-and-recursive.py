@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # ## Linear Regression: Rolling and Recursive
 #
 # **Functions**
@@ -12,10 +12,10 @@
 # For the same portfolios in the previous exercise, compute rolling $\beta$s
 # using 60 consecutive observations.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 36
 #
 # For each of the four $\beta$s, produce a plot containing four series:
@@ -29,20 +29,20 @@
 #   these.
 # * The constant $\beta$ minus $1.96 \times$ the variance of a 60-observation estimate of $\beta$.
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 37
 #
 # Do the factor exposures appear constant?
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 38
 #
 # What happens if only the market is used as a factor (repeat the exercise excluding SMB and HML).
 
-#%%
+# %%

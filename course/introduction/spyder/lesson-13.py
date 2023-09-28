@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # # `for` Loops
 #
 # This lesson covers:
@@ -11,7 +11,7 @@
 #
 #
 
-#%%
+# %%
 # ## Problem: Basic For Loops
 #
 # Construct a for loop to sum the numbers between 1 and N for any N. A for loop
@@ -24,10 +24,10 @@
 # ```
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Compute a compound return
 # The compound return on a bond that pays interest annually at rate r is given
 # by $cr_{t}=\prod_{i=1}^{T}(1+r)=(1+r)^{T}$. Use a for loop compute the total
@@ -35,10 +35,10 @@
 # in a 10 by 1 vector cr.
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Simulate a random walk
 #
 # (Pseudo) Normal random variables can be simulated using the command
@@ -59,13 +59,13 @@
 # ```
 #
 
-#%%
+# %%
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Problem: Nested Loops
 #
 # Begin by loading momentum data used in an earlier lesson. Compute a
@@ -80,7 +80,7 @@
 # ann_std_dev.plot()
 # ```
 
-#%%
+# %%
 # Setup: Load the momentum data
 
 import pandas as pd
@@ -89,16 +89,16 @@ momentum = pd.read_csv("data/momentum.csv", index_col="date", parse_dates=True)
 momentum = momentum / 100  # Convert to numeric values from percentages
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ## Exercises
 #
 # ### Exercise
@@ -119,4 +119,4 @@ momentum = momentum / 100  # Convert to numeric values from percentages
 #
 # Finally, compute the mean drawdown for each of the portfolios.
 
-#%%
+# %%

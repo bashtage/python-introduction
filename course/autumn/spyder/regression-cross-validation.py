@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#%%
+# %%
 # ## Linear Regression: Model Selection and Cross-Validation
 #
 # Functions
@@ -13,10 +13,10 @@
 # regressors which range from no factor to all 3 factors, which model is preferred
 # by AIC, BIC, GtS and StG?
 
-#%%
+# %%
 
 
-#%%
+# %%
 # ### Exercise 40
 # Cross-validation is a method of analyzing the in-sample forecasting ability of a
 # cross-sectional model by using $\alpha\%$ of the data to estimate the model and
@@ -34,4 +34,4 @@
 #    to the cross-validated $R^{2}$ when computed on the held out sample when compared
 #    to the full-sample $R^{2}$? (k-fold cross validated SSE by the TSS).
 
-#%%
+# %%

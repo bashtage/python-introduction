@@ -12,9 +12,9 @@ import black.mode as bm
 import nbclient
 import nbconvert.preprocessors as pre
 import nbformat
+
 from latex import key
 from spyder import export_for_spyder
-
 
 # See https://bugs.python.org/issue37373 :(
 if (

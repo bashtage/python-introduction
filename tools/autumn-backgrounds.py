@@ -21,7 +21,7 @@ def generate_cover(title, subtitle, file_name):
     sha.update((title + subtitle).encode("utf8"))
     rem = int.from_bytes(sha.digest(), "little")
     rg = np.random.default_rng(rem)
-    r = np.sqrt(1 - 0.5 ** 2)
+    r = np.sqrt(1 - 0.5**2)
     x = [0, 0, r, 2 * r, 2 * r, r, 0]
     y = [1, 0, -0.5, 0, 1, 1.5, 1]
     x_data = np.array(x)

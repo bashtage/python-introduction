@@ -1,9 +1,9 @@
 import asyncio
 import sys
 
-import isort
 import black
 import black.mode as bm
+import isort
 import nbconvert
 
 # See https://bugs.python.org/issue37373 :(
@@ -33,7 +33,7 @@ def export_for_spyder(nb):
         if line.startswith("get_ipython()") and not imported_get_python:
             code.insert(i, "from IPython import get_ipython")
             imported_get_python = True
-    mode = bm.Mode([bm.TargetVersion.PY38, bm.TargetVersion.PY39])
+    mode = bm.Mode({bm.TargetVersion.PY39, bm.TargetVersion.PY310, bm.TargetVersion.PY311})
     code = black.format_file_contents("\n".join(code), mode=mode, fast=False)
     code = isort.api.sort_code_string(code)
 

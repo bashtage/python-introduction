@@ -11,9 +11,7 @@
 # %%
 # ### Exercise 83
 #
-# Compare this VaR to the HS VaR in the previous example.
-#
-# import pandas as pd
+# Compare the 95% FHS VaR to the 95% HS VaR.
 
 # %%
 

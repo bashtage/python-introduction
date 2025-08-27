@@ -40,7 +40,6 @@ print(momentum.head())
 # in a later lesson.
 #
 # ```python
-# %matplotlib inline
 # import matplotlib.pyplot as plt
 # plt.plot(y)
 # plt.plot(z)
@@ -61,10 +60,6 @@ print(momentum.head())
 
 # %%
 # Setup: Plot the data
-from IPython import get_ipython
-
-get_ipython().run_line_magic("matplotlib", "inline")
-
 import matplotlib.pyplot as plt
 
 plt.rc("figure", figsize=(16, 6))  # Improve figure size
@@ -96,8 +91,6 @@ plt.rc("font", size=14)  # Improve figure size
 # Plot the runs using
 #
 # ```python
-# %matplotlib inline
-#
 # import matplotlib.pyplot as plt
 # plt.plot(run)
 # ```

@@ -31,10 +31,6 @@ df.head()
 
 
 # %%
-from IPython import get_ipython
-
-get_ipython().run_line_magic("matplotlib", "inline")
-
 import matplotlib.pyplot as plt
 import seaborn
 

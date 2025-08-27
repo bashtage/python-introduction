@@ -17,9 +17,6 @@
 
 # %%
 # Setup
-from IPython import get_ipython
-
-get_ipython().run_line_magic("matplotlib", "inline")
 import matplotlib.pyplot as plt
 
 plt.rc("figure", figsize=(16, 6))  # Improves figure size
@@ -94,7 +91,7 @@ plt.rc("figure", figsize=(16, 6))  # Improves figure size
 import pandas as pd
 
 msft = pd.read_hdf("data/hf.h5", "MSFT")
-msft_5min = msft.resample("300S")
+msft_5min = msft.resample("300s")
 high = msft_5min.max()
 low = msft_5min.min()
 open = msft_5min.first()

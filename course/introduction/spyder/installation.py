@@ -6,25 +6,25 @@
 #
 # ## Install Anaconda
 #
-# 1. Download the [Anaconda Python/R Distribution](https://www.anaconda.com/distribution/#download-section) 2021.05 (or later).
-# 2. When the download is complete, install into your user account.
+# 1. Download the [Anaconda Python/R Distribution](https://www.anaconda.com/distribution/#download-section) 2025.06 (or later).
+# 2. When the download is complete, install Anaconda into your user account.
 
 # %%
 # ## Install Visual Studio Code and the Python extension
 #
 # 1. Download VS Code and install
 # 2. Install the Python extension by clicking on Extensions and searching for "Python"
-# 3. Open the `mfe-introduction` folder created in the previous step
-# 4. Create a file called `second.py` and enter
-#    ```python
-#    #%%
+# 3. Create a folder called `mfe-introduction`
+# 4. Create a file called `first.ipynb` using File>New File...>Jupyter Notebook and enter
 #
-#    print("Python may be harder to learn than other languages since")
-#    print("there is rarely a single approach to completing a task.")
-#    ```
+# ```python
+# print("Python may be harder to learn than other languages since")
+# print("there is rarely a single approach to completing a task.")
+# ```
 # 5. Click on Run Cell
 #
-# **Note** the `#%%` makes it a magic cell
+# ### Note
+# You may need to choose a Python environment. Point VS Code to the installation of Anaconda
 
 # %%
 # ## Install Pycharm Professional

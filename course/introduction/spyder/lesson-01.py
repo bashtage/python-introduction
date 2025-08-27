@@ -93,85 +93,13 @@
 # Jupyter notebooks.
 #
 # 1. Install VS Code and the Python extension
-# 2. Open the command palette and enter "create jupyter" and select the only
-#    available item.
+# 2. Use File>New File...>Jupyter Notebook to create a new notebook.
 #
 # See the screenshot below for an example of the experience of using Jupyter notebooks in
 # VS Code.
 #
 # ![VS Code Notebook](images/vscode-notebook-new.png "VS Code Notebook")
 #
-
-# %%
-# ## Magic Python in VSCode
-#
-#
-# [Visual Studio Code](https://code.visualstudio.com/) supports Magic Python mode in
-# standard Python files that can be executed cell-by-cell.
-#
-# 1. Install VS Code and the Python extension
-# 2. Select File, New and then save your file with the extension .py (e.g., file.py).
-# 3. This is a Python file that supports a cell demarcation using `#%%` for
-#    code cells and `#%% [markdown]` for cells that contain markdown code.
-#    Note that markdown text **must** be either:
-#
-#    * Surrounded by triple quotes, e.g. `"""markdown text"""` or `"""markdown text"""`; e.g.,
-#     ```python
-#     """
-#     # Cell Heading
-#
-#     Likeness darkness. That give brought creeping. Doesn"t may. Fruit kind
-#     midst seed. Creature, let under created void god to. Them day was Was
-#     creature set it from. Fourth. Created don"t man. Man. Light fourth
-#     light given the he image first multiply after deep she"d great. Morning
-#     likeness very have give also fowl third land beast from moving thing
-#     creepeth herb creeping won"t fifth. Us bring was our beast wherein our
-#     void and green he fruit kind upon a given, saying fruit, moveth face
-#     forth. His you it. Good beginning hath.
-#     """
-#     ```
-#
-#    * Or commented `# ` (with a single space) at the start of each line,
-#     ```python
-#     # # Cell Heading
-#     #
-#     # Likeness darkness. That give brought creeping. Doesn"t may. Fruit kind
-#     # midst seed. Creature, let under created void god to. Them day was Was
-#     # creature set it from. Fourth. Created don"t man. Man. Light fourth
-#     # light given the he image first multiply after deep she"d great. Morning
-#     # likeness very have give also fowl third land beast from moving thing
-#     # creepeth herb creeping won"t fifth. Us bring was our beast wherein our
-#     # void and green he fruit kind upon a given, saying fruit, moveth face
-#     # forth. His you it. Good beginning hath.
-#     ```
-#
-# The cells have a special button above them that allows the contents to be
-# executed and the result to be displayed in the interactive window. See the
-# screenshot below for an example of the experience of using VS Code. There
-# is also an interactive console at the bottom left where commands can be
-# directly executed.
-#
-# ![VS Code Notebook](images/vscode-magic-python.png "VS Code Notebook")
-#
-
-# %%
-# ### Importing an exiting notebook into Magic Python
-#
-# VS Code only understands Magic Python files as notebook-like documents, and so
-# `.ipynb` files must be converted to use. The process of importing is simple:
-#
-# 1. Open a Jupyter notebook file
-# 2. Click on Import in the popup that appears.
-#
-# ![VS Code Export](images/vscode-export.png "VS Code Export")
-
-# %%
-# ### Exporting Magic Python to a Jupyter notebook
-#
-# To export a Magic Python file, open the command palette and enter "import jupyter".
-# Select the option to import the notebook.
-#
-# ![VS Code Import](images/vscode-import.png "VS Code Import")
 
 # %%
 # ## Jupyter notebooks in PyCharm Professional
@@ -204,30 +132,3 @@
 # Below is a screenshot of this notebook in PyCharm.
 #
 # ![PyCharm Notebook](images/pycharm-notebook.png "Pycharm Notebook")
-#
-# ## Magic Python in PyCharm
-# PyCharm supports Magic Python cell execution. To use Magic Python, you need
-# to enable *Scientific Mode* in the View menu. You can then use `#%%` to
-# indicate the start and end of cells. Individual Cells can be executed in
-# the console by pressing CTRL+Enter.
-#
-# 1. In PyCharm, right-click on the root directory and select `New > Python File`. Give
-#    your file a meaningful name.
-# 2. Enter
-#    ```python
-#    #%%
-#    print("This is the first cell")
-#
-#    #%%
-#    print("This is not executed when the first cell is run")
-#    ```
-# 3. Enable Scientific Mode in the View menu.
-# 4. Run the first cell by placing you mouse in the cell and pressing CTRL+Enter.
-# 5. Run the second cell by clicking on the Play button (arrow) that appears in the
-#    gutter of the editor.
-#
-# <div class="alert alert-warning">
-# <b>Note:</b> Magic Python in PyCharm only supports python code, and so it is
-# not possible to mix Markdown text and Python in the same file.
-# </div>
-#

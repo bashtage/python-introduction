@@ -50,8 +50,6 @@
 # $y_{i}=y_{i-1}+e_{i}$. When finished plot the results using
 #
 # ```python
-# %matplotlib inline
-#
 # import matplotlib.pyplot as plt
 # plt.rc('figure', figsize=(16,6))
 #

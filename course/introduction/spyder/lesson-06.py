@@ -117,12 +117,7 @@ mom_10 = momentum["mom_10"]
 
 
 # %%
-# Compute the number of combinations using the exact representation using
-# only positional arguments for all 3 inputs.  Repeat using the keyword
-# argument for `exact`.
-
-# %%
-
+# Compute the number of combinations using the keyword argument `exact=True`.
 
 # %%
 

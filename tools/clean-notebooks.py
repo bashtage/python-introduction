@@ -8,7 +8,6 @@ import os
 import sys
 from collections.abc import MutableMapping
 
-import black.mode as bm
 import nbclient
 import nbconvert.preprocessors as pre
 import nbformat
